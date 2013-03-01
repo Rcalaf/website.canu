@@ -1,0 +1,110 @@
+<div class="forms" id="form_menu">
+			
+	<img class"logoshit" src="/assets/canu_logo.png">
+
+	<%= flash[:notice]%>
+
+	<ul class="form_type">
+		<li><a href="#z_1">I HAVE A CODE</a></li>
+		<li><a href="#z_2">HOW DO I GET A CODE?</a></li>
+	</ul>
+	
+	<div class="form_holder" id="z_1">
+		<form class="join_alpha" method="POST">	
+		<%= form_for @user, :url => root_url,:class => "join_alpha" do |f|%>
+			<label for="code">Unique Code</label>
+			<span class="clear"></span>
+			<span class="input">
+				<input name="user[code]" type="text" id="code"/>
+			</span>
+			<span class="clear"></span>
+			<%= %>
+			<label for="name">Name</label>
+			<span class="clear"></span>
+			<span class="input">
+				<input name="user[name]" type="text"/>
+			</span>
+			<span class="clear"></span>
+						<label for="Email">e-mail</label>
+			<span class="clear"></span>
+			<span class="input">
+				<input name="user[email]" type="text"/>
+			</span>
+			<span class="clear"></span>
+			<input type="submit" name="submit" value="GO" class="submit-button"/>				
+		<%end%>	
+
+	</div>
+	
+	<div class="form_holder" id="z_2">	
+		
+		<p class="header">You nicely ask for one.<br/> See you soon.</p>
+		
+		<form class="join_alpha" method="POST">	
+			<label for="Email">Name</label>
+			<span class="clear"></span>
+			<span class="input">
+				<input name="email" type="text"/>
+			</span>
+			<span class="clear"></span>
+			<label for="Email">E-MAIL</label>
+			<span class="clear"></span>
+			<span class="input">
+				<input name="email" type="text"/>
+			</span>
+			<span class="clear"></span>
+			<label for="Email">WHY?</label>
+			<span class="clear"></span>
+			<span class="input">
+				<input name="email" type="text"/>
+			</span>
+			<span class="clear"></span>
+			<input type="submit" name="submit" value="ASK" class="submit-button"/>	
+		</form>	
+		
+	</div>
+	
+</div>
+
+<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0"></div>
+
+<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+
+	<div class="menu" id="top_menu">	
+	
+		<div class="show_zone" id="z_2">
+	
+			<span class="team" id="team_section">
+				<p class="header">We are working hard to create a simple and personal way to keep track of the people you care about and inspire others.</p>
+				<p class="contact">getgoing@canu.se</p>
+				<ul class="team">
+					<li id="did"></li>
+					<li id="vit"></li>
+					<li id="seb"></li>
+					<li id="rog"></li>
+				</ul>
+				<ul class="details">
+					<li>
+						<p class="name">Didrik Persson</p>
+						<p class="title">CEO & Founder</p>
+					</li>
+					<li>
+						<p class="name">Vitali Poluzhnikov</p>
+						<p class="title">Design/Vision & Founder</p>
+					</li>
+					<li>
+						<p class="name">Sebastian Gustafsson</p>
+						<p class="title">Evangelist & Founder</p>
+					</li>
+					<li>
+						<p class="name">Roger Calaf</p>
+						<p class="title">CTO & Founder</p>
+					</li>
+				</ul>
+			</span>
+			
+		</div>
+		
+	</div>
+
+</div>
