@@ -20,7 +20,7 @@ set :user, "deploy"
 # Deploy settings
 #
 
-set :application, "canu.es"
+set :application, "canu.se"
 set :local_app, "canu"
 set :deploy_to, "/home/#{user}/#{application}"
 
