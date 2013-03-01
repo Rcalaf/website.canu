@@ -21,7 +21,7 @@ set :user, "deploy"
 #
 
 set :application, "canu.es"
-set :local_app, "canu.es"
+set :local_app, "canu"
 set :deploy_to, "/home/#{user}/#{application}"
 
 ### 
@@ -39,7 +39,7 @@ set :deploy_via, :copy
 #
 
 set :db_passwd, "wL8XSPha"
-set :db_name, "endoreprocasos.edu_production"
+set :db_name, "canu_production"
 
 role :app, server_ip
 role :web, server_ip
