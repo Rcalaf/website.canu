@@ -1,6 +1,6 @@
 # encoding: UTF-8
 class Mailer < ActionMailer::Base
-  default from: 'no-replay@canu.se'
+  default from: 'Get going <no-replay@canu.se>'
 
   def code_check_mail(user)
     @user = user

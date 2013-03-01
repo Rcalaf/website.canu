@@ -9,7 +9,7 @@ class UsersController < ApplicationController
           flash.now[:notice] = 'yeah'
         end
       else
-          flash.now[:notice] = 'Uooops'
+          flash.now[:errors] = 'Uooops'
       end
     end
     @user = User.new
@@ -22,8 +22,12 @@ class UsersController < ApplicationController
         Mailer.new_user_mail(@user).deliver
         flash[:notice] = 'Yeah'
       else
-        flash[:notice] = 'Uoooops'
-        puts @user.errors.inspect
+        message = "<p>Please correct the form:<br />"
+        @user.errors.each do |key,value|
+          message += "-#{value}<br />"
+        end
+        message += "</p>"
+        flash[:errors] = message.html_safe
       end
     else
       @user.new
@@ -33,7 +37,7 @@ class UsersController < ApplicationController
   end
   
   def verify_mail
-    @user = User.find_by_email(params[:email])
+    @user = User.find(params[:user_id])
     if @user
        (flash[:notice] = 'Your mail has been confirmed') if @user.update_attribute(:email_confirm,true)
     end

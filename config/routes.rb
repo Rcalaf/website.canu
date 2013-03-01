@@ -8,7 +8,7 @@ Canu::Application.routes.draw do
 
   # Sample of named route:
     match 'user/new' => 'users#new', :as => "new_user"
-    match 'user/email_verification/:email' => 'user#verify_mail', :as => 'confirm_email'
+    match 'user/:user_id' => 'users#verify_mail', :as => 'confirm_email'
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
