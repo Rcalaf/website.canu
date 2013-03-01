@@ -6,7 +6,8 @@ ActionMailer::Base.smtp_settings = {
   :authentication => :login,
   :user_name => 'getgoing@canu.se',
   :password => 'Itshalfpast8',
-  :enable_starttls_auto => true
+  :enable_starttls_auto => true,
+  :openssl_verify_mode => 'none'
 }
 
 ActionMailer::Base.default_url_options[:host] = "api.canu.se"
