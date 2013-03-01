@@ -5,7 +5,7 @@ class UsersController < ApplicationController
       if @user
         params[:user][:used] = true
         if @user.update_attributes(params[:user])
-          Mailer.code_check_mail(user).deliver
+          Mailer.code_check_mail(@user).deliver
           flash.now[:notice] = 'yeah'
         end
       else
