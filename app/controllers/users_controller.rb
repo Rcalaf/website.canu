@@ -6,10 +6,17 @@ class UsersController < ApplicationController
         params[:user][:used] = true
         if @user.update_attributes(params[:user])
           Mailer.code_check_mail(@user).deliver
-          flash.now[:notice] = 'yeah'
+          flash[:notify] = 'Ouw! Exciting!<br /> IMPORTANT: please confirm your email via the link that we sent to you.'.html_safe
+        else
+            message = "<p>Please correct the form:<br />"
+            @user.errors.each do |key,value|
+              message += "-#{value}<br />"
+            end
+            message += "</p>"
+            flash[:notify] = message.html_safe
         end
       else
-          flash.now[:errors] = 'Uooops'
+          flash[:notify] = "<p>This code is not valid.</p>".html_safe
       end
     end
     @user = User.new
@@ -20,14 +27,14 @@ class UsersController < ApplicationController
       @user = User.create(params[:user])
       if @user.valid?
         Mailer.new_user_mail(@user).deliver
-        flash[:notice] = 'Yeah'
+        flash[:notify] = 'Ouw! Exciting!<br /> IMPORTANT: please confirm your email via the link that we sent to you.'.html_safe
       else
         message = "<p>Please correct the form:<br />"
         @user.errors.each do |key,value|
           message += "-#{value}<br />"
         end
         message += "</p>"
-        flash[:errors] = message.html_safe
+        flash[:notify] = message.html_safe
       end
     else
       @user.new

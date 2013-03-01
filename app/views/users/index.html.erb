@@ -9,11 +9,12 @@
 		<li><a href="#z_2">HOW DO I GET A CODE?</a></li>
 	</ul>
 	
-	<%if flash[:errors]%>
+	<%if flash[:notify]%>
 	<div class="form_holder_errors">
-			<%= flash[:errors]%>	
+			<%= flash[:notify]%>	
 	</div>
 	<%end%>
+
 	
 	<div class="form_holder" id="z_1">
 		
@@ -24,7 +25,6 @@
 				<input name="user[code]" type="text" id="code"/>
 			</span>
 			<span class="clear"></span>
-			<%= %>
 			<label for="name">Name</label>
 			<span class="clear"></span>
 			<span class="input">
@@ -43,8 +43,6 @@
 	</div>
 	
 	<div class="form_holder" id="z_2">	
-		
-		<p class="header">You nicely ask for one.<br/> See you soon.</p>
 	
 		<%= form_for @user, :url => new_user_url,:html => {:class => "join_alpha"} do |f|%>
 			<label for="name">Name</label>
