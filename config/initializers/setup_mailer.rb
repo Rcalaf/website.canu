@@ -2,14 +2,14 @@ ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
   :address => 'smtp.canu.se',
   :port => 25,
-  :domain => 'canu.se',
+  :domain => 'api.canu.se',
   :authentication => :login,
   :user_name => 'getgoing@canu.se',
   :password => 'Itshalfpast8',
   :enable_starttls_auto => true
 }
 
-ActionMailer::Base.default_url_options[:host] = "canu.se"
+ActionMailer::Base.default_url_options[:host] = "api.canu.se"
 
 
 =begin
