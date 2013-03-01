@@ -13,7 +13,11 @@
 <script type="text/javascript">
    
     $(document).ready(function(){
+		
 		$('#form_menu div').hide();
+		if($('.form_holder_errors').length != 0){	
+			$('.form_holder_errors').show();
+		};
 
 		$('#form_menu ul li a').click(function(){
 			$('#form_menu ul li').removeClass('active');

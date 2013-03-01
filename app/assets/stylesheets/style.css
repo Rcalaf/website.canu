@@ -413,6 +413,8 @@ div.forms ul.form_type li.active{
 - Drop-Down Components
 *******************************/
 
+
+
 div.form_holder {
 	position: absolute;
 	width: 200px;
@@ -421,6 +423,18 @@ div.form_holder {
 	left: 260px;
 	background-color: rgba(255, 255, 255, 0.1);
 	}
+	
+div.form_holder_errors {
+	position: absolute;
+	width: 200px;
+	height: 68px;
+	top: 0px;
+	left: 260px;
+	background-color: rgba(166, 207, 212, 1);
+	color: #fff;
+	}
+	
+
 	
 div.form_holder p.header {
 	width: 200px;
