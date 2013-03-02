@@ -1,71 +1,74 @@
-<div class="forms" id="form_menu">
-			
-	<img class"logoshit" src="/assets/canu_logo.png">
 
+<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0">
 	
+	<div class="forms" id="form_menu">
 
-	<ul class="form_type">
-		<li><a href="#z_1">I HAVE A CODE</a></li>
-		<li><a href="#z_2">HOW DO I GET A CODE?</a></li>
-	</ul>
-	
-	<%if flash[:notify]%>
-	<div class="form_holder_errors">
-			<%= flash[:notify]%>	
-	</div>
-	<%end%>
+		<img class"logoshit" src="/assets/canu_logo.png">
 
-	
-	<div class="form_holder" id="z_1">
-		
-		<%= form_for @user, :url => root_url,:html => {:class =>"join_alpha"} do |f|%>
-			<label for="code">Unique Code</label>
-			<span class="clear"></span>
-			<span class="input">
-				<input name="user[code]" type="text" id="code"/>
-			</span>
-			<span class="clear"></span>
-			<label for="name">Name</label>
-			<span class="clear"></span>
-			<span class="input">
-				<input name="user[name]" type="text"/>
-			</span>
-			<span class="clear"></span>
-						<label for="Email">e-mail</label>
-			<span class="clear"></span>
-			<span class="input">
-				<input name="user[email]" type="text"/>
-			</span>
-			<span class="clear"></span>
-			<input type="submit" name="submit" value="GO" class="submit-button"/>				
-		<%end%>	
 
-	</div>
-	
-	<div class="form_holder" id="z_2">	
-	
-		<%= form_for @user, :url => new_user_url,:html => {:class => "join_alpha"} do |f|%>
-			<label for="name">Name</label>
-			<span class="clear"></span>
-			<span class="input">
-				<input name="user[name]" type="text"/>
-			</span>
-			<span class="clear"></span>
-			<label for="email">E-MAIL</label>
-			<span class="clear"></span>
-			<span class="input">
-				<input name="user[email]" type="text"/>
-			</span>
-			<span class="clear"></span>
-			
-			<input type="submit" name="submit" value="ASK" class="submit-button"/>	
-		<%end%>	
-		
+
+		<ul class="form_type">
+			<li><a href="#z_1">I HAVE A CODE</a></li>
+			<li><a href="#z_2">HOW DO I GET A CODE?</a></li>
+		</ul>
+
+		<%if flash[:notify]%>
+		<div class="form_holder_errors">
+				<%= flash[:notify]%>	
+		</div>
+		<%end%>
+
+
+		<div class="form_holder" id="z_1">
+
+			<%= form_for @user, :url => root_url,:html => {:class =>"join_alpha"} do |f|%>
+				<label for="code">Unique Code</label>
+				<span class="clear"></span>
+				<span class="input">
+					<input name="user[code]" type="text" id="code"/>
+				</span>
+				<span class="clear"></span>
+				<label for="name">Name</label>
+				<span class="clear"></span>
+				<span class="input">
+					<input name="user[name]" type="text"/>
+				</span>
+				<span class="clear"></span>
+							<label for="Email">e-mail</label>
+				<span class="clear"></span>
+				<span class="input">
+					<input name="user[email]" type="text"/>
+				</span>
+				<span class="clear"></span>
+				<input type="submit" name="submit" value="GO" class="submit-button"/>				
+			<%end%>	
+
+		</div>
+
+		<div class="form_holder" id="z_2">	
+
+			<%= form_for @user, :url => new_user_url,:html => {:class => "join_alpha"} do |f|%>
+				<label for="name">Name</label>
+				<span class="clear"></span>
+				<span class="input">
+					<input name="user[name]" type="text"/>
+				</span>
+				<span class="clear"></span>
+				<label for="email">E-MAIL</label>
+				<span class="clear"></span>
+				<span class="input">
+					<input name="user[email]" type="text"/>
+				</span>
+				<span class="clear"></span>
+
+				<input type="submit" name="submit" value="ASK" class="submit-button"/>	
+			<%end%>	
+
+		</div>
+
 	</div>
 	
 </div>
-
-<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0"></div>
 
 <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
 
