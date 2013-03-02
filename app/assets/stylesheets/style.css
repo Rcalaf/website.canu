@@ -211,42 +211,21 @@ span.team  ul.team li:hover{
 span.team  ul.team li#did{
 	background-image: url(/assets/team/didrik.png);
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-     span.team  ul.team li#did {
-          background-image: url(/assets/team/didrik@2x.png);
-          background-size: auto 322px;
-     }
-}
+
 
 span.team  ul.team li#vit{
 	background-image: url(/assets/team/vitali.png);
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-     span.team  ul.team li#vit {
-          background-image: url(/assets/team/vitali@2x.png);
-          background-size: auto 322px;
-     }
 }
 
 span.team  ul.team li#seb{
 	background-image: url(/assets/team/sebastian.png);
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-     span.team  ul.team li#seb {
-          background-image: url(/assets/team/sebastian@2x.png);
-          background-size: auto 322px;
-     }
-}
+
 
 span.team  ul.team li#rog{
 	background-image: url(/assets/team/roger.png);
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-     span.team  ul.team li#rog {
-          background-image: url(/assets/team/roger@2x.png);
-          background-size: auto 322px;
-     }
-}
+
 
 span.team ul.team li:last-child{
 	margin-right: 0;
