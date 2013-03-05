@@ -92,6 +92,58 @@ img {
 	cursor:pointer;
 }
 
+
+/******************************
+Stats Box
+*******************************/
+div.stats {
+	position: absolute;
+	/*position:fixed;*/
+	top:50%;
+	left:50%;
+	width:240px;
+	height: 156px;
+	margin-top:10px;
+	margin-left:-140px;
+	z-index:900;
+	background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+div.stats ul.stats{
+	position: absolute;
+	width: 200px;
+	height: 227px;
+	margin: 20px;
+	top: 0;
+	left: 0;
+	z-index: 1001;
+}
+
+div.stats ul.stats li{
+	float: left;
+	height: 48px;
+	width: 200px;
+	margin-bottom: 20px;
+	background-color: rgba(255, 255, 255,1);
+}
+
+div.stats ul.stats li span{
+	height: 48px;
+	width: 200px;
+	display: block;
+	
+	font-family: 'LatoRegular';
+	text-align: center;
+	line-height: 48px;
+	color: #6D6E7A;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 0.1em;
+	z-index: 2000;
+}
+
 /******************************
 Top Menu
 *******************************/

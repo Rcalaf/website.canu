@@ -7,8 +7,11 @@ Canu::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
+  
+    match 'stats' => 'users#stats', :as => 'user_stats'
     match 'user/new' => 'users#new', :as => "new_user"
     match 'user/:user_id' => 'users#verify_mail', :as => 'confirm_email'
+    
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
