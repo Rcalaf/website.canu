@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
   
   def stats
+    @title = "Statistics"
     @confirm = User.find_all_by_used(true)
     @ask_for_code = User.find_all_by_code(nil)
   end
   
   def index
+    @title = "CANU - Get going together"
     if request.post?
       @user = User.find_by_code_and_used(params[:user][:code],false)
       if @user
