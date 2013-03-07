@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   def verify_mail
     @user = User.find(params[:user_id])
     if @user
-       (flash[:notice] = 'Your mail has been confirmed') if @user.update_attribute(:email_confirm,true)
+       (flash[:notify] = 'Your mail has been confirmed') if @user.update_attribute(:email_confirm,true)
     end
     redirect_to root_url
   end
