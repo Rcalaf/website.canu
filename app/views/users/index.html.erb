@@ -1,112 +1,149 @@
 
-<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0">
-	
-	<div class="forms" id="form_menu">
-
-		<img class"logoshit" src="/assets/canu_logo.png">
-
-
-
-		<ul class="form_type">
-			<li><a href="#z_1">I HAVE A CODE</a></li>
-			<li><a href="#z_2">HOW DO I GET A CODE?</a></li>
-		</ul>
-
-		<%if flash[:notify]%>
-		<div class="form_holder_errors">
-				<%= flash[:notify]%>	
-		</div>
-		<%end%>
-
-
-		<div class="form_holder" id="z_1">
-
-			<%= form_for @user, :url => root_url,:html => {:class =>"join_alpha"} do |f|%>
-				<label for="code">Unique Code</label>
-				<span class="clear"></span>
-				<span class="input">
-					<input name="user[code]" type="text" id="code"/>
-				</span>
-				<span class="clear"></span>
-				<label for="name">Name</label>
-				<span class="clear"></span>
-				<span class="input">
-					<input name="user[name]" type="text"/>
-				</span>
-				<span class="clear"></span>
-							<label for="Email">e-mail</label>
-				<span class="clear"></span>
-				<span class="input">
-					<input name="user[email]" type="text"/>
-				</span>
-				<span class="clear"></span>
-				<input type="submit" name="submit" value="GO" class="submit-button"/>				
-			<%end%>	
-
-		</div>
-
-		<div class="form_holder" id="z_2">	
-
-			<%= form_for @user, :url => new_user_url,:html => {:class => "join_alpha"} do |f|%>
-				<label for="name">Name</label>
-				<span class="clear"></span>
-				<span class="input">
-					<input name="user[name]" type="text"/>
-				</span>
-				<span class="clear"></span>
-				<label for="email">E-MAIL</label>
-				<span class="clear"></span>
-				<span class="input">
-					<input name="user[email]" type="text"/>
-				</span>
-				<span class="clear"></span>
-
-				<input type="submit" name="submit" value="ASK" class="submit-button"/>	
-			<%end%>	
-
-		</div>
-
-	</div>
-	
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="logo_top">
+	<img src="/assets/canu_logo.svg">
 </div>
-
-<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
-
-	<div class="menu" id="top_menu">	
-	
-		<div class="show_zone" id="z_2">
-	
-			<span class="team" id="team_section">
-				<p class="header">We offer you a simple and personal way to find, share and create activities between you, your friends and the public. Keep track of the people you care about and inspire others.</p>
-				<p class="contact">getgoing@canu.se</p>
-				<ul class="team">
-					<li id="did"></li>
-					<li id="vit"></li>
-					<li id="seb"></li>
-					<li id="rog"></li>
-				</ul>
-				<ul class="details">
-					<li>
-						<p class="name">Didrik Persson</p>
-						<p class="title">CEO & Founder</p>
-					</li>
-					<li>
-						<p class="name">Vitali Poluzhnikov</p>
-						<p class="title">Design/Vision & Founder</p>
-					</li>
-					<li>
-						<p class="name">Sebastian Gustafsson</p>
-						<p class="title">Evangelist & Founder</p>
-					</li>
-					<li>
-						<p class="name">Roger Calaf</p>
-						<p class="title">CTO & Founder</p>
-					</li>
-				</ul>
-			</span>
-			
-		</div>
-		
+<div id="confirmation">Thanks! Talk soon</div>
+<div class="above" id="surface">
+	<div class="content_top_full"></div>
+	<div class="content_top">
 	</div>
+</div>
+<div class="below" id="underwater">
+	<div class="surface_info" id="fuck">
+		<img src="/assets/baloon.svg" id="baloon">
+		<p class="surface_header" id="header_main">
+			Getting together is about to 
+			<span>change</span>
+		</p>
+		<div class="codes">
+			<a class="alpha_button i_got" id="goto_join">I WANT TO JOIN</a>
+			<a class="i_want" id="goto_code">I have a code</a>
+			<div class="form_window" id="form_join">
+				<%= form_for @user, :url => new_user_url,:html => {:class =>"join_alpha"} do |f|%>
+				<div class="input_holder">
+					<input name="user[name]" type="text" id="code" placeholder="Your Name"/>
+				</div>
+				<div class="input_holder">
+					<input name="user[email]" type="text" id="email" placeholder="e-mail"/>
+				</div>
+				<div class="input_holder">
+					<input type="submit" name="submit" value="REQUEST INVITE" class="submit_button" id="submit_join"/>
+				</div>
+				<%end%>
+			</div>
+			<div class="form_window_code" id="form_code">
+				<%= form_for @user, :url => new_user_url,:html => {:class => "join_alpha"} do |f|%>
+				<div class="input_holder">
+					<input name="user[code]" type="text" id="code" placeholder="Code"/>
+				</div>
+				<div class="input_holder">
+					<input name="user[name]" type="text" id="code" placeholder="Your Name"/>
+				</div>
+				<div class="input_holder">
+					<input name="user[email]" type="text" id="email" placeholder="e-mail"/>
+				</div>
+				<div class="input_holder">
+					<input type="submit" name="submit" value="GET GOING" class="submit_button" id="submit_code"/>
+				</div>
+				<%end%>
+			</div>
+		</div>
+	</div>	
+	<div class="iceberg">
+		<img src="/assets/iceberg.svg" id="iceberg_main">
+	</div>
+	
+	<div class="content">
+		<div id="dive_in_action" class="dive_in">
+			<p style="display: none">Get Air</p>
+			<p>Dive In</p>
+		</div>
+		<p class="iceberg" id="welcome">
+				Hi!
+
+We are entering Iceberg state. We’ve been working completely under water for five months now. And its time to start inviting you guys to interact with us and take part of the progress together with us. Iceberg state is special for us, we will start putting things on the surface but most of the work will still be under water. You can follow our progress via the blog or any of the social channels.
+		</p>
+	</div>	
+	
+
+	<div id="underworld" class="underworld_content">
+		<div id="tabs">
+			<ul class="menu_bottom">
+				<li><a href="#tab-1">About</a></li>
+				<li><a href="#tab-2">Blog</a></li>
+				<li><a href="#tab-3">Team</a></li>
+				<li><a href="#tab-4">Contact</a></li>
+			</ul>
+			<div class="apple" id="tab-1">
+				<p class="left">CANU is an app that    makes it fast and simple for you to share and join spontaneous activities on the go.<br/><br/>Stop scrolling through the past. Look into the future, join the fun and be part of something real. </p>
+			</div>
+			 <div class="apple" id="tab-2">
+				 <div class="facebook_thing" id="tab-2">
+					<div>
+<iframe src="http://snapwidget.com/in/?u=Y2FudWdldHRvZ2V0aGVyfGlufDIzNHwxfDN8I2ZmZnxub3wxMHxub25l" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:244px; height: 732px"></iframe>
+					</div>
+					<div>
+						<a href="https://twitter.com/canugetgoing" class="twitter-follow-button" data-show-count="false">Follow @canugetgoing</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>				
+					</div>
+				</div>
+				<iframe class="iframe_tumblr" src="http://canugetgoing.tumblr.com" width="100%" height="200px" id="iframe1" marginheight="0" frameborder="0" onLoad="autoResize('iframe1');"></iframe>
+			 </div>
+			 <div class="apple" id="tab-3">
+				 <span class="team" id="team_section">
+					<p class="header">Our Story</p>
+					<p class="body">Tribes once was the shit. But internet came and social media turned us all into followers.
+We believe that there is a leader in everyone and that you deserve your own tribe. You decide who is in it and who is left out. You set the rules and the sub tribes, your in control of where your content end up.</p>
+					<ul class="team">
+						<li id="did"></li>
+						<li id="rog"></li>
+						<li id="vit"></li>
+						<li id="seb"></li>
+					</ul>
+					<ul class="details">
+						<li>
+							<p class="name">Didrik Persson</p>
+							<p class="title">CEO & Founder</p>
+							<p class="email">didrik@canu.se</p>
+						</li>
+						<li>
+							<p class="name">Roger Calaf</p>
+							<p class="title">CTO & Founder</p>
+							<p class="email">roger@canu.se</p>
+						</li>
+						<li>
+							<p class="name">Vitali Poluzhnikov</p>
+							<p class="title">Vision/Design & Founder</p>
+							<p class="email">vitali@canu.se</p>
+						</li>
+						<li>
+							<p class="name">Sebastian Gustafsson</p>
+							<p class="title">Evangelist & Founder</p>
+							<p class="email">sebastian@canu.se</p>
+						</li>
+
+					</ul>
+					<p class="header">Join our Tribe</p>
+					<p class="body">Like what we are doing? Well, we are in a lookout for the very right developer. Drop us a line and tell us about yourself.</p>
+				</span>
+			 </div>
+			 <div class="apple" id="tab-4">
+				 <p class="header">Ask us anything</p>
+				 <p class="body">getgoing@canu.se</p>
+				 <p class="header">Tech Support</p>
+				 <p class="body">support@canu.se</p>
+			 </div>	
+		</div>
+	</div>
+
+	
 
 </div>

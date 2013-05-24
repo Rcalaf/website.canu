@@ -11,8 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 
-//= require js
-//= require jquery.stellar.min
-//= require waypoints.min
+//= require jquery.min
+//= require jquery.circulate
 //= require jquery.easing.1.3
 //= require jquery_ujs

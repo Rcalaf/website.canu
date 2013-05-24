@@ -1,67 +1,168 @@
-<!DOCTYPE> 
+<!DOCTYPE HTML<!
 <html>
-<head>
-<meta charset="utf-8">
-<title><%=@title%></title>
-<%= stylesheet_link_tag 'style' %>
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
-<link rel="shortcut icon" href="/assets/favicon.ico" type="image/ico">
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-39022803-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-<script type="text/javascript">
-   
-    $(document).ready(function(){
+	<head>
+		<meta charset="utf-8">
+		<title><%=@title%></title>
 		
-		$('#form_menu div').hide();
-		if($('.form_holder_errors').length != 0){	
-			$('.form_holder_errors').show();
-		};
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+		<%= stylesheet_link_tag 'style' %>
+		<%= javascript_include_tag "application" %>
 
-		$('#form_menu ul li a').click(function(){
-			$('#form_menu ul li').removeClass('active');
-				$(this).parent().addClass('active');
-					var currentTab = $(this).attr('href');
-			$('#form_menu div').hide();
-			$(currentTab).show();
-			return false;
-		});
+	    <script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39022803-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	
+	    <script language="JavaScript">
+		<!--
+		function autoResize(id){
+		    var newheight;
+		    var newwidth;
 		
-		$('body').click(function(){
-		if($(':focus').prop("tagName") != 'INPUT'){
-		$('#form_menu ul li').removeClass('active');
-			$('#form_menu div').hide();
-			//alert($(':focus').prop("tagName"));
+		    if(document.getElementById){
+		        newheight=document.getElementById(id).contentWindow.document .body.scrollHeight;
+		        newwidth=document.getElementById(id).contentWindow.document .body.scrollWidth;
+		    }
+		
+		    document.getElementById(id).height= (newheight) + "px";
+		    document.getElementById(id).width= (newwidth) + "px";
 		}
 		
-			
-		});
-	});
-	
-
-</script>
-</head>
-
-	<body id="mainbody">
-
-		<%=yield%>
+		//-->
+		</script>
 		
+		<script type="text/javascript">
+
+		   $(document).ready(function(){
+			$('#tabs div').hide();
+			$('#tabs div:first').show();
+			$('#tabs ul li:first').addClass('active');
+			
+			$('#tabs ul li a').click(function(){
+			$('#tabs ul li').removeClass('active');
+			$(this).parent().addClass('active');
+			var currentTab = $(this).attr('href');
+			$('#tabs div').hide();
+			$(currentTab).show();
+			return false;
+			});
+			});
+		   $(document).ready(function(){
+		   		$('#confirmation').hide();
+		   		$('#form_join').hide();
+		   		$('#form_code').hide();
+		   		$('#underworld').hide();
+		   		$('#why_d').hide();
+		   		$("#iceberg_main").hide(300);
+		   		
+		   });
+		   
+		   $(window).load(function(){
+		    	
+	    		$("#goto_join").click(function(){
+		    		$('#form_join').fadeIn(300);
+		    		$('#header_main').fadeOut(300);
+			    	
+			    });
+			    $("#submit_join").click(function(){
+		    		$('#form_join').fadeOut(300);
+			    	$('#header_main').fadeIn(300);
+			    	$('#confirmation').fadeIn(100).delay(1000).fadeOut(400);
+			    });
+			    
+	    		$("#goto_code").click(function(){
+		    		$('#form_code').fadeIn(300);
+		    		$('#header_main').fadeOut(300);
+		    		$('#goto_code').fadeOut(300);
+			    	
+			    });
+			    $("#submit_code").click(function(){
+		    		$('#form_code').fadeOut(300);
+			    	$('#header_main').fadeIn(300);
+			    	$('#goto_code').show();
+			    	$('#confirmation').fadeIn(100).delay(1000).fadeOut(400);  
+			    });
+		    	
+		    	$("#dive_in_action").hover(function(){
+			    	$("#why_d").fadeIn(400);
+			    	}, function(){
+			    	$('#why_d').hide();
+			    });
+			   
+			    $("#dive_in_action").toggle(function(){
+				      $('#underwater').animate({top: "0"}, {
+					      duration: 400,
+					      easing: 'easeOutBack'
+					      });
+					  },function(){
+				      $('#underwater').animate({top: "400px"}, {
+					      duration: 1000
+					   });
+				});
+				
+				$("#dive_in_action").click(function(){
+				      $('#dive_in_action p').toggle();
+				      $('#why_d p').toggle();
+				});
+
+			    $("#dive_in_action").toggle(function(){
+				   
+				   	  $('#underworld').show();
+				   	  $('#welcome').fadeOut(200);
+				   
+				      $('#underworld').animate({top: "140px"}, {
+					      duration: 1000,
+					      easing: 'easeOutBack'
+					      });
+					  },function(){
+					
+					  $('#underworld').hide();
+					  $('#welcome').fadeIn(200);
+				    
+				      $('#underworld').animate({top: "1000px"}, {
+					      duration: 1000,
+					      easing: 'easeOutBack'
+					   });
+				});
+
+			    $("#underwater").animate({top: "400px"}, {
+				      duration: 1000,
+				      easing: 'easeOutBack'
+				   });
+				
+			
+			    $("#iceberg_main").fadeIn(300);
+			    
+				$("#iceberg_main").animate({top: "-225px"}, {
+				      duration: 1000,
+				      easing: 'easeOutBack'
+				   });   
+
+			    $("#iceberg_main").circulate({
+		                loop: true,
+		                width: 0,
+		                height: 7,
+		                speed: 1400,
+		                easing: 'easeOutBack'
+		            });       
+		            
+	            });
+
+	    </script>		
+	</head>
+	<body>
+		<%= yield%>
+
 	</body>
-	
 </html>
 
 
