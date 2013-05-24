@@ -1,5 +1,5 @@
-/*= require reset-min
-/*= require_self
+/*= require reset-min*/
+/*= require_self*/
 
 @charset "utf-8";
 /* CSS Document */
@@ -363,7 +363,7 @@ ul.menu_bottom li.active:hover{
 	float: left;
 	margin: 60px 0 0 20px;
 	outline: none;
-	background-color: red);
+	background-color: red;
 }
 
 
