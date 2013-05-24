@@ -25,20 +25,25 @@
 	    <script language="JavaScript">
 		<!--
 		function autoResize(id){
+/*
 		    var newheight;
 		    var newwidth;
 		
 		    if(document.getElementById){
-		        newheight=document.getElementById(id).contentWindow.document .body.scrollHeight;
-		        newwidth=document.getElementById(id).contentWindow.document .body.scrollWidth;
+		        newheight=document.getElementById(id).contentWindow.document.body.scrollHeight;
+		        newwidth=document.getElementById(id).contentWindow.document.body.scrollWidth;
 		    }
 		
 		    document.getElementById(id).height= (newheight) + "px";
-		    document.getElementById(id).width= (newwidth) + "px";
-		}
+		    document.getElementById(id).width= (newwidth) + "px";*/
 		
+			alert(document.getElementsByTagName('iframe')[0].contentDocument);
+		
+		}
 		//-->
 		</script>
+		
+		
 		
 		<script type="text/javascript">
 
@@ -47,14 +52,14 @@
 			$('#tabs div:first').show();
 			$('#tabs ul li:first').addClass('active');
 			
-			$('#tabs ul li a').click(function(){
-			$('#tabs ul li').removeClass('active');
-			$(this).parent().addClass('active');
-			var currentTab = $(this).attr('href');
-			$('#tabs div').hide();
-			$(currentTab).show();
-			return false;
-			});
+				$('#tabs ul li a').click(function(){
+					$('#tabs ul li').removeClass('active');
+					$(this).parent().addClass('active');
+					var currentTab = $(this).attr('href');
+					$('#tabs div').hide();
+					$(currentTab).show();
+					return false;
+				});
 			});
 		   $(document).ready(function(){
 		   		$('#confirmation').hide();
@@ -62,11 +67,25 @@
 		   		$('#form_code').hide();
 		   		$('#underworld').hide();
 		   		$('#why_d').hide();
-		   		$("#iceberg_main").hide(300);
-		   		
+		   	//	$("#iceberg_main").hide();
+		  
 		   });
 		   
+		   $(document).ready(function(){
+		
+			});
+			
+	
+			
+		   
 		   $(window).load(function(){
+			$("#iceberg_main").fadeIn(300);
+			
+			$("#iceberg_main").animate({top: "-225px"}, {
+						      duration: 1000,
+						      easing: 'easeOutBack'
+				});
+						 
 		    	
 	    		$("#goto_join").click(function(){
 		    		$('#form_join').fadeIn(300);
@@ -140,12 +159,8 @@
 				   });
 				
 			
-			    $("#iceberg_main").fadeIn(300);
-			    
-				$("#iceberg_main").animate({top: "-225px"}, {
-				      duration: 1000,
-				      easing: 'easeOutBack'
-				   });   
+			   
+			       
 
 			    $("#iceberg_main").circulate({
 		                loop: true,

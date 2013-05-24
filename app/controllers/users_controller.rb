@@ -14,17 +14,17 @@ class UsersController < ApplicationController
         params[:user][:used] = true
         if @user.update_attributes(params[:user])
           Mailer.code_check_mail(@user).deliver
-          flash[:notify] = 'Ouw! Exciting!<br /> IMPORTANT: please confirm your email via the link that we sent to you.'.html_safe
+          flash[:ok] = '<p>Thanks! Talk soon</p>'.html_safe
         else
-            message = "<p>Please correct the form:<br />"
+            message = "<p>Oops!</p> <ul>"
             @user.errors.each do |key,value|
-              message += "-#{value}<br />"
+              message += "<li>#{value}</li>"
             end
-            message += "</p>"
-            flash[:notify] = message.html_safe
+            message += "</ul>"
+            flash[:error] = message.html_safe
         end
       else
-          flash[:notify] = "<p>This code is not valid.</p>".html_safe
+          flash[:error] = "<p>This code is not valid.</p>".html_safe
       end
     end
     @user = User.new
@@ -35,14 +35,14 @@ class UsersController < ApplicationController
       @user = User.create(params[:user])
       if @user.valid?
         Mailer.new_user_mail(@user).deliver
-        flash[:notify] = 'Ouw! Exciting!<br /> IMPORTANT: please confirm your email via the link that we sent to you.'.html_safe
+        flash[:ok] = '<p>Thanks! Talk soon</p>'.html_safe
       else
-        message = "<p>Please correct the form:<br />"
+        message = "<p>Oops!</p> <ul>"
         @user.errors.each do |key,value|
-          message += "-#{value}<br />"
+          message += "<li>#{value}</li>"
         end
-        message += "</p>"
-        flash[:notify] = message.html_safe
+        message += "</ul>"
+        flash[:error] = message.html_safe
       end
     else
       @user.new
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   def verify_mail
     @user = User.find(params[:user_id])
     if @user
-       (flash[:notify] = 'Your mail has been confirmed') if @user.update_attribute(:email_confirm,true)
+       (flash[:ok] = 'Your mail has been confirmed') if @user.update_attribute(:email_confirm,true)
     end
     redirect_to root_url
   end
