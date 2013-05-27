@@ -1,11 +1,13 @@
-<!DOCTYPE HTML<!
+<!DOCTYPE HTML!>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title><%=@title%></title>
 		
-		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+		<!--<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">-->
 		<%= stylesheet_link_tag 'style' %>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		
 		<%= javascript_include_tag "application" %>
 
 	    <script type="text/javascript">
@@ -21,158 +23,7 @@
 		  })();
 
 		</script>
-	
-	    <script language="JavaScript">
-		<!--
-		function autoResize(id){
-/*
-		    var newheight;
-		    var newwidth;
-		
-		    if(document.getElementById){
-		        newheight=document.getElementById(id).contentWindow.document.body.scrollHeight;
-		        newwidth=document.getElementById(id).contentWindow.document.body.scrollWidth;
-		    }
-		
-		    document.getElementById(id).height= (newheight) + "px";
-		    document.getElementById(id).width= (newwidth) + "px";*/
-		
-		//	alert(document.getElementsByTagName('iframe')[0].contentDocument);
-		
-		}
-		//-->
-		</script>
-		
-		
-		
-		<script type="text/javascript">
-
-		   $(document).ready(function(){
-			$('#tabs div').hide();
-			$('#tabs div:first').show();
-			$('#tabs ul li:first').addClass('active');
-			
-				$('#tabs ul li a').click(function(){
-					$('#tabs ul li').removeClass('active');
-					$(this).parent().addClass('active');
-					var currentTab = $(this).attr('href');
-					$('#tabs div').hide();
-					$(currentTab).show();
-					return false;
-				});
-			});
-		   $(document).ready(function(){
-		   		$('#confirmation').hide();
-		   		$('#form_join').hide();
-		   		$('#form_code').hide();
-		   		$('#underworld').hide();
-		   		$('#why_d').hide();
-		   	//	$("#iceberg_main").hide();
-		  
-		   });
-		   
-		   $(document).ready(function(){
-		
-			});
-			
-	
-			
-		   
-		   $(window).load(function(){
-			$("#iceberg_main").fadeIn(300);
-			
-			$("#iceberg_main").animate({top: "-225px"}, {
-						      duration: 1000,
-						      easing: 'easeOutBack'
-				});
-						 
-		    	
-	    		$("#goto_join").click(function(){
-		    		$('#form_join').fadeIn(300);
-		    		$('#header_main').fadeOut(300);
-			    	
-			    });
-			    $("#submit_join").click(function(){
-		    		$('#form_join').fadeOut(300);
-			    	$('#header_main').fadeIn(300);
-			    	$('#confirmation').fadeIn(100).delay(1000).fadeOut(400);
-			    });
-			    
-	    		$("#goto_code").click(function(){
-		    		$('#form_code').fadeIn(300);
-		    		$('#header_main').fadeOut(300);
-		    		$('#goto_code').fadeOut(300);
-			    	
-			    });
-			    $("#submit_code").click(function(){
-		    		$('#form_code').fadeOut(300);
-			    	$('#header_main').fadeIn(300);
-			    	$('#goto_code').show();
-			    	$('#confirmation').fadeIn(100).delay(1000).fadeOut(400);  
-			    });
-		    	
-		    	$("#dive_in_action").hover(function(){
-			    	$("#why_d").fadeIn(400);
-			    	}, function(){
-			    	$('#why_d').hide();
-			    });
-			   
-			    $("#dive_in_action").toggle(function(){
-				      $('#underwater').animate({top: "0"}, {
-					      duration: 400,
-					      easing: 'easeOutBack'
-					      });
-					  },function(){
-				      $('#underwater').animate({top: "400px"}, {
-					      duration: 1000
-					   });
-				});
 				
-				$("#dive_in_action").click(function(){
-				      $('#dive_in_action p').toggle();
-				      $('#why_d p').toggle();
-				});
-
-			    $("#dive_in_action").toggle(function(){
-				   
-				   	  $('#underworld').show();
-				   	  $('#welcome').fadeOut(200);
-				   
-				      $('#underworld').animate({top: "140px"}, {
-					      duration: 1000,
-					      easing: 'easeOutBack'
-					      });
-					  },function(){
-					
-					  $('#underworld').hide();
-					  $('#welcome').fadeIn(200);
-				    
-				      $('#underworld').animate({top: "1000px"}, {
-					      duration: 1000,
-					      easing: 'easeOutBack'
-					   });
-				});
-
-			    $("#underwater").animate({top: "400px"}, {
-				      duration: 1000,
-				      easing: 'easeOutBack'
-				   });
-				
-			
-			   
-			       
-
-			    $("#iceberg_main").circulate({
-		                loop: true,
-		                width: 0,
-		                height: 7,
-		                speed: 1400,
-		                easing: 'easeOutBack'
-		            });       
-		            
-	            });
-
-	    </script>		
 	</head>
 	<body>
 		<%= yield%>

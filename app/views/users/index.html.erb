@@ -1,34 +1,26 @@
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-
 <%if flash[:error] || flash[:ok]%>
-<script>
-$('.confirmation').fadeIn(1000);
-setTimeout(function(){$('.confirmation').fadeOut(1000)},2000);
-</script>
+	<script>
+	$(document).ready(function(){
+		$('#confirmation').show(1000);
+		setTimeout(function(){$('#confirmation').fadeOut(1000)},3000);
+	});
+	</script>
 <%end%>
 
 <div class="logo_top">
 	<img src="/assets/canu_logo.svg">
 </div>
+
 <%unless flash[:ok].nil?%>
-<div class="confirmation"><%=flash[:ok]%></div>
+<div id="confirmation"><%=flash[:ok]%></div>
 <%end%>
 <%unless flash[:error].nil?%>
-<div class="confirmation"><%=flash[:error]%></div>
+<div id="confirmation"><%=flash[:error]%></div>
 <%end%>
+
 <div class="above" id="surface">
 	<div class="content_top_full"></div>
-	<div class="content_top">
-	</div>
+	<div class="content_top"></div>
 </div>
 <div class="below" id="underwater">
 	<div class="surface_info" id="fuck">
@@ -41,7 +33,7 @@ setTimeout(function(){$('.confirmation').fadeOut(1000)},2000);
 			<a class="alpha_button i_got" id="goto_join">I WANT TO JOIN</a>
 			<a class="i_want" id="goto_code">I have a code</a>
 			<div class="form_window" id="form_join">
-				<%= form_for @user, :url => new_user_url,:html => {:class =>"join_alpha"} do |f|%>
+				<%= form_for @user, :url => new_user_url do |f|%>
 				<div class="input_holder">
 					<input name="user[name]" type="text" id="code" placeholder="Your Name"/>
 				</div>
@@ -54,7 +46,7 @@ setTimeout(function(){$('.confirmation').fadeOut(1000)},2000);
 				<%end%>
 			</div>
 			<div class="form_window_code" id="form_code">
-				<%= form_for @user, :url => root_url,:html => {:class => "join_alpha"} do |f|%>
+				<%= form_for @user, :url => root_url do |f|%>
 				<div class="input_holder">
 					<input name="user[code]" type="text" id="code" placeholder="Code"/>
 				</div>
@@ -71,8 +63,8 @@ setTimeout(function(){$('.confirmation').fadeOut(1000)},2000);
 			</div>
 		</div>
 	</div>	
-	<div class="iceberg">
-		<img src="/assets/iceberg.svg" id="iceberg_main" style="display:none;">
+	<div id="iceberg_main">
+		<img src="/assets/iceberg.svg">
 	</div>
 	
 	<div class="content">
@@ -82,8 +74,8 @@ setTimeout(function(){$('.confirmation').fadeOut(1000)},2000);
 		</div>
 		<p class="iceberg" id="welcome">
 				Hi!
-
-We are entering Iceberg state. We’ve been working completely under water for five months now. And its time to start inviting you guys to interact with us and take part of the progress together with us. Iceberg state is special for us, we will start putting things on the surface but most of the work will still be under water. You can follow our progress via the blog or any of the social channels.
+					<br/>
+We are entering Iceberg state. We’ve been working completely under water for five months now. And its time to invite you to take part of the progress together with us. We will start putting things on the surface but most of the work will still be under water.
 		</p>
 	</div>	
 	
@@ -92,26 +84,15 @@ We are entering Iceberg state. We’ve been working completely under water for f
 		<div id="tabs">
 			<ul class="menu_bottom">
 				<li><a href="#tab-1">About</a></li>
-				<li><a href="#tab-2">Blog</a></li>
-				<li><a href="#tab-3">Team</a></li>
-				<li><a href="#tab-4">Contact</a></li>
+				<li><a href="#tab-2">Team</a></li>
+				<li><a href="#tab-3">Contact</a></li>
+				<a class="other" href="http://blog.canu.se/" target="_blank">Blog</a>
 			</ul>
+			
 			<div class="apple" id="tab-1">
 				<p class="left">CANU is an app that    makes it fast and simple for you to share and join spontaneous activities on the go.<br/><br/>Stop scrolling through the past. Look into the future, join the fun and be part of something real. </p>
 			</div>
 			 <div class="apple" id="tab-2">
-				 <div class="facebook_thing" id="tab-2">
-					<div>
-<iframe src="http://snapwidget.com/in/?u=Y2FudWdldHRvZ2V0aGVyfGlufDIzNHwxfDN8I2ZmZnxub3wxMHxub25l" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:244px; height: 732px"></iframe>
-					</div>
-					<div>
-						<a href="https://twitter.com/canugetgoing" class="twitter-follow-button" data-show-count="false">Follow @canugetgoing</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>				
-					</div>
-				</div>
-				<iframe class="iframe_tumblr" src="http://canugetgoing.tumblr.com" width="100%" height="50%" id="iframe1" marginheight="0" frameborder="0" onLoad="autoResize('iframe1');"></iframe>
-			 </div>
-			 <div class="apple" id="tab-3">
 				 <span class="team" id="team_section">
 					<p class="header">Our Story</p>
 					<p class="body">Tribes once was the shit. But internet came and social media turned us all into followers.
@@ -146,10 +127,10 @@ We believe that there is a leader in everyone and that you deserve your own trib
 
 					</ul>
 					<p class="header">Join our Tribe</p>
-					<p class="body">Like what we are doing? Well, we are in a lookout for the very right developer. Drop us a line and tell us about yourself.</p>
+					<p class="body">Like what we are doing? Well, we are in a lookout for the very right people. Drop us a line and lets talk.</p>
 				</span>
 			 </div>
-			 <div class="apple" id="tab-4">
+			 <div class="apple" id="tab-3">
 				 <p class="header">Ask us anything</p>
 				 <p class="body">getgoing@canu.se</p>
 				 <p class="header">Tech Support</p>
