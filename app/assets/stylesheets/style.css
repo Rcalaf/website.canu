@@ -70,12 +70,12 @@ Content
 
 p.iceberg {
 	color: #fff;
-	width: 540px;
+	width: 542px;
 	font-size: 28px;
 	height: auto;
 	text-align: center;
 	top: 140px;
-	left: 242px; 
+	left: 236px; 
 	font-weight: 300;
 	position: absolute;
 	line-height: 48px;
@@ -280,7 +280,6 @@ div.apple{
 	float: left;
 	outline: none;
 	clear: both;
-	margin-bottom: 100px;
 	padding-top: 20px;
 }
 
@@ -292,6 +291,7 @@ div.apple p.left {
 	float: left;
 	width: 600px;
 	margin-top: 40px;
+	padding-bottom: 100px;
 }
 
 div.apple p.header {
@@ -384,13 +384,14 @@ Team
 span.team {
 	float: left;
 	width: 960px;
-	height: 780px;
+	height: auto;
 	display: block; 
+	padding-bottom: 200px;
 }
 
 span.team  ul.team{
 	float: left;
-	width: 920px;
+	width: 924px;
 	height: 322px;
 	margin-left: 20px;
 	margin-top: 40px;
@@ -403,6 +404,7 @@ span.team  ul.team li{
 	height: 322px;
 	margin-right: 4px;
 	background-position: 227px 0;
+	cursor: pointer;
 }
 
 span.team  ul.team li:hover{
@@ -439,6 +441,7 @@ span.team  ul.details{
 	height: 180px;
 	margin-top: 20px;
 	margin-left: 20px;
+	margin-bottom: -100px;
 }
 
 span.team  ul.details li{
@@ -486,6 +489,42 @@ span.team  ul.details li p.email{
 }
 
 
+div.member_story {
+	position: relative;
+	top: 326px;
+	left: 0;
+	width: 920px;
+	height: 322px;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+
+div.member_story p.story{
+	position: absolute;
+	top:60px;
+	left: 0;
+	padding: 40px;
+	font-size: 14px;
+	line-height: 22px;
+	color: rgba(28, 166, 195, 1);      
+	font-weight: 400;
+	float: left;
+	width: 610px;
+}
+
+div.member_story p.member_name{
+	position: absolute;
+	top:0;
+	left: 0;
+	padding: 40px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 28px;
+	color: rgba(28, 166, 195, 1);      
+	font-weight: 400;
+	float: left;
+	width: 600px;
+}
 
 
 
