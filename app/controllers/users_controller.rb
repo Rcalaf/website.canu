@@ -16,15 +16,15 @@ class UsersController < ApplicationController
           Mailer.code_check_mail(@user).deliver
           flash[:ok] = '<p>Thanks! Talk soon</p>'.html_safe
         else
-            message = "<p>Oops!</p> <ul>"
-            @user.errors.each do |key,value|
-              message += "<li>#{value}</li>"
-            end
-            message += "</ul>"
-            flash[:error] = message.html_safe
+            #message = "<p>Oops!</p> <ul>"
+            #@user.errors.each do |key,value|
+            #  message += "<li>#{value}</li>"
+            #end
+            #message += "</ul>"
+            flash[:error] = "code"
         end
       else
-          flash[:error] = "<p>This code is not valid.</p>".html_safe
+          flash[:error] = "code"#"<p>This code is not valid.</p>".html_safe
       end
     end
     @user = User.new
@@ -37,12 +37,12 @@ class UsersController < ApplicationController
         Mailer.new_user_mail(@user).deliver
         flash[:ok] = '<p>Thanks! Talk soon</p>'.html_safe
       else
-        message = "<p>Oops!</p> <ul>"
-        @user.errors.each do |key,value|
-          message += "<li>#{value}</li>"
-        end
-        message += "</ul>"
-        flash[:error] = message.html_safe
+        #message = "<p>Oops!</p> <ul>"
+        #@user.errors.each do |key,value|
+        #  message += "<li>#{value}</li>"
+        #end
+        #message += "</ul>"
+        flash[:error] = "new"#message.html_safe
       end
     else
       @user.new

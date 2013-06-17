@@ -505,7 +505,7 @@ Form
 	line-height: 400px;
 	
 	z-index: 3000;
-	font-size: 40px;
+	font-size: 38px;
 	background-color: rgba(255, 255, 255, 1);
 	color: rgba(164, 205, 210, 1);
 }
@@ -530,6 +530,11 @@ div.form_window_code{
 	background-color: rgba(235, 235, 235, 1);
 }
 
+.error_border {
+	border: 2px solid rgba(237, 95, 87, 1);
+	margin-top: -2px;
+	margin-right: -2px;
+	}
 
 div.input_holder {
 	width: 148px;

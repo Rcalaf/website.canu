@@ -1,9 +1,18 @@
-<%if flash[:error] || flash[:ok]%>
+<%if flash[:ok] || flash[:error]%>
 	<script>
 	$(document).ready(function(){
-		$('#confirmation').show(1000);
+		$('#confirmation').fadeIn(200);
 		setTimeout(function(){$('#confirmation').fadeOut(1000)},3000);
+		
+		if(<%=flash[:error] == "code"%>){
+			$('#form_code').show();
+		} else if (<%=flash[:error] == "new"%>){
+			$('#form_join').show();
+		}
+		
+		
 	});
+	
 	</script>
 <%end%>
 
@@ -13,9 +22,6 @@
 
 <%unless flash[:ok].nil?%>
 <div id="confirmation"><%=flash[:ok]%></div>
-<%end%>
-<%unless flash[:error].nil?%>
-<div id="confirmation"><%=flash[:error]%></div>
 <%end%>
 
 <div class="above" id="surface">
@@ -32,7 +38,7 @@
 		<div class="codes">
 			<a class="alpha_button i_got" id="goto_join">I WANT TO JOIN</a>
 			<a class="i_want" id="goto_code">I have a code</a>
-			<div class="form_window" id="form_join">
+			<div class="form_window<%= flash[:error].nil? ? '' : ' error_border'%>" id="form_join">
 				<%= form_for @user, :url => new_user_url do |f|%>
 				<div class="input_holder">
 					<input name="user[name]" type="text" id="code" placeholder="Your Name"/>
@@ -45,7 +51,7 @@
 				</div>
 				<%end%>
 			</div>
-			<div class="form_window_code" id="form_code">
+			<div class="form_window_code<%= flash[:error].nil? ? '' : ' error_border'%>" id="form_code">
 				<%= form_for @user, :url => root_url do |f|%>
 				<div class="input_holder">
 					<input name="user[code]" type="text" id="code" placeholder="Code"/>
@@ -73,10 +79,9 @@
 			<p>Dive In</p>
 		</div>
 		<p class="iceberg" id="welcome">
-				Hi!
+				Hello there!
 					<br/>
-We are entering Iceberg state. We’ve been working completely under water for five months now. And its time to invite you to take part of the progress together with us. We will start putting things on the surface but most of the work will still be under water.
-		</p>
+We are entering Iceberg state. We’ve been working completely under water for five months now. And its time to invite you to take part of the progress together with us. Dive in to explore.</p>
 	</div>	
 	
 

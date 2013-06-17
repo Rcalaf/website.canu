@@ -10,7 +10,7 @@ ENV['RAILS_ENV'] ||= 'production'
 # SSH settings
 
 ## New server
-set :server_ip, "5.39.92.72"
+set :server_ip, "91.121.65.49"
 
 default_run_options[:pty] = true
 set :ssh_options, {:forward_agent => true}
