@@ -15,7 +15,14 @@
 	
 	</script>
 <%end%>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="logo_top">
 	<img src="/assets/canu_logo.svg">
 </div>
@@ -79,9 +86,12 @@
 			<p>Dive In</p>
 		</div>
 		<p class="iceberg" id="welcome">
-					Hi!
-					<br/>
-We are currently in Iceberg state. We’ve been working completely under water for some time now. It is time to invite you to take part of the creation together with us.<br/> <br/>Dive in to explore more.</p>
+				Hi!<br/><br/>
+We are currently in iceberg state. For the last couple of
+months we’ve been working completely under water
+but now it’s time to invite you to take a part of
+the creation process together with us.<br/><br/>
+Dive in to explore more</p>
 	</div>	
 	<div id="underworld" class="underworld_content">
 		<div id="tabs">
@@ -92,11 +102,12 @@ We are currently in Iceberg state. We’ve been working completely under water f
 			</ul>
 			 <div class="apple" id="tab-1">
 				 <span class="team" id="team_section">
-				 	<p class="header">The App</p>
+				 	<p class="header">The Service</p>
 				 	<p class="body">CANU is an app that makes it fast and simple for you to share and join spontaneous activities on the go.<br/><br/>Stop scrolling through the past. Look into the future, join the fun and be part of something real. </p>
 					<p class="header">Our Story</p>
-					<p class="body">We all came from different parts of the world and gathered with a lot of unknown people at Hyper Island. We liked Stockholm very much and the people we hung out with. But we quickly found two related problems - there is no easy way of getting in contact with the locals in Stockholm and keeping track of what is happening among our diverse friends.<br/><br/>
-We decided to create CANU.</p>
+					<p class="body">Every story has a beginning, ours have four and it all started when we moved to Stockholm from different parts of the world, to study at Hyper Island. As much as we liked Stockholm we quickly found a problem - there is no easy way of getting together with people and finding new things to do. We wanted to create the smartest, quickest and most efficient service to get your friends together for a specific thing and a way to find new people to do spontaneous activities with such as playing soccer, drinking or just hanging out.
+<br/><br/>
+That’s why we decided to create CANU.</p>
 					<ul class="team">
 						<li id="did"></li>
 						<li id="rog"></li>
@@ -161,12 +172,12 @@ We decided to create CANU.</p>
 			 </div>	
 		</div>
 		<div class="social_connect">
-			 <div class="twitter">
+            <div>
+                <div class="fb-like" data-href="https://www.facebook.com/pages/CANU/176144762529176" data-send="false" data-layout="button_count" data-width="292" data-show-faces="false" data-font="trebuchet ms"></div>
+            </div>
+			 <div>
                 <a href="https://twitter.com/CANUgettogether" class="twitter-follow-button" data-show-count="false">Follow @CANUgettogether</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            </div>
-            <div class="facebook">
-                <div class="fb-like" data-href="https://www.facebook.com/pages/CANU/176144762529176" data-send="false" data-layout="button_count" data-width="292" data-show-faces="false" data-font="trebuchet ms"></div>
             </div>
          </div>
 	</div>
