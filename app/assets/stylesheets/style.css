@@ -25,7 +25,7 @@ General
 
 div.content {
 	width: 960px;
-	height: 1200px;
+	height: 900px;
 	background-color: rgba(28, 166, 195, 0.9);
 	position: absolute;
 	top:0;
@@ -57,7 +57,7 @@ div.content_top_full {
 	background-color: rgba(28, 166, 195, 1);
 	z-index: 900;
 	width:100%;
-	height:1200px;
+	height:700px;
 	position: absolute;
 	top: 400px;
 	padding-bottom: 100px;
@@ -80,7 +80,7 @@ p.iceberg {
 	position: absolute;
 	line-height: 48px;
 	z-index: 3100;
-	opacity: 0.3;
+	opacity: 0.5;
 	
 }
 
@@ -133,8 +133,8 @@ div.why_dive {
 }
 
 #iceberg_main img {
-	width: 900px;
-	margin-left: 62px;
+	width: 800px;
+	margin-left: 82px;
 }
 
 div.underworld_content{
