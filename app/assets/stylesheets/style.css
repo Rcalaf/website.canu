@@ -24,22 +24,22 @@ General
 *******************************/
 
 div.content {
-	width: 1024px;
+	width: 960px;
 	height: 1200px;
 	background-color: rgba(28, 166, 195, 0.9);
 	position: absolute;
 	top:0;
 	left: 50%;
-	margin-left: -514px;
+	margin-left: -480px;
 	z-index: 1100;
 }
 
 div.content_top {
-	width: 1024px;
+	width: 960px;
 	height: 400px;
 	position: absolute;
 	left: 50%;
-	margin-left: -514px;
+	margin-left: -480px;
 	z-index: 900;
 }
 
@@ -75,7 +75,7 @@ p.iceberg {
 	height: auto;
 	text-align: center;
 	top: 140px;
-	left: 236px; 
+	left: 209px; 
 	font-weight: 300;
 	position: absolute;
 	line-height: 48px;
@@ -98,7 +98,7 @@ div.dive_in {
 	background-color: rgba(255, 255, 255, 0.1);
 	text-align: center;
 	top: 40px;
-	left: 442px; 
+	left: 410px; 
 	position: absolute;
 	line-height: 58px;
 	z-index: 3100;
@@ -126,8 +126,8 @@ div.why_dive {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	margin-left: -512px;
-	width: 1024px;
+	margin-left: -510px;
+	width: 960px;
 	z-index: 1000;
 	opacity: 0.7;
 }
@@ -138,11 +138,11 @@ div.why_dive {
 }
 
 div.underworld_content{
-	width: 1024px;
+	width: 960px;
 	height: auto;
 	position: absolute;
 	left: 50%;
-	margin-left: -514px;
+	margin-left: -480px;
 	top: 1000px;
 	z-index: 2010;
 	min-height: 800px;
@@ -153,7 +153,7 @@ div.logo_top {
 	width: 100px;
 	top: 40px;
 	left: 50%;
-	margin-left: -512px;
+	margin-left: -480px;
 	z-index: 2000;
 }
 
@@ -275,7 +275,7 @@ Underwater
 
 
 div.apple{
-	width: 1024px;
+	width: 960px;
 	height: auto;
 	float: left;
 	outline: none;
@@ -316,10 +316,11 @@ div.apple p.body {
 
 
 ul.menu_bottom {
-	width: 1024px;
+	width: 960px;
 	height: 38px;
 	float: left;
 	outline: none;
+	margin-left: -4px;
 	clear: both;
 	background-color: rgba(255, 255, 255, 0.0);
 }
@@ -628,6 +629,16 @@ input.submit_button:hover {
 	background-color: rgba(255, 255, 255, 1);
 }
 
+
+div.social_connect {
+	position: absolute;
+	width: 960px;
+	left: 0;
+	bottom: 0;
+	height: 40px;
+	background-color: fuchsia;
+	z-index: 10000;
+}
 
 
 

@@ -138,10 +138,10 @@ $(document).ready(function(){
               
              }); 
             
-          $("#did").hover(function(){ $('#did_story').fadeToggle(3); });  
-          $("#rog").hover(function(){ $('#rog_story').fadeToggle(3); });  
-          $("#vit").hover(function(){ $('#vit_story').fadeToggle(3); });  
-          $("#seb").hover(function(){ $('#seb_story').fadeToggle(3); });       
+          $("#did").hover(function(){ $('#did_story').fadeToggle(50); });  
+          $("#rog").hover(function(){ $('#rog_story').fadeToggle(50); });  
+          $("#vit").hover(function(){ $('#vit_story').fadeToggle(50); });  
+          $("#seb").hover(function(){ $('#seb_story').fadeToggle(50); });       
      
 
      });
