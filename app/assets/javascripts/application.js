@@ -36,80 +36,84 @@ $(document).ready(function(){
 		$('#form_join').hide();
 		$('#form_code').hide();
 		$('#underworld').hide();
+		$('#member_story').hide();
 		$('#why_d').hide();
 		$("#iceberg_main").hide(300);
 		
 });
 
 
-$(window).load(function(){
+	$(window).load(function(){
  	
 		$("#goto_join").click(function(){
- 		$('#form_join').fadeIn(300);
- 		$('#header_main').fadeOut(300);
-	    	
+ 			$('#form_join').fadeIn(300);
+ 			$('#header_main').fadeOut(300); 	
 	    });
+	    
 	    $("#submit_join").click(function(){
- 		$('#form_join').fadeOut(300);
+ 			$('#form_join').fadeOut(300);
 	    	$('#header_main').fadeIn(300);
 	    	$('#confirmation').fadeIn(100).delay(1000).fadeOut(400);
 	    });
 	    
 		$("#goto_code").click(function(){
- 		$('#form_code').fadeIn(300);
- 		$('#header_main').fadeOut(300);
- 		$('#goto_code').fadeOut(300);
-	    	
+ 			$('#form_code').fadeIn(300);
+ 			$('#header_main').fadeOut(300);
+ 			$('#goto_code').fadeOut(300);
 	    });
+	    
 	    $("#submit_code").click(function(){
- 		$('#form_code').fadeOut(300);
+ 			$('#form_code').fadeOut(300);
 	    	$('#header_main').fadeIn(300);
 	    	$('#goto_code').show();
 	    	$('#confirmation').fadeIn(100).delay(1000).fadeOut(400);  
 	    });
  	
- 	$("#dive_in_action").hover(function(){
+	    $("#dive_in_action").hover(function(){
 	    	$("#why_d").fadeIn(400);
 	    	}, function(){
 	    	$('#why_d').hide();
 	    });
 	   
-		    $("#dive_in_action").toggle(function(){
-			      $('#underwater').animate({top: "0"}, {
-				      duration: 400,
-				      easing: 'easeOutBack'
-				      });
-				      $('html, body').animate({scrollTop: '0px'}, 800);   
-				  },function(){
-			      $('#underwater').animate({top: "400px"}, {
-				      duration: 1000
-				   });
-			});
+	    $("#dive_in_action").toggle(function(){
+		      $('#underwater').animate({top: "0"}, {
+			      duration: 300,
+			      easing: 'easeOutBack'
+			      });
+			      $('html, body').animate({scrollTop: '0px'}, 400);   
+			  },function(){
+		      $('#underwater').animate({top: "400px"}, {
+			      duration: 700
+			   });
+		});
+	
+		$("#dive_in_action").click(function(){
+		      $('#dive_in_action p').toggle();
+		      $('#why_d p').toggle();
+		});
 		
-			$("#dive_in_action").click(function(){
-			      $('#dive_in_action p').toggle();
-			      $('#why_d p').toggle();
-			});
 
-		    $("#dive_in_action").toggle(function(){
-			   
-			   	  $('#underworld').show();
-			   	  $('#welcome').fadeOut(200);
-			   
-			      $('#underworld').animate({top: "140px"}, {
-				      duration: 1000,
-				      easing: 'easeOutBack'
-				      });
-				  },function(){
-				
-				  $('#underworld').hide();
-				  $('#welcome').fadeIn(200);
-			    
-			      $('#underworld').animate({top: "1000px"}, {
-				      duration: 1000,
-				      easing: 'easeOutBack'
-				   });
-			});
+		
+
+	    $("#dive_in_action").toggle(function(){
+		   
+		   	  $('#underworld').show();
+		   	  $('#welcome').fadeOut(200);
+		   
+		      $('#underworld').animate({top: "140px"}, {
+			      duration: 1000,
+			      easing: 'easeOutBack'
+			      });
+			  },function(){
+			
+			  $('#underworld').hide();
+			  $('#welcome').fadeIn(200);
+		    
+		      $('#underworld').animate({top: "1000px"}, {
+			      duration: 1000,
+			      easing: 'easeOutBack'
+			   });
+		});
 
 		   $("#underwater").animate({top: "400px"}, {
 			      duration: 1000,
@@ -130,7 +134,14 @@ $(window).load(function(){
              height: 7,
              speed: 1400,
              easing: 'easeOutBack'
-         });       
+             
+              
+             }); 
+            
+          $("#did").hover(function(){ $('#did_story').fadeToggle(50); });  
+          $("#rog").hover(function(){ $('#rog_story').fadeToggle(50); });  
+          $("#vit").hover(function(){ $('#vit_story').fadeToggle(50); });  
+          $("#seb").hover(function(){ $('#seb_story').fadeToggle(50); });       
      
 
      });

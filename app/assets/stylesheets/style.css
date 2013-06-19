@@ -24,22 +24,22 @@ General
 *******************************/
 
 div.content {
-	width: 1024px;
-	height: 1200px;
+	width: 960px;
+	height: 900px;
 	background-color: rgba(28, 166, 195, 0.9);
 	position: absolute;
 	top:0;
 	left: 50%;
-	margin-left: -514px;
+	margin-left: -480px;
 	z-index: 1100;
 }
 
 div.content_top {
-	width: 1024px;
+	width: 960px;
 	height: 400px;
 	position: absolute;
 	left: 50%;
-	margin-left: -514px;
+	margin-left: -480px;
 	z-index: 900;
 }
 
@@ -57,7 +57,7 @@ div.content_top_full {
 	background-color: rgba(28, 166, 195, 1);
 	z-index: 900;
 	width:100%;
-	height:1200px;
+	height:700px;
 	position: absolute;
 	top: 400px;
 	padding-bottom: 100px;
@@ -70,17 +70,17 @@ Content
 
 p.iceberg {
 	color: #fff;
-	width: 540px;
+	width: 542px;
 	font-size: 28px;
 	height: auto;
 	text-align: center;
 	top: 140px;
-	left: 242px; 
+	left: 209px; 
 	font-weight: 300;
 	position: absolute;
 	line-height: 48px;
 	z-index: 3100;
-	opacity: 0.3;
+	opacity: 0.5;
 	
 }
 
@@ -98,7 +98,7 @@ div.dive_in {
 	background-color: rgba(255, 255, 255, 0.1);
 	text-align: center;
 	top: 40px;
-	left: 442px; 
+	left: 410px; 
 	position: absolute;
 	line-height: 58px;
 	z-index: 3100;
@@ -126,23 +126,23 @@ div.why_dive {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	margin-left: -512px;
-	width: 1024px;
+	margin-left: -510px;
+	width: 960px;
 	z-index: 1000;
 	opacity: 0.7;
 }
 
 #iceberg_main img {
-	width: 900px;
-	margin-left: 62px;
+	width: 800px;
+	margin-left: 82px;
 }
 
 div.underworld_content{
-	width: 1024px;
+	width: 960px;
 	height: auto;
 	position: absolute;
 	left: 50%;
-	margin-left: -514px;
+	margin-left: -480px;
 	top: 1000px;
 	z-index: 2010;
 	min-height: 800px;
@@ -153,7 +153,7 @@ div.logo_top {
 	width: 100px;
 	top: 40px;
 	left: 50%;
-	margin-left: -512px;
+	margin-left: -480px;
 	z-index: 2000;
 }
 
@@ -275,12 +275,11 @@ Underwater
 
 
 div.apple{
-	width: 1024px;
+	width: 960px;
 	height: auto;
 	float: left;
 	outline: none;
 	clear: both;
-	margin-bottom: 100px;
 	padding-top: 20px;
 }
 
@@ -292,6 +291,7 @@ div.apple p.left {
 	float: left;
 	width: 600px;
 	margin-top: 40px;
+	padding-bottom: 100px;
 }
 
 div.apple p.header {
@@ -316,10 +316,11 @@ div.apple p.body {
 
 
 ul.menu_bottom {
-	width: 1024px;
+	width: 960px;
 	height: 38px;
 	float: left;
 	outline: none;
+	margin-left: -4px;
 	clear: both;
 	background-color: rgba(255, 255, 255, 0.0);
 }
@@ -384,13 +385,14 @@ Team
 span.team {
 	float: left;
 	width: 960px;
-	height: 780px;
+	height: auto;
 	display: block; 
+	padding-bottom: 200px;
 }
 
 span.team  ul.team{
 	float: left;
-	width: 920px;
+	width: 924px;
 	height: 322px;
 	margin-left: 20px;
 	margin-top: 40px;
@@ -403,6 +405,7 @@ span.team  ul.team li{
 	height: 322px;
 	margin-right: 4px;
 	background-position: 227px 0;
+	cursor: pointer;
 }
 
 span.team  ul.team li:hover{
@@ -439,6 +442,7 @@ span.team  ul.details{
 	height: 180px;
 	margin-top: 20px;
 	margin-left: 20px;
+	margin-bottom: -100px;
 }
 
 span.team  ul.details li{
@@ -486,6 +490,42 @@ span.team  ul.details li p.email{
 }
 
 
+div.member_story {
+	position: relative;
+	top: 326px;
+	left: 0;
+	width: 920px;
+	height: 322px;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+
+div.member_story p.story{
+	position: absolute;
+	top:60px;
+	left: 0;
+	padding: 40px;
+	font-size: 14px;
+	line-height: 22px;
+	color: rgba(28, 166, 195, 1);      
+	font-weight: 400;
+	float: left;
+	width: 610px;
+}
+
+div.member_story p.member_name{
+	position: absolute;
+	top:0;
+	left: 0;
+	padding: 40px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 28px;
+	color: rgba(28, 166, 195, 1);      
+	font-weight: 400;
+	float: left;
+	width: 600px;
+}
 
 
 
@@ -505,7 +545,7 @@ Form
 	line-height: 400px;
 	
 	z-index: 3000;
-	font-size: 40px;
+	font-size: 38px;
 	background-color: rgba(255, 255, 255, 1);
 	color: rgba(164, 205, 210, 1);
 }
@@ -530,6 +570,11 @@ div.form_window_code{
 	background-color: rgba(235, 235, 235, 1);
 }
 
+.error_border {
+	border: 2px solid rgba(237, 95, 87, 1);
+	margin-top: -2px;
+	margin-right: -2px;
+	}
 
 div.input_holder {
 	width: 148px;
@@ -584,6 +629,20 @@ input.submit_button:hover {
 	background-color: rgba(255, 255, 255, 1);
 }
 
+
+div.social_connect {
+	position: absolute;
+	width: 360px;
+	left: 400;
+	bottom: 20px;
+	height: 30px;
+	z-index: 10000;
+}
+
+div.social_connect div{
+	float: left;
+	margin-left: 10px;
+}
 
 
 
