@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
   
   def index
-    @title = "CANU - Get going together"
+    @title = "CANU - Get Together"
     if request.post?
       @user = User.find_by_code_and_used(params[:user][:code],false)
       if @user
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   def verify_mail
     @user = User.find(params[:user_id])
     if @user
-       (flash[:ok] = 'Your mail has been confirmed') if @user.update_attribute(:email_confirm,true)
+       (flash[:ok] = 'E-mail Confirmed') if @user.update_attribute(:email_confirm,true)
     end
     redirect_to root_url
   end

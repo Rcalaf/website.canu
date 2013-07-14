@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>No such page, Sorry.</title>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
+    body { 
+    	background-color: rgba(229, 245, 255, 1);
+    	color: #666; 
+    	text-align: center; 
+    	font-family: "lato", arial, sans-serif; 
+    	}
+    	
     div.dialog {
       width: 25em;
       padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
+      margin: 300px auto;
+
     }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+    
+    h1 { 
+    	text-align: center;
+    	color: #6D6E7A;
+    	font-size: 38px;
+    	line-height: 48px;
+    	z-index: 2100;
+    	}
+    	
+    h1 span{
+	color: #ED5F57;
+}
+    
+    div.logo_top {
+		position: absolute;
+		width: 100px;
+		top: 40px;
+		left: 50%;
+		margin-left: -480px;
+		z-index: 2000;
+	}
+	
+    
   </style>
 </head>
 
 <body>
   <!-- This file lives in public/404.html -->
+  <div class="logo_top">
+	<a href="http://api.canu.se/"><img src="../app/assets/images/canu_logo.svg"></a>
+  </div>
   <div class="dialog">
-    <h1>The page you were looking for doesn't exist.</h1>
-    <p>You may have mistyped the address or the page may have moved.</p>
+    <h1>Oops. No one lives here</h1>
   </div>
 </body>
 </html>
