@@ -10,13 +10,13 @@ Canu::Application.routes.draw do
   
     match 'stats' => 'users#stats', :as => 'user_stats'
     match 'user/new' => 'users#new', :as => "new_user"
-    match 'about' => 'users#about'
-    match 'product' => 'users#product'
-    match 'index' => 'users#index'
-    match 'world' => 'users#world'
-    match 'jobs' => 'users#jobs'
-    match 'contacts' => 'users#contacts'
-    match 'press' => 'users#press'
+    match 'about' => 'users#about', :as => "new_user"
+    match 'product' => 'users#product', :as => "new_user"
+    match 'index' => 'users#index', :as => "new_user"
+    match 'world' => 'users#world', :as => "new_user"
+    match 'jobs' => 'users#jobs', :as => "new_user"
+    match 'contacts' => 'users#contacts', :as => "new_user"
+    match 'press' => 'users#press', :as => "new_user"
 
   # ---------------------------API--------------------------------------
     # ------------------------USERS-------------------------------------
