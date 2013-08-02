@@ -1,17 +1,3 @@
-<%if flash[:ok] || flash[:error]%>
-	<script>
-	$(document).ready(function(){
-		$('#confirmation').fadeIn(200);
-		setTimeout(function(){$('#confirmation').fadeOut(1000)},3000);
-		
-		if(<%=flash[:error] == "code"%>){
-			$('#form_code').show();
-		} else if (<%=flash[:error] == "new"%>){
-			$('#form_join').show();
-		}
-	});
-	</script>
-<%end%>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -20,163 +6,75 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="logo_top">
-	<img src="/assets/canu_logo.svg">
-</div>
 
-<%unless flash[:ok].nil?%>
-<div id="confirmation"><%=flash[:ok]%></div>
-<%end%>
 
-<div class="above" id="surface">
-	<div class="content_top_full"></div>
-	<div class="content_top"></div>
-</div>
-<div class="below" id="underwater">
-	<div class="surface_info" id="fuck">
-		<img src="/assets/baloon.svg" id="baloon">
-		<p class="surface_header" id="header_main">
-			Getting together is about to 
-			<span>change</span>
-		</p>
-		<div class="codes">
-			<a class="alpha_button i_got" id="goto_join">I WANT TO JOIN</a>
-			<a class="i_want" id="goto_code">I have a code</a>
-			<div class="form_window<%= flash[:error].nil? ? '' : ' error_border'%>" id="form_join">
-				<%= form_for @user, :url => new_user_url do |f|%>
-				<div class="input_holder">
-					<input name="user[name]" type="text" id="code" placeholder="Your Name"/>
-				</div>
-				<div class="input_holder">
-					<input name="user[email]" type="text" id="email" placeholder="e-mail"/>
-				</div>
-				<div class="input_holder">
-					<input type="submit" name="submit" value="REQUEST INVITE" class="submit_button" id="submit_join"/>
-				</div>
-				<%end%>
-			</div>
-			<div class="form_window_code<%= flash[:error].nil? ? '' : ' error_border'%>" id="form_code">
-				<%= form_for @user, :url => root_url do |f|%>
-				<div class="input_holder">
-					<input name="user[code]" type="text" id="code" placeholder="Code"/>
-				</div>
-				<div class="input_holder">
-					<input name="user[name]" type="text" id="code" placeholder="Your Name"/>
-				</div>
-				<div class="input_holder">
-					<input name="user[email]" type="text" id="email" placeholder="e-mail"/>
-				</div>
-				<div class="input_holder">
-					<input type="submit" name="submit" value="GET GOING" class="submit_button" id="submit_code"/>
-				</div>
-				<%end%>
-			</div>
-		</div>
-	</div>	
-	<div id="iceberg_main">
-		<img src="/assets/iceberg.svg">
+<div class="top_bg_index"></div>
+<div class="top">
+	<div class="logo_top">
+		<a href="index"><img class="logo_active" src="/assets/canu_logo.svg"></a>
 	</div>
-	
-	<div class="content">
-		<div id="dive_in_action" class="dive_in">
-			<p style="display: none">Get Air</p>
-			<p>Dive In</p>
+	<ul class="menu">
+		<li><a href="world">World</a></li>
+		<li><a href="#" id="tribes">Tribes</a><div id="soon">soon</div></li>
+		<li><a href="product">Product</a></li>
+		<li><a href="about">About us</a></li>
+		<li><a href="http://blog.canu.se/">Blog</a>
+	</ul>
+	<div class="codes">
+		<%unless flash[:ok].nil?%>
+			<div id="confirmation"><%=flash[:ok]%></div>
+		<%end%>
+		<div class="form_window" id="form_join"<%= flash[:goaway]%>>
+			<%= form_for @user, :url => new_user_url do |f|%>
+			<input type="submit" name="submit" value="GO" class="submit_button" id="submit_join"/>
+			<div class="input_holder">
+				<input name="user[email]" type="text" id="email" class="email<%= flash[:error].nil? ? '' : ' error_border'%>" placeholder="<%= flash[:error].nil? ? 'Notify me about Launch' : 'Ooops. Wrong e-mail'%>"/>
+			</div>
+			<%end%>
 		</div>
-		<p class="iceberg" id="welcome">
-				Hi!<br/><br/>
-We are currently in iceberg state. For the last couple of
-months we’ve been working completely under water
-but now it’s time to invite you to take a part of
-the creation process together with us.<br/><br/>
-Dive in to explore more</p>
-	</div>	
-	<div id="underworld" class="underworld_content">
-		<div id="tabs">
-			<ul class="menu_bottom">
-				<li><a href="#tab-1">About</a></li>
-				<li><a href="#tab-2">Contact</a></li>
-				<a class="other" href="http://blog.canu.se/">Blog</a>
-			</ul>
-			 <div class="apple" id="tab-1">
-				 <span class="team" id="team_section">
-				 	<p class="header">The Service</p>
-				 	<p class="body">CANU is an app that makes it fast and simple for you to share and join spontaneous activities on the go.<br/><br/>Stop scrolling through the past. Look into the future, join the fun and be part of something real. </p>
-					<p class="header">Our Story</p>
-					<p class="body">Every story has a beginning, ours have four and it all started when we moved to Stockholm from different parts of the world, to study at Hyper Island. As much as we liked Stockholm we quickly found a problem - there is no easy way of getting together with people and finding new things to do. We wanted to create the smartest, quickest and most efficient service to get your friends together for a specific thing and a way to find new people to do spontaneous activities with such as playing soccer, drinking or just hanging out.
-<br/><br/>
-That’s why we decided to create CANU.</p>
-					<ul class="team">
-						<li id="did"></li>
-						<li id="rog"></li>
-						<li id="vit"></li>
-						<li id="seb"></li>
-						<div class="member_story" id="did_story">
-							<p class="member_name">Didrik Persson</p>
-							<p class="story">I grew up on a small farm in the south of Sweden called
- Tillytorp, which was my home for 18 years. I’ve always been a thinker and a problem solver with a love for challenges and finding a great solution to a difficult problem. As a kid I wanted to become an inventor for that reason alone. I am ambitious, fearless
- and determined and right now I’m exploring my surroundings at Hyper Island, throwing myself out there and loving it.</p>
-						</div>
-						<div class="member_story" id="rog_story">
-							<p class="member_name">Roger Calaf</p>
-							<p class="story">
-								Born and raised in Barcelona. I love playing soccer, sail
- and motor sports. I really enjoy the nature and outdoor activities. Since my first contact with MSX and BASIC at the age of 7 I’ve always been interested in the art of coding and my oldest brother has always influenced me a lot, that’s why I chose the developers
- path. I once started a business that sold caviar but that only ended up in a great friendship. Now I’m exploring my creative side and having fun developing great ideas at Hyper Island.
-							</p>
-						</div>
-						<div class="member_story" id="vit_story">
-							<p class="member_name">Vitali Poluzhnikov</p>
-							<p class="story">Shaped up in the sunny side of southern Russia, I was
- surrounded by art, sport and nature in my early life. I moved to Vancouver at the age of 17 where I studied Graphic Design. Later I moved to Ville de Montréal, where I studied Marketing and Economics. I am an initiator, solution designer and I love to challenge everything that follows the norm. Apart from that I love electronic music, mountains, racing and great times with awesome people. Now enjoying Stockholm and the scandinavian mindset.</p>
-						</div>	
-						<div class="member_story" id="seb_story">
-							<p class="member_name">Sebastian Gustafsson</p>
-							<p class="story">Brought up on the west coast of Sweden where the infamous
- Falcon Beer hails from, I wanted to become a soccer pro growing up but in my teens I decided to pursue a career as a musician. I studied economics and marketing in collage and started my first band at the age of 15. We signed deals with Warner Music and Universal
- and I’ve run my own company. I am an initiator, a social genius and ambitious. I'm a team player with a positive attitude and I get motivated when amazing people do great stuff together, that’s why I decided to study at Hyper Island.</p>
-						</div>
-					</ul>
-					<ul class="details">
-						<li>
-							<p class="name">Didrik Persson</p>
-							<p class="title">CEO & Founder</p>
-							<p class="email">didrik@canu.se</p>
-						</li>
-						<li>
-							<p class="name">Roger Calaf</p>
-							<p class="title">CTO & Founder</p>
-							<p class="email">roger@canu.se</p>
-						</li>
-						<li>
-							<p class="name">Vitali Poluzhnikov</p>
-							<p class="title">Vision/Design & Founder</p>
-							<p class="email">vitali@canu.se</p>
-						</li>
-						<li>
-							<p class="name">Sebastian Gustafsson</p>
-							<p class="title">Evangelist & Founder</p>
-							<p class="email">sebastian@canu.se</p>
-						</li>
+	</div>
+</div>
 
-					</ul>
-					<p class="header">Join our Tribe</p>
-					<p class="body">Like what we are doing? We are always on the lookout to work with cool people.<br/>
-Contact us and let's talk.</p>
-				</span>
-			 </div>
-			 <div class="apple" id="tab-2">
-				 <p class="header">Ask us anything</p>
-				 <p class="body">gettogether@canu.se</p>
-			 </div>	
-		</div>
+<div class="feature_bg" id="f_intro_index">	
+	<div class="feature">
+		<p class="body_landing" style="color: #fff">
+			Daily Activities</br> are all around you</br>
+			<span>
+			Share what you feel like doing.</br> Get together.
+			</span>
+		</p>
+		<!--
+			<a href="world" class="learn_lifestyle">Lifestyle</a>
+			<a href="product" class="learn_app">The App</a>
+			<img class="appstore" src="/assets/appstore.png">
+		-->
+		<img class="landing" src="/assets/phone_500.png">
+		<img class="landing_feed" src="/assets/feed.png">	
+	</div>
+</div>		
+<div class="feature_bg_landing" id="f_footer">
+	<div class="feature">	
 		<div class="social_connect">
-            <div>
-                <div class="fb-like" data-href="https://www.facebook.com/pages/CANU/176144762529176" data-send="false" data-layout="button_count" data-width="292" data-show-faces="false" data-font="trebuchet ms"></div>
-            </div>
+	        <div id="fb_boxy">
+	            <div class="fb-like"  data-href="https://www.facebook.com/pages/CANU/176144762529176" data-send="false" data-layout="button_count" data-width="292" data-show-faces="false" data-font="trebuchet ms"></div>
+	        </div>
 			 <div>
-                <a href="https://twitter.com/CANUgettogether" class="twitter-follow-button" data-show-count="false">Follow @CANUgettogether</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            </div>
-         </div>
+	            <a href="https://twitter.com/CANUgettogether" class="twitter-follow-button" data-show-count="false">Follow @CANUgettogether</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	        </div>
+	    </div>	 
+		<ul class="footer">
+			<!--
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">Terms</a><li>
+			-->
+			<li><a href="contacts">Contacts</a></li>
+			<li><a href="press">Press</a></li>
+			<li><a href="jobs">Jobs</a></li>
+			<li><a href="http://somewherehq.com/canu" target="_blank">Somewhere HQ</a></li>
+			<li><a href="https://www.facebook.com/canugettogether" target="_blank">Facebook</a></li>
+			
+			<!--<li><a href="#">Help</a></li>-->
+		</ul>	
 	</div>
 </div>

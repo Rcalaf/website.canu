@@ -16,132 +16,70 @@
 //= require jquery.circulate
 //= require jquery_ujs
 
-
-$(document).ready(function(){
-	   $('#tabs div').hide();
-			$('#tabs div:first').show();
-			$('#tabs ul li:first').addClass('active');
-			$('#tabs ul li a').click(function(){
-			$('#tabs ul li').removeClass('active');
-			$(this).parent().addClass('active');
-			var currentTab = $(this).attr('href');
-			$('#tabs div').hide();
-			$(currentTab).show();
-			return false;
-		});
-	});
 	
-$(document).ready(function(){
-		$('#confirmation').hide();
-		$('#form_join').hide();
-		$('#form_code').hide();
-		$('#underworld').hide();
-		$('#member_story').hide();
-		$('#why_d').hide();
-		$("#iceberg_main").hide(300);
+	$(document).ready(function(){
+			$('.member_story').hide();
+			$('#soon').hide();	
+			$('#confirmation').hide();
 		
-});
+ 		     	
+		$('#confirmation').fadeIn(1900).delay(3000).fadeOut(900);
 
-
-	$(window).load(function(){
- 	
-		$("#goto_join").click(function(){
- 			$('#form_join').fadeIn(300);
- 			$('#header_main').fadeOut(300); 	
-	    });
-	    
-	    $("#submit_join").click(function(){
- 			$('#form_join').fadeOut(300);
-	    	$('#header_main').fadeIn(300);
-	    	$('#confirmation').fadeIn(100).delay(1000).fadeOut(400);
-	    });
-	    
-		$("#goto_code").click(function(){
- 			$('#form_code').fadeIn(300);
- 			$('#header_main').fadeOut(300);
- 			$('#goto_code').fadeOut(300);
-	    });
-	    
-	    $("#submit_code").click(function(){
- 			$('#form_code').fadeOut(300);
-	    	$('#header_main').fadeIn(300);
-	    	$('#goto_code').show();
-	    	$('#confirmation').fadeIn(100).delay(1000).fadeOut(400);  
-	    });
- 	
-	    $("#dive_in_action").hover(function(){
-	    	$("#why_d").fadeIn(400);
-	    	}, function(){
-	    	$('#why_d').hide();
-	    });
-	   
-	    $("#dive_in_action").toggle(function(){
-		      $('#underwater').animate({top: "0"}, {
-			      duration: 300,
-			      easing: 'easeOutBack'
-			      });
-			      $('html, body').animate({scrollTop: '0px'}, 400);   
-			  },function(){
-		      $('#underwater').animate({top: "400px"}, {
-			      duration: 700
-			   });
+		
+		$("#tribes").hover(function(){ 
+			$('#soon').fadeIn(500);
 		});
+		$("#soon").mouseleave(function(){ 
+			$('#soon').fadeOut(500);
+		});
+	    
+   
+		$("#did").hover(function(){ $('#did_story').fadeToggle(10); });  
+		$("#rog").hover(function(){ $('#rog_story').fadeToggle(10); });  
+		$("#vit").hover(function(){ $('#vit_story').fadeToggle(10); });  
+		$("#seb").hover(function(){ $('#seb_story').fadeToggle(10); });       
+     
+		
+		
+		
+		$("#nt_phone").hide();
+		
+		$(window).bind("scroll", function() {
+     		if ($(this).scrollTop() > 2600) {
+	     		$("#nt_phone").delay(100).fadeIn(5900);
+	     		$("#nt_back").animate({top: "0", opacity: "1"}, 2400);
+	     		$("#nt_content").animate({top: "0", opacity: "1"}, 2700);
+	     		$("#nt_text").animate({top: "0", opacity: "1"}, 3700);
+	     		$("#nt_photo").animate({top: "0", opacity: "1"}, 3100);
+	     		$("#nt_photo_bg").animate({top: "0", opacity: "1"}, 1200);
+	     		$("#nt_profile").animate({top: "0", opacity: "1"}, 3900);
+	     		$("#nt_time").animate({top: "0", opacity: "1"}, 3800);
+	     		$("#nt_go").animate({top: "0", opacity: "1"}, 2900);
+	     		$("#nt_ppl").animate({top: "0", opacity: "1"}, 2700);
+	     		$("#nt_bottom").animate({top: "0", opacity: "1"}, 2300);
+	     		
+		     }
+		}); 
+  
+     });
 	
-		$("#dive_in_action").click(function(){
-		      $('#dive_in_action p').toggle();
-		      $('#why_d p').toggle();
-		});
-		
-
-		
-
-	    $("#dive_in_action").toggle(function(){
-		   
-		   	  $('#underworld').show();
-		   	  $('#welcome').fadeOut(200);
-		   
-		      $('#underworld').animate({top: "140px"}, {
-			      duration: 1000,
-			      easing: 'easeOutBack'
-			      });
-			  },function(){
-			
-			  $('#underworld').hide();
-			  $('#welcome').fadeIn(200);
-		    
-		      $('#underworld').animate({top: "1000px"}, {
-			      duration: 1000,
-			      easing: 'easeOutBack'
-			   });
-		});
-
-		   $("#underwater").animate({top: "400px"}, {
-			      duration: 1000,
-			      easing: 'easeOutBack'
-			});
-		
-	
-	   	   $("#iceberg_main").fadeIn(300);
- 
-		   $("#iceberg_main").animate({top: "-225px"}, {
-		      duration: 1000,
-		      easing: 'easeOutBack'
-		   });   
-
-		   $("#iceberg_main img").circulate({
-             loop: true,
-             width: 0,
-             height: 7,
-             speed: 1400,
-             easing: 'easeOutBack'
-             
-              
-             }); 
-            
-          $("#did").hover(function(){ $('#did_story').fadeToggle(50); });  
-          $("#rog").hover(function(){ $('#rog_story').fadeToggle(50); });  
-          $("#vit").hover(function(){ $('#vit_story').fadeToggle(50); });  
-          $("#seb").hover(function(){ $('#seb_story').fadeToggle(50); });       
      
 
-     });
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    

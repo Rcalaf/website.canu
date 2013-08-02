@@ -8,25 +8,36 @@ class UsersController < ApplicationController
   
   def index
     @title = "CANU - Get Together"
-    if request.post?
-      @user = User.find_by_code_and_used(params[:user][:code],false)
-      if @user
-        params[:user][:used] = true
-        if @user.update_attributes(params[:user])
-          Mailer.code_check_mail(@user).deliver
-          flash[:ok] = '<p>Thanks! Talk soon</p>'.html_safe
-        else
-            #message = "<p>Oops!</p> <ul>"
-            #@user.errors.each do |key,value|
-            #  message += "<li>#{value}</li>"
-            #end
-            #message += "</ul>"
-            flash[:error] = "code"
-        end
-      else
-          flash[:error] = "code"#"<p>This code is not valid.</p>".html_safe
-      end
-    end
+    @user = User.new
+  end
+  
+  def about
+    @title = "CANU- About Us"
+    @user = User.new
+  end
+  
+  def world
+    @title = "CANU- World"
+    @user = User.new
+  end
+  
+  def product
+    @title = "CANU- Product"
+    @user = User.new
+  end
+    
+  def jobs
+    @title = "CANU - Get Together"
+    @user = User.new
+  end
+  
+  def contact
+    @title = "CANU - Get Together"
+    @user = User.new
+  end
+  
+  def press
+    @title = "CANU - Get Together"
     @user = User.new
   end
   
@@ -36,6 +47,7 @@ class UsersController < ApplicationController
       if @user.valid?
         Mailer.new_user_mail(@user).deliver
         flash[:ok] = '<p>Thanks! Talk soon</p>'.html_safe
+        flash[:goaway] = 'style="display:none"'.html_safe
       else
         #message = "<p>Oops!</p> <ul>"
         #@user.errors.each do |key,value|
@@ -47,8 +59,8 @@ class UsersController < ApplicationController
     else
       @user.new
     end
-    redirect_to root_url
-    
+    redirect_to(:back)
+        
   end
   
   def verify_mail
@@ -57,6 +69,5 @@ class UsersController < ApplicationController
        (flash[:ok] = 'E-mail Confirmed') if @user.update_attribute(:email_confirm,true)
     end
     redirect_to root_url
-  end
-  
+  end 
 end

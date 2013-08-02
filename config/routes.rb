@@ -10,8 +10,14 @@ Canu::Application.routes.draw do
   
     match 'stats' => 'users#stats', :as => 'user_stats'
     match 'user/new' => 'users#new', :as => "new_user"
-    match 'user/:user_id' => 'users#verify_mail', :as => 'confirm_email'
-    
+    match 'about' => 'users#about'
+    match 'product' => 'users#product'
+    match 'index' => 'users#index'
+    match 'world' => 'users#world'
+    match 'jobs' => 'users#jobs'
+    match 'contacts' => 'users#contacts'
+    match 'press' => 'users#press'
+
   # ---------------------------API--------------------------------------
     # ------------------------USERS-------------------------------------
     
