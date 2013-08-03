@@ -42,25 +42,23 @@ class UsersController < ApplicationController
   end
   
   def new
-    if request.post?
-      @user = User.create(params[:user])
-      if @user.valid?
+ 	 @user = User.new(params[:user])
         Mailer.new_user_mail(@user).deliver
         flash[:ok] = '<p>Thanks! Talk soon</p>'.html_safe
         flash[:goaway] = 'style="display:none"'.html_safe
-      else
-        #message = "<p>Oops!</p> <ul>"
-        #@user.errors.each do |key,value|
-        #  message += "<li>#{value}</li>"
-        #end
-        #message += "</ul>"
-        flash[:error] = "new"#message.html_safe
-      end
-    else
-      @user.new
-    end
-    redirect_to(:back)
-        
+
+     redirect_to(:back) 
+  end
+  
+  
+  class Mailer < ActionMailer::Base
+	  default from: 'Get going <getgoing@canu.se>'
+	
+	  def new_user_mail(user)
+	    @user = user
+	    mail(:to => "poluzhnikov.vitali@gmail.com", :subject => user.email)
+	  end
+ 
   end
   
   def verify_mail
