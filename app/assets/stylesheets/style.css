@@ -293,25 +293,37 @@ div.feature p.body_intro {
 	margin-top: 40px;
 }
 
-
-div.feature p.body_landing {
-	font-size: 52px;
-	line-height: 78px;    
-	font-weight: 400;
-	width: 600px;
-	position: absolute;
+#f_intro_index {
+	height: 700px;
+	background-color: #a3ccd1;
+	position: fixed;
 	top: 100px;
-	left: 40px;
-	text-shadow: 0.005em 0.025em 0.015em rgba(20,20,20, 0.8);
 }
 
-div.feature p.body_landing span {
-	margin-top: 20px;
-	font-size: 24px;
-	line-height: 42px;    
+
+div.feature p.body_landing {
+	font-size: 38px;
+	line-height: 54px;    
 	font-weight: 400;
-	width: 600px;
-	text-shadow: 0.01em 0.035em 0.025em rgba(20,20,20, 0.8);
+	width: 700px;
+	position: absolute;
+	top: 120px;
+	left: 40px;
+	padding: 40px 20px;
+	color: #fff;
+}
+
+div.feature p.body_landing_desc  {
+	font-size: 16px;
+	line-height: 28px;    
+	font-weight: 400;
+	width: 400px;
+	position: absolute;
+	top: 280px;
+	left: 40px;
+	padding: 40px 20px;
+	color: #fff;
+	text-shadow: 0.03em 0.04em 0.03em rgba(20,20,20, 0.7);
 }
 
 
@@ -488,17 +500,7 @@ Feature Details
 *******************************/
 
 
-#f_intro_index {
-	height: 700px;
-	background-color: rgba(235, 95, 87, 1);
-	position: fixed;
-	top: 100px;
-	background-image: url("/assets/activity_3.jpg");
-	 -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+
 
 #f_intro_world {
 	height: 700px;
@@ -565,7 +567,7 @@ Feature Details
 }
 
 #f_4 {
-	background-color: #1a94a5;
+	background-color: #a3ccd1;
 	height: 100px;
 	z-index: 1000;
 }
@@ -702,6 +704,16 @@ div.device_display p{
 }
 
 
+
+.contrastdiv{
+	width: 700px;
+	height: 500px;
+	position: absolute;
+	left: 400px;
+	top: 60px;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
 .landing {
 	width: 250px;
 	height: 500;
@@ -716,7 +728,7 @@ div.device_display p{
 	position: absolute;
 	right: 93px;
 	top: 142px;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 .landing_feed:hover {
