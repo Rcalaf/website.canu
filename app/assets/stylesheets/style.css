@@ -9,6 +9,7 @@ html,body{
 	letter-spacing: 0.1em;
 	font-family: 'Lato', sans-serif;
 	background-color: #fafafa;
+	width:100%; padding:0; margin:0;
 }
 
 input {
@@ -38,11 +39,8 @@ Content
 
 div.content{
 	width: 960px;
-	position: absolute;
-	left: 50%;
-	margin-left: -480px;
+	margin: 100px auto 0 auto;
 	height: auto;
-	margin-top: 100px;
 	z-index: 1000;
 }
 
@@ -250,6 +248,10 @@ div.feature p.header {
 	
 }
 
+
+
+
+
 div.feature p.header span {
 	color: #1a91a2; 
 }
@@ -282,6 +284,11 @@ div.feature p.body_long {
 	width: 700px;
 }
 
+
+/******************************
+Features Intro
+*******************************/
+
 div.feature p.body_intro {
 	font-size: 18px;
 	line-height: 24px;
@@ -298,7 +305,7 @@ div.feature p.body_intro {
 	background-color: rgba(235, 95, 87, 1);
 	position: fixed;
 	top: 100px;
-	background-image: url("/assets/activity_1.jpg");
+	background-image: url("/assets/activity_3.jpg");
 	 -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -353,42 +360,130 @@ div.feature p.body_intro_header span{
 	     
 }
 
-div.feature p.tech_centered {
-	font-size: 14px;
+
+/******************************
+Features World
+*******************************/
+
+div.feature p.world_header {
+	font-size: 34px;
+	line-height: 48px;
+	position: absolute;
+	top: 200px;
+	left: 370px;
+	z-index: 1000;
+	color: #6d6e7a; 
+	width: 440px;     
+	font-weight: 700;
+	padding: 20px 40px;
+	margin-top: 20px;
+	
+}
+
+div.feature p.world_header span {
+	color: #1a90a1;
+	
+}
+
+div.feature p.header_centered_tiny {
+
+	text-align: center; 
+	width: 960px;     
+	font-weight: 700;
+	padding: 20px 0;	
+	font-size: 18px;
 	line-height: 20px;
 	float: left;
-	text-align: center;
-	width: 880px;
-	color: #fff;      
+	color: #939598;      
 	font-weight: 400;
-	padding: 0 40px;
-	
 	margin-top: 60px;
-	
+}
+
+div.feature p.header_centered_conclusion {
+
+	font-size: 22px;
+	line-height: 30px;
+	float: left;
+	text-align: center;
+	color: #1a90a1; 	
+	width: 960px;     
+	font-weight: 700;
+	padding: 20px 0;	
+	float: left;     
+	font-weight: 700;
+	margin-top: 60px;
 }
 
 div.feature p.header_centered {
 	font-size: 42px;
-	line-height: 48px;
+	line-height: 58px;
 	float: left;
-	color: #fff;      
-	font-weight: 700;
-	padding: 20px 40px;
 	text-align: center;
-	width: 880px;
-	margin-top: 20px;
+	color: #6d6e7a; 
+	width: 960px;     
+	font-weight: 700;
+	padding: 20px 0;
+	margin-top: 40px;	
 }
 
-div.feature p.body_centered {
-	font-size: 20px;
-	line-height: 38px;
-	color: #6d6e7a;      
-	font-weight: 400;
-	padding: 20px 0;
+div.feature div.half_feature {
+	width: 400px;
+	float: left;
+	height: auto;
+	margin-top: 60px;
+}
+
+div.feature div.half_feature p {
+	font-size: 22px;
+	line-height: 30px;
 	float: left;
 	text-align: center;
-	width: 960px;
+	color: #1a90a1; 
+	width: 400px;     
+	font-weight: 700;
+	padding: 20px 0;
+	margin-top: 20px;		
 }
+
+div.feature p.centered_feature {
+	text-align: center; 
+	width: 80px;     
+	font-weight: 700;
+	padding: 20px 0;	
+	font-size: 18px;
+	line-height: 20px;
+	float: left;
+	color: #939598;      
+	font-weight: 400;
+	margin-top: 94px;
+}
+
+.world_discover {
+	width: 305px;
+	height: auto;
+	float: left;
+	margin-left: 47px; 
+	margin-top: 40px; 
+} 
+
+.world_create {
+	width: 305px;
+	height: auto;
+	float: left;
+	margin-left: 47px;  
+	margin-top: 40px; 
+} 
+
+.happy_ppl {
+	width: 460px;
+	height: auto;
+	float: left;
+	margin-left: 250px;  
+	margin-top: 60px; 
+} 
+
+
+
 
 
 /******************************
@@ -602,16 +697,28 @@ Feature Details
 #f_world_first {
 	height: auto;
 	margin-top: 700px;
+	height: 650px;
 	background-color: #fafafa;
 	z-index: 1000;
-	padding-bottom: 80px;
+	background-image: url("/assets/world_map.jpg");
+	 -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
 
 #f_world {
 	height: auto;
 	background-color: #fafafa;
 	z-index: 1000;
 	padding-bottom: 80px;
+}
+
+#world_story {
+	height: 1200px;
+	background-color: #fafafa;
+	z-index: 1100;
 }
 
 
@@ -763,6 +870,23 @@ div.device_display p{
 	top:80px;
 	left: 270px;
 	opacity: 0.9;
+	z-index: 900;
+}
+
+.world_phone {
+	width: 250px;
+	position: absolute;
+	top:84px;
+	left: 74px;
+	opacity: 1;
+	z-index: 890;
+}
+
+.world_selection {
+	width: 960px;
+	position: absolute;
+	top: 0;
+	left: 0;
 	z-index: 900;
 }
 
