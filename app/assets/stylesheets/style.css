@@ -430,7 +430,7 @@ div.feature div.half_feature {
 	width: 400px;
 	float: left;
 	height: auto;
-	margin-top: 60px;
+	margin-top: 80px;
 }
 
 div.feature div.half_feature p {
@@ -455,7 +455,7 @@ div.feature p.centered_feature {
 	float: left;
 	color: #939598;      
 	font-weight: 400;
-	margin-top: 94px;
+	margin-top: 116px;
 }
 
 .world_discover {
@@ -482,7 +482,25 @@ div.feature p.centered_feature {
 	margin-top: 60px; 
 } 
 
+div.bg_aid_left {
+	position: absolute;
+	height: 650px;
+	width: 650px;
+	background-color: #fff;
+	opacity: 0.8;
+	left: -650px;
+	overflow: hidden;
+}
 
+div.bg_aid_right {
+	position: absolute;
+	height: 650px;
+	width: 650px;
+	background-color: #fff;
+	opacity: 0.8;
+	right: -650px;
+	overflow: hidden;
+}
 
 
 
@@ -705,6 +723,7 @@ Feature Details
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow: hidden;
 }
 
 
@@ -716,8 +735,8 @@ Feature Details
 }
 
 #world_story {
-	height: 1200px;
-	background-color: #fafafa;
+	height: 1240px;
+	background-color: #fff;
 	z-index: 1100;
 }
 
