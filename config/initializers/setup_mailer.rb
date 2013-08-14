@@ -2,7 +2,7 @@ ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
   :address => 'smtp.canu.se',
   :port => 25,
-  :domain => 'api.canu.se',
+  :domain => 'www.canu.se',
   :authentication => :login,
   :user_name => 'getgoing@canu.se',
   :password => 'Itshalfpast8',
@@ -10,7 +10,7 @@ ActionMailer::Base.smtp_settings = {
   :openssl_verify_mode => 'none'
 }
 
-ActionMailer::Base.default_url_options[:host] = "api.canu.se"
+ActionMailer::Base.default_url_options[:host] = "www.canu.se"
 
 
 =begin

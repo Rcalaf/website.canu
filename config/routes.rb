@@ -8,15 +8,15 @@ Canu::Application.routes.draw do
 
   # Sample of named route:
   
-    match 'stats' => 'users#stats', :as => 'user_stats'
+    match 'stats' => 'pages#stats', :as => 'user_stats'
     match 'user/new' => 'users#new', :as => "new_user"
-    match 'about' => 'users#about'
-    match 'product' => 'users#product'
-    match 'index' => 'users#index'
-    match 'world' => 'users#world'
-    match 'jobs' => 'users#jobs'
-    match 'contacts' => 'users#contacts'
-    match 'press' => 'users#press'
+    match 'about' => 'pages#about', :as => 'about'
+    match 'product' => 'pages#product', :as => 'product'
+   # match 'index' => 'pages#index'
+    match 'world' => 'pages#world', :as => 'world'
+    match 'jobs' => 'pages#jobs', :as => 'jobs'
+    match 'contacts' => 'pages#contacts', :as => 'contacts'
+    match 'press' => 'pages#press', :as => 'press'
 
   # ---------------------------API--------------------------------------
     # ------------------------USERS-------------------------------------
@@ -63,7 +63,7 @@ Canu::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'users#index'
+   root :to => 'pages#index'
 
   # See how all your routes lay out with "rake routes"
 

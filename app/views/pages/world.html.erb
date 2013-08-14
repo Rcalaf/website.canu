@@ -1,39 +1,3 @@
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div class="top_bg"></div>
-<div class="top">
-	<div class="logo_top">
-		<a href="index"><img class="logo_passive" src="/assets/canu_logo.svg"></a>
-	</div>
-	<ul class="menu">
-		<li><a href="#" class="selected">World</a></li>
-		<li><a href="#" id="tribes">Tribes</a><div id="soon">soon</div></li>
-		<li><a href="product">Product</a></li>
-		<li><a href="about">About us</a></li>
-		<li><a href="http://blog.canu.se/">Blog</a>
-	</ul>
-	<div class="codes">
-		<%unless flash[:ok].nil?%>
-			<div id="confirmation"><%=flash[:ok]%></div>
-		<%end%>
-		<div class="form_window" id="form_join"<%= flash[:goaway]%>>
-			<%= form_for @user, :url => new_user_url do |f|%>
-			<input type="submit" name="submit" value="GO" class="submit_button" id="submit_join"/>
-			<div class="input_holder">
-				<input name="user[email]" type="text" id="email" class="email<%= flash[:error].nil? ? '' : ' error_border'%>" placeholder="<%= flash[:error].nil? ? 'Notify me about Launch' : 'Ooops. Wrong e-mail'%>"/>
-			</div>
-			<%end%>
-		</div>
-	</div>
-
-</div>
 <div class="feature_bg" id="f_intro_world">	
 	<div class="feature">
 		<img class="icon_world" src="/assets/world.svg">
