@@ -1,0 +1,85 @@
+<!DOCTYPE HTML!>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title><%=@title%></title>
+
+		<meta http-equiv="Content-language" content="en" /> 
+		<meta name="Keywords" content="CANU, app, activities, stockholm, hyper island">
+		<meta name="Description" content="CANU is an app that makes it fast and simple for you to share and join spontaneous activities on the go.">		
+	
+		<!--<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">-->
+		<%= stylesheet_link_tag 'style' %>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+		
+		<%= javascript_include_tag "application" %>
+		
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"> 
+	   
+	    <script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-39022803-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-42941115-1', 'canu.se');
+		  ga('send', 'pageview');
+		
+		</script>
+		
+				
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		
+		<div class="top_bg_index"></div>
+		<div class="top">
+			<div class="logo_top">
+				<!--<a href="<%= root_url%>"><img class="logo_active" src="/assets/canu_logo.svg"></a>-->
+				<%= link_to (image_tag 'canu_logo.svg', :class => (params[:action] == 'index' ? 'logo_active' : 'logo_passive')), root_url%>
+			</div>
+			<ul class="menu">
+				<li><%= link_to 'World',world_url, :class => (params[:action] == 'world' ? 'selected' : nil) %></li>
+				<li><%= link_to 'Product',product_url, :class => (params[:action] == 'product' ? 'selected' : nil)%></li>
+								<!--<li><a href="#" id="tribes">Tribes</a><div id="soon">soon</div></li>-->
+				<li><a href="http://blog.canu.se/">Blog</a>
+			</ul>
+			<div class="codes">
+				<%unless flash[:ok].nil?%>
+					<div id="confirmation"><%=flash[:ok]%></div>
+				<%end%>
+				<div class="form_window" id="form_join"<%= flash[:goaway]%>>
+					<%= form_for @user, :url => new_user_url do |f|%>
+					<input type="submit" name="submit" value="GO" class="submit_button" id="submit_join"/>
+					<div class="input_holder">
+						<input name="user[email]" type="email" id="email" class="email<%= flash[:error].nil? ? '' : ' error_border'%>" placeholder="<%= flash[:error].nil? ? 'e-mail me about Launch' : flash[:error]%>"/>
+					</div>
+					<%end%>
+				</div>
+			</div>
+		</div>
+		<%= yield%>
+
+	</body>
+</html>
