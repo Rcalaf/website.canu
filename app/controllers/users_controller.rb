@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  layout 'simple'
+
   def stats
     @title = "Statistics"
     @confirm = User.find_all_by_used(true)

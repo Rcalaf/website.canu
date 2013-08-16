@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protected
   
   def http_basic_auth
-    authenticate_or_request_with_http_basic("Debes autenticarte para entrar") do |username,password|
+    authenticate_or_request_with_http_basic("If U are not Didrik you can't get in :(") do |username,password|
       username == "Canu" && password == "getTogether"
     end 
   end

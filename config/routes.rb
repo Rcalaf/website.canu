@@ -8,7 +8,7 @@ Canu::Application.routes.draw do
 
   # Sample of named route:
   
-    match 'stats' => 'pages#stats', :as => 'user_stats'
+    match 'stats' => 'users#stats', :as => 'user_stats'
     match 'user/new' => 'users#new', :as => "new_user"
     match 'about' => 'pages#about', :as => 'about'
     match 'product' => 'pages#product', :as => 'product'
