@@ -305,7 +305,7 @@ div.feature p.body_intro {
 	background-color: rgba(235, 95, 87, 1);
 	position: fixed;
 	top: 100px;
-	background-image: url("/assets/beach.jpg");
+	background-image: url("/assets/landing.jpg");
 	 -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -323,7 +323,7 @@ div.feature p.body_landing {
 	left: 40px;
 	padding: 40px 20px;
 	color: #fff;
-	text-shadow: -0.02em -0.02em 0.02em rgba(100,100,100, 0.7);
+	text-shadow: 0.04em 0.03em 0.02em rgba(100,100,100, 0.7);
 }
 
 div.feature p.body_landing_desc  {
@@ -336,7 +336,7 @@ div.feature p.body_landing_desc  {
 	left: 60px;
 	padding: 30px 0;
 	color: #fff;
-	text-shadow: 0.03em 0.04em 0.03em rgba(20,20,20, 0.7);
+	text-shadow: 0.07em 0.07em 0.02em rgba(100,100,100, 0.7);
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -861,7 +861,7 @@ div.device_display p{
 	position: absolute;
 	right: 93px;
 	top: 142px;
-	opacity: 1;
+	opacity: 0.9;
 }
 
 .landing_feed:hover {
@@ -873,6 +873,7 @@ div.device_display p{
     -ms-transition: opacity .45s ease-in-out;
     -o-transition: opacity .45s ease-in-out;
     transition: opacity .45s ease-in-out;
+    cursor: pointer;
 }
 
 .uihistory {
