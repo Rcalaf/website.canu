@@ -78,6 +78,133 @@ div.logo_top img.logo_passive:hover {
     
 }
 
+img.scroll_down {
+	position: absolute;
+	top:24px;
+	left: 445px;
+	width: 35px;
+	height: 20px;
+	z-index: 9000; 
+}
+
+
+/******************************
+Comments Container
+*******************************/
+
+
+
+#close_btn {
+	position: absolute;
+	top: 0px;
+	left: -40px;
+	width: 40px;
+	height: 40px;
+	background-image: url("/assets/close_window.svg");
+	background-size: 40px auto;
+	
+	z-index: 9000;
+	
+	z-index: 11100;
+	font-size: 12px;
+	cursor: pointer;
+	opacity: 0.9;
+	
+	display: none;
+}
+
+#close_btn:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+#feedback_btn {
+	color: rgba(28, 165, 194, 1);
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+#feedback_btn:hover {
+	opacity: 1;
+}
+
+
+#comments_container {
+	position: fixed;
+	top: 0;
+	right: -440px;
+	padding: 0;
+	margin: 0;
+	
+	width: 440px;
+	height: 100%;
+	background-color: #fff;
+	z-index: 10100;
+}
+
+
+#comments {
+	float: left;
+	width: 420px;
+	margin-top: 20px;
+	margin-left: 20px;
+	height: 95%;
+	overflow: auto;
+	overflow-x: hidden;
+	
+}
+
+
+#comments_description {
+	position: absolute;
+	left: -540px;
+	top: 160px;
+	width: 320px;
+	height: 320px;
+	
+	padding: 40px 40px;
+	
+	font-size: 32px;
+	line-height: 48px;
+	color: rgba(28, 165, 194, 1);   
+	font-weight: 400;
+	opacity: 0.9;
+	
+	display: none;
+}
+
+
+#comments_blur {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.9);
+	top: 0;
+	left: 0;
+	z-index: 10050;
+	display: none;
+}
+
+
+#hider {
+	position: relative;
+	width: 400px;
+	bottom: 0;
+	left: 0;
+	height: 170px;
+	background-color: #fff;
+	z-index: 9999;
+}
+
+
+#disqus_thread {
+	height: auto;
+	margin-bottom: -170px;
+	width: 380px;
+}
+
+
 
 /******************************
 Top Menu
@@ -305,7 +432,7 @@ div.feature p.body_intro {
 	background-color: rgba(235, 95, 87, 1);
 	position: fixed;
 	top: 100px;
-	background-image: url("/assets/landing.jpg");
+	background: url("/assets/landing_4.jpg") no-repeat center center fixed;
 	 -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -323,7 +450,7 @@ div.feature p.body_landing {
 	left: 40px;
 	padding: 40px 20px;
 	color: #fff;
-	text-shadow: 0.04em 0.03em 0.02em rgba(100,100,100, 0.7);
+	text-shadow: 0.04em 0.03em 0.02em rgba(100,100,100, 0.5);
 }
 
 div.feature p.body_landing_desc  {
@@ -336,7 +463,7 @@ div.feature p.body_landing_desc  {
 	left: 60px;
 	padding: 30px 0;
 	color: #fff;
-	text-shadow: 0.07em 0.07em 0.02em rgba(100,100,100, 0.7);
+	text-shadow: 0.05em 0.05em 0.02em rgba(100,100,100, 0.5);
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -354,7 +481,7 @@ div.feature p.body_intro_header {
 
 
 div.feature p.body_intro_header span{
-	color: #a4cdd2; 
+	color: #1a91a2; 
 	font-size: 22px;
 	line-height: 38px;
 	text-shadow: 0.045em 0.04em 0.02em rgba(255,255,255, 1);
@@ -627,7 +754,7 @@ Feature Details
 	background-color: rgba(164, 205, 210, 1);
 	position: fixed;
 	top: 100px;
-	background-image: url("/assets/world_activity.jpg");
+	background: url("/assets/world_activity.jpg") no-repeat center center fixed;
 	 -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -639,7 +766,7 @@ Feature Details
 	background-color: rgba(164, 205, 210, 0.2);
 	position: fixed;
 	top: 100px;
-	background-image: url("/assets/ui_5.jpg");
+	background: url("/assets/ui_5.jpg") no-repeat center center fixed;
 	 -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -652,7 +779,7 @@ Feature Details
 	background-size: auto 600px;
 	position: fixed;
 	top: 100px;
-	background-image: url("/assets/team_sample.png");
+	background: url("/assets/team_4.jpg") no-repeat center center fixed;
 	 -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

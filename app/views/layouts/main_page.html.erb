@@ -40,6 +40,9 @@
 		  ga('send', 'pageview');
 		
 		</script>
+		<script type="text/javascript">
+		  var disqus_identifier = 'canu';
+		</script>
 		
 				
 	</head>
@@ -64,6 +67,7 @@
 				<li><%= link_to 'Product',product_url, :class => (params[:action] == 'product' ? 'selected' : nil)%></li>
 								<!--<li><a href="#" id="tribes">Tribes</a><div id="soon">soon</div></li>-->
 				<li><a href="http://blog.canu.se/">Blog</a>
+				<li id="feedback_btn"><a>Feedback wall</a>
 			</ul>
 			<div class="codes">
 				<%unless flash[:ok].nil?%>
@@ -79,7 +83,31 @@
 				</div>
 			</div>
 		</div>
+		<div id="comments_blur"></div>
+		<div id="comments_container">
+			<div id="comments_description">
+				 Feedback, advice, compliments, positive words, complaints, whatever you feel like sharing...<br/><br/>
+				 <span style="font-weight: 700;">Share it all.</span>
+				
+			</div>
+			<div id="close_btn"></div>
+			<div id="comments">
+				
+				<div id="disqus_thread"></div>
+				<div id="hider"></div>
+			    <script type="text/javascript">
+			        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			        var disqus_shortname = 'canu'; // required: replace example with your forum shortname
+			
+			        /* * * DON'T EDIT BELOW THIS LINE * * */
+			        (function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+			    </script>
+			</div>
+		</div>
 		<%= yield%>
-
 	</body>
 </html>

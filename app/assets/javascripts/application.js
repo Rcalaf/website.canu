@@ -33,6 +33,27 @@
 			$('#soon').fadeOut(500);
 		});
 	    
+	    
+	    $("#feedback_btn").click(function(){
+	        $("#comments_container").animate({right:"0px"},500); 
+	        $("#feedback_btn").fadeOut(700); 
+	        $("#comments_blur").fadeIn(700); 
+	        $("#comments_description").fadeIn(700);
+	        $("#close_btn").fadeIn(300);      		
+	    });
+	    
+	    $("#close_btn").click(function(){
+			$("#comments_container").animate({right: "-440px"},500);   
+			$("#feedback_btn").fadeIn(500);
+			$("#comments_blur").fadeOut(400);
+			$("#comments_description").fadeOut(300);
+			$("#close_btn").fadeOut(100);   
+			
+	    });
+	    
+	   	 $('#comments').height() - 170;
+	    
+	
    
 		$("#did").hover(function(){ $('#did_story').fadeToggle(10); });  
 		$("#rog").hover(function(){ $('#rog_story').fadeToggle(10); });  
