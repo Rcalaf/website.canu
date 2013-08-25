@@ -42,7 +42,7 @@
 	        $("#close_btn").fadeIn(300);      		
 	    });
 	    
-	    $("#close_btn").click(function(){
+	    $("#close_btn, #comments_blur, #comments_description").click(function(){
 			$("#comments_container").animate({right: "-440px"},500);   
 			$("#feedback_btn").fadeIn(500);
 			$("#comments_blur").fadeOut(400);
