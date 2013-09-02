@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  layout 'main_page', :except => [:jobs, :press, :contacts, :about, :privacy]
+  layout 'main_page', :except => [:jobs, :press, :contacts, :about, :privacy, :terms]
   
   def index
      @title = "CANU - Get Together"
@@ -39,5 +39,10 @@ class PagesController < ApplicationController
    def privacy
      @title = "CANU - Privacy"
      @user = User.new
-   end   
+   end 
+   
+   def terms
+     @title = "CANU - Terms of Service"
+     @user = User.new
+   end      
 end
