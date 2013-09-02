@@ -17,6 +17,7 @@ Canu::Application.routes.draw do
     match 'jobs' => 'pages#jobs', :as => 'jobs'
     match 'contacts' => 'pages#contacts', :as => 'contacts'
     match 'press' => 'pages#press', :as => 'press'
+    match 'privacy' => 'pages#privacy', :as => 'privacy'
 
   # ---------------------------API--------------------------------------
     # ------------------------USERS-------------------------------------
