@@ -32,6 +32,37 @@ a.intext {
 	opacity: 0.5;
 }
 
+
+/******************************
+Temp
+*******************************/
+
+div.appstore_banner {
+	position: fixed;
+	top: 140px;
+	right: 40px;
+	width: 220px;
+	height: 54px;
+	background-color: rgba(28, 165, 194, 0.9); 
+	z-index: 9999;
+	
+	transform:rotate(14deg);
+	-ms-transform:rotate(14deg); /* IE 9 */
+	-webkit-transform:rotate(14deg); /* Safari and Chrome */
+}
+
+div.appstore_banner p {
+	float: left;
+	
+	padding-top: 3px;
+	padding-left: 12px;
+	font-size: 14px;
+	line-height: 48px;
+	color: rgba(255, 255, 255, 1);  
+	font-weight: 700;
+}
+
+
 /******************************
 Content
 *******************************/
