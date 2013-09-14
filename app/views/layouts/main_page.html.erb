@@ -66,9 +66,10 @@
 				<li><%= link_to 'World',world_url, :class => (params[:action] == 'world' ? 'selected' : nil) %></li>
 				<li><%= link_to 'Product',product_url, :class => (params[:action] == 'product' ? 'selected' : nil)%></li>
 								<!--<li><a href="#" id="tribes">Tribes</a><div id="soon">soon</div></li>-->
-				<li><a href="http://blog.canu.se/">Blog</a>
+				<li><a href="http://canugettogether.tumblr.com">Blog</a>
 				<li id="feedback_btn"><a>Feedback wall</a>
 			</ul>
+			<!--<a href="#"><img class="appstore_badge" src="/assets/badge_135x40.svg"></a>-->
 			<div class="codes">
 				<%unless flash[:ok].nil?%>
 					<div id="confirmation"><%=flash[:ok]%></div>

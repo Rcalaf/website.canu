@@ -37,6 +37,17 @@ a.intext {
 Temp
 *******************************/
 
+
+img.appstore_badge {
+	position: absolute;
+	top: 28px;
+	right: 40px;
+	width: 134px;
+	height: 40px;
+	z-index: 9999;
+}
+
+
 div.appstore_banner {
 	position: fixed;
 	top: 140px;
@@ -678,7 +689,7 @@ div.bg_aid_left {
 }
 
 div.bg_aid_right {
-	position: absolute;
+	posion: absolute;
 	height: 650px;
 	width: 650px;
 	background-color: #fff;
