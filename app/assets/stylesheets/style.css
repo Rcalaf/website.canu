@@ -689,7 +689,7 @@ div.bg_aid_left {
 }
 
 div.bg_aid_right {
-	posion: absolute;
+	position: absolute;
 	height: 650px;
 	width: 650px;
 	background-color: #fff;
