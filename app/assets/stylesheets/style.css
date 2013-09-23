@@ -6,7 +6,7 @@
 
 html,body{
 
-	letter-spacing: 0.1em;
+	letter-spacing: 0.07em;
 	font-family: 'Lato', sans-serif;
 	background-color: #fafafa;
 	width:100%; padding:0; margin:0;
@@ -286,7 +286,7 @@ div.top {
 }
 
 ul.menu {
-	width: 540px;
+	width: 580px;
 	height: 60px;
 	float: left;
 	outline: none;
@@ -419,7 +419,7 @@ div.feature p.header {
 
 div.feature p.header_policy {
 	font-size: 26px;
-	line-height: 24px;
+	line-height: 38px;
 	float: left;
 	color: #6d6e7a; 
 	width: 700px;     
