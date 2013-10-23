@@ -70,7 +70,7 @@
 				<li id="feedback_btn"><a>Feedback wall</a>
 			</ul>
 			<a href="https://itunes.apple.com/nz/app/canu-get-together/id697998179?mt=8#"><img class="appstore_badge" src="/assets/badge_135x40.svg"></a>
-			<!--<div class="codes">
+			<div class="codes">
 				<%unless flash[:ok].nil?%>
 					<div id="confirmation"><%=flash[:ok]%></div>
 				<%end%>
@@ -78,11 +78,11 @@
 					<%= form_for @user, :url => new_user_url do |f|%>
 					<input type="submit" name="submit" value="GO" class="submit_button" id="submit_join"/>
 					<div class="input_holder">
-						<input name="user[email]" type="email" id="email" class="email<%= flash[:error].nil? ? '' : ' error_border'%>" placeholder="<%= flash[:error].nil? ? 'e-mail me about Launch' : flash[:error]%>"/>
+						<input name="user[email]" type="email" id="email" class="email<%= flash[:error].nil? ? '' : ' error_border'%>" placeholder="<%= flash[:error].nil? ? 'e-mail me about Android' : flash[:error]%>"/>
 					</div>
 					<%end%>
 				</div>
-			</div>-->
+			</div>
 		</div>
 		<div id="comments_blur"></div>
 		<div id="comments_container">
