@@ -12,7 +12,7 @@ Canu::Application.routes.draw do
     match 'user/new' => 'users#new', :as => "new_user"
     match 'about' => 'pages#about', :as => 'about'
     match 'product' => 'pages#product', :as => 'product'
-   # match 'index' => 'pages#index'
+    match 'index' => 'pages#index'
     match 'world' => 'pages#world', :as => 'world'
     match 'jobs' => 'pages#jobs', :as => 'jobs'
     match 'contacts' => 'pages#contacts', :as => 'contacts'
