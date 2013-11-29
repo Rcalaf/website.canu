@@ -8,8 +8,11 @@
 		<meta name="Keywords" content="CANU, app, activities, stockholm, hyper island">
 		<meta name="Description" content="CANU is an app that makes it fast and simple for you to share and join spontaneous activities on the go.">		
 	
-		<!--<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<%= stylesheet_link_tag 'reset-min' %>
+
 		<%= stylesheet_link_tag 'style' %>
+		<%= stylesheet_link_tag 'jquery.fullPage' %>
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 		
 		<%= javascript_include_tag "application" %>
@@ -40,13 +43,17 @@
 		  ga('send', 'pageview');
 		
 		</script>
+		
 		<script type="text/javascript">
 		  var disqus_identifier = 'canu';
 		</script>
 		
+
+
 				
 	</head>
 	<body>
+	
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
@@ -56,42 +63,49 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 		
-		<div class="top_bg_index"></div>
-		<div class="top">
-			<div class="logo_top">
-				<!--<a href="<%= root_url%>"><img class="logo_active" src="/assets/canu_logo.svg"></a>-->
-				<%= link_to (image_tag 'canu_logo.svg', :class => (params[:action] == 'index' ? 'logo_active' : 'logo_passive')), root_url%>
-			</div>
-			<ul class="menu">
-				<li><%= link_to 'World',world_url, :class => (params[:action] == 'world' ? 'selected' : nil) %></li>
-				<li><%= link_to 'Product',product_url, :class => (params[:action] == 'product' ? 'selected' : nil)%></li>
-								<!--<li><a href="#" id="tribes">Tribes</a><div id="soon">soon</div></li>-->
-				<li><a href="http://canugettogether.tumblr.com">Blog</a>
-				<li id="feedback_btn"><a>Feedback wall</a>
-			</ul>
-			<a href="https://itunes.apple.com/nz/app/canu-get-together/id697998179?mt=8#"><img class="appstore_badge" src="/assets/badge_135x40.svg"></a>
-			<!--<div class="codes">
-				<%unless flash[:ok].nil?%>
-					<div id="confirmation"><%=flash[:ok]%></div>
-				<%end%>
-				<div class="form_window" id="form_join"<%= flash[:goaway]%>>
-					<%= form_for @user, :url => new_user_url do |f|%>
-					<input type="submit" name="submit" value="GO" class="submit_button" id="submit_join"/>
-					<div class="input_holder">
-						<input name="user[email]" type="email" id="email" class="email<%= flash[:error].nil? ? '' : ' error_border'%>" placeholder="<%= flash[:error].nil? ? 'e-mail me about Launch' : flash[:error]%>"/>
-					</div>
-					<%end%>
+
+		<!--		
+		<div class="codes">
+			<%unless flash[:ok].nil?%>
+				<div id="confirmation"><%=flash[:ok]%></div>
+			<%end%>
+			<div class="form_window" id="form_join"<%= flash[:goaway]%>>
+				<%= form_for @user, :url => new_user_url do |f|%>
+				<input type="submit" name="submit" value="GO" class="submit_button" id="submit_join"/>
+				<div class="input_holder">
+					<input name="user[email]" type="email" id="email" class="email<%= flash[:error].nil? ? '' : ' error_border'%>" placeholder="<%= flash[:error].nil? ? 'e-mail me about Android' : flash[:error]%>"/>
 				</div>
-			</div>-->
-		</div>
-		<div id="comments_blur"></div>
-		<div id="comments_container">
-			<div id="comments_description">
-				 Feedback, advice, compliments, positive words, complaints, whatever you feel like sharing...<br/><br/>
-				 <span style="font-weight: 700;">Share it all.</span>
-				
+				<%end%>
 			</div>
-			<div id="close_btn"></div>
+		</div>
+		-->
+
+		<div class="social_connect">
+	        <div id="fb_boxy">
+	            <div class="fb-like"  data-href="https://www.facebook.com/pages/CANU/176144762529176" data-send="false" data-layout="button_count" data-width="292" data-show-faces="false" data-font="trebuchet ms"></div>
+	        </div>
+			 <div>
+	            <a href="https://twitter.com/CANUgettogether" class="twitter-follow-button" data-show-count="false">Follow @CANUgettogether</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	        </div>
+	    </div>	
+
+		<ul class="bottom_menu">
+			<li><a href="press">Press</a></li>
+			<li><a href="help">Help</a></li>
+			<li><a href="http://canugettogether.tumblr.com">Blog</a>
+			<li id="feedback_btn">Feedback</li>
+			<li><a href="about">About Us</a></li>
+		</ul>
+
+		<div id="comments_blur">
+			<div id="comments_description">
+				 Feedback, advice, compliments, complaints, whatever you feel like sharing...<br/><br/>			
+			</div>
+		</div>
+		<div id="comments_container">
+
+			<!--<div id="close_btn"></div>-->
 			<div id="comments">
 				
 				<div id="disqus_thread"></div>

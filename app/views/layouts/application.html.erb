@@ -8,11 +8,14 @@
 		<meta name="Keywords" content="CANU, app, activities, stockholm, hyper island">
 		<meta name="Description" content="CANU is an app that makes it fast and simple for you to share and join spontaneous activities on the go.">		
 	
-		<!--<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<%= stylesheet_link_tag 'style' %>
+		<%= stylesheet_link_tag 'reset-min' %>
+
+		
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 		
-		<%= javascript_include_tag "application" %>
+		<%= javascript_include_tag "application_rest" %>
 		
 		<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"> 
 	   
@@ -40,41 +43,72 @@
 		  ga('send', 'pageview');
 		
 		</script>
-				
+		
+		<script type="text/javascript">
+		  var disqus_identifier = 'canu';
+		</script>
+	
 	</head>
 	<body>
-		<div class="top_bg"></div>
-		<div class="top">
-			<div class="logo_top">
-				<%= link_to (image_tag 'canu_logo.svg', :class => 'logo_passive'), root_url%>
-			</div>
-			<ul class="menu">
+	
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		
+		<a href="index"><div class="logo_top"></div></a>
+
+
+		<ul class="top_menu">
+
 				<li><%= link_to 'About us',about_url, :class => (params[:action] == 'about' ? 'selected' : nil)%></li>
 				<li><%= link_to 'Press',press_url, :class => (params[:action] == 'press' ? 'selected' : nil) %></li>
-				<li><%= link_to 'Jobs',jobs_url, :class => (params[:action] == 'jobs' ? 'selected' : nil) %></li>
+				<!--<li><%= link_to 'Jobs',jobs_url, :class => (params[:action] == 'jobs' ? 'selected' : nil) %></li>-->
 				<li><%= link_to 'Privacy',privacy_url, :class => (params[:action] == 'privacy' ? 'selected' : nil) %></li>
-				<li><%= link_to 'Terms of Service',terms_url, :class => (params[:action] == 'terms' ? 'selected' : nil) %></li>				
+				<li><%= link_to 'Terms of Service',terms_url, :class => (params[:action] == 'terms' ? 'selected' : nil) %></li>	
 				<li><%= link_to 'Help',help_url, :class => (params[:action] == 'help' ? 'selected' : nil) %></li>
+				<li id="feedback_btn">Feedback</a></li>
+				<li><a href="http://canugettogether.tumblr.com">Blog</a></li>
 				<li><%= link_to 'Contacts',contacts_url, :class => (params[:action] == 'contacts' ? 'selected' : nil) %></li>
-
-				<!--<li><a href="#" class="selected">Jobs</a></li>
-				<li><a href="press">Press</a></li>
-				<li><a href="contacts">Contacts</a></li>-->
-			</ul>
-		</div>
-		<%= yield%>
-		<script type="text/javascript">
-	    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-	    var disqus_shortname = 'canu'; // required: replace example with your forum shortname
+			
+			
+		</ul>		
 	
-	    /* * * DON'T EDIT BELOW THIS LINE * * */
-	    (function () {
-	        var s = document.createElement('script'); s.async = true;
-	        s.type = 'text/javascript';
-	        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-	        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-	    }());
-	    </script>
+		
+		
+		<div class="section_normal">
+			<%= yield%>
+		</div>
+
+		<div id="comments_blur">
+			<div id="comments_description">
+				 Feedback, advice, compliments, complaints, whatever you feel like sharing.<br/><br/>			
+			</div>
+		</div>
+		<div id="comments_container">
+
+			<!--<div id="close_btn"></div>-->
+			<div id="comments">
+				
+				<div id="disqus_thread"></div>
+				<div id="hider"></div>
+			    <script type="text/javascript">
+			        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			        var disqus_shortname = 'canu'; // required: replace example with your forum shortname
+			
+			        /* * * DON'T EDIT BELOW THIS LINE * * */
+			        (function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+			    </script>
+			</div>
+		</div>
 	</body>
 </html>
 

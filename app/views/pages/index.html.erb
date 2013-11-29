@@ -1,47 +1,57 @@
-<!--<div class="appstore_banner">
-	<p>
-		Awaiting App Store Review
+<div class="logo_top"></div>
+<div class="proto">Prototype</div>
+<div class="section active" id="section0">
+	<h2>
+		All future moments in one place <br/>
+		<a href="https://itunes.apple.com/nz/app/canu-get-together/id697998179?mt=8#" class="store">Get The App</a>
+		<span class="android">I got Android				
+			<div class="codes">
+				<%unless flash[:ok].nil?%>
+					<div id="confirmation"><%=flash[:ok]%></div>
+				<%end%>
+				<div class="form_window" id="form_join"<%= flash[:goaway]%>>
+					<%= form_for @user, :url => new_user_url do |f|%>
+					
+					<div class="input_holder">
+						<input name="user[email]" type="email" id="email" class="email<%= flash[:error].nil? ? '' : ' error_border'%>" placeholder="<%= flash[:error].nil? ? 'Your e-mail' : flash[:error]%>"/>
+					</div>
+					<input type="submit" name="submit" value="Invite when ready" class="submit_button" id="submit_join"/>
+					<%end%>
+				</div>
+			</div>
+		</span>
+	
+	</h2>
+	<!--<img class="phone" src="/assets/app.png">-->
+</div>
+<!--
+<div class="section" id="section1">
+	<h3>Tribes</h3>
+	<img class="icon" src="/assets/icon_tipi.png">
+	<h4>The hassle of getting your friends together - solved
+	</h4>
+	<p class="description">
+		We all know how hard it is to get a group of friends together for a casual activity. Group chats, phone calls and Facebook just don't do the job. CANU removes all the unnecessary communication.<!-- spend less time planning and more time doing. 
 	</p>
-</div>-->
-<div class="feature_bg" id="f_intro_index">	
-	<div class="feature">
 
-		<p class="body_landing">
-			Get Together</br>
-		</p>
-		<p class="body_landing_desc">
-			With CANU you propose or find what you feel like doing. Get together and share moments with friends and new friends - for free.
-		</p>
-
-		<img class="landing" src="/assets/phone_500.png">
-		<a href="product"><img class="landing_feed" src="/assets/feed.png"></a>	
-	</div>
-</div>		
-<div class="feature_bg_landing" id="f_footer">
-	<div class="feature">	
-		<div class="social_connect">
-	        <div id="fb_boxy">
-	            <div class="fb-like"  data-href="https://www.facebook.com/pages/CANU/176144762529176" data-send="false" data-layout="button_count" data-width="292" data-show-faces="false" data-font="trebuchet ms"></div>
-	        </div>
-			 <div>
-	            <a href="https://twitter.com/CANUgettogether" class="twitter-follow-button" data-show-count="false">Follow @CANUgettogether</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-	        </div>
-	    </div>	 
-		<ul class="footer">
-			<!--
-			<li><a href="#">Privacy</a></li>
-			<li><a href="#">Terms</a><li>
-			-->
-			<li><a href="contacts">Contacts</a></li>
-			<!--<li><a href="press">Press</a></li>-->
-			<li><a href="jobs">Jobs</a></li>
-			<li><a href="press">Press</a></li>
-			<li><a href="help">Help</a></li>
-			<li><a href="https://www.facebook.com/canugettogether" target="_blank">Facebook</a></li>
-			<li><a href="about">About Us</a></li>
-			
-			<!--<li><a href="#">Help</a></li>-->
-		</ul>	
-	</div>
+</div>
+-->
+<div class="section" id="section2">
+	<h3>Local</h3>
+	<img class="icon" src="/assets/icon_bird.png">
+	<h4 class="shadow_blue"> Be part of the future activities around you
+	</h4>
+	<p class="description">
+	 	We all have days when we want to meet new faces. CANU enables you to share moments with people you have no prior relation to. 
+	</p>
+	<img class="local" src="/assets/local.png">
+</div>
+<div class="section" id="section3">
+	<h3>Me</h3>
+	<img class="icon" src="/assets/icon_feather.png">
+	<h4 class="shadow_green">A clear overview of your casual plans</h4>
+<p class="description">
+		CANU let's you collect your upcoming activities with one tap.
+	</p>
+	<img class="local" src="/assets/me.png">
 </div>
