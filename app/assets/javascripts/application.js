@@ -51,7 +51,7 @@
 	    
 	   	 $('#comments').height() - 170;
 	   	 
-	   	 $(".android").hover(function(){
+	   	 $(".android").click(function(){
 	   	 	$(this).toggleClass("blank");
 	        $(".codes").toggleClass("opacity");     		
 	    });
