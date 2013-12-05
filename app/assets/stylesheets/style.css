@@ -9,7 +9,7 @@ General
 html, body {
 	font-family: 'Lato';
 	background-color: #fafafa;
-	min-width: 640px;
+	min-width: 740px;
 	color: #414042; 
 }
 
@@ -106,7 +106,7 @@ h2{
 	padding-right: 160px;
 	height: 180px;
 	color: rgba(28, 166, 195, 1);
-	text-shadow: 2px 2px 0 white;
+	/*text-shadow: 2px 2px 0 white;*/
 }
 
 h3{
