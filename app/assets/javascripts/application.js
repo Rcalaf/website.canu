@@ -35,11 +35,14 @@
 		});
 	   
 	    $("#feedback_btn").click(function(){
+		    
 	    	$("#comments_container").show();
 	        $("#comments_container").animate({right:"0px"},500); 
 	        $("#comments_blur").fadeIn(300); 
 	        $("#comments_description").fadeIn(900);
-	        $("#close_btn").fadeIn(1000);      		
+	        $("#close_btn").fadeIn(1000); 
+	        $("html, body, #comments_container, #comments").animate({ scrollTop: 0 }, "slow");
+	        return false     		
 	    });
 	    
 	    $("#close_btn, #comments_blur, #comments_description").click(function(){
