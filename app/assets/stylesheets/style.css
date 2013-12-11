@@ -1040,7 +1040,7 @@ Mobile
 			top: 120px;
 			padding: 0;
 			left: 0;
-			width: 100%;
+			width: 320px;
 			height:auto;
 			z-index: 10100;
 			display: none;
@@ -1052,6 +1052,7 @@ Mobile
 			width: 100%;
 			margin: 0;
 			top: 0;
+			right: 0;
 			height: auto;
 			overflow: hidden;
 			overflow-x: hidden;
@@ -1061,13 +1062,13 @@ Mobile
 		
 		#comments_description {
 			position: relative;
-			width: auto;
+			width: 280;
 			top: 140px;
+			left: 20px;
 			padding: 0;
 			height: 180px;
 			font-weight: 700;
-			text-align: center;
-			padding: 0 20px;
+			text-align: left;
 			font-size: 22px;
 			line-height: 34px;
 			color: #fff;   
@@ -1076,14 +1077,11 @@ Mobile
 			z-index: 10060;
 		}
 		
-		
-		
-		
-		
+
 		#disqus_thread {
 			height: auto;
-			width: auto;
-			padding: 20px;
+			width: 280px;
+			margin: 20px; 
 		}
 		
 	}
