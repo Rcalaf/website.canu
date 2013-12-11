@@ -1033,5 +1033,58 @@ Mobile
 	
 		}
 		
+		
+		#comments_container {
+			position: fixed;
+			top: 240px;
+			right: -320px;
+			padding: 0;
+			margin: 0;
+			
+			width: 320px;
+			height: 100%;
+			background-color: #fff;
+			z-index: 10100;
+		}
+		
+		
+		#comments {
+			float: left;
+			width: 300px;
+			margin-top: 20px;
+			margin-left: 10px;
+			height: 95%;
+			overflow: auto;
+			overflow-x: hidden;
+		}
+		
+		
+		#comments_description {
+			position: relative;
+			left: 0;
+			top: 160px;
+			width: auto;
+			height: 220px;
+			font-weight: 700;
+			text-align: center;
+			padding: 0 20px;
+			
+			font-size: 26px;
+			line-height: 36px;
+			color: #fff;   
+			font-weight: 700;
+			display: none;
+		}
+		
+		
+		
+		
+		
+		#disqus_thread {
+			height: auto;
+			margin-bottom: -100px;
+			width: 300px;
+		}
+		
 	}
 
