@@ -1039,6 +1039,7 @@ Mobile
 			position: relative;
 			top: 120px;
 			padding: 0;
+			left: 0;
 			width: 100%;
 			height:auto;
 			z-index: 10100;
@@ -1062,7 +1063,7 @@ Mobile
 			position: relative;
 			width: auto;
 			top: 140px;
-			left: 0;
+			padding: 0;
 			height: 180px;
 			font-weight: 700;
 			text-align: center;
