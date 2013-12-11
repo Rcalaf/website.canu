@@ -34,8 +34,9 @@
 			$.fn.fullpage.moveToSlide('CANU');
 		});
 	   
+		
+	   
 	    $("#feedback_btn").click(function(){
-		    
 	    	$("#comments_container").show();
 	        $("#comments_container").animate({right:"0px"},500); 
 	        $("#comments_blur").fadeIn(300); 

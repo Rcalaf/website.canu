@@ -1037,7 +1037,7 @@ Mobile
 		
 		#comments_container {
 			position: relative;
-			top: 140px;
+			top: 120px;
 			padding: 0;
 			width: 100%;
 			height:auto;
@@ -1048,10 +1048,9 @@ Mobile
 		
 		#comments {
 			position: relative;
-			width: 280px;
+			width: 100%;
 			margin: 0;
 			top: 0;
-			padding: 20px;
 			height: auto;
 			overflow: hidden;
 			overflow-x: hidden;
@@ -1082,7 +1081,8 @@ Mobile
 		
 		#disqus_thread {
 			height: auto;
-			width: 100%;
+			width: auto;
+			padding: 20px;
 		}
 		
 	}
