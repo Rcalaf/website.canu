@@ -906,6 +906,53 @@ li a.number {
 	width: 180px;
 }
 
+/******************************
+Authorization Form
+*******************************/
+
+a.authorization_header {
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	width: 300px;
+	height: auto;
+	top: 100px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+	color: #1ca5c2;
+}
+
+
+
+div.authorization_form {
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	width: 300px;
+	height: auto;
+	top: 160px;
+}
+
+
+div.input_classic {
+	width: 300px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+div.input_classic input {
+	width: 100%;
+	height: 47px;
+	line-height: 27px;
+	padding: 10 20px;
+	font-size: 15px;
+	background-color: #fff;
+	color: #6d6e7a;
+	outline: none;
+	border: none;
+	margin: 0;
+}
 
 
 /******************************
