@@ -44,6 +44,12 @@
 		$("#rog").hover(function(){ $('#rog_story').fadeToggle(10); });  
 		$("#vit").hover(function(){ $('#vit_story').fadeToggle(10); });  
 		$("#seb").hover(function(){ $('#seb_story').fadeToggle(10); });  
+		
+		$("#submit_reset").click(function() {
+		    $(".authorization_form, #reset_intro").fadeOut(100);
+		    $("#reset_confirmation").fadeIn(700);
+		   
+	    });
 	   	 
 	});
   

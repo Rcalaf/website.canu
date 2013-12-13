@@ -910,13 +910,17 @@ li a.number {
 Authorization Form
 *******************************/
 
+#reset_confirmation {
+	display: none;
+}
+
 a.authorization_header {
 	position: absolute;
 	left: 50%;
 	margin-left: -150px;
 	width: 300px;
 	height: auto;
-	top: 100px;
+	top: 80px;
 	text-align: center;
 	font-size: 24px;
 	font-weight: 700;
@@ -931,7 +935,7 @@ div.authorization_form {
 	margin-left: -150px;
 	width: 300px;
 	height: auto;
-	top: 160px;
+	top: 140px;
 }
 
 div.authorization_form a.guidance{
@@ -954,7 +958,7 @@ div.input_classic input {
 	width: 100%;
 	height: 47px;
 	line-height: 27px;
-	padding: 10 20px;
+	padding: 10 15px;
 	font-size: 15px;
 	background-color: #fff;
 	color: #6d6e7a;
@@ -997,7 +1001,7 @@ div.input_classic input.submit {
 	z-index: 10000;
 }
 
-div.input_classic input.submit:active, input.submit:hover {
+div.input_classic input.submit:active {
 	background-color: #1a94a5;
 }
 

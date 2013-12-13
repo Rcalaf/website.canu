@@ -24,6 +24,7 @@ Canu::Application.routes.draw do
   # To implement:
     
     match 'resetpassword' => 'users#resetpassword', :as => 'resetpassword'
+    match 'emailconfirmation' => 'users#emailconfirmation', :as => 'emailconfirmation'
 
   # ---------------------------API--------------------------------------
     # ------------------------USERS-------------------------------------

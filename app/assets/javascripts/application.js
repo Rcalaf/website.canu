@@ -67,7 +67,7 @@
 	        $(".codes").toggleClass("opacity");     		
 	    });
 	    
-
+	
 
 	   	 
 	});

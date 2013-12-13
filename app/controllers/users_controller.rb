@@ -10,7 +10,12 @@ class UsersController < ApplicationController
    def resetpassword
      @title = "CANU - Reset Password"
      @user = User.new
-   end   
+   end
+   
+   def emailconfirmation
+       @title = "CANU - E-mail Confirmed"
+       @user = User.new
+   end
   
   def new
  	 @user = User.new(params[:user])
