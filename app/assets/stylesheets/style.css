@@ -937,6 +937,7 @@ div.authorization_form {
 
 div.input_classic {
 	width: 300px;
+	height: 47px;
 	float: left;
 	margin-bottom: 10px;
 }
@@ -952,6 +953,26 @@ div.input_classic input {
 	outline: none;
 	border: none;
 	margin: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+div.input_classic input.submit {
+	width: 100%;
+	height: 47px;
+	line-height: 27px;
+	padding: 10 20px;
+	font-size: 14px;
+	background-color: #1ca6c3;
+	color: #fff;
+	outline: none;
+	border: none;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+	letter-spacing: 0.5em;
 }
 
 
@@ -1080,6 +1101,7 @@ Mobile
 			color: rgba(65, 64, 66, 0.4);
 			text-decoration: none;
 			text-shadow: none;
+			-webkit-appearance: none;
 		}
 		
 		input.submit_button {
@@ -1097,6 +1119,7 @@ Mobile
 			cursor: pointer;
 			background-color: rgba(28, 166, 195, 1);
 			border-radius: 2px;
+			-webkit-appearance: none;
 		
 			
 		}
