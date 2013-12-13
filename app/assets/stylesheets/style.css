@@ -934,6 +934,14 @@ div.authorization_form {
 	top: 160px;
 }
 
+div.authorization_form a.guidance{
+	float: left;
+	margin-top: 20px;
+	font-size: 12px;
+	color: #414042;
+	opacity: 0.5;
+}
+
 
 div.input_classic {
 	width: 300px;
@@ -955,7 +963,20 @@ div.input_classic input {
 	margin: 0;
 	border-radius: 0;
 	-webkit-appearance: none;
+	
+	background-size: 47px 47px;
+	background-repeat: no-repeat;
+	background-position: right center;
 }
+
+div.input_classic input.fb_ok {
+	background-image: url(/assets/feedback_good.png);
+}
+
+div.input_classic input.fb_error {
+	background-image: url(/assets/feedback_bad.png);
+}
+
 
 div.input_classic input.submit {
 	width: 100%;
@@ -972,8 +993,14 @@ div.input_classic input.submit {
 	margin: 0;
 	border-radius: 0;
 	-webkit-appearance: none;
-	letter-spacing: 0.5em;
+	letter-spacing: 0.05em;
+	z-index: 10000;
 }
+
+div.input_classic input.submit:active {
+	background-color: #1a94a5;
+}
+
 
 
 /******************************
