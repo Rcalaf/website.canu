@@ -997,7 +997,7 @@ div.input_classic input.submit {
 	z-index: 10000;
 }
 
-div.input_classic input.submit:active {
+div.input_classic input.submit:active, input.submit:hover {
 	background-color: #1a94a5;
 }
 
