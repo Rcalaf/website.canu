@@ -2,6 +2,21 @@
 /*= require jquery.fullPage
 /*= require_self
 
+
+/******************************
+Temp
+*******************************/
+
+
+img.christmas {
+	position: fixed;
+	top: -40px;
+	width: 240px;
+	height: auto;
+	right: 50px;
+	z-index: 100000;
+}
+
 /******************************
 General
 *******************************/
@@ -1382,6 +1397,10 @@ Mobile
 			color: rgba(28, 166, 195, 1);
 			width: 300px;
 		}
+		
+			img.christmas {
+		display: none;
+	}
 		
 	}
 
