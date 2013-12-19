@@ -551,7 +551,7 @@ Team
 
 span.team {
 	float: left;
-	width: 720px;
+	width: auto;
 	height: auto;
 	display: block; 
 	padding-bottom: 0px;
@@ -559,11 +559,10 @@ span.team {
 
 span.team  ul.team{
 	float: left;
-	width: 924px;
+	width: 1200px;
 	height: 322px;
 	margin-left: 0;
 	margin-top: 40px;
-	
 }
 
 span.team  ul.team li{
@@ -590,13 +589,16 @@ span.team  ul.team li#vit{
 	background-image: url(/assets/team/vitali.png);
 }
 
-
-span.team  ul.team li#seb{
-	background-image: url(/assets/team/sebastian.png);
-}
-
 span.team  ul.team li#rog{
 	background-image: url(/assets/team/roger.png);
+}
+
+span.team  ul.team li#viv{
+	background-image: url(/assets/team/vivien.png);
+}
+
+span.team  ul.team li#lea{
+	background-image: url(/assets/team/lea.png);
 }
 
 
@@ -606,7 +608,6 @@ span.team ul.team li:last-child{
 
 span.team  ul.details{
 	float: left;
-	width: 720px;
 	height: 180px;
 	margin-top: 40px;
 	margin-bottom: 20px;
