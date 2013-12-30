@@ -1,4 +1,4 @@
-class TribemachineController < ApplicationController
+class TribemachineController  < ActionController::Base
   layout 'tribemachine'
   
   def start

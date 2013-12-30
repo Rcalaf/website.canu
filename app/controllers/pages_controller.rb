@@ -40,5 +40,6 @@ class PagesController < ApplicationController
      @title = "CANU - Help"
      @user = User.new
    end    
+   
       
 end
