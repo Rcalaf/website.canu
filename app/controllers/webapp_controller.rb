@@ -1,4 +1,4 @@
-class WebappController  < ActionController::Base
+class WebappController < ApplicationController
 	layout 'webapp'
 	
   def fullview

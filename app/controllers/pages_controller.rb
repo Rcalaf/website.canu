@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  layout 'main_page', :except => [:jobs, :press, :contacts, :about, :privacy, :terms, :help, :resetpassword]
+  layout 'main_page', :except => [:jobs, :press, :contacts, :about, :privacy, :terms, :help, :resetpassword, :start]
   
   def index
      @title = "CANU - Get Together"
