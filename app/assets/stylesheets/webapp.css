@@ -1,0 +1,400 @@
+
+/******************************
+Web App - Full View
+*******************************/
+
+div.wrapper {
+	margin: 0 auto;
+	background-color: #f1f5f5;
+	max-width: 640px;
+	height: 100%;
+}
+
+
+div.activity_container {
+	width: auto;
+	max-width: 640px;
+	margin: 0 10px;
+}
+
+div.activity_people_wrapper {
+	width: auto;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: #f1f5f5;
+	left: 0;
+	z-index: 4000;
+}
+
+ul.people_list {
+	width: 100%;
+	position: absolute;
+	height: auto;
+	background-color: #f1f5f5;
+	z-index: 4001;
+	top: 10px;
+	padding-bottom: 60px;
+	
+}
+
+ul.people_list li {
+	width: auto;
+	margin: 0 10px;
+	height: 57px;
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+
+ul.people_list li img {
+	height: 37px;
+	width: 37px;
+	margin: 10px;
+}
+
+ul.people_list li a.guest_name {
+	float: left;
+	line-height: 23px;
+	color: #1a8b9c;
+	font-size: 12px;
+	padding-left: 5px;
+	padding-top: 10px;
+	font-weight: 700;
+	width: 70%;
+}
+
+ul.people_list li a.guest_username {
+	float: left;
+	line-height: 15px;
+	color: #2b4b58;
+	font-size: 10px;
+	padding-left: 5px;
+	width: 70%;
+	font-weight: 700;
+}
+
+div.activity_menu {
+	position: fixed;
+	width: 640px;
+	background-color: #fafafa;
+	border-top: 1px solid #b3c9c9;
+	height: 57px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -320px;
+	z-index: 5000;
+}
+
+
+/******************************
+Activity Menu
+*******************************/
+
+div.home_button {
+	width: 37px;
+	height: 37px;
+	margin-top: 10px;
+	margin-left: 10px;
+	float: left;
+	background-color: #fff;
+	background-image: url(/assets/canu_logo.png);
+	background-size: 100%;
+}
+
+div.back_button {
+	width: 57px;
+	height: 57px;
+	float: left;
+	background-color: #fff;
+	background-image: url(/assets/webapp/back_arrow@2x.png);
+	background-size: 100%;
+}
+
+div.people_button {
+	width: 116px;
+	height: 37px;
+	float: left;
+	margin: 10px 0 0 10px;
+	background-color: #fff;
+	background-image: url(/assets/webapp/fullview_action_ppl@2x.png);
+	background-size: 100%;
+	
+	padding-left: 14px;
+	line-height: 37px;
+	font-size: 16px;
+	text-align: center;
+	font-weight: 700;
+	color: #2b4b58;
+}
+
+div.go_button {
+	width: 116px;
+	height: 37px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: #fff;
+	background-image: url(/assets/webapp/fullview_action_go@2x.png);
+	background-size: 100%;
+	line-height: 37px;
+	border-left: 4px solid #fafafa;
+}
+
+div.going_button {
+	width: 116px;
+	height: 37px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: #fff;
+	background-size: 100%;
+	line-height: 37px;
+	border-left: 4px solid #fafafa;
+	background-image: url(/assets/webapp/fullview_action_yes@2x.png);
+	display: none;
+}
+
+/******************************
+Contents
+*******************************/
+
+div.creator_info {
+	float: left;
+	height: 35px;
+	background-color: #fafafa;
+	width: 100%;
+	margin-top: 10px;
+	border-bottom: 1px solid #f1f5f5;
+}
+
+div.activity_header {
+	float: left;
+	width: 100%;
+	height: 285px;
+	background-color: #fff;
+}
+
+div.activity_chat {
+	float: left;
+	width: 100%;
+	height: auto;
+	min-height: 200px;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-top: 1px;
+}
+
+
+img.creator_userpic {
+	margin: 5px;
+	float: left;
+	height: 25px;
+	width: 25px;
+	background-color: #333;
+	border: none;
+	outline: none;
+}
+
+a.creator_name {
+	float: left;
+	line-height: 35px;
+	color: #1a8b9c;
+	font-size: 12px;
+	padding-left: 5px;
+	font-weight: 700;
+}
+
+a.guest_name {
+	float: left;
+	line-height: 35px;
+	color: #1a8b9c;
+	font-size: 12px;
+	padding-left: 5px;
+	font-weight: 700;
+}
+
+
+span.activity_date {
+	float: right;
+	line-height: 35px;
+	font-size: 10px;
+	color: #2b4b58;
+	padding: 0 0 0 10px;
+	border-left: 1px solid #f1f5f5;	
+}
+
+span.activity_hours{
+	float: right;
+	line-height: 35px;
+	font-size: 12px;
+	color: #2b4b58;
+	padding: 0 10px;
+	font-weight: 700;
+}
+
+span.activity_hours span{
+	font-weight: 400;
+	opacity: 0.5;
+}
+
+
+div.map {
+	width: auto;
+	margin: 10px;
+	height: 140px;
+}
+
+p.activity_title{
+
+	font-size: 26px;
+	color: #2b4b58;
+	line-height: 30px;
+	padding: 10px 20px;
+	font-weight: 700;
+}
+
+p.activity_address{
+	line-height: 25px;
+	font-size: 12px;
+	color: #2b4b58;
+	padding: 0 20px;
+}
+
+p.activity_description{
+	line-height: 35px;
+	font-size: 14px;
+	color: #2b4b58;
+	padding: 0 20px;
+}
+
+
+/******************************
+Chat
+*******************************/
+
+div.activity_chat ul {
+	width: 100%;
+	height: auto;
+	padding-bottom: 58px;
+}
+
+
+div.activity_chat ul li {
+	width: auto;
+	margin: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgba(43, 75, 88, 0.1);
+}
+
+div.activity_chat ul li:last-child {
+	border-bottom: none;
+}
+
+div.activity_chat ul li p.chat_message {
+	line-height: 22px;
+	font-size: 14px;
+	color: #2b4b58;
+	padding: 10px 10px 0 40px;
+	clear: both;
+}
+
+div.activity_chat ul li.leave_message {
+	width: auto;
+	margin: 10px;
+	padding-bottom: 0;
+	height: 37px;
+}
+
+
+
+div.input_go {
+	width: 100%;
+	height: 37px;
+	margin-bottom: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #fff;
+}
+
+
+div.input_chat {
+	width: 100%;
+	height: 37px;
+	float: left;
+	margin-bottom: 10px;
+	position: relative;
+	background-color: #fff;
+}
+
+div.input_chat input, div.input_go input {
+	width: 100%;
+	height: 37px;
+	line-height: 17px;
+	padding: 10px 70px 10px 10px;
+	font-size: 15px;
+	color: #2b4b58;
+	outline: none;
+	border: none;
+	margin: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+	
+	background-size: 47px 47px;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+div.input_chat input.chat_submit, div.input_go input.chat_submit {
+	width: 61px;
+	height: 33px;
+	line-height: 33px;
+	padding: 0;
+	text-align: center;
+	font-size: 14px;
+	background-color: #1ca6c3;
+	color: #fff;
+	outline: none;
+	border: none;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0;
+	border-radius: 0;
+	-webkit-appearance: none;
+	letter-spacing: 0.05em;
+	z-index: 3000;
+	
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}
+
+div.input_chat input.chat_submit:active {
+	background-color: #1a94a5;
+}
+
+/******************************
+Map
+*******************************/
+
+
+
+/******************************
+Mobile
+*******************************/
+
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px){
+		
+	div.activity_menu {
+		position: fixed;
+		width: 100%;
+		background-color: #fafafa;
+		border-top: 1px solid #b3c9c9;
+		height: 57px;
+		bottom: 0;
+		left: 0;
+		z-index: 5000;
+		margin-left: 0;
+	}
+		
+}
+

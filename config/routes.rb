@@ -25,6 +25,17 @@ Canu::Application.routes.draw do
     
     match 'resetpassword' => 'users#resetpassword', :as => 'resetpassword'
     match 'emailconfirmation' => 'users#emailconfirmation', :as => 'emailconfirmation'
+    
+  # Web App: 
+  
+  	match 'fullview' => 'webapp#fullview', :as => 'fullview'
+  	match 'expired' => 'webapp#expired', :as => 'expired'
+    
+    
+  # The Tribe Machine:
+  
+  
+    match 'start' => 'tribemachine#start', :as => 'start'
 
   # ---------------------------API--------------------------------------
     # ------------------------USERS-------------------------------------
