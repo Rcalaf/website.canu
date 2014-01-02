@@ -9,7 +9,7 @@ Canu::Application.routes.draw do
 
   resources :users
   resources :pages
-  resources :webapp
+ 
   resources :tribemachine
 
   # Sample of named route:
@@ -33,8 +33,8 @@ Canu::Application.routes.draw do
     match 'emailconfirmation' => 'users#emailconfirmation', :as => 'emailconfirmation'
     
 
-  
-  	match 'fullview' => 'webapp#fullview', :as => 'fullview'
+    match 'activities' => 'webapp#activities', :as => 'activities'
+  	match 'fullview/:activity_id' => 'webapp#fullview', :as => 'fullview'
   	match 'expired' => 'webapp#expired', :as => 'expired'
     
     
