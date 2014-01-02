@@ -35,6 +35,12 @@
 		<div class="activity_chat">
 			<ul>
 				<%= render :partial => 'chat_message', :collection => @chat_messages%>
+				<li class="leave_message">
+					<div class="input_chat">
+						<input class="authorization" placeholder="Say something nice..."/>
+						<a ontouchstart=""><input type="submit" class="chat_submit"/ value="send"></a>
+					</div>
+				</li>
 			</ul>
 		</div>
 		<div class="activity_menu">
