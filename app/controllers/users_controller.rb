@@ -1,12 +1,22 @@
 class UsersController < ApplicationController
-
+	layout 'authorization'
+	
   def stats
     @title = "Statistics"
     @confirm = User.find_all_by_used(true)
     @ask_for_code = User.find_all_by_code(nil)
+    @body_class = "stats"
   end
   
- 
+   def resetpassword
+     @title = "CANU - Reset Password"
+     @user = User.new
+   end
+   
+   def emailconfirmation
+       @title = "CANU - E-mail Confirmed"
+       @user = User.new
+   end
   
   def new
  	 @user = User.new(params[:user])

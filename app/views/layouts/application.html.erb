@@ -8,6 +8,9 @@
 		<meta name="Keywords" content="CANU, app, activities, stockholm, hyper island">
 		<meta name="Description" content="CANU is an app that makes it fast and simple for you to share and join spontaneous activities on the go.">		
 	
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="user-scalable=no, width=device-width"/>
+		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<%= stylesheet_link_tag 'style' %>
 
@@ -64,13 +67,13 @@
 
 		<ul class="top_menu">
 
-				<li><%= link_to 'About us',about_url, :class => (params[:action] == 'about' ? 'selected' : nil)%></li>
+				<li><%= link_to 'About Us',about_url, :class => (params[:action] == 'about' ? 'selected' : nil)%></li>
 				<li><%= link_to 'Press',press_url, :class => (params[:action] == 'press' ? 'selected' : nil) %></li>
 				<!--<li><%= link_to 'Jobs',jobs_url, :class => (params[:action] == 'jobs' ? 'selected' : nil) %></li>-->
-				<li><%= link_to 'Privacy',privacy_url, :class => (params[:action] == 'privacy' ? 'selected' : nil) %></li>
-				<li><%= link_to 'Terms of Service',terms_url, :class => (params[:action] == 'terms' ? 'selected' : nil) %></li>	
+				<li class="mobile_hide"><%= link_to 'Privacy',privacy_url, :class => (params[:action] == 'privacy' ? 'selected' : nil) %></li>
+				<li class="mobile_hide"><%= link_to 'Terms of Service',terms_url, :class => (params[:action] == 'terms' ? 'selected' : nil) %></li>	
 				<li><%= link_to 'Help',help_url, :class => (params[:action] == 'help' ? 'selected' : nil) %></li>
-				<li id="feedback_btn">Feedback</a></li>
+				<li id="feedback_btn" class="mobile_hide">Feedback</a></li>
 				<li><a href="http://canugettogether.tumblr.com">Blog</a></li>
 				<li><%= link_to 'Contacts',contacts_url, :class => (params[:action] == 'contacts' ? 'selected' : nil) %></li>
 			

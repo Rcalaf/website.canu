@@ -6,6 +6,12 @@ Canu::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
+
+  resources :users
+  resources :pages
+  resources :webapp
+  resources :tribemachine
+
   # Sample of named route:
   
     match 'stats' => 'users#stats', :as => 'user_stats'
@@ -20,6 +26,19 @@ Canu::Application.routes.draw do
     match 'privacy' => 'pages#privacy', :as => 'privacy'
     match 'terms' => 'pages#terms', :as => 'terms'
     match 'help' => 'pages#help', :as => 'help'
+    
+
+    
+    match 'resetpassword' => 'users#resetpassword', :as => 'resetpassword'
+    match 'emailconfirmation' => 'users#emailconfirmation', :as => 'emailconfirmation'
+    
+
+  
+  	match 'fullview' => 'webapp#fullview', :as => 'fullview'
+  	match 'expired' => 'webapp#expired', :as => 'expired'
+    
+    
+    match 'start' => 'tribemachine#start', :as => 'start'
 
   # ---------------------------API--------------------------------------
     # ------------------------USERS-------------------------------------

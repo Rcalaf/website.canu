@@ -1,0 +1,120 @@
+
+/******************************
+Web App - Full View
+*******************************/
+
+
+div.fullslide {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+#story_1 {
+	background-color: orange;
+}
+
+#story_2 {
+	background-color: green;
+}
+
+#story_3_1 {
+	background-color: blue;
+}
+
+#story_3_2 {
+	background-color: yellow;
+}
+
+#story_3_3 {
+	background-color: red;
+}
+
+#story_4_1 {
+	background-color: grey;
+}
+
+#story_4_2 {
+	background-color: pink;
+}
+
+#story_5 {
+	background-color: fuchsia;
+}
+
+#story_6_1 {
+	background-color: #f1f2f3;
+}
+
+#story_6_2 {
+	background-color: #f1f2f3;
+}
+
+#story_6_3 {
+	background-color: #f1f2f3;
+}
+
+#story_6_4 {
+	background-color: #f1f2f3;
+}
+
+
+/******************************
+Story Content
+*******************************/
+
+h7 {
+	position: absolute;
+	top: 40px;
+	line-height: 84px;
+	left: 20px;
+	font-weight: 700;
+	width: auto;
+	font-size: 94px;
+	background-color: #fff;
+}
+
+
+div.choices {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	height: 48px;
+	width: 100%;
+} 
+
+a.story_choice {
+
+	float: left;
+	color: black;
+	display: block;
+	width: auto;
+	height: 48px;
+	font-size: 22px;
+	line-height: 48px;
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	margin-left: 20px;
+	border-radius: 2px;
+	padding: 0 10px;
+}
+
+a.story_choice:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+a.choice_reset {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: red;
+}
+
+a.choice_reset:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+

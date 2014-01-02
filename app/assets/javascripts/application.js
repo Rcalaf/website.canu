@@ -17,6 +17,8 @@
 
 	
 	$(document).ready(function(){
+		
+		
 			
 		$("img.phone").fadeIn(1800);
 
@@ -24,8 +26,8 @@
 	   	
 
 		$.fn.fullpage({
-			slidesColor: ['#fff', '#1ca6c3', '#3bc48f'],
-			anchors: ['CANU','Local', 'Me'],
+			slidesColor: ['#fff', '#1ca6c3','#3bc48f', '#ec5f57'],
+			anchors: ['CANU','Tribes','Local', 'Me'],
 			autoScrolling: false,
 			scrollingSpeed: 700
 			
@@ -34,14 +36,21 @@
 			$.fn.fullpage.moveToSlide('CANU');
 		});
 	   
+		
+	   
 	    $("#feedback_btn").click(function(){
+	        $.fn.fullpage.moveToSlide('CANU');	    	
+	    	$("#comments_container").show();
 	        $("#comments_container").animate({right:"0px"},500); 
 	        $("#comments_blur").fadeIn(300); 
 	        $("#comments_description").fadeIn(900);
-	        $("#close_btn").fadeIn(1000);      		
+	        $("#close_btn").fadeIn(1000); 
+	        $("html, body").animate({ scrollTop: 0 }, "fast");
+
 	    });
 	    
 	    $("#close_btn, #comments_blur, #comments_description").click(function(){
+	    	$("#comments_container").hide();
 			$("#comments_container").animate({right: "-440px"},200);   
 			$("#comments_blur").fadeOut(900);
 			$("#comments_description").fadeOut(700);
@@ -50,17 +59,21 @@
 	    });
 	    
 	   	 $('#comments').height() - 170;
+
+	   		   	 
 	   	 
 	   	 $(".android").click(function(){
 	   	 	$(this).toggleClass("blank");
 	        $(".codes").toggleClass("opacity");     		
 	    });
 	    
-
+	
 
 	   	 
 	});
-  
+	
+
+
 
 	
      
