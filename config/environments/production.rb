@@ -49,7 +49,7 @@ Canu::Application.configure do
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
   # Precompile additional assets
-  config.assets.precompile += %w( .svg .eot .woff .ttf style.css application_rest.js)
+  config.assets.precompile += %w( .svg .eot .woff .ttf style.css application_rest.js webapp.css webapp.js tribemachine.css tribemachine.js)
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
