@@ -47,11 +47,21 @@
 		$('.choice_4_1').click(function(){
 			$(".fullslide").hide();
 			$("#story_4_1").fadeIn(400);	
-		});		
+		});	
 		
 		$('.choice_4_2').click(function(){
 			$(".fullslide").hide();
 			$("#story_4_2").fadeIn(400);	
+		});	
+		
+		$('.choice_4_3').click(function(){
+			$(".fullslide").hide();
+			$("#story_4_3").fadeIn(400);	
+		});		
+		
+		$('.choice_4_4').click(function(){
+			$(".fullslide").hide();
+			$("#story_4_4").fadeIn(400);	
 		});	
 		
 		$('#choice_5').click(function(){

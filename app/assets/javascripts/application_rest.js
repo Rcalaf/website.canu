@@ -15,6 +15,7 @@
 //= require jquery.easing.1.3
 //= require jquery.circulate
 //= require jquery.fullPage
+//= require jquery.min
 
 	
 	$(document).ready(function(){
