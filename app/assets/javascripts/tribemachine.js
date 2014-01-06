@@ -64,7 +64,7 @@
 			$("#story_4_4").fadeIn(400);	
 		});	
 		
-		$('#choice_5').click(function(){
+		$('.choice_5').click(function(){
 			$(".fullslide").hide();
 			$("#story_5").fadeIn(400);	
 		});	
