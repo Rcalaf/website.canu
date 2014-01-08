@@ -18,6 +18,9 @@
 	
 	$(document).ready(function(){
 		
+		
+		//$('html, body').animate({scrollTop: $(document).height()}, 'slow');
+		
 		$(".activity_people_wrapper").hide();
 		
 		$(".people_button").click(function() {	

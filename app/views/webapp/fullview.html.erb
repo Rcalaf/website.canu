@@ -1,8 +1,10 @@
 <%# @activity%>
 <%# @attendees%>
+
+
 <div class="add_data">
-	<div class="addname_form">
-		<a class="authorization_header">Who are you?</a>
+	<div class="authorization_header">Who are you?</div>
+	<div class="authorization_form">
 		<div class="input_classic">
 			<input name="user[confirm_password]" class="authorization" placeholder="Full Name"/>
 		</div>
@@ -14,48 +16,50 @@
 	</div>
 </div>
 <div class="wrapper">
-	<div class="activity_container">
-		<div class="creator_info">
-			<img src="http://api.canu.se/<%=@activity['user']['profile_pic']%>" class="creator_userpic"/>
-			<a class="creator_name"><%= @activity['user']['first_name']%></a>
+	<div class="future_scrolling">
+		<div class="activity_container">
+			<div class="creator_info">
+				<img src="http://api.canu.se/<%=@activity['user']['profile_pic']%>" class="creator_userpic"/>
+				<a class="creator_name"><%= @activity['user']['first_name']%></a>
+				
+				<span class="activity_hours"><%= Time.parse(@activity['start']).strftime("%H:%M")%> - <span><%=Time.parse(@activity['end_date']).strftime("%H:%M")%></span></span>	
+				<span class="activity_date"><%= Time.parse(@activity['start']).strftime("%d %h")%></span>
 			
-			<span class="activity_hours"><%= Time.parse(@activity['start']).strftime("%H:%M")%> - <span><%=Time.parse(@activity['end_date']).strftime("%H:%M")%></span></span>	
-			<span class="activity_date"><%= Time.parse(@activity['start']).strftime("%d %h")%></span>
-		
-		</div>
-		<div class="activity_header">
-			<div class="map">
-				<iframe width='100%' height='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v3/vinitiate.ggnah1pf/mm/zoomwheel.html?secure=1#11/59.3269/18.1079'></iframe>
 			</div>
-			<p class="activity_title"><%= @activity['title']%></p>
-			<p class="activity_address"><%= @activity['street']%>, <%= @activity['city']%>, <%= @activity['zip_code']%></p>
-			<p class="activity_description"><%= @activity['description']%></p>
-		
+			<div class="activity_header">
+				<div class="map">
+					<iframe width='100%' height='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v3/vinitiate.ggnah1pf/mm/zoomwheel.html?secure=1#11/59.3269/18.1079'></iframe>
+				</div>
+				<p class="activity_title"><%= @activity['title']%></p>
+				<p class="activity_address"><%= @activity['street']%>, <%= @activity['city']%>, <%= @activity['zip_code']%></p>
+				<p class="activity_description"><%= @activity['description']%></p>
+			
+			</div>
+			<div class="activity_chat">
+				<ul>
+					<%= render :partial => 'chat_message', :collection => @chat_messages%>
+					<li class="leave_message">
+						<div class="input_chat">
+							<input class="authorization" placeholder="Say something nice"/>
+							<input type="submit" class="chat_submit" value="send"/>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="activity_menu">
+				<%= link_to '<div class="back_button"></div>'.html_safe, :back %>
+				<a class="people_button"><%= @attendees.size%></a>
+				<a class="go_button"></a>
+				<a class="going_button"></a>
+			</div>
 		</div>
-		<div class="activity_chat">
-			<ul>
-				<%= render :partial => 'chat_message', :collection => @chat_messages%>
-				<li class="leave_message">
-					<div class="input_chat">
-						<input class="authorization" placeholder="Say something nice..."/>
-						<input type="submit" class="chat_submit" value="send"/>
-					</div>
-				</li>
+		<div class="activity_people_wrapper">
+			<ul class="people_list">
+				<%= render :partial => "attendee", :collection => @attendees%>
 			</ul>
-		</div>
-		<div class="activity_menu">
-			<%= link_to '<div class="back_button"></div>'.html_safe, :back %>
-			<a class="people_button"><%= @attendees.size%></div>
-			<a class="go_button"></a>
-			<a class="going_button"></a>
-		</div>
-	</div>
-	<div class="activity_people_wrapper">
-		<ul class="people_list">
-			<%= render :partial => "attendee", :collection => @attendees%>
-		</ul>
-		<div class="activity_menu">
-			<a class="back_button" id="bb_ppl_list"></a>
+			<div class="activity_menu">
+				<div class="back_button" id="bb_ppl_list"></div>
+			</div>
 		</div>
 	</div>
 

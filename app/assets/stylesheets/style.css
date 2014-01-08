@@ -995,9 +995,12 @@ div.add_data {
 	position: fixed;
 	width: 100%;
 	height: 100%;
+	top: 0;
+	left: 0;
 	background-color: #f1f5f5;
 	z-index: 10000;
 	display: none;
+	overflow: hidden;
 }
 
 div.addname_form {
