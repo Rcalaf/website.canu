@@ -20,83 +20,114 @@
 		
 	
 		
-		$(".fullslide").hide();
+		$(".fullslide, .fullslide ul").hide();
 		
 		$("#story_1").fadeIn(300);
+		$("#story_1 ul").delay(300).fadeIn(300);
 		
 		$('#choice_2').click(function(){
 			$(".fullslide").hide();
-			$("#story_2").fadeIn(400);	
+			$("#story_2").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});
 		});	
 		
 		$('#choice_3_1').click(function(){
 			$(".fullslide").hide();
-			$("#story_3_1").fadeIn(400);	
+			$("#story_3_1").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});
 		});	
 		
 		$('#choice_3_2').click(function(){
 			$(".fullslide").hide();
-			$("#story_3_2").fadeIn(400);	
+			$("#story_3_2").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});	
 		
 		$('#choice_3_3').click(function(){
 			$(".fullslide").hide();
-			$("#story_3_3").fadeIn(400);	
+			$("#story_3_3").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});	
 		
 		$('.choice_4_1').click(function(){
 			$(".fullslide").hide();
-			$("#story_4_1").fadeIn(400);	
+			$("#story_4_1").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});	
 		
 		$('.choice_4_2').click(function(){
 			$(".fullslide").hide();
-			$("#story_4_2").fadeIn(400);	
+			$("#story_4_2").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});	
 		
 		$('.choice_4_3').click(function(){
 			$(".fullslide").hide();
-			$("#story_4_3").fadeIn(400);	
+			$("#story_4_3").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});		
 		
 		$('.choice_4_4').click(function(){
 			$(".fullslide").hide();
-			$("#story_4_4").fadeIn(400);	
+			$("#story_4_4").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});	
 		
 		$('.choice_5').click(function(){
 			$(".fullslide").hide();
-			$("#story_5").fadeIn(400);	
+			$("#story_5").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});	
 		
 		$('#choice_6_1').click(function(){
 			$(".fullslide").hide();
-			$("#story_6_1").fadeIn(400);	
+			$("#story_6_1").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});	
 		
 		$('#choice_6_2').click(function(){
 			$(".fullslide").hide();
-			$("#story_6_2").fadeIn(400);	
+			$("#story_6_2").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});	
 		
 		$('#choice_6_3').click(function(){
 			$(".fullslide").hide();
-			$("#story_6_3").fadeIn(400);	
+			$("#story_6_3").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});	
 		
 		$('#choice_6_4').click(function(){
 			$(".fullslide").hide();
-			$("#story_6_4").fadeIn(400);	
+			$("#story_6_4").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});	
 		
 		$('.choice_7').click(function(){
 			$(".fullslide").hide();
-			$("#story_7").fadeIn(400);	
+			$("#story_7").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});	
 		
 		$('.choice_reset').click(function(){
 			$(".fullslide").hide();
-			$("#story_1").fadeIn(400);	
+			$("#story_1").fadeIn(100, function(){
+				$(this).children("ul").delay(250).fadeIn(700);	
+			});	
 		});		
 
 	   	 

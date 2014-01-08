@@ -26,7 +26,7 @@
 	   	
 
 		$.fn.fullpage({
-			slidesColor: ['#fff', '#1ca6c3','#3bc48f', '#ec5f57'],
+			slidesColor: ['#f1f5f5', '#1ca6c3','#ec5f57'],
 			anchors: ['CANU','Tribes','Local', 'Me'],
 			autoScrolling: false,
 			scrollingSpeed: 700
