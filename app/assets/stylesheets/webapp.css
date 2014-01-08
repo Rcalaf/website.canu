@@ -101,7 +101,8 @@ a.home_button {
 	background-size: 100%;
 }
 
-a.back_button {
+div.back_button {
+	display: block;
 	width: 57px;
 	height: 57px;
 	float: left;
@@ -111,6 +112,7 @@ a.back_button {
 }
 
 a.people_button {
+	display: block;
 	width: 116px;
 	height: 37px;
 	float: left;
@@ -128,6 +130,7 @@ a.people_button {
 }
 
 a.go_button {
+	display: block;
 	width: 116px;
 	height: 37px;
 	position: absolute;
@@ -382,7 +385,7 @@ Map
 Mobile
 *******************************/
 
-@media only screen and (max-width: 640px), only screen and (max-device-width: 640px){
+@media only screen and (max-width: 768px), only screen and (max-device-width: 768px){
 		
 	div.activity_menu {
 		position: fixed;
