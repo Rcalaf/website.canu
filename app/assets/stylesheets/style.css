@@ -50,12 +50,15 @@ div.section_normal {
 	padding-top: 160px;
 }
 
+input {
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-appearance: none;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	}
 
-
-
-/******************************
-Fonts
-*******************************/
 
 a {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -69,6 +72,11 @@ a:link, a:visited, a:active {
 a:hover {
 	color: rgba(28, 166, 195, 1);
 }
+
+
+/******************************
+Fonts
+*******************************/
 
 
 a.store:link, a.store:visited, a.store:active {
@@ -966,15 +974,6 @@ div.map_stats {
 /******************************
 Authorization Form
 *******************************/
-
-input {
-	outline: none;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-appearance: none;
-	border: none;
-	box-shadow: none;
-	border-radius: 0;
-	}
 
 
 #reset_confirmation {

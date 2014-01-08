@@ -7,7 +7,7 @@
 			<input name="user[confirm_password]" class="authorization" placeholder="Full Name"/>
 		</div>
 		<div class="input_classic">
-			<a ontouchstart=""><input name="user[email]" type="submit" class="submit" value="save" id="submit_save_name"/></a>
+			<input name="user[email]" type="submit" class="submit" value="save" id="submit_save_name"/>
 		</div>	
 		<a class="guidance">Your name will be shown and saved for future.</a>
 		<a class="guidance_option" id="cancel_add_data">Cancel</a>
@@ -38,16 +38,16 @@
 				<li class="leave_message">
 					<div class="input_chat">
 						<input class="authorization" placeholder="Say something nice..."/>
-						<a ontouchstart=""><input type="submit" class="chat_submit"/ value="send"></a>
+						<input type="submit" class="chat_submit" value="send"/>
 					</div>
 				</li>
 			</ul>
 		</div>
 		<div class="activity_menu">
-			<%= link_to '<div class="back_button"></div>'.html_safe, :back %>
-			<div class="people_button"><%= @attendees.size%></div>
-			<div class="go_button"></div>
-			<div class="going_button"></div>
+			<%= link_to '<a class="back_button"></a>'.html_safe, :back %>
+			<a class="people_button"><%= @attendees.size%></div>
+			<a class="go_button"></a>
+			<a class="going_button"></a>
 		</div>
 	</div>
 	<div class="activity_people_wrapper">
@@ -55,7 +55,7 @@
 			<%= render :partial => "attendee", :collection => @attendees%>
 		</ul>
 		<div class="activity_menu">
-			<div class="back_button" id="bb_ppl_list"></div>
+			<a class="back_button" id="bb_ppl_list"></a>
 		</div>
 	</div>
 
