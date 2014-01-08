@@ -49,11 +49,11 @@
 		//$("#viv").hover(function(){ $('#viv_story').fadeToggle(10); });  
 		//$("#lea").hover(function(){ $('#lea_story').fadeToggle(10); });  
 		
-		$("#submit_reset").click(function() {
-		    $(".authorization_form, #reset_intro").fadeOut(100);
-		    $("#reset_confirmation").fadeIn(700);
+		//$("#submit_reset").click(function() {
+		  //  $(".authorization_form, #reset_intro").fadeOut(100);
+		    //$("#reset_confirmation").fadeIn(700);
 		   
-	    });
+	   // });
 	   	 
 	});
   
