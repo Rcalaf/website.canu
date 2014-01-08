@@ -58,6 +58,48 @@
 		});
 		
 		
+		
+		
+		$("#tab_local").animate({opacity: 1}, 30);
+		$("#content_local").show();
+		
+
+		$("#tab_local").click(function(){			
+			$("li.tab").css({opacity: 0.2});
+			$(this).animate({opacity: 1}, 500);
+			$("#selected").animate(
+			{ 
+				left: "5px",
+				marginLeft: "0" }, 600
+			);
+		});
+		
+		
+		
+		$("#tab_tribes").click(function(){
+			
+			$("li.tab").css({opacity: 0.2});
+			$(this).animate({opacity: 1}, 500);
+			$("#selected").animate(
+			{ 
+				left: "50%",
+				marginLeft: "-28px" }, 600
+			);
+		});
+		
+		
+		
+		$("#tab_me").click(function(){
+			
+			$("li.tab").css({opacity: 0.2});
+			$(this).animate({opacity: 1}, 500);
+			$("#selected").animate({ 
+				left: "100%",
+				marginLeft: "-62px" }, 600
+			);
+		});
+		
+		
 	});
 	
 
