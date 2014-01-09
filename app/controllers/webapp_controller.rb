@@ -1,10 +1,10 @@
 class WebappController < ApplicationController
 	layout 'webapp'
 	
-	def activities
-	  @title = "CANU - Activities"
+  def activities
+  
+  @title = "CANU - Activities"
     @body_class = "webapp"
-    
     @activities = get_from_canu_api("http://api.canu.se/activities")
 
   end
@@ -18,6 +18,7 @@ class WebappController < ApplicationController
     @body_class = "webapp"
     @user = User.new
   end
+ 
   
   def expired
     @title = "CANU - Expired Activity"

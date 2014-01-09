@@ -19,7 +19,7 @@
 	<div class="future_scrolling">
 		<div class="activity_container">
 			<div class="creator_info">
-				<img src="http://api.canu.se/<%=@activity['user']['profile_pic']%>" class="creator_userpic"/>
+				<img src="http://api.canu.se/<%=@activity['user']['profile_pic']%>" class="creator_userpic" onerror="MissingUserpic(this);"/>
 				<a class="creator_name"><%= @activity['user']['first_name']%></a>
 				
 				<span class="activity_hours"><%= Time.parse(@activity['start']).strftime("%H:%M")%> - <span><%=Time.parse(@activity['end_date']).strftime("%H:%M")%></span></span>	
@@ -47,7 +47,8 @@
 				</ul>
 			</div>
 			<div class="activity_menu">
-				<%= link_to '<div class="back_button"></div>'.html_safe, :back %>
+				<!--<%= link_to '<div class="back_button"></div>'.html_safe, :back %>-->
+				<%= link_to '<div class="home_button"></div>'.html_safe, :back %>
 				<a class="people_button"><%= @attendees.size%></a>
 				<a class="go_button"></a>
 				<a class="going_button"></a>
