@@ -24,6 +24,14 @@ div.activity_container {
 	
 }
 
+ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+}
 
 
 div.activity_people_wrapper {
@@ -262,7 +270,7 @@ p.activity_title{
 	font-size: 26px;
 	color: #2b4b58;
 	line-height: 30px;
-	padding: 20px 20px 10px 20px;
+	padding: 10px 20px 10px 20px;
 	font-weight: 700;
 }
 

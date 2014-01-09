@@ -24,7 +24,8 @@
 
 	   	//$(".codes").hide();
 	   	
-
+	   	
+	   	/*
 		$.fn.fullpage({
 			slidesColor: ['#f1f5f5', '#1ca6c3','#ec5f57'],
 			anchors: ['CANU','Tribes','Local', 'Me'],
@@ -35,7 +36,22 @@
 		$(".logo_top").click(function(){
 			$.fn.fullpage.moveToSlide('CANU');
 		});
+	   */
 	   
+	   	$("#sec_tribes").hover(function(){
+		   $("#sec_tribes").children().toggleClass("faded");	
+	   	});
+	   	
+	   	$("#sec_tribes").hover(function(){
+		   $(".c_soon").toggleClass("faded_full");	
+	   	});
+	   	
+	   	$("#sec_tribes").click(function(){
+		   $("#sec_tribes").children().toggleClass("faded");	
+	   	});
+	   	$("#sec_tribes").click(function(){
+		   $(".c_soon").toggleClass("faded_full");	
+	   	});
 		
 	   
 	    $("#feedback_btn").click(function(){
