@@ -1,20 +1,56 @@
+
+
+
+/******************************
+Web App - Feeds
+*******************************/
+
+div.wrapper {
+	
+	background-color: #f1f5f5;
+	max-width: 768px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0;	
+	}
+
+div.wr_feed {
+
+	position: relative;
+
+	top:0;
+	width: 100%;
+	height: 100px;
+	
+	transition-property: left, opacity;
+	-webkit-transition-property: left, opacity;
+    -webkit-transition-duration: 1.35s;
+
+	transition: left 1.35s ease-in-out, opacity 1.35s ease-in-out;
+   -moz-transition: left 1.35s ease-in-out, opacity 1.35s ease-in-out;
+   -webkit-transition: left 1.35s ease-in-out, opacity 1.35s ease-in-out;	
+   float: left;
+}
+
+#wr_tribes {
+	margin-top: -100px;
+}
+
+#wr_me {
+	margin-top: -100px;
+}
+
 /******************************
 Web App - Full View
 *******************************/
 
-div.future_scrolliang {
+
+div.future_scrollidng {
 	transform: rotate(180deg);
 	-ms-transform: rotate(180deg); /* IE 9 */
 	-webkit-transform: rotate(180deg); /* Safari and Chrome */
 }
 
-div.wrapper {
-	margin: 0 auto;
-	background-color: #f1f5f5;
-	max-width: 768px;
-	height: 100%;
-	background-color: black;
-}
 
 
 
