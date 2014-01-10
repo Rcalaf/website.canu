@@ -124,6 +124,15 @@ Sections
 }
 
 
+
+
+.full_visible {
+	opacity: 1;
+	transition: opacity .35s ease-in-out;
+   -moz-transition: opacity .35s ease-in-out;
+   -webkit-transition: opacity .35s ease-in-out;
+}
+
 .faded {
 	opacity: 0.1;
 	transition: opacity .35s ease-in-out;
@@ -203,13 +212,13 @@ h3{
 
 h4 {
 	font-size: 24px; 
-	line-height: 33px; 
+	line-height: 36px; 
 	font-weight: 400;
 	
 
 	margin: 60px auto 40px auto;
 	text-align: center;
-	padding: 0 60px;
+	padding: 0 70px;
 	color: #fff;
 }
 
@@ -258,6 +267,10 @@ p.c_soon {
 	margin-top: -85px;
 	margin-left: -85px;
 	text-transform: uppercase;
+
+		transition: opacity .5s ease-in-out;
+   -moz-transition: opacity .5s ease-in-out;
+   -webkit-transition: opacity .5s ease-in-out;	
 
 }
 
@@ -883,7 +896,7 @@ div.input_holder input.email{
 	padding: 0 8px;
 	font-size: 14px;
 	font-weight: 400;
-	color: rgba(28, 166, 195, 1);
+	color: #2b4b58;
 	background-color: rgba(255, 255, 255, 0.4);
 	cursor: pointer;
 }
@@ -927,6 +940,10 @@ body.stats{
 
 body.webapp{
 	background-color: #f1f5f5;
+}
+
+body.authorization{
+	background-color: #f;
 }
 
 body.expired{
@@ -1033,11 +1050,12 @@ div.authorization_form {
 	height: 300px;
 	margin-top: 40px;
 	padding: 0 10px;
+	padding-bottom: 140px;
 }
 
 a.guidance{
 	float: left;
-	margin-top: 20px;
+	margin-top: 10px;
 	font-size: 12px;
 	color: #2b4b58;
 	opacity: 0.5;
@@ -1045,15 +1063,16 @@ a.guidance{
 
 a.guidance_option{
 	float: right;
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-left: 10px;
 	font-size: 12px;
 	color: #2b4b58;
 	opacity: 0.5;
-	text-decoration: underline;
 }
 
-a.guidance_option:hover{
+a.guidance_option:hover, a.guidance_option:active{
 	cursor: pointer;
+	text-decoration: underline;
 }
 
 
@@ -1071,7 +1090,7 @@ div.input_classic input {
 	padding: 10 15px;
 	font-size: 15px;
 	background-color: #fff;
-	color: #6d6e7a;
+	color: #2b4b58;
 	margin: 0;
 	border-radius: 0;
 	
@@ -1098,7 +1117,7 @@ div.input_classic input.submit {
 	background-color: #1ca6c3;
 	color: #fff;
 	font-weight: 700;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	margin: 0;
 	border-radius: 0;
 	letter-spacing: 0.05em;
@@ -1106,11 +1125,49 @@ div.input_classic input.submit {
 
 }
 
-div.input_classic input.submit:active {
+div.input_classic input.submit:active, div.input_classic input.submit:hover {
 	background-color: #1a94a5;
+	cursor: pointer;
+}
+
+#signout {
+	background-color: #ec6057;
+}
+
+button_link {
+	background-color: #fff;
 }
 
 
+
+a.button_link {
+	width: 100%;
+	height: 47px;
+	padding: 0;
+	font-size: 14px;
+	background-color: #fff;
+	margin: 0; 
+	border-radius: 0;
+	display: block;
+
+}
+
+a.button_link span {
+	float: left;
+	padding-left: 14px;
+
+	line-height: 47px;
+	
+	font-size: 14px;
+
+	color: #2b4b58;
+	font-weight: 400;
+	text-transform: capitalize;
+	
+	text-align: left; 
+	
+
+}
 
 /******************************
 Mobile

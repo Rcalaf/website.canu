@@ -6,6 +6,7 @@ class WebappController < ApplicationController
   @title = "CANU - Activities"
     @body_class = "webapp"
     @activities = get_from_canu_api("http://api.canu.se/activities")
+    
 
   end
 	
@@ -18,12 +19,55 @@ class WebappController < ApplicationController
     @body_class = "webapp"
     @user = User.new
   end
- 
   
+  def fullview_signedin
+      
+      @activities = get_from_canu_api("http://api.canu.se/activities")
+      @title = "CANU - You're Invited"
+      @body_class = "webapp"
+      @user = User.new
+  end
+ 
   def expired
     @title = "CANU - Expired Activity"
     @body_class = "expired"
     @user = User.new
+  end
+  
+  def contribute
+      @title = "CANU - Contribute"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def iamnew_account
+      @title = "CANU - I'm New - Account"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def iamnew_profile
+      @title = "CANU - I'm New - Profile"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def signin
+      @title = "CANU - Sign In"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def settings
+      @title = "CANU - Your Settings"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def edit_profile
+      @title = "CANU - Edit Profile"
+      @user = User.new
+      @body_class = "authorization"
   end
   
   private 

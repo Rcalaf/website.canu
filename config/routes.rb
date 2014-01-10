@@ -39,6 +39,25 @@ Canu::Application.routes.draw do
     
     
     match 'start' => 'tribemachine#start', :as => 'start'
+    
+
+  # To implement in a proper way:
+  
+  
+  # add Name to Chat Message or "Going User"
+    match 'contribute' => 'webapp#contribute', :as => 'contribute'
+    
+    match 'iamnew_account' => 'webapp#iamnew_account', :as => 'iamnew_account'
+    match 'iamnew_profile' => 'webapp#iamnew_profile', :as => 'iamnew_profile'
+    
+    match 'signin' => 'webapp#signin', :as => 'signin'
+    
+    match 'fullview_signedin' => 'webapp#fullview_signedin', :as => 'fullview_signedin'
+    
+    match 'settings' => 'webapp#settings', :as => 'settings'
+    
+    match 'edit_profile' => 'webapp#edit_profile', :as => 'edit_profile'
+
 
   # ---------------------------API--------------------------------------
     # ------------------------USERS-------------------------------------

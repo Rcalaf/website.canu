@@ -16,12 +16,19 @@ div.wrapper {
 }
 
 
+
+div.feed_container {
+	width: auto;
+	max-width: 768px;
+	margin: 0 10px;
+	height: auto;
+}
+
 div.activity_container {
 	width: auto;
 	max-width: 768px;
 	margin: 0 10px;
 	height: auto;
-	
 }
 
 ul {
@@ -46,11 +53,10 @@ div.activity_people_wrapper {
 
 ul.people_list {
 	width: 100%;
-	position: absolute;
 	height: auto;
-	background-color: #f1f5f5;
 	z-index: 4001;
-	bottom: 57px;
+	padding-bottom: 60px;
+	padding-top: 10px;
 }
 
 ul.people_list li {
@@ -88,27 +94,30 @@ ul.people_list li a.guest_username {
 	font-weight: 700;
 }
 
-div.activity_menu {
-	position: fixed;
-	width: 768px;
-	background-color: #fafafa;
-	border-top: 1px solid #b3c9c9;
-	height: 57px;
-	bottom: 0;
-	left: 50%;
-	margin-left: -384px;
-	z-index: 5000;
-}
 
 
 /******************************
 Activity Menu
 *******************************/
 
-div.home_button {
-	width: 57px;
+div.activity_menu {
+	position: fixed;
+	width: 748px;
+	background-color: #fafafa;
+	border-top: 2px solid rgba(43, 75, 88, 0.1);
 	height: 57px;
-	float: left;
+	bottom: 0;
+	left: 50%;
+	margin-left: -374px;
+	z-index: 5000;
+}
+
+div.home_button {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 40px;
+	height: 40px;
 	background-color: #fff;
 	background-image: url(/assets/canu_logo.png);
 	background-size: 100%;
@@ -154,10 +163,18 @@ a.go_button {
 	top: 10px;
 	right: 10px;
 	background-color: #1ca5c2;
-	background-image: url(/assets/webapp/fullview_action_go@2x.png);
+	text-align: center;
+	font-weight: 700;
+	color: #fff;
+	font-size: 16px;
 	background-size: 100%;
 	line-height: 37px;
 }
+
+a.go_button:hover{ 
+	background-color: #1a94a5;
+	cursor: pointer;
+	}
 
 a.going_button {
 	width: 116px;
@@ -177,12 +194,16 @@ a.going_button {
 Contents
 *******************************/
 
+div.feed_container div.creator_info {
+	margin-top: 10px;
+}
+
 div.creator_info {
 	float: left;
 	height: 35px;
 	background-color: #fafafa;
 	width: 100%;
-	margin-top: 10px;
+	margin-top: 80px;
 	border-bottom: 1px solid #f1f5f5;
 }
 
@@ -190,18 +211,10 @@ div.activity_header {
 	float: left;
 	width: 100%;
 	height: auto;
-	padding-bottom: 20px;
 	background-color: #fff;
 }
 
-div.activity_chat {
-	float: left;
-	width: 100%;
-	height: auto;
-	min-height: 200px;
-	background-color: rgba(255, 255, 255, 0.5);
-	margin-top: 1px;
-}
+
 
 
 img.creator_userpic {
@@ -267,10 +280,12 @@ div.map {
 
 p.activity_title{
 
-	font-size: 26px;
+	font-size: 24px;
 	color: #2b4b58;
-	line-height: 30px;
-	padding: 10px 20px 10px 20px;
+	line-height: 32px;
+	padding: 20px 20px;
+	padding-bottom: 4px;
+	margin: 0;
 	font-weight: 700;
 }
 
@@ -282,7 +297,7 @@ p.activity_address{
 }
 
 p.activity_description{
-	line-height: 25px;
+	line-height: 22px;
 	font-size: 14px;
 	color: #2b4b58;
 	padding: 0 20px;
@@ -294,22 +309,34 @@ p.activity_description{
 Chat
 *******************************/
 
+
+div.activity_chat {
+	float: left;
+	width: 100%;
+	height: auto;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 0;
+	margin-bottom: 68px;
+}
+
 div.activity_chat ul {
 	width: 100%;
 	height: auto;
-	padding-bottom: 58px;
+	margin: 0;
+	padding: 0;
 }
 
 
 div.activity_chat ul li {
 	width: auto;
 	margin: 10px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid rgba(43, 75, 88, 0.1);
 }
 
 div.activity_chat ul li:last-child {
 	border-bottom: none;
+	padding-top: 10px;
 }
 
 div.activity_chat ul li p.chat_message {
@@ -324,9 +351,9 @@ div.activity_chat ul li p.chat_message {
 
 div.activity_chat ul li.leave_message {
 	width: auto;
-	margin: 10px;
 	padding-bottom: 0;
 	height: 37px;
+	margin: 10px 10px 0 10px;
 }
 
 
@@ -347,6 +374,7 @@ div.input_chat {
 	height: 37px;
 	float: left;
 	margin-bottom: 10px;
+	margin-top: -10px;
 	position: relative;
 	background-color: #fff;
 }
@@ -355,7 +383,7 @@ div.input_chat input, div.input_go input {
 	width: 100%;
 	height: 37px;
 	line-height: 17px;
-	padding: 10px 70px 10px 10px;
+	padding: 10px 70px 10px 14px;
 	font-size: 15px;
 	color: #2b4b58;
 	outline: none;
@@ -390,11 +418,12 @@ div.input_chat input.chat_submit, div.input_go input.chat_submit {
 	
 	position: absolute;
 	top: 2px;
-	right: 2px;
+	right: 2px;	
 }
 
-div.input_chat input.chat_submit:active {
+div.input_chat input.chat_submit:active, div.input_chat input.chat_submit:hover {
 	background-color: #1a94a5;
+	cursor: pointer;
 }
 
 
@@ -403,13 +432,40 @@ div.input_chat input.chat_submit:active {
 Navbox
 *******************************/
 
+#selected{
+	width: 57px;
+	height: 57px;
+	bottom: 5px;
+	position: absolute;
+	background-color: #fff;
+	box-shadow: 0px 0px 4px rgba(43, 75, 88, 0.4);
+	-moz-box-shadow: 0px 0px 4px rgba(43, 75, 88, 0.4);
+	-webkit-box-shadow: 0px 0px 4px rgba(43, 75, 88, 0.4);
+	
+	
+	transition-property: left;
+	-webkit-transition-property: left;
+    -webkit-transition-duration: 0.35s;
+	transition: left .35s ease-in-out;
+   -moz-transition: left .35s ease-in-out;
+   -webkit-transition: left .35s ease-in-out;
+   	
+}
+
 ul.tabs {
 	position: fixed;
-	bottom: 5px;
+	bottom: 0;
 	left: 50%;
+	margin: 0;
+	padding: 0;
 	margin-left: -384px;
 	width: 768px;
 	height: 57px;
+	z-index: 3000;
+	outline: none;
+	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-appearance: none;	
 }
 
 ul.tabs li.tab {
@@ -418,37 +474,34 @@ ul.tabs li.tab {
 	position: absolute;
 	background-size: 57px 57px;
 	z-index: 3000;
-	opacity: 0.7;
-	background-color: rgba(255, 255, 255, 0.4);
+	opacity: 0.6;
+	box-shadow: inset 0 0 0 1px rgba(43, 75, 88, 0.1);
+	-moz-box-shadow: inset 0 0 0 1px rgba(43, 75, 88, 0.1);
+	-webkit-box-shadow: inset 0 0 0 1px rgba(43, 75, 88, 0.1);
+	
+	
+	background-color: rgba(241, 245, 245, 1);
+	bottom: 5px;
+	transition: opacity .35s ease-in-out;
+   -moz-transition: opacity .35s ease-in-out;
+   -webkit-transition: opacity .35s ease-in-out;
+   
 }
 
 ul.tabs li.tab:hover {
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(241, 245, 245, 0.7);
 	cursor: pointer;
-	opacity: 0.9;
-}
-
-ul.tabs li.tab:active {
-	background-color: rgba(255, 255, 255, 0.7);
-	cursor: pointer;
-	opacity: 0.9;
-}
-
-#selected{
-	width: 57px;
-	height: 57px;
-	position: absolute;
-	left: 5px;
-	margin-left: 0;
-	z-index: 2990;
-	background-color: #fff;
-	box-shadow: 0px 0px 2px rgba(100, 100, 100, 0.3);
+	opacity: 0.6;
+	transition: opacity .35s ease-in-out;
+   -moz-transition: opacity .35s ease-in-out;
+   -webkit-transition: opacity .35s ease-in-out;	
 }
 
 
 #tab_local {
 	left: 5px;
 	background-image: url(/assets/webapp/tab_local.png);
+	z-index: 900;
 }
 
 
@@ -456,20 +509,201 @@ ul.tabs li.tab:active {
 	left: 50%;
 	margin-left: -28px;
 	background-image: url(/assets/webapp/tab_tribes.png);
+	z-index: 900;
 }
 
 
 #tab_me {
 	right: 5px;
 	background-image: url(/assets/webapp/tab_me.png);
+	z-index: 1002;
+}
+
+ul.tabs .tab_selected {
+	opacity: 1 !important;
+	z-index: 1006 !important;
+	background-color: #fff !important;
+
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;	
+	
+	transition: opacity .35s ease-in-out;
+   -moz-transition: opacity .35s ease-in-out;
+   -webkit-transition: opacity .35s ease-in-out;
+}
+
+.pos_local {
+	left: 5px;
+	z-index: 700;
+	left: 5px;
+	margin-left: 0;	
+	
+	transition-property: left;
+	-webkit-transition-property: left;
+    -webkit-transition-duration: 0.35s;
+	transition: left .35s ease-in-out;
+   -moz-transition: left .35s ease-in-out;
+   -webkit-transition: left .35s ease-in-out;	
+}
+
+.pos_tribes {
+	left: 5px;
+	z-index: 700;
+	left: 50%;
+	margin-left: -28px;	
+	
+	transition-property: left;
+	-webkit-transition-property: left;
+    -webkit-transition-duration: 0.35s;
+	transition: left .35s ease-in-out;
+   -moz-transition: left .35s ease-in-out;
+   -webkit-transition: left .35s ease-in-out;	
+}
+
+.pos_me {
+	left: 5px;
+	z-index: 1005;
+	left: 100%;
+	margin-left: -62px;	
+	
+	transition-property: left;
+	-webkit-transition-property: left;
+    -webkit-transition-duration: 0.35s;
+	transition: left .35s ease-in-out;
+   -moz-transition: left .35s ease-in-out;
+   -webkit-transition: left .35s ease-in-out;	
 }
 
 
+/******************************
+Signed In
+*******************************/
+
+div.my_profile {
+	position: absolute;
+	width: 100%;
+	height: 114px;
+	background-color: #fff;
+	box-shadow: 0px 0px 4px rgba(43, 75, 88, 0.3);
+	
+
+	bottom: -114px;
+	z-index: 1000;
+	overflow: hidden;
+	transition-property: bottom;
+	-webkit-transition-property: bottom;
+    -webkit-transition-duration: 0.5s;
+	transition: bottom .35s ease-in-out;
+   -moz-transition: bottom .35s ease-in-out;
+   -webkit-transition: bottom .35s ease-in-out;	
+}
+
+
+.profilepossition {
+	position: absolute;
+	bottom: 0 !important;
+	transition-property: bottom;
+	-webkit-transition-property: bottom;
+    -webkit-transition-duration: 0.5s;
+	transition: bottom .35s ease-in-out;
+   -moz-transition: bottom .35s ease-in-out;
+   -webkit-transition: bottom .35s ease-in-out;
+}
+
+
+img.logedin_userpic {
+	margin: 10px;
+	float: left;
+	height: 94px;
+	width: 94px;
+	display: block;
+	background-color: #333;
+	border: none;
+	outline: none;
+}
+
+a.logedin_name {
+	float: left;
+	line-height: 35px;
+	color: #1a8b9c;
+	margin-top: 14px;
+	font-size: 18px;
+	padding-left: 5px;
+	font-weight: 700;
+	
+	width: 50%;
+	
+}
+
+a.logedin_username {
+	float: left;
+	line-height: 15px;
+	color: #2b4b58;
+	font-size: 12px;
+	padding-left: 5px;
+	font-weight: 700;
+	padding-top: 4px;
+	width: 50%;
+}
+
+a.logedin_settings {
+	float: right;
+	width: 47px;
+	height: 42px;
+	background-color: aqua;
+	
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	
+	background: url(/assets/webapp/user_settings@2x.png) center center no-repeat;
+	background-size: 17px 17px;
+	opacity: 0.5;
+
+		transition: opacity .5s ease-in-out;
+   -moz-transition: opacity .5s ease-in-out;
+   -webkit-transition: opacity .5s ease-in-out;	
+   cursor: pointer;	
+	
+	
+}
+
+a.logedin_settings:hover, a.logedin_settings:active {
+	opacity: 1;
+		transition: opacity .5s ease-in-out;
+   -moz-transition: opacity .5s ease-in-out;
+   -webkit-transition: opacity .5s ease-in-out;	
+   cursor: pointer;
+}
 
 
 /******************************
 Mobile
 *******************************/
+
+
+@media only screen and (max-width: 880px), only screen and (max-device-width: 880px){
+	div.home_button {
+	
+		position: relative;
+		width: 37px;
+		height: 37px;
+		top: 10px;
+		left: 10px;
+		margin-right: 8px;
+		float: left;
+		background-color: #fff;
+		background-image: url(/assets/canu_logo.png);
+		background-size: 100%;
+	}
+	
+	div.creator_info {
+		margin-top: 10px;
+	}	
+}
+
+
 
 @media only screen and (max-width: 768px), only screen and (max-device-width: 768px){
 		
@@ -477,23 +711,24 @@ Mobile
 		position: fixed;
 		width: 100%;
 		background-color: #fafafa;
-		border-top: 1px solid #b3c9c9;
+		border-top: 1px solid rgba(43, 75, 88, 0.1);;
 		height: 57px;
 		bottom: 0;
 		left: 0;
 		z-index: 5000;
 		margin-left: 0;
 	}
+	
+
 
 	ul.tabs {
 		position: fixed;
-		bottom: 5px;
+		bottom: 0;
 		left: 0;
 		margin-left: 0;
 		width: 100%;
 		height: 57px;
 	}
-
 		
 }
 

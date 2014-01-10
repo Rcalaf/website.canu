@@ -42,6 +42,8 @@
 			$(".going_button").fadeIn();
 		});
 		
+		
+		/*
 		$(".chat_submit").click(function(){
 			$(".add_data").fadeIn(700);
 		});
@@ -54,7 +56,7 @@
 			$(".add_data").fadeOut();
 		});
 		
-		
+		*/
 		$(".going_button").click(function(){
 			$(this).fadeOut();
 			$(".go_button").fadeIn();
@@ -63,44 +65,39 @@
 		
 		
 		
-		$("#tab_local").animate({opacity: 1}, 30);
-		$("#content_local").show();
-		
+		$("#tab_local").addClass("tab_selected");
+		$("#selected").addClass("pos_local");
 
-		$("#tab_local").click(function(){			
-			$("li.tab").css({opacity: 0.2});
-			$(this).animate({opacity: 1}, 500);
-			$("#selected").animate(
-			{ 
-				left: "5px",
-				marginLeft: "0" }, 600
-			);
+
+	
+		
+		$("#tab_local").click(function(){
+			$("#selected").removeClass("pos_tribes").removeClass("pos_me");
+			$("#selected").addClass("pos_local");
 		});
-		
-		
-		
+
 		$("#tab_tribes").click(function(){
-			
-			$("li.tab").css({opacity: 0.2});
-			$(this).animate({opacity: 1}, 500);
-			$("#selected").animate(
-			{ 
-				left: "50%",
-				marginLeft: "-28px" }, 600
-			);
+			$("#selected").removeClass("pos_local").removeClass("pos_me");
+			$("#selected").addClass("pos_tribes");
 		});
+
+
 		
 		
-		
-		$("#tab_me").click(function(){
-			
-			$("li.tab").css({opacity: 0.2});
-			$(this).animate({opacity: 1}, 500);
-			$("#selected").animate({ 
-				left: "100%",
-				marginLeft: "-62px" }, 600
-			);
-		});
+	   	$("#tab_me").click(function(){
+	   		if ($(this).hasClass("tab_selected")) {
+		   		$(".my_profile").toggleClass("profilepossition");
+		   		$(".wrapper").toggleClass("fade");	
+		   } else {
+			   $("#selected").removeClass("pos_local").removeClass("pos_tribes");
+			   $("#selected").addClass("pos_me");
+		   } 
+	   	});		
+	   	
+		$("#tab_tribes, #tab_local, #tab_me").click(function(){
+			$("li.tab").removeClass("tab_selected");
+			$(this).addClass("tab_selected");
+		});	   	
 		
 		
 	});

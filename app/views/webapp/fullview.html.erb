@@ -1,20 +1,6 @@
 <%# @activity%>
 <%# @attendees%>
 
-
-<div class="add_data">
-	<div class="authorization_header">Who are you?</div>
-	<div class="authorization_form">
-		<div class="input_classic">
-			<input name="user[confirm_password]" class="authorization" placeholder="Full Name"/>
-		</div>
-		<div class="input_classic">
-			<input name="user[email]" type="submit" class="submit" value="save" id="submit_save_name"/>
-		</div>	
-		<a class="guidance">Your name will be shown and saved for future.</a>
-		<a class="guidance_option" id="cancel_add_data">Cancel</a>
-	</div>
-</div>
 <div class="wrapper">
 	<div class="future_scrolling">
 		<div class="activity_container">
@@ -41,7 +27,7 @@
 					<li class="leave_message">
 						<div class="input_chat">
 							<input class="authorization" placeholder="Say something nice"/>
-							<input type="submit" class="chat_submit" value="send"/>
+							<a href="<%=contribute_url%>"><input type="submit" class="chat_submit" value="send"/></a>
 						</div>
 					</li>
 				</ul>
@@ -50,14 +36,14 @@
 				<!--<%= link_to '<div class="back_button"></div>'.html_safe, :back %>-->
 				<%= link_to '<div class="home_button"></div>'.html_safe, :back %>
 				<a class="people_button"><%= @attendees.size%></a>
-				<a class="go_button"></a>
+				<a href="<%=contribute_url%>" class="go_button">GO</a>
 				<a class="going_button"></a>
 			</div>
 		</div>
 		<div class="activity_people_wrapper">
 			<ul class="people_list">
 				<%= render :partial => "attendee", :collection => @attendees%>
-			</ul>
+			</ul>						
 			<div class="activity_menu">
 				<div class="back_button" id="bb_ppl_list"></div>
 			</div>

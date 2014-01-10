@@ -11,11 +11,13 @@ class UsersController < ApplicationController
    def resetpassword
      @title = "CANU - Reset Password"
      @user = User.new
+     @body_class = "authorization"
    end
    
    def emailconfirmation
        @title = "CANU - E-mail Confirmed"
        @user = User.new
+       @body_class = "authorization"
    end
   
   def new
