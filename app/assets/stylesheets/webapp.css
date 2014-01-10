@@ -13,6 +13,7 @@ div.wrapper {
 	background-color: #f1f5f5;
 	max-width: 768px;
 	height: 100%;
+	background-color: black;
 }
 
 
@@ -294,6 +295,7 @@ p.activity_address{
 	font-size: 10px;
 	color: #2b4b58;
 	padding: 0 20px;
+	padding-bottom: 10px;
 }
 
 p.activity_description{
