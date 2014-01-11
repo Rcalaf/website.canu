@@ -82,6 +82,15 @@ a:hover {
 	color: rgba(28, 166, 195, 1);
 }
 
+ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+}
+
 
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:    #bec8cc;
@@ -120,7 +129,7 @@ Sections
 }
 
 #sec_local, #sec_tribes {
-	border: 10px solid #f1f1f5;
+	border: 10px solid #f1f5f5;
 	border-bottom: 0 solid;
 	margin-bottom: 40px;
 }
@@ -129,14 +138,14 @@ Sections
 	 background-color: #83d3d6;
 	 width: 50%;
 	 height: 500px;
-	 border-right: 5px solid #f1f1f5;
+	 border-right: 5px solid #f1f5f5;
 }
 
 #sec_tribes {
 	 background-color: #2c4b58;
 	  width: 50%;
 	  height: 500px;
-	  border-left: 5px solid #f1f1f5;
+	  border-left: 5px solid #f1f5f5;
 }
 
 
@@ -360,7 +369,7 @@ Top Menu
 ul.top_menu {
 	position: fixed;
 	height: 40px;
-	background-color: rgba(241, 245, 245, 0.9);
+	background-color: rgba(242, 245, 245, 0.9);
 	z-index: 10000;
 	
 	
@@ -455,14 +464,14 @@ Comments Container
 	left: 140px;
 	top: 50%;
 	margin-top: -110px;
-	width: 340px;
+	width: 300px;
 	height: 220px;
 	font-weight: 700;
 	
 	padding: 0 20px;
 	
-	font-size: 26px;
-	line-height: 36px;
+	font-size: 36px;
+	line-height: 54px;
 	color: #fff;   
 	font-weight: 700;
 	display: none;
@@ -474,7 +483,7 @@ Comments Container
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(65, 64, 66, 0.95);
+	background-color: rgba(43, 75, 88, 0.95);
 	top: 0;
 	left: 0;
 	z-index: 10050;
@@ -635,6 +644,7 @@ span.team  ul.team li{
 	background-position: 227px 0;
 	cursor: pointer;
 	opacity: 0.2;
+	margin-left: 0;
 }
 
 span.team  ul.team li:hover{
@@ -723,7 +733,7 @@ div.member_story {
 	top: 326px;
 	left: 0;
 	height: 260px;
-	background-color: rgba(241, 245, 245, 1);
+	background-color: rgba(242, 245, 245, 1);
 }
 
 
@@ -952,7 +962,7 @@ body.webapp{
 }
 
 body.authorization{
-	background-color: #f;
+	background-color: #f1f5f5;
 }
 
 body.expired{
@@ -1353,7 +1363,7 @@ Mobile
 		ul.top_menu {
 			position: fixed;
 			height: 40px;
-			background-color: rgba(241, 245, 245, 0.9);
+			background-color: rgba(242, 245, 245, 0.9);
 			z-index: 10000;
 			width: 250px;
 			top: 10px;
