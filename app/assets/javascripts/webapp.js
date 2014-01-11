@@ -87,6 +87,9 @@
 		});
 				
 		$("#tab_local").addClass("tab_selected");
+		
+		/*
+			
 		$("#selected").addClass("pos_local");
 
 
@@ -100,13 +103,15 @@
 			$("#selected").addClass("pos_tribes");
 		});
 		
+		
+		*/
+		
 	   	$("#tab_me").click(function(){
 	   		if ($(this).hasClass("tab_selected")) {
 		   		$(".my_profile").toggleClass("profilepossition");
 		   		$(".wrapper").toggleClass("faded");	
 		   } else {
-			   $("#selected").removeClass("pos_local").removeClass("pos_tribes");
-			   $("#selected").addClass("pos_me");
+
 		   } 
 	   	});		
 	   	
