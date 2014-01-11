@@ -62,19 +62,19 @@
 
 		$("#tab_local").click(function(){
 			$("#wr_local").css("left","0").css("opacity","1");
-			$("#wr_tribes").css("left","100%").css("opacity","0.3");
-			$("#wr_me").css("left","200%").css("opacity","0.3");
+			$("#wr_tribes").css("left","100%").css("opacity","0");
+			$("#wr_me").css("left","200%").css("opacity","0");
 		});
 
 		$("#tab_tribes").click(function(){
-			$("#wr_local").css("left","-100%").css("opacity","0.3");
+			$("#wr_local").css("left","-100%").css("opacity","0");
 			$("#wr_tribes").css("left","0").css("opacity","1");
-			$("#wr_me").css("left","100%").css("opacity","0.3");
+			$("#wr_me").css("left","100%").css("opacity","0");
 		});
 		
 		$("#tab_me").click(function(){
-			$("#wr_local").css("left","-200%").css("opacity","0.3");
-			$("#wr_tribes").css("left","-100%").css("opacity","0.3");
+			$("#wr_local").css("left","-200%").css("opacity","0");
+			$("#wr_tribes").css("left","-100%").css("opacity","0");
 			$("#wr_me").css("left","0").css("opacity","1");
 		});				
 
@@ -103,7 +103,7 @@
 	   	$("#tab_me").click(function(){
 	   		if ($(this).hasClass("tab_selected")) {
 		   		$(".my_profile").toggleClass("profilepossition");
-		   		$(".wrapper").toggleClass("fade");	
+		   		$(".wrapper").toggleClass("faded");	
 		   } else {
 			   $("#selected").removeClass("pos_local").removeClass("pos_tribes");
 			   $("#selected").addClass("pos_me");

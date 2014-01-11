@@ -38,20 +38,15 @@
 		});
 	   */
 	   
-	   	$("#sec_tribes").hover(function(){
-		   $("#sec_tribes").children().toggleClass("faded");	
-	   	});
-	   	
-	   	$("#sec_tribes").hover(function(){
-		   $(".c_soon").toggleClass("faded_full");	
-	   	});
+
 	   	
 	   	$("#sec_tribes").click(function(){
 		   $("#sec_tribes").children().toggleClass("faded");	
 	   	});
-	   	$("#sec_tribes").click(function(){
-		   $(".c_soon").toggleClass("faded_full");	
+	    $("#sec_tribes").hover(function(){
+		   $("#sec_tribes").children().toggleClass("faded");	
 	   	});
+
 		
 	   
 	    $("#feedback_btn").click(function(){    	

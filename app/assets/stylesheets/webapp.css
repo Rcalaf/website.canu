@@ -13,24 +13,26 @@ div.wrapper {
 	margin: 0 auto;
 	padding: 0;	
 	overflow-x: hidden;
+	
+	
+	transition: opacity 0.2s ease-in-out;
+   -moz-transition: opacity 0.2s ease-in-out;
+   -webkit-transition: opacity 0.2s ease-in-out;	
+	
 	}
 
 div.wr_feed {
 
 	position: relative;
-
+	float: left;
 	top:0;
 	width: 100%;
 	height: 100px;
 	
-	transition-property: left, opacity;
-	-webkit-transition-property: left, opacity;
-    -webkit-transition-duration: 1.35s;
-
-	transition: left 1.35s ease-in-out, opacity 1.35s ease-in-out;
-   -moz-transition: left 1.35s ease-in-out, opacity 1.35s ease-in-out;
-   -webkit-transition: left 1.35s ease-in-out, opacity 1.35s ease-in-out;	
-   float: left;
+	transition: left 0.5s ease-in-out, opacity 0.7s ease-in-out;
+   -moz-transition: left 0.5s ease-in-out, opacity 0.7s ease-in-out;
+   -webkit-transition: left 0.5s ease-in-out, opacity 0.7s ease-in-out;	
+   
 }
 
 #wr_tribes {
@@ -44,16 +46,6 @@ div.wr_feed {
 /******************************
 Web App - Full View
 *******************************/
-
-
-div.future_scrollidng {
-	transform: rotate(180deg);
-	-ms-transform: rotate(180deg); /* IE 9 */
-	-webkit-transform: rotate(180deg); /* Safari and Chrome */
-}
-
-
-
 
 div.feed_container {
 	width: auto;
@@ -477,18 +469,13 @@ Navbox
 	bottom: 5px;
 	position: absolute;
 	background-color: #fff;
-	box-shadow: 0px 0px 4px rgba(43, 75, 88, 0.4);
-	-moz-box-shadow: 0px 0px 4px rgba(43, 75, 88, 0.4);
-	-webkit-box-shadow: 0px 0px 4px rgba(43, 75, 88, 0.4);
+	box-shadow: 0px 0px 2px rgba(43, 75, 88, 0.4);
+	-moz-box-shadow: 0px 0px 2px rgba(43, 75, 88, 0.4);
+	-webkit-box-shadow: 0px 0px 2px rgba(43, 75, 88, 0.4);
 	
-	
-	transition-property: left;
-	-webkit-transition-property: left;
-    -webkit-transition-duration: 0.35s;
 	transition: left .35s ease-in-out;
    -moz-transition: left .35s ease-in-out;
-   -webkit-transition: left .35s ease-in-out;
-   	
+   -webkit-transition: left .35s ease-in-out;	
 }
 
 ul.tabs {
@@ -521,19 +508,11 @@ ul.tabs li.tab {
 	
 	background-color: rgba(241, 245, 245, 1);
 	bottom: 5px;
-	transition: opacity .35s ease-in-out;
-   -moz-transition: opacity .35s ease-in-out;
-   -webkit-transition: opacity .35s ease-in-out;
-   
 }
 
-ul.tabs li.tab:hover {
-	background-color: rgba(241, 245, 245, 0.7);
+ul.tabs li.tab:hover, ul.tabs li.tab:active {
 	cursor: pointer;
-	opacity: 0.6;
-	transition: opacity .35s ease-in-out;
-   -moz-transition: opacity .35s ease-in-out;
-   -webkit-transition: opacity .35s ease-in-out;	
+	opacity: 0.7;	
 }
 
 
@@ -566,10 +545,7 @@ ul.tabs .tab_selected {
 	box-shadow: none !important;
 	-moz-box-shadow: none !important;
 	-webkit-box-shadow: none !important;	
-	
-	transition: opacity .35s ease-in-out;
-   -moz-transition: opacity .35s ease-in-out;
-   -webkit-transition: opacity .35s ease-in-out;
+
 }
 
 .pos_local {
@@ -577,13 +553,7 @@ ul.tabs .tab_selected {
 	z-index: 700;
 	left: 5px;
 	margin-left: 0;	
-	
-	transition-property: left;
-	-webkit-transition-property: left;
-    -webkit-transition-duration: 0.35s;
-	transition: left .35s ease-in-out;
-   -moz-transition: left .35s ease-in-out;
-   -webkit-transition: left .35s ease-in-out;	
+
 }
 
 .pos_tribes {
@@ -591,13 +561,6 @@ ul.tabs .tab_selected {
 	z-index: 700;
 	left: 50%;
 	margin-left: -28px;	
-	
-	transition-property: left;
-	-webkit-transition-property: left;
-    -webkit-transition-duration: 0.35s;
-	transition: left .35s ease-in-out;
-   -moz-transition: left .35s ease-in-out;
-   -webkit-transition: left .35s ease-in-out;	
 }
 
 .pos_me {
@@ -605,13 +568,6 @@ ul.tabs .tab_selected {
 	z-index: 1005;
 	left: 100%;
 	margin-left: -62px;	
-	
-	transition-property: left;
-	-webkit-transition-property: left;
-    -webkit-transition-duration: 0.35s;
-	transition: left .35s ease-in-out;
-   -moz-transition: left .35s ease-in-out;
-   -webkit-transition: left .35s ease-in-out;	
 }
 
 
@@ -630,24 +586,16 @@ div.my_profile {
 	bottom: -114px;
 	z-index: 1000;
 	overflow: hidden;
-	transition-property: bottom;
-	-webkit-transition-property: bottom;
-    -webkit-transition-duration: 0.5s;
-	transition: bottom .35s ease-in-out;
-   -moz-transition: bottom .35s ease-in-out;
-   -webkit-transition: bottom .35s ease-in-out;	
+
+	transition: bottom .3s ease-in-out;
+   -moz-transition: bottom .3s ease-in-out;
+   -webkit-transition: bottom .3s ease-in-out;	
 }
 
 
 .profilepossition {
 	position: absolute;
 	bottom: 0 !important;
-	transition-property: bottom;
-	-webkit-transition-property: bottom;
-    -webkit-transition-duration: 0.5s;
-	transition: bottom .35s ease-in-out;
-   -moz-transition: bottom .35s ease-in-out;
-   -webkit-transition: bottom .35s ease-in-out;
 }
 
 
@@ -700,19 +648,13 @@ a.logedin_settings {
 	background-size: 17px 17px;
 	opacity: 0.5;
 
-		transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
    -moz-transition: opacity .5s ease-in-out;
    -webkit-transition: opacity .5s ease-in-out;	
-   cursor: pointer;	
-	
-	
 }
 
 a.logedin_settings:hover, a.logedin_settings:active {
 	opacity: 1;
-		transition: opacity .5s ease-in-out;
-   -moz-transition: opacity .5s ease-in-out;
-   -webkit-transition: opacity .5s ease-in-out;	
    cursor: pointer;
 }
 

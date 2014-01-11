@@ -144,23 +144,14 @@ Sections
 
 .full_visible {
 	opacity: 1;
-	transition: opacity .35s ease-in-out;
-   -moz-transition: opacity .35s ease-in-out;
-   -webkit-transition: opacity .35s ease-in-out;
 }
 
 .faded {
-	opacity: 0.1;
-	transition: opacity .35s ease-in-out;
-   -moz-transition: opacity .35s ease-in-out;
-   -webkit-transition: opacity .35s ease-in-out;
+	opacity: 0.3;
 }
 
 .faded_full {
 	opacity: 0;
-	transition: opacity .35s ease-in;
-   -moz-transition: opacity .35s ease-in;
-   -webkit-transition: opacity .35s ease-in;
 }
 
 
@@ -269,9 +260,9 @@ p.description {
 
 p.c_soon {
 	text-align: center;
-	width: 170px;
-	height: 170px;
-	line-height: 170px;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
 	color: #2c4b58;
 	
 	background-color: #f1f1f5;
@@ -282,8 +273,8 @@ p.c_soon {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	margin-top: -85px;
-	margin-left: -85px;
+	margin-top: -50px;
+	margin-left: -50px;
 	text-transform: uppercase;
 
 		transition: opacity .5s ease-in-out;
