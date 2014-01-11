@@ -42,6 +42,7 @@
 			$(".going_button").fadeIn();
 		});
 		
+		$(".empty_tribes").css("height", $(document).height() + "px");
 		
 		/*
 		$(".chat_submit").click(function(){

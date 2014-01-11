@@ -35,6 +35,26 @@ div.wr_feed {
    
 }
 
+
+div.empty_tribes {
+	position: relative;
+	background: url(/assets/webapp/empty_tribes.svg) no-repeat center center;
+	width: 100%;
+	display: block;
+	background-size: cover;	
+}
+
+p.situation {
+	float: left;	
+	text-align: center;
+	width: 100%;	
+	padding: 0;	
+	color: #fff;
+	font-size: 24px;
+	font-weight: 700;
+	margin-top: 20%;	
+}
+
 /******************************
 Web App - Full View
 *******************************/
