@@ -13,9 +13,6 @@
 			
 			</div>
 			<div class="activity_header">
-				<!--<div class="map">
-					<iframe width='100%' height='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v3/vinitiate.ggnah1pf/mm/zoomwheel.html?secure=1#11/<%=activity['latitude']%>/<%=activity['longitude']%>'></iframe>
-				</div>-->
 				<a href="<%=fullview_url(activity['id'])%>">
 				<p class="activity_title"><%= activity['title']%></p>
 				<p class="activity_address"><%= activity['street']%>, <%= activity['city']%>, <%= activity['zip_code']%></p>
@@ -24,6 +21,7 @@
 		</div>
 		<%end%>		
 	</div>
+	
 	<div class="wr_feed" id="wr_tribes" style="left: 100%; opcaity: 0">
 		<%  @activities.each do |activity|%>
 			<%# activity%>
@@ -37,9 +35,6 @@
 			
 			</div>
 			<div class="activity_header">
-				<!--<div class="map">
-					<iframe width='100%' height='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v3/vinitiate.ggnah1pf/mm/zoomwheel.html?secure=1#11/<%=activity['latitude']%>/<%=activity['longitude']%>'></iframe>
-				</div>-->
 				<a href="<%=fullview_url(activity['id'])%>">
 				<p class="activity_title"><%= activity['title']%></p>
 				<p class="activity_address"><%= activity['street']%>, <%= activity['city']%>, <%= activity['zip_code']%></p>
@@ -48,6 +43,7 @@
 		</div>
 		<%end%>
 	</div>
+	
 	<div class="wr_feed" id="wr_me" style="left: 200%; opcaity: 0">
 		<%  @activities.each do |activity|%>
 			<%# activity%>
@@ -62,9 +58,6 @@
 			
 			</div>
 			<div class="activity_header">
-				<!--<div class="map">
-					<iframe width='100%' height='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v3/vinitiate.ggnah1pf/mm/zoomwheel.html?secure=1#11/<%=activity['latitude']%>/<%=activity['longitude']%>'></iframe>
-				</div>-->
 				<a href="<%=fullview_url(activity['id'])%>">
 				<p class="activity_title"><%= activity['title']%></p>
 				<p class="activity_address"><%= activity['street']%>, <%= activity['city']%>, <%= activity['zip_code']%></p>
@@ -77,13 +70,14 @@
 	</div>
 </div>
 <ul class="tabs">
+	
 	<div id="selected"></div>
 	<li class="tab" id="tab_local"></li>
 	<li class="tab" id="tab_tribes"></li>
 	<li class="tab" id="tab_me"></li>
 
 	<div class="my_profile">
-		<img src="#" onerror="MissingUserpic(this);" class="logedin_userpic"/>
+		<img src="#" onerror="MissingUserpic(this)" class="logedin_userpic"/>
 		<a class="logedin_name">Jacob Koloa</a>
 		<a class="logedin_username">thejacob</a>
 		<a class="logedin_settings" href="<%=settings_url%>"></a>
