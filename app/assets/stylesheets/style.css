@@ -958,7 +958,6 @@ body.stats{
 
 body.webapp{
 	background-color: #f1f5f5;
-	overflow-x: hidden;
 }
 
 body.authorization{
