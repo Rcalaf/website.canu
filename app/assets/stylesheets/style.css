@@ -103,7 +103,7 @@ li {
 Transitions
 *******************************/
 
-div.wr_feed, ul.tabs li.tab {
+ul.tabs li.tab {
 	transition: opacity .7s ease-in-out;
 	-moz-transition: opacity .7s ease-in-out;
     -webkit-transition: opacity .7s ease-in-out;	

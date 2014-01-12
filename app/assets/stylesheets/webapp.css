@@ -17,9 +17,9 @@ div.wr_feed {
 	top:0;
 	width: 100%;
 	height: 0;
-	transition: left 0.5s ease-in-out;
-   -moz-transition: left 0.5s ease-in-out;
-   -webkit-transition: left 0.5s ease-in-out;	 
+	transition: left 0.5s ease-in-out, opacity .7s ease-in-out;
+   -moz-transition: left 0.5s ease-in-out, opacity .7s ease-in-out;
+   -webkit-transition: left 0.5s ease-in-out, opacity .7s ease-in-out;	 
 }
 
 div.empty_tribes {
