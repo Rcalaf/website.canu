@@ -57,6 +57,8 @@ Canu::Application.routes.draw do
     match 'settings' => 'webapp#settings', :as => 'settings'
     
     match 'edit_profile' => 'webapp#edit_profile', :as => 'edit_profile'
+    
+    match 'index_demo' => 'pages#index_demo', :as => 'index_demo'
 
 
   # ---------------------------API--------------------------------------

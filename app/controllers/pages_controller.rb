@@ -5,6 +5,11 @@ class PagesController < ApplicationController
      @title = "CANU - Get Together"
      @user = User.new
    end
+  
+  def index_demo
+      @title = "CANU - Get Together"
+      @user = User.new
+  end
 
    def about
      @title = "CANU - About Us"

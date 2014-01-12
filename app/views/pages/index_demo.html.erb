@@ -1,0 +1,54 @@
+<div class="logo_top"></div>
+<a href="<%=signin_url%>"><div class="sign_in"> sign in</div></a>
+
+<div class="section" id="sec_landing">
+	<h2>
+		Put your future activities in one place <br/>
+		<a href="https://itunes.apple.com/nz/app/canu-get-together/id697998179?mt=8#" class="store">Get The App</a>
+		<span class="clear"></span>	
+		<span class="android">I got Android		
+			<div class="codes">
+				<%unless flash[:ok].nil?%>
+					<div id="confirmation"><%=flash[:ok]%></div>
+				<%end%>
+				<div class="form_window" id="form_join"<%= flash[:goaway]%>>
+					<%= form_for @user, :url => new_user_url do |f|%>
+					
+					<div class="input_holder">
+						<input name="user[email]" type="email" id="email" class="email<%= flash[:error].nil? ? '' : ' error_border'%>" placeholder="<%= flash[:error].nil? ? 'Your e-mail' : flash[:error]%>"/>
+					</div>
+					<input type="submit" name="submit" value="Invite when ready" class="submit_button" id="submit_join"/>
+					<%end%>
+				</div>
+			</div>
+		</span>
+	
+	</h2>
+	<!--<img class="phone" src="/assets/app.png">-->
+</div>
+<div class="section" id="sec_local">
+	<h3>Local</h3>
+	<img class="icon" src="/assets/icon_bird.png">
+	<h4>Meet new faces and be part of the future activities around you</h4>
+	<!--<p class="description">
+	 	We all have days when we want to meet new faces. Share moments with people you've never met before. 
+	</p>-->
+</div>
+<!--<div class="section" id="section2">
+	<h3>Me</h3>
+	<img class="icon" src="/assets/icon_feather.png">
+	<h4 class="shadow_green">A clear overview of your casual plans</h4>
+<p class="description">
+		CANU let's you collect your upcoming activities with one tap.
+	</p>
+	<img class="local" src="/assets/me.png">
+</div>-->
+<div class="section" id="sec_tribes">
+	<p class="c_soon">Soon</p>
+	<h3  class="faded">Tribes</h3>
+	<img class="icon faded" src="/assets/icon_tipi.png">
+	<h4 class="faded">The hassle of getting your friends together - solved</h4>
+	<!--<p class="description">
+		We all know how hard it is to get a group of friends together for a casual activity. Group chats, phone calls and Facebook just don't do the job. CANU removes all the unnecessary communication.	
+	</p>-->
+</div>

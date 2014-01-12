@@ -44,6 +44,10 @@
 		
 		$(".empty_tribes").css("height", $(document).height() + "px");
 		
+		$(window).resize(function() {
+			$(".empty_tribes").css("height", $(document).height() + "px");
+		});
+		
 		/*
 		$(".chat_submit").click(function(){
 			$(".add_data").fadeIn(700);
