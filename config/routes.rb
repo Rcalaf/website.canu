@@ -6,60 +6,78 @@ Canu::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
-
   resources :users
   resources :pages
- 
   resources :tribemachine
 
-  # Sample of named route:
-  
-    match 'stats' => 'users#stats', :as => 'user_stats'
-    match 'user/new' => 'users#new', :as => "new_user"
-    match 'about' => 'pages#about', :as => 'about'
-    match 'product' => 'pages#product', :as => 'product'
-    match 'index' => 'pages#index'
-    match 'world' => 'pages#world', :as => 'world'
-    match 'jobs' => 'pages#jobs', :as => 'jobs'
-    match 'contacts' => 'pages#contacts', :as => 'contacts'
-    match 'press' => 'pages#press', :as => 'press'
-    match 'privacy' => 'pages#privacy', :as => 'privacy'
-    match 'terms' => 'pages#terms', :as => 'terms'
-    match 'help' => 'pages#help', :as => 'help'
-    
+    #
+    # Homepage:
+    #
+        match 'user/new' => 'users#new', :as => "new_user"
+        match 'about' => 'pages#about', :as => 'about'
+        match 'product' => 'pages#product', :as => 'product'
+        match 'index' => 'pages#index'
+        match 'world' => 'pages#world', :as => 'world'
+        match 'jobs' => 'pages#jobs', :as => 'jobs'
+        match 'contacts' => 'pages#contacts', :as => 'contacts'
+        match 'press' => 'pages#press', :as => 'press'
+        match 'privacy' => 'pages#privacy', :as => 'privacy'
+        match 'terms' => 'pages#terms', :as => 'terms'
+        match 'help' => 'pages#help', :as => 'help'
+        match 'start' => 'tribemachine#start', :as => 'start'
+        
+    #
+    # Technical:
+    #
+        match 'resetpassword' => 'users#resetpassword', :as => 'resetpassword'
+        match 'emailconfirmation' => 'users#emailconfirmation', :as => 'emailconfirmation'
 
-    
-    match 'resetpassword' => 'users#resetpassword', :as => 'resetpassword'
-    match 'emailconfirmation' => 'users#emailconfirmation', :as => 'emailconfirmation'
-    
+    #
+    # For Internal Use (Protected)
+    #
+        match 'stats' => 'users#stats', :as => 'user_stats'
+        match 'activities' => 'webapp#activities', :as => 'activities'
 
-    match 'activities' => 'webapp#activities', :as => 'activities'
-  	match 'fullview/:activity_id' => 'webapp#fullview', :as => 'fullview'
-  	match 'expired' => 'webapp#expired', :as => 'expired'
-    
-    
-    match 'start' => 'tribemachine#start', :as => 'start'
-    
 
-  # To implement in a proper way:
-  
-  
-  # add Name to Chat Message or "Going User"
-    match 'contribute' => 'webapp#contribute', :as => 'contribute'
-    
-    match 'iamnew_account' => 'webapp#iamnew_account', :as => 'iamnew_account'
-    match 'iamnew_profile' => 'webapp#iamnew_profile', :as => 'iamnew_profile'
-    
-    match 'signin' => 'webapp#signin', :as => 'signin'
-    
-    match 'fullview_signedin' => 'webapp#fullview_signedin', :as => 'fullview_signedin'
-    
-    match 'settings' => 'webapp#settings', :as => 'settings'
-    
-    match 'edit_profile' => 'webapp#edit_profile', :as => 'edit_profile'
-    
-    match 'index_demo' => 'pages#index_demo', :as => 'index_demo'
+    #
+    # Web App:
+    #
+        match 'index_demo' => 'pages#index_demo', :as => 'index_demo'
+        match 'signin' => 'webapp#signin', :as => 'signin'
+        
+        #
+        # From Invite:
+        #
+            match 'invite/:activity_id' => 'webapp#invite', :as => 'invite'
+            
+            # Add Name for a single interaction
+            match 'contribute' => 'webapp#contribute', :as => 'contribute'
+            
+            # Forward expired activity to this page
+            match 'expired' => 'webapp#expired', :as => 'expired'
+        
+        #
+        # Sign Up
+        #
+            match 'iamnew_account' => 'webapp#iamnew_account', :as => 'iamnew_account'
+            match 'iamnew_profile' => 'webapp#iamnew_profile', :as => 'iamnew_profile'
+        
+        #
+        # Signed In
+        #
+            # List of Feeds
+            match 'fullview_signedin' => 'webapp#fullview_signedin', :as => 'fullview_signedin'
+        
+            # Full View of an activity
+            match 'fullview/:activity_id' => 'webapp#fullview', :as => 'fullview'
 
+            # Settings
+            match 'settings' => 'webapp#settings', :as => 'settings'
+            match 'edit_profile' => 'webapp#edit_profile', :as => 'edit_profile'
+        
+    
+    
+    
 
   # ---------------------------API--------------------------------------
     # ------------------------USERS-------------------------------------

@@ -2,11 +2,14 @@
 /*= require_self
 
 
+
+
 /******************************
-Temp
+Experiemental
 *******************************/
 
-.hwaccel {  -webkit-transform: translateZ(0); }
+.hwaccel {-webkit-transform: translateZ(0);}
+
 
 /******************************
 General
@@ -26,15 +29,12 @@ body {
 	color: #2b4b58; 
 }
 
-
-
 .wrap{
 	margin-left: auto;
 	margin-right: auto;
 	width: 960px;
 	position: relative;
 }
-
 
 .clear {
 	width: 0;
@@ -45,9 +45,11 @@ body {
 	visibility: hidden;
 }
 
-
-
-
+a.people_button:hover, a.go_button:hover, a.going_button:hover, ul.tabs, input, a:link, a:visited, a:active, a, div.sign_in, input.submit {
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-appearance: none;	
+}
 
 div.section_normal {
 	float: left;
@@ -59,19 +61,11 @@ div.section_normal {
 }
 
 input {
-	outline: none;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-appearance: none;
 	border: none;
 	box-shadow: none;
 	border-radius: 0;
 	font-weight: 400;
 	}
-
-
-a {
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-}
 
 a:link, a:visited, a:active {
 	color: #2b4b58;
@@ -91,7 +85,6 @@ li {
 	list-style: none;
 }
 
-
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:    #bec8cc;
 }
@@ -105,51 +98,38 @@ li {
     color:    #bec8cc;
 }
 
+
 /******************************
-Sections
+Transitions
 *******************************/
 
-.section{
-    position: relative;
-	-webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box; 
-    float: left;
+div.wr_feed, ul.tabs li.tab {
+	transition: opacity .7s ease-in-out;
+	-moz-transition: opacity .7s ease-in-out;
+    -webkit-transition: opacity .7s ease-in-out;	
+    -ms-transition: opacity .7s ease-in-out;
+    -o-transition: opacity .7s ease-in-out;
 }
 
-
-#sec_landing {
-	  background: url(/assets/futurescrolling.jpg) no-repeat center center; 
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-      width: 100%;
-      height: 90%;
+p.c_soon, div.sign_in, div.social_connect {
+	transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;	
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
 }
 
-#sec_local, #sec_tribes {
-	border: 10px solid #f1f5f5;
-	border-bottom: 0 solid;
-	margin-bottom: 40px;
+div.wrapper {
+	transition: opacity .3s ease-in-out;
+	-moz-transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;	
+    -ms-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
 }
 
-#sec_local {
-	 background-color: #83d3d6;
-	 width: 50%;
-	 height: 500px;
-	 border-right: 5px solid #f1f5f5;
-}
-
-#sec_tribes {
-	 background-color: #2c4b58;
-	  width: 50%;
-	  height: 500px;
-	  border-left: 5px solid #f1f5f5;
-}
-
-
-
+/******************************
+Fadings
+*******************************/
 
 .full_visible {
 	opacity: 1;
@@ -164,18 +144,58 @@ Sections
 }
 
 
+/******************************
+Home Page Sections
+*******************************/
+
+.section{
+	position: relative;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+	float: left;
+}
+
+#sec_landing {
+	background: url(/assets/futurescrolling.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 90%;
+}
+
+#sec_local, #sec_tribes {
+	border: 10px solid #f1f5f5;
+	border-bottom: 0 solid;
+	margin-bottom: 40px;
+}
+
+#sec_local {
+	background-color: #83d3d6;
+	width: 50%;
+	height: 500px;
+	border-right: 5px solid #f1f5f5;
+}
+
+#sec_tribes {
+	background-color: #2c4b58;
+	width: 50%;
+	height: 500px;
+	border-left: 5px solid #f1f5f5;
+}
+
 
 /******************************
-Fonts
+Typography & Buttons
 *******************************/
 
 a.store:link, a.store:visited, a.store:active {
 	position: absolute;
 	left: 50%;
 	margin-left: -80px;
-	
 	margin-top: 60px;
-	
 	padding: 0;
 	width: 160px;
 	height: 40px;
@@ -198,11 +218,9 @@ a.selected {
 	font-weight: 700;
 }
 
-
 h1{
 	margin-left: 140px;
 }
-
 
 h2{
 	font-size: 44px;
@@ -213,13 +231,11 @@ h2{
 	color: rgba(28, 166, 195, 1);
 	max-width: 600px;
 	font-weight: 700;
-
 }
 
 h3{
 	font-size: 64px; 
 	font-weight: 700;
-	
 	margin: 0 auto;
 	text-align: center;
 	margin-top: 160px;
@@ -231,8 +247,6 @@ h4 {
 	font-size: 24px; 
 	line-height: 36px; 
 	font-weight: 400;
-	
-
 	margin: 60px auto 40px auto;
 	text-align: center;
 	padding: 0 70px;
@@ -248,21 +262,16 @@ p.display_state{
 	text-align: center;
 	height: 64px;
 	color: #fff;
-	
 }
 
-
 p.description {
-
 	padding: 0 60px;
 	font-size: 16px; 
 	line-height: 24px; 
 	max-width: 300px;
 	margin-top: 40px;
-	
 	margin: 0 auto;
 	color: #fff;
-	
 	text-align: center;
 }
 
@@ -273,26 +282,15 @@ p.c_soon {
 	height: 100px;
 	line-height: 100px;
 	color: #2c4b58;
-	
 	background-color: #f1f1f5;
-	
-	
 	font-weight: 700;
-	
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	margin-top: -50px;
 	margin-left: -50px;
 	text-transform: uppercase;
-
-		transition: opacity .5s ease-in-out;
-   -moz-transition: opacity .5s ease-in-out;
-   -webkit-transition: opacity .5s ease-in-out;	
-
 }
-
-
 
 
 /******************************
@@ -316,26 +314,14 @@ div.sign_in {
 	width: auto;
 	height: 40px;
 	top: 40px;
-	right: 40px;
+	right: 20px;
 	z-index: 9000;
-
 	opacity: 0.8;
-	
-	transition: opacity 0.7s ease-in-out;
-   -moz-transition: opacity 0.7s ease-in-out;
-   -webkit-transition: opacity 0.7s ease-in-out;
-  
-	
-	outline: none;
-	
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-appearance: none;	
-	
 	line-height: 40px;
 	text-align: left;
 	padding: 0 20px;
-	font-size: 12px;
-	
+	font-size: 14px;
+	font-weight: 700;
 }
 
 div.sign_in:hover, div.sign_in:active {
@@ -350,17 +336,12 @@ div.sign_in:hover, div.sign_in:active {
 img.icon {
 	width: 44px;
 	height: 44px;
-
 	left: 50%;
 	margin-left: -22px;
 	position: absolute;
 	top: 0;
 	margin-top: 80px;
-
-
 }
-
-
 
 
 /******************************
@@ -397,6 +378,7 @@ ul.bottom_menu li:hover {
 	color: rgba(28, 166, 195, 1); 
 }
 
+
 /******************************
 Top Menu
 *******************************/
@@ -406,8 +388,6 @@ ul.top_menu {
 	height: 40px;
 	background-color: rgba(242, 245, 245, 0.9);
 	z-index: 10000;
-	
-	
 	top: 40px;
 	left: 120px;
 	margin: 0;
@@ -436,12 +416,9 @@ ul.top_menu  li:hover {
 }
 
 
-
 /******************************
 Comments Container
 *******************************/
-
-
 
 #close_btn {
 	position: absolute;
@@ -451,14 +428,11 @@ Comments Container
 	height: 40px;
 	background-image: url("/assets/close_window.svg");
 	background-size: 40px auto;
-	
 	z-index: 9000;
-	
 	z-index: 11100;
 	font-size: 12px;
 	cursor: pointer;
 	opacity: 0.9;
-	
 	display: none;
 }
 
@@ -467,14 +441,12 @@ Comments Container
 	cursor: pointer;
 }
 
-
 #comments_container {
 	position: fixed;
 	top: 0;
 	right: -440px;
 	padding: 0;
 	margin: 0;
-	
 	width: 440px;
 	height: 100%;
 	background-color: #fff;
@@ -490,9 +462,7 @@ Comments Container
 	height: 95%;
 	overflow: auto;
 	overflow-x: hidden;
-	
 }
-
 
 #comments_description {
 	position: fixed;
@@ -502,9 +472,7 @@ Comments Container
 	width: 300px;
 	height: 220px;
 	font-weight: 700;
-	
 	padding: 0 20px;
-	
 	font-size: 36px;
 	line-height: 54px;
 	color: #fff;   
@@ -512,7 +480,6 @@ Comments Container
 	display: none;
 	z-index: 10060;
 }
-
 
 #comments_blur {
 	position: fixed;
@@ -525,7 +492,6 @@ Comments Container
 	display: none;
 }
 
-
 #hider {
 	position: relative;
 	width: 400px;
@@ -536,13 +502,11 @@ Comments Container
 	z-index: 9999;
 }
 
-
 #disqus_thread {
 	height: auto;
 	margin-bottom: -170px;
 	width: 380px;
 }
-
 
 /******************************
 Social Connect
@@ -557,17 +521,11 @@ div.social_connect {
 	height: 28px;
 	z-index: 8000;
 	opacity: 0.2;
-	
 }
 
 div.social_connect:hover {
 	filter: alpha(opacity=100);
     opacity: 1;
-    -webkit-transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -ms-transition: opacity .25s ease-in-out;
-    -o-transition: opacity .25s ease-in-out;
-    transition: opacity .25s ease-in-out;
 }
 
 div.social_connect div{
@@ -585,11 +543,9 @@ div.social_connect div{
 }
 
 
-
 /******************************
 Detailed Saite
 *******************************/
-
 
 div.feature {
 	float: left;
@@ -611,7 +567,6 @@ p.intro_header {
 	padding-bottom: 40px;
 }
 
-
 p.header {
 	font-size: 26px;
 	line-height: 36px;
@@ -620,7 +575,6 @@ p.header {
 	font-weight: 700;
 	padding: 40px 0 0 0;
 	color: #2b4b58;
-	
 }
 
 p.header span  {
@@ -634,7 +588,6 @@ p.header span  {
 	font-style: italic;
 	opacity: 0.5;	
 }
-
 
 p.body {
 	font-size: 15px;
@@ -653,7 +606,6 @@ p.body a{
 /******************************
 Team
 *******************************/
-
 
 span.team {
 	float: left;
@@ -686,11 +638,9 @@ span.team  ul.team li:hover{
 	background-position: 0 0;
 }
 
-
 span.team  ul.team li#did{
 	background-image: url(/assets/team/didrik.png);
 }
-
 
 span.team  ul.team li#vit{
 	background-image: url(/assets/team/vitali.png);
@@ -707,7 +657,6 @@ span.team  ul.team li#viv{
 span.team  ul.team li#lea{
 	background-image: url(/assets/team/lea.png);
 }
-
 
 span.team ul.team li:last-child{
 	margin-right: 0;
@@ -730,14 +679,12 @@ span.team ul.details li:last-child{
 	margin-right: 0;
 }
 
-
 span.team  ul.details li p.name{
 	float: left;
 	width: 225px;
 	color: #2b4b58;
 	font-size: 15px;
 	line-height: 24px;
-
 	font-weight: 700;
 	word-spacing: 0.1em;
 	text-transform: capitalize;
@@ -771,7 +718,6 @@ div.member_story {
 	background-color: rgba(242, 245, 245, 1);
 }
 
-
 div.member_story p.story{
 	position: absolute;
 	top:60px;
@@ -798,9 +744,6 @@ div.member_story p.member_name{
 	float: left;
 	width: 600px;
 }
-
-
-
 
 
 /******************************
@@ -848,7 +791,6 @@ ul.press_links li p.quote:hover  {
 	text-decoration: underline;
 }
 
-
 .presskit {
 	float: left;
 	margin: 20px 0;
@@ -859,15 +801,12 @@ ul.press_links li p.quote:hover  {
 Codes
 *******************************/
 
-
 span.android {
 	position: absolute;
 	left: 50%;
 	margin-left: -80px;
 	padding: 0;
-	
 	margin-top: 110px;
-
 	font-size: 14px;
 	line-height: 40px;
 	height: 40px;
@@ -892,16 +831,13 @@ input.submit_button {
 	cursor: pointer;
 	background-color: rgba(28, 166, 195, 1);
 	border-radius: 1px;
-}
-		
-		
+}	
 		
 input.submit_button:active {
 	background-color: rgba(28, 166, 205, 1);
 	color: #fff;
 	
 }
-
 
 span.blank {
 	color: rgba(65, 64, 66, 0.0) !important;
@@ -911,7 +847,6 @@ span.android:hover {
 	cursor: pointer;
 	color: rgba(65, 64, 66, 0.5);
 }
-
 
 div.codes{
 	position: relative;
@@ -927,14 +862,12 @@ div.opacity{
 	opacity: 1;
 }
 
-
 div.form_window{
 	float: left;
 	width: auto;
 	height: 40px;
 	z-index: 2000;
 }
-
 
 div.input_holder {
 	width: 160px;
@@ -955,17 +888,10 @@ div.input_holder input.email{
 	cursor: pointer;
 }
 
-
 .error_border {
 	background-color: red;
 	border-right: 0 !important;
-	}
-
-
-
-
-
-
+}
 
 #confirmation{
 	position: absolute;
@@ -974,14 +900,11 @@ div.input_holder input.email{
 	top: 0;
 	left: 0;
 	text-align: left;
-	
 	line-height: 30px;
-	
 	z-index: 3000;
 	font-size: 16px;
 	color: rgba(28, 166, 195, 1);
 }
-
 
 
 /******************************
@@ -997,6 +920,10 @@ body.webapp{
 	background-color: #2b4b58;
 }
 
+body.invite{
+	background-color: #f1f5f5;
+}
+
 body.authorization{
 	background-color: #f1f5f5;
 }
@@ -1006,7 +933,6 @@ body.expired{
 	background-size: cover;
 }
 
-
 ul.stats {
 	width: 700px;
 	float: left;
@@ -1014,7 +940,6 @@ ul.stats {
 	margin-top: 38px;
 	margin-left: 140px;
 }
-
 
 ul.stats li {
 	float: left;
@@ -1064,13 +989,12 @@ div.map_stats {
 Authorization Form
 *******************************/
 
-
 #reset_confirmation {
 	display: none;
 }
 
 div.authorization_header {
-	margin: 50px auto 0 auto;
+	margin: 100px auto 0 auto;
 	max-width: 300px;
 	padding: 0 10px;
 	height: 40px;
@@ -1113,7 +1037,7 @@ a.guidance{
 	margin-top: 10px;
 	font-size: 12px;
 	color: #2b4b58;
-	opacity: 0.5;
+	opacity: 0.4;
 }
 
 a.guidance_option{
@@ -1122,7 +1046,8 @@ a.guidance_option{
 	margin-left: 10px;
 	font-size: 12px;
 	color: #2b4b58;
-	opacity: 0.5;
+	opacity: 0.7;
+	font-weight: 700;
 }
 
 a.guidance_option:hover, a.guidance_option:active{
@@ -1148,7 +1073,6 @@ div.input_classic input {
 	color: #2b4b58;
 	margin: 0;
 	border-radius: 0;
-	
 	background-size: 47px 47px;
 	background-repeat: no-repeat;
 	background-position: right center;
@@ -1161,7 +1085,6 @@ div.input_classic input.fb_ok {
 div.input_classic input.fb_error {
 	background-image: url(/assets/feedback_bad.png);
 }
-
 
 div.input_classic input.submit {
 	width: 100%;
@@ -1177,7 +1100,6 @@ div.input_classic input.submit {
 	border-radius: 0;
 	letter-spacing: 0.05em;
 	z-index: 10000;
-
 }
 
 div.input_classic input.submit:active, div.input_classic input.submit:hover {
@@ -1193,8 +1115,6 @@ button_link {
 	background-color: #fff;
 }
 
-
-
 a.button_link {
 	width: 100%;
 	height: 47px;
@@ -1204,25 +1124,34 @@ a.button_link {
 	margin: 0; 
 	border-radius: 0;
 	display: block;
-
 }
 
 a.button_link span {
 	float: left;
 	padding-left: 14px;
-
 	line-height: 47px;
-	
 	font-size: 14px;
-
 	color: #2b4b58;
 	font-weight: 400;
 	text-transform: capitalize;
-	
 	text-align: left; 
-	
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /******************************
 Mobile
@@ -1233,9 +1162,11 @@ Mobile
 		#sec_landing {
 			width: 100%;
 			height: 400px;
-
 		}
 		
+		div.authorization_header {
+			margin-top: 40px;
+		}
 
 		#sec_local, #sec_tribes {
 			width: 100%;
@@ -1264,7 +1195,6 @@ Mobile
 			right: 10px;
 		}
 
-	
 		h2{
 			font-size: 24px;
 			line-height: 37px;    
@@ -1279,9 +1209,6 @@ Mobile
 			display: none;
 		}	
 
-		
-		
-		
 		#comments_container {
 			position: relative;
 			top: 120px;
@@ -1294,7 +1221,6 @@ Mobile
 			display: none;
 		}
 		
-		
 		#comments {
 			position: relative;
 			width: 100%;
@@ -1306,7 +1232,6 @@ Mobile
 			overflow-x: hidden;
 			background-color: #fff;
 		}
-		
 		
 		#comments_description {
 			position: relative;
@@ -1325,7 +1250,6 @@ Mobile
 			z-index: 10060;
 		}
 		
-
 		#disqus_thread {
 			height: auto;
 			width: auto;
@@ -1344,7 +1268,6 @@ Mobile
 			padding-bottom: 100px;
 			padding-top: 100px;
 		}
-		
 		
 		ul.bottom_menu {
 			position: fixed;
@@ -1423,8 +1346,6 @@ Mobile
 			display: none;
 		}
 		
-		
-
 		span.team {
 			float: left;
 			width: 1200px;
@@ -1490,9 +1411,9 @@ Mobile
 			width: 300px;
 		}
 		
-			img.christmas {
-		display: none;
-	}
+		img.christmas {
+			display: none;
+		}
 		
-	}
+}
 

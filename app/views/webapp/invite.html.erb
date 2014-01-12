@@ -2,7 +2,8 @@
 <%# @attendees%>
 <div class="wrapper">
 	<div class="activity_container">
-		<div class="creator_info">
+		<a href="<%=signin_url%>"><div class="sign_in" id="invite_signin">sign in</div></a>
+		<div class="creator_info_invite">
 			<img src="http://api.canu.se/<%=@activity['user']['profile_pic']%>" class="creator_userpic" onerror="MissingUserpic(this);"/>
 			<a class="creator_name"><%= @activity['user']['first_name']%></a>
 			
@@ -31,7 +32,7 @@
 			</ul>
 		</div>
 		<div class="activity_menu">
-			<%= link_to '<div class="back_button"></div>'.html_safe, :back %>
+			<a href="<%=index_demo_url%>"><div class="home_button"></div></a>
 			<a class="people_button"><%= @attendees.size%></a>
 			<a href="<%=contribute_url%>" class="go_button">GO</a>
 			<a class="going_button"></a>

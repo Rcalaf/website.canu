@@ -2,26 +2,30 @@ class WebappController < ApplicationController
 	layout 'webapp'
 	
   def activities
-  
-  @title = "CANU - Activities"
+    @title = "CANU - Activities"
     @body_class = "webapp"
     @activities = get_from_canu_api("http://api.canu.se/activities")
-    
-
   end
 	
   def fullview
-
     @activity = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}")
     @chat_messages = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat")
     @attendees = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees")
-    @title = "CANU - You're Invited"
+    @title = "CANU - Activity Details"
     @body_class = "webapp"
     @user = User.new
   end
   
+  def invite
+      @activity = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}")
+      @chat_messages = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat")
+      @attendees = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees")
+      @title = "CANU - You're Invited"
+      @body_class = "invite"
+      @user = User.new
+  end
+  
   def fullview_signedin
-      
       @activities = get_from_canu_api("http://api.canu.se/activities")
       @title = "CANU - You're Invited"
       @body_class = "webapp"
