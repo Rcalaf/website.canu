@@ -7,8 +7,8 @@ Canu::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
 
   resources :users
-  resources :pages
-  resources :tribemachine
+  #resources :pages
+  #resources :tribemachine
 
     #
     # Homepage:
@@ -42,8 +42,10 @@ Canu::Application.routes.draw do
     #
     # Web App:
     #
-        match 'index_demo' => 'pages#index_demo', :as => 'index_demo'
-        match 'signin' => 'webapp#signin', :as => 'signin'
+       match 'index_demo' => 'pages#index_demo', :as => 'index_demo'
+       match 'sign-in' => 'webapplication/session#sign_in', :as => 'sign_in'
+       
+       match 'sign-up' => 'webapplication/session#sign_up', :as => 'sign_up'
         
         #
         # From Invite:

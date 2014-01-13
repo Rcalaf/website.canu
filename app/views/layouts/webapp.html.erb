@@ -41,7 +41,9 @@
 		</script>
 		
 	</head>
+	<%= " here is the current user: #{session[:user]}" %>
 	<body class="<%=@body_class%> 'use-fastclick'">
+			
 
 			<%= yield%> 
 

@@ -55,13 +55,13 @@ class WebappController < ApplicationController
       @user = User.new
       @body_class = "authorization"
   end
-  
+=begin  
   def signin
       @title = "CANU - Sign In"
       @user = User.new
       @body_class = "authorization"
   end
-  
+=end  
   def settings
       @title = "CANU - Your Settings"
       @user = User.new
