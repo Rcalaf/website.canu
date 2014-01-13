@@ -1,6 +1,19 @@
-<div class="authorization_header">Welcome Back</div>
+<%= content_for :js do%>
+	  function initialize() {	
+		navigator.geolocation.getCurrentPosition(function(position){
+			var cookie_val = position.coords.latitude + "|" + position.coords.longitude;
+		    document.cookie = "lat_lng=" + escape(cookie_val);
+			$('.authorization_form').toggle();
+			$('.loading').toggle();
+		});
+	  }
+	  $(document).ready(function(){
+		initialize(); 
+	  });
+<%end%>
+<div class="authorization_header" >Welcome Back</div>
 <%= form_tag '/sign-in' do%>
-<div class="authorization_form">
+<div class="authorization_form" style="display: none;">
 	<div class="input_classic">
 		<input class="authorization" name="email" placeholder="Username or Email"/>
 	</div>
@@ -14,4 +27,5 @@
 	<a class="guidance_option" href="<%=resetpassword_url%>">Forgot Password</a>
 	<a class="guidance_option" href="<%=iamnew_account_url%>">I'm New</a>
 </div>
+<div class='loading'>Getting Location....</div>
 <%end%>

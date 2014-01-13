@@ -1,5 +1,6 @@
 class Webapplication::SessionController < Webapplication::WebapplicationController
- # before_filter :authenticate_user#,:except => [:signin]
+  before_filter :authenticate_user,:except => [:sign_in, :sign_up]
+  protect_from_forgery :except => :set_location 
   
   def sign_in
       @title = "CANU - Sign In"
@@ -9,12 +10,21 @@ class Webapplication::SessionController < Webapplication::WebapplicationControll
        if response.code.to_i == 200
          body = JSON.parse(response.body)    
          session[:user] = body
-         redirect_to fullview_signedin_url
+         #redirect_to fullview_signedin_url
+         redirect_to activities_url
        else
          # show form errors notifications
        end
      end
   end
+  
+  def set_location
+    if params[:lat] && params[:long]
+      session[:lat] = params[:lat]
+      session[:long] = params[:long]
+    end
+  end
+  
   
   def sign_up
       @title = "CANU - Sign Up"

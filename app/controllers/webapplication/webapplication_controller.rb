@@ -5,12 +5,14 @@ class Webapplication::WebapplicationController < ApplicationController
   
   def authenticate_user
     if session[:user]
-      response = request_to_canu_api("http://api.canu.se/session/", :post, {}, {token: session[:user][:token]})
+      response = request_to_canu_api("http://api.canu.se/session/", :post, {}, {token: session[:user]['token']})
       if response.code.to_i == 400
         redirect_to sign_in_url
+        session[:user] = nil
       end
     else
       redirect_to sign_in_url
+      session[:user] = nil
     end
   end
   

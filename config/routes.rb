@@ -36,7 +36,7 @@ Canu::Application.routes.draw do
     # For Internal Use (Protected)
     #
         match 'stats' => 'users#stats', :as => 'user_stats'
-        match 'activities' => 'webapp#activities', :as => 'activities'
+    #    match 'activities' => 'webapp#activities', :as => 'activities'
 
 
     #
@@ -44,6 +44,7 @@ Canu::Application.routes.draw do
     #
        match 'index_demo' => 'pages#index_demo', :as => 'index_demo'
        match 'sign-in' => 'webapplication/session#sign_in', :as => 'sign_in'
+       match 'set-location' => 'webapplication/session#set_location', :as => 'set_location'
        
        match 'sign-up' => 'webapplication/session#sign_up', :as => 'sign_up'
         
@@ -69,6 +70,8 @@ Canu::Application.routes.draw do
         #
             # List of Feeds
             match 'fullview_signedin' => 'webapp#fullview_signedin', :as => 'fullview_signedin'
+            match 'activities' => 'webapplication/activities#index', :as => "activities"
+            match 'activities/:activity_id' => 'webapplication/activities#show', :as => "show_activity"
         
             # Full View of an activity
             match 'fullview/:activity_id' => 'webapp#fullview', :as => 'fullview'

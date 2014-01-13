@@ -1,0 +1,31 @@
+
+
+<div class="wrapper">
+	<div class="wr_feed" id="wr_local" style="left: 0;">
+		<%= render :partial => "activity", :collection => @local_activities%>
+	</div>
+	
+	<div class="wr_feed" id="wr_tribes" style="left: 100%;">
+		<div class="empty_tribes">
+			<p class="situation">It seems to be a quite day</p>
+		</div>
+	</div>
+	
+	<div class="wr_feed" id="wr_me" style="left: 200%;">
+		<%= render :partial => "activity", :collection => @profile_activities%>
+	</div>
+</div>
+<ul class="tabs">
+	
+	<!--<div id="selected"></div>-->
+	<li class="tab" id="tab_local"></li>
+	<li class="tab" id="tab_tribes"></li>
+	<li class="tab" id="tab_me"></li>
+
+	<div class="my_profile">
+		<img src="#" onerror="MissingUserpic(this)" class="logedin_userpic"/>
+		<a class="logedin_name">Jacob Koloa</a>
+		<a class="logedin_username">thejacob</a>
+		<a class="logedin_settings" href="<%=settings_url%>"></a>
+	</div>
+</ul>

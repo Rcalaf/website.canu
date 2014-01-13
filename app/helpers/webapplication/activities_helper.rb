@@ -1,0 +1,2 @@
+module Webapplication::ActivitiesHelper
+end
