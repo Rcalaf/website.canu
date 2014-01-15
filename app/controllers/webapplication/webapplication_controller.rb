@@ -1,4 +1,7 @@
 class Webapplication::WebapplicationController < ApplicationController
+  
+  before_filter :http_basic_auth
+  
   layout 'webapp'
     
   protected 
