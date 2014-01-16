@@ -26,7 +26,7 @@ class Webapplication::SessionController < Webapplication::WebapplicationControll
   end
   
   def facebook_auth
-    
+    @respond_value = self.inspect
   end
   
   
