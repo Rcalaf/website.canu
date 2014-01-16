@@ -30,7 +30,7 @@ Canu::Application.routes.draw do
     # Technical:
     #
         match 'resetpassword' => 'users#resetpassword', :as => 'resetpassword'
-        match 'emailconfirmation' => 'users#emailconfirmation', :as => 'emailconfirmation'
+        match 'email-confirmed' => 'users#emailconfirmation', :as => 'emailconfirmation'
 
     #
     # For Internal Use (Protected)
