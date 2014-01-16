@@ -26,12 +26,7 @@ class Webapplication::SessionController < Webapplication::WebapplicationControll
   end
   
   def facebook_auth
-    puts request.post?
-    if request.get?
-      respond_to do |format|
-        format.js
-      end
-    end
+
   end
   
   

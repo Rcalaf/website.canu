@@ -1,3 +1,10 @@
+<%content_for :js do%>
+$(function() {
+	alert(document.location.hash);
+//   $.post('facebook-auth', {hash: document.location.hash});
+});
+<%end%>
+
 <div class="authorization_header">New Account</div>
 <div class="authorization_form">
 	<div class="input_classic">
@@ -12,4 +19,5 @@
 	<a class="guidance">Already have an account?</a>
 	<a class="guidance_option" href="<%=sign_in_url%>">Sign In</a>
 </div>
-<%= link_to 'grabb info from facebook', "https://www.facebook.com/dialog/oauth?client_id=213847565419629&redirect_uri=#{facebook_auth_url}&scope=email&response_type=token"%>
+<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+<%= link_to 'grabb info from facebook', "https://www.facebook.com/dialog/oauth?client_id=213847565419629&redirect_uri=#{sign_up_url}&scope=email&response_type=token"%>
