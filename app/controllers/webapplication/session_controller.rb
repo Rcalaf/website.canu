@@ -1,5 +1,5 @@
 class Webapplication::SessionController < Webapplication::WebapplicationController
-  before_filter :authenticate_user,:except => [:sign_in, :sign_up]
+  before_filter :authenticate_user,:except => [:sign_in, :sign_up,:facebook_auth]
   protect_from_forgery :except => :set_location 
   
   def sign_in
