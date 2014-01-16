@@ -26,7 +26,12 @@ class Webapplication::SessionController < Webapplication::WebapplicationControll
   end
   
   def facebook_auth
-    @respond_value = request.original_url
+    puts request.post?
+    if request.get?
+      respond_to do |format|
+        format.js
+      end
+    end
   end
   
   
