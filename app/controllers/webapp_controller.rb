@@ -38,6 +38,19 @@ class WebappController < ApplicationController
     @user = User.new
   end
   
+  
+  def privacyapp
+      @title = "CANU - Privacy"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def termsapp
+      @title = "CANU - Terms"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
   def contribute
       @title = "CANU - Contribute"
       @user = User.new

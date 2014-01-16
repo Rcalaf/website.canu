@@ -26,6 +26,9 @@ Canu::Application.routes.draw do
         match 'help' => 'pages#help', :as => 'help'
         match 'start' => 'tribemachine#start', :as => 'start'
         
+        match 'privacyapp' => 'webapp#privacy', :as => 'privacyapp'
+        match 'termsapp' => 'webapp#terms', :as => 'termsapp'
+        
     #
     # Technical:
     #
