@@ -1,7 +1,16 @@
 <%content_for :js do%>
 $(function() {
-	alert(document.location.hash);
-//   $.post('facebook-auth', {hash: document.location.hash});
+	// document.cookie = "facebook_access_token=" + escape(document.location.hash);
+	var elements = document.location.hash.split("&");
+	var token = elements[0].split('=')[1];
+	document.location.hash = "";
+	$.get('https://https://graph.facebook.com/me',{'access_token' = token},function (data){
+		var values = JSON.parse(data);
+		$('#name').value = values.name;
+		$('#email').value = values.email;
+	});
+	
+
 });
 <%end%>
 
@@ -13,11 +22,18 @@ $(function() {
 	<div class="input_classic">
 		<input name="user[confirm_password]" type="password" class="authorization" placeholder="Password"/>
 	</div>	
+	
+	<div class="input_classic">
+		<input id='name' class="authorization" placeholder="Full Name"/>
+	</div>
+	<div class="input_classic">
+		<input id='email' class="authorization" type="email" placeholder="e-mail"/>
+	</div>	
 	<div class="input_classic">
 		<a href="<%=iamnew_profile_url%>"><input type="submit" class="submit" value="next"/></a>
 	</div>	
 	<a class="guidance">Already have an account?</a>
 	<a class="guidance_option" href="<%=sign_in_url%>">Sign In</a>
 </div>
-<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+
 <%= link_to 'grabb info from facebook', "https://www.facebook.com/dialog/oauth?client_id=213847565419629&redirect_uri=#{sign_up_url}&scope=email&response_type=token"%>
