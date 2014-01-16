@@ -25,6 +25,10 @@ class Webapplication::SessionController < Webapplication::WebapplicationControll
     end
   end
   
+  def facebook_auth
+    
+  end
+  
   
   def sign_up
       @title = "CANU - Sign Up"

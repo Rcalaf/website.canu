@@ -50,6 +50,7 @@ Canu::Application.routes.draw do
        match 'set-location' => 'webapplication/session#set_location', :as => 'set_location'
        
        match 'sign-up' => 'webapplication/session#sign_up', :as => 'sign_up'
+       match 'facebook-auth' => 'webapplication/session#facebook_auth',:as => 'facebook_auth'
         
         #
         # From Invite:
