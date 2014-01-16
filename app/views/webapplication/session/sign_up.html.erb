@@ -4,10 +4,12 @@ $(function() {
 	var elements = document.location.hash.split("&");
 	var token = elements[0].split('=')[1];
 	document.location.hash = "";
-	$.get('https://https://graph.facebook.com/me',{'access_token' = token},function (data){
-		var values = JSON.parse(data);
-		$('#name').value = values.name;
-		$('#email').value = values.email;
+	$.get('https://graph.facebook.com/me',{access_token: token},function (data){
+	//	alert(data);
+	//	alert(JSON.parse(data));
+	//	var values = $.parseJSON(data);
+		$('#name').val(data.name);
+		$('#email').val(data.email);
 	});
 	
 
@@ -16,6 +18,7 @@ $(function() {
 
 <div class="authorization_header">New Account</div>
 <div class="authorization_form">
+	<%= link_to 'Fill from facebook', "https://www.facebook.com/dialog/oauth?client_id=213847565419629&redirect_uri=#{sign_up_url}&scope=email&response_type=token"%>
 	<div class="input_classic">
 		<input class="authorization" placeholder="Username"/>
 	</div>
@@ -36,4 +39,3 @@ $(function() {
 	<a class="guidance_option" href="<%=sign_in_url%>">Sign In</a>
 </div>
 
-<%= link_to 'grabb info from facebook', "https://www.facebook.com/dialog/oauth?client_id=213847565419629&redirect_uri=#{sign_up_url}&scope=email&response_type=token"%>
