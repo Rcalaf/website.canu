@@ -602,6 +602,12 @@ p.body a{
 	opacity: 0.8;
 }
 
+div.bottom_spacer {
+	height: 100px;
+	width: 300px;
+	float: left;
+}
+
 
 /******************************
 Team
