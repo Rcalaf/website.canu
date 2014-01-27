@@ -1,16 +1,18 @@
 <!DOCTYPE HTML!>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 	<head>
 		<meta charset="utf-8">
 		<title><%=@title%></title>
 
 		<meta http-equiv="Content-language" content="en" /> 
-		<meta name="Keywords" content="CANU, app, activities, stockholm, hyper island">
-		<meta name="Description" content="CANU is an app that makes it fast and simple for you to share and join spontaneous activities on the go.">		
+		<meta name="Keywords" content="CANU, app, canu app, activities, stockholm, hyper island, get together">
+		<meta name="Description" content="Put your future activities in one place. CANU is the quickest way to get your friends together.">		
 	
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="viewport" content="user-scalable=no, width=device-width"/>
-		
+		<%= display_meta_tags %>
+		<%= csrf_meta_tags %>
+		<%= content_for :head %>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<%= stylesheet_link_tag 'style' %>
 	

@@ -37,3 +37,5 @@ gem 'capistrano', '~> 2.15.5'
 # To use debugger
 # gem 'debugger'
 
+gem 'meta-tags', :require => 'meta_tags'
+
