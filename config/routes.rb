@@ -51,6 +51,9 @@ Canu::Application.routes.draw do
        
        match 'sign-up' => 'webapplication/session#sign_up', :as => 'sign_up'
        match 'facebook-auth' => 'webapplication/session#facebook_auth',:as => 'facebook_auth'
+       
+       
+       match 'statistics' => 'webapplication/statistics#index', :as => 'statistics'
         
         #
         # From Invite:

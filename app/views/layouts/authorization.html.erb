@@ -11,13 +11,20 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="viewport" content="user-scalable=no, width=device-width"/>
 		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<%= javascript_include_tag "application_rest"%>
 		<%= stylesheet_link_tag 'style' %>
+		<style>
+	      #map_canvas {
+	        width: 500px;
+	        height: 400px;
+	      }
+	    </style>
+	    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
-		<script src='https://raw.github.com/x1024/jquery-fastbutton/master/bin/fastbutton.js'></script>
+		<!--<script src='https://raw.github.com/x1024/jquery-fastbutton/master/bin/fastbutton.js' type="text/javascript"></script>-->
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 		
-		<%= javascript_include_tag "application_rest"%>
+
 		
 		<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"> 
 	   
@@ -44,10 +51,11 @@
 		  ga('create', 'UA-42941115-1', 'canu.se');
 		  ga('send', 'pageview');
 		
+		  <%= yield :js%>	
 		</script>
 		
 		</head>
-	<body class="'use-fastclick' <%=@body_class%>">
+	<body class="'use-fastclick' <%=@body_class%>" onload="initMap()">
 			
 		<a href="http://www.canu.se"><div class="logo_top"></div></a>
 	

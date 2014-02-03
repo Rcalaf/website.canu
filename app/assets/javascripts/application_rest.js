@@ -11,11 +11,12 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 
-
+//= require jquery.min
 //= require jquery.easing.1.3
 //= require jquery.circulate
 //= require jquery.fullPage
-//= require jquery.min
+//= require Chart.min
+
 
 	
 	$(document).ready(function(){

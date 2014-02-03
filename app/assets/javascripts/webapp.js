@@ -11,10 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 
-//= require jquery.easing.1.3
-//= require jquery.circulate
-//= require jquery.fullPage
-
 
 
 
