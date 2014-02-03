@@ -2,11 +2,11 @@
 
 	var activities = [
 			{
-				value: <%= @data['activity']['total_active']%>,
+				value: <%= @data['activity']['total_active'].to_i%>,
 				color:"#B92D2A"
 			},
 			{
-				value : <%= @data['activity']['total']%>,
+				value : <%= @data['activity']['total'].to_i%>,
 				color : "#F9CD00"
 			}
 		];
@@ -14,11 +14,11 @@
 	var users = [
 	
 		{
-			value : <%= @data['user']['total']%>,
+			value : <%= @data['user']['total'].to_i%>,
 			color : "#F9CD00"
 		},
 		{
-			value : <%= @data['user']['ghost']%>,
+			value : <%= @data['user']['ghost'].to_i%>,
 			color : "#00a6c3"
 		}
 
@@ -26,15 +26,15 @@
 	
 	var confirmed = [
 		{
-			value: <%= @data['user']['total_phone_verified'] + @data['user']['total_email_verified']%>,
+			value: <%= @data['user']['total_phone_verified'] + @data['user']['total_email_verified'].to_i%>,
 			color:"#DF4A42"
 		},
 	/*	{
-			value : <%= @data['user']['total_email_verified']%>,
+			value : <%= @data['user']['total_email_verified'].to_i%>,
 			color : "#B92D2A"
 		},*/
 		{
-			value: <%= @data['user']['not_verified']%>,
+			value: <%= @data['user']['not_verified'].to_i%>,
 			color:"#00a6c3"
 		}
 	];
