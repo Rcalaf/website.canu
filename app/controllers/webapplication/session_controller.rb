@@ -25,6 +25,13 @@ class Webapplication::SessionController < Webapplication::WebapplicationControll
     end
   end
   
+  def reset_password
+    if request.post? 
+      
+    else
+    end
+  end
+  
   def facebook_auth
 
   end
