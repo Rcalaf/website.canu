@@ -20,18 +20,18 @@
 		<div class="activity_chat">
 			<ul>
 				<%= render :partial => 'chat_message', :collection => @chat_messages%>
-				<li class="leave_message">
+				<!--<li class="leave_message">
 					<div class="input_chat">
 						<input class="authorization" placeholder="Say something nice"/>
 						<a href="<%=contribute_url%>"><input type="submit" class="chat_submit" value="send"/></a>
 					</div>
-				</li>
+				</li>-->
 			</ul>
 		</div>
 		<div class="activity_menu">
-			<%= link_to '<div class="back_button"></div>'.html_safe, :back %>
+			<a href="www.canu.se"><div class="home_button"></div></a>
 			<a class="people_button"><%= @attendees.size%></a>
-			<a href="<%=contribute_url%>" class="go_button">GO</a>
+			<!--<a href="<%=contribute_url%>" class="go_button">GO</a>-->
 			<a class="going_button"></a>
 		</div>
 	</div>
