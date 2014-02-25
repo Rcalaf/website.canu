@@ -22,7 +22,9 @@
 		
 		$(".activity_people_wrapper").hide();
 		
-		$(".people_button").click(function() {	
+		
+		
+		$(".creator_name").click(function() {	
 			$(".activity_container").fadeOut(100);
 			$(".activity_people_wrapper").fadeIn(100);
 		});
