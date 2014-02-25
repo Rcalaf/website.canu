@@ -1,22 +1,30 @@
-
-
-<div class="wrapper">
-	<div class="get_canu">
-		<div class="logo_tiny"></div>
-		<p class="get">Open in the app</p>
+<div class="get_canu">
+	<!--<div class="logo_tiny"></div>-->
+	<p class="get">Open in the app ></p>
+</div>
+<div class="activity_people_wrapper">
+	<ul class="people_list">
+		<%= render :partial => "attendee", :collection => @attendees%>
+	</ul>						
+	<div class="activity_menu">
+		<div class="back_button" id="bb_ppl_list"></div>
 	</div>
+</div>
+<div class="wrapper">
 	<div class="activity_container">
-		<div class="activity_header">
+		<div
+		 class="activity_header">
 			<img src="http://api.canu.se/<%=@activity['user']['profile_pic']%>" class="creator_userpic" onerror="MissingUserpic(this);"/>
 			<a class="creator_name"><%= @activity['user']['first_name']%> <span>& <%= @attendees.size - 1%></span></a>
 			
 			<span class="clear"></span>
 			
+			<a href="#" class="go_button">GO</a>
 			<p class="activity_title"><%= @activity['title']%></p>
 			
 			<span class="clear"></span>
 			
-			<p class="activity_address"><%= @activity['street']%>, <%= @activity['city']%>, <%= @activity['zip_code']%></p>
+			<p class="activity_address"><%= @activity['street']%>, <%= @activity['city']%></p>
 			
 			<span class="activity_hours"><%= Time.parse(@activity['start']).strftime("%H:%M")%> - <span><%=Time.parse(@activity['end_date']).strftime("%H:%M")%></span></span>	
 			
@@ -26,41 +34,39 @@
 		<div class="description_holder">
 			<p class="activity_description"><%= @activity['description']%> The gate code is 5729. Also bring beer if you feel like it. Go ahead and invite your friends. It’s fine by me just so cool. Also bring cats.</p>
 		</div>
-			
 		<div class="activity_chat">
 			<ul>
 				<!--<%= render :partial => 'chat_message', :collection => @chat_messages%>-->
 				<li>
 					<ul>
 						<a class="chat_name"><%= @activity['user']['first_name']%></a>
-						<a class="chat_date">5 sec ago</a>
+						<a class="chat_date">5 min ago</a>
 						<li class="chat_message">Do I bring my pig?</li>
 						<li class="chat_message">Hello</li>
 						<li class="chat_message">Can I do that or will everyone be angry at me? I mean like, will I get kicked out or something...</li>
 					</ul>
 					<img src="http://api.canu.se/<%=@activity['user']['profile_pic']%>" onerror="MissingUserpic(this);" class="chat_userpic"/>
 				</li>
-								<li>
+				<li>
 					<ul>
-						<a class="chat_name">Robert</a>
+						<a class="chat_name">Robert Lee</a>
 						<a class="chat_date">10 sec ago</a>
 						<li class="chat_message">Sure, do that!</li>
 					</ul>
 					<img src="http://api.canu.se/" onerror="MissingUserpic(this);" class="chat_userpic"/>
 				</li>
+				<li>
+					<ul>
+						<a class="chat_name">Jacardina Moose</a>
+						<a class="chat_date">5 sec ago</a>
+						<li class="chat_message">I think I would use the words ‘multidisciplinary studio.’ We try to never look at design from a media perspective. If someone briefs us for something in a particular medium, then it’s not a job for us. We need to develop design from a content perspective, not an aesthetic perspective. Then of course we love the aesthetics and that’s often what people react to, but the content behind the aesthetics really needs to be a concept or something worth talking about.</li>
+					</ul>
+					<img src="http://api.canu.se/" onerror="MissingUserpic(this);" class="chat_userpic"/>
+				</li>
 			</ul>
 		</div>
-		<!--
-		<div class="activity_menu">
-			<a href="www.canu.se"><div class="home_button"></div></a>
-		</div>-->
-	</div>
-	<div class="activity_people_wrapper">
-		<ul class="people_list">
-			<%= render :partial => "attendee", :collection => @attendees%>
-		</ul>						
-		<div class="activity_menu">
-			<div class="back_button" id="bb_ppl_list"></div>
-		</div>
+		<div class="canu_footer">
+			<div class="logo_tiny">Get Together</div>
+			</div>
 	</div>
 </div>
