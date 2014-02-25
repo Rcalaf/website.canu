@@ -45,7 +45,7 @@ body {
 	visibility: hidden;
 }
 
-a.people_button:hover, a.go_button:hover, a.going_button:hover, ul.tabs, input, a:link, a:visited, a:active, a, div.sign_in, input.submit {
+div.get_canu, a.people_button:hover, a.go_button:hover, a.going_button:hover, ul.tabs, input, a:link, a:visited, a:active, a, div.sign_in, input.submit {
 	outline: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-appearance: none;	
