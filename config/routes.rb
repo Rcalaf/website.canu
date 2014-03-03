@@ -14,6 +14,7 @@ Canu::Application.routes.draw do
     # Homepage:
     #
         match 'user/new' => 'users#new', :as => "new_user"
+        match 'vision' => 'pages#vision', :as => 'vision'
         match 'about' => 'pages#about', :as => 'about'
         match 'product' => 'pages#product', :as => 'product'
         match 'index' => 'pages#index'
@@ -21,13 +22,20 @@ Canu::Application.routes.draw do
         match 'jobs' => 'pages#jobs', :as => 'jobs'
         match 'contacts' => 'pages#contacts', :as => 'contacts'
         match 'press' => 'pages#press', :as => 'press'
-        match 'privacy' => 'pages#privacy', :as => 'privacy'
-        match 'terms' => 'pages#terms', :as => 'terms'
-        match 'help' => 'pages#help', :as => 'help'
+        match 'support' => 'pages#support', :as => 'support'
+            match 'privacy' => 'pages#privacy', :as => 'privacy'
+            match 'terms' => 'pages#terms', :as => 'terms'
+            match 'help' => 'pages#help', :as => 'help'
         match 'start' => 'tribemachine#start', :as => 'start'
         
+        
+    #
+    # Linked to App:
+    #
+    
         match 'privacyapp' => 'webapp#privacy', :as => 'privacyapp'
         match 'termsapp' => 'webapp#terms', :as => 'termsapp'
+        match 'lockdown' => 'webapp#lockdown', :as => 'lockdown'
         
     #
     # Technical:

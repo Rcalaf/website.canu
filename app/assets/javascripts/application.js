@@ -1,54 +1,12 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// the compiled file.
-//
-// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
-// GO AFTER THE REQUIRES BELOW.
-//
-
 //= require jquery.easing.1.3
 //= require jquery.circulate
 //= require jquery.fullPage
 
+
+
 	
 	$(document).ready(function(){
 		
-		
-			
-		$("img.phone").fadeIn(1800);
-
-	   	//$(".codes").hide();
-	   	
-	   	
-	   	/*
-		$.fn.fullpage({
-			slidesColor: ['#f1f5f5', '#1ca6c3','#ec5f57'],
-			anchors: ['CANU','Tribes','Local', 'Me'],
-			autoScrolling: false,
-			scrollingSpeed: 700
-			
-		});
-		$(".logo_top").click(function(){
-			$.fn.fullpage.moveToSlide('CANU');
-		});
-	   */
-	   
-
-	   	
-	   	$("#sec_tribes").click(function(){
-		   $("#sec_tribes").children().toggleClass("faded");	
-	   	});
-	    $("#sec_tribes").hover(function(){
-		   $("#sec_tribes").children().toggleClass("faded");	
-	   	});
-
-		
-	   
 	    $("#feedback_btn").click(function(){    	
 	    	$("#comments_container").show();
 	        $("#comments_container").animate({right:"0px"},500); 
@@ -70,16 +28,15 @@
 	    
 	   	 $('#comments').height() - 170;
 
-	   		   	 
-	   	 
 	   	 $(".android").click(function(){
-	   	 	$(this).toggleClass("blank");
-	        $(".codes").toggleClass("opacity");     		
+	        $(".codes").toggleClass("codes_active");     		
 	    });
 	    
+	      setTimeout(function(){
+		    $('.confirmation').fadeOut("slow");
+		  }, 2000);
 	
 
-	   	 
 	});
 	
 

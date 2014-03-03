@@ -24,14 +24,16 @@ class UsersController < ApplicationController
  	 @user = User.new(params[:user])
  	 if @user.valid?
  	   @user.save
- 	   flash[:ok] = '<p>Thanks! Talk soon</p>'.html_safe
-     flash[:goaway] = 'style="display:none"'.html_safe
+ 	   flash[:ok] = '<p>Perfect. Talk soon.</p>'.html_safe
+ 	   flash[:eraser] = 'eraser'.html_safe
    else
      flash[:error] = @user.errors.first[1]
    end
    #Mailer.new_user_mail(@user).deliver
  
     redirect_to :back
+    flash[:again] = 'codes_active'.html_safe
+   
   end
   
 =begin

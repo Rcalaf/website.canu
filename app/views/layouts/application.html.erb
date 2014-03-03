@@ -36,6 +36,27 @@
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
+		  
+			$(function(){
+			    $('.top_menu_top, .top_menu_top_2 ').data('size','big');
+			});
+			
+			$(window).scroll(function(){
+			    var $nav = $('.top_menu_top, .top_menu_top_2 ');
+			    if ($('body').scrollTop() > 0) {
+			        if ($nav.data('size') == 'big') {
+			            $nav.data('size','small').stop().animate({
+			                top:'-200px'
+			            }, 300);
+			        }
+			    } else {
+			        if ($nav.data('size') == 'small') {
+			            $nav.data('size','big').stop().animate({
+			                top:'0'
+			            }, 50);
+			        }  
+			    }
+			});
 
 		</script>
 		
@@ -51,7 +72,7 @@
 		</script>
 		
 		<script type="text/javascript">
-		  var disqus_identifier = 'canu';
+		  var disqus_identifier = 'canu';		  
 		</script>
 	
 	</head>
@@ -68,22 +89,18 @@
 		
 		<a href="http://www.canu.se"><div class="logo_top"></div></a>
 
-
-		<ul class="top_menu">
-
-				<li><%= link_to 'About Us',about_url, :class => (params[:action] == 'about' ? 'selected' : nil)%></li>
-				<li><%= link_to 'Press',press_url, :class => (params[:action] == 'press' ? 'selected' : nil) %></li>
-				<!--<li><%= link_to 'Jobs',jobs_url, :class => (params[:action] == 'jobs' ? 'selected' : nil) %></li>-->
-				<li class="mobile_hide"><%= link_to 'Privacy',privacy_url, :class => (params[:action] == 'privacy' ? 'selected' : nil) %></li>
-				<li class="mobile_hide"><%= link_to 'Terms of Service',terms_url, :class => (params[:action] == 'terms' ? 'selected' : nil) %></li>	
-				<li><%= link_to 'Help',help_url, :class => (params[:action] == 'help' ? 'selected' : nil) %></li>
-				<li id="feedback_btn" class="mobile_hide">Feedback</a></li>
-				<li><a href="http://canugettogether.tumblr.com">Blog</a></li>
-				<li><%= link_to 'Contacts',contacts_url, :class => (params[:action] == 'contacts' ? 'selected' : nil) %></li>
-			
-			
-		</ul>		
-	
+		<div class="top_menu_top">
+			<ul class="top_menu">
+				<div class="centering_top">
+					<!--<li><%= link_to 'Vision',vision_url, :class => (params[:action] == 'vision' ? 'selected' : nil)%></li>-->
+					<li><%= link_to 'Our Story',about_url, :class => (params[:action] == 'about' ? 'selected' : nil)%></li>
+					<li class="mobile_hide"><%= link_to 'Support',help_url, :class => (params[:action] == 'help' ? 'selected' : nil)%></li>
+					<li class="mobile_hide"><%= link_to 'Press',press_url, :class => (params[:action] == 'press' ? 'selected' : nil) %></li>			
+					<li><a href="http://canugettogether.tumblr.com">Blog</a></li>
+					<li><%= link_to 'Contacts',contacts_url, :class => (params[:action] == 'contacts' ? 'selected' : nil) %></li>
+				</div>
+			</ul>		
+		</div>
 		
 		
 		<div class="section_normal">
