@@ -51,6 +51,12 @@ class WebappController < ApplicationController
       @body_class = "authorization"
   end
   
+  def lockdown
+      @title = "CANU - Lockdown"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
   def contribute
       @title = "CANU - Contribute"
       @user = User.new
