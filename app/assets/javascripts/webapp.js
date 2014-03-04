@@ -49,14 +49,14 @@
 			$(".activity_people_wrapper, .get_canu").hide();
 			$(".activity_container").show();
 		});
-		
+		/*
 		$(".empty_tribes").css("height", $(document).height() + "px");
 		
 		$(window).resize(function() {
 			$(".empty_tribes").css("height", $(document).height() + "px");
 		});
 		
-		/*
+		
 		$(".chat_submit").click(function(){
 			$(".add_data").fadeIn(700);
 		});
@@ -69,7 +69,7 @@
 			$(".add_data").fadeOut();
 		});
 		
-		*/
+
 	
 
 
@@ -94,7 +94,6 @@
 				
 		$("#tab_local").addClass("tab_selected");
 		
-		/*
 			
 		$("#selected").addClass("pos_local");
 
@@ -110,7 +109,7 @@
 		});
 		
 		
-		*/
+		
 		
 	   	$("#tab_me").click(function(){
 	   		if ($(this).hasClass("tab_selected")) {
@@ -125,7 +124,7 @@
 			$("li.tab").removeClass("tab_selected");
 			$(this).addClass("tab_selected");
 		});	   	
-		
+		*/
 		
 	});
 	

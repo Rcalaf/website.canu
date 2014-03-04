@@ -234,10 +234,12 @@ p.activity_title{
 	font-size: 24px;
 	color: #2b4b58;
 	line-height: 47px;
-	padding: 10px 0 8px 10px;
+	padding: 10px 10px 8px 10px;
 	margin: 0;
 	font-weight: 700;
-	max-width: 220px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 p.activity_address{
@@ -288,7 +290,7 @@ p.activity_description{
 	float: left;
 	font-size: 14px;
 	color: #2b4b58;
-	padding: 0 10px;
+	padding: 4px 10px;
 }
 
 a.guest_name {
@@ -315,14 +317,17 @@ div.activity_chat {
 
 div.activity_chat ul {
 	float: left;
+	width: calc(100% - 20px);
 	margin-top: 10px;
 }
 
-div.activity_chat ui li {
+div.activity_chat ul li {
 	float: left;
-	width: calc(100% - 20px);
-	padding-bottom: 20px;
-	
+	width: auto;
+	height: 100px;
+	display: block;
+	list-style: none;
+	clear: both;
 }
 
 
@@ -833,6 +838,6 @@ Mobile
 		width: 100%;
 		height: 57px;
 	}
-		
+
 }
 
