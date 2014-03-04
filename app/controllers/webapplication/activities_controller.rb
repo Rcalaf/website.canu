@@ -1,5 +1,5 @@
 class Webapplication::ActivitiesController < Webapplication::WebapplicationController
-  before_filter :authenticate_user
+  #before_filter :authenticate_user
   
   def index
     puts session[:user]
