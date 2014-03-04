@@ -1,5 +1,6 @@
 class Webapplication::ActivitiesController < Webapplication::WebapplicationController
   #before_filter :authenticate_user
+  before_filter :http_basic_auth, :except => [:invite]
   
   def index
     puts session[:user]
