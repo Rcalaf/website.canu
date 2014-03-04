@@ -32,16 +32,15 @@
 			</ul>
 		</div>
 		<div class="activity_menu">
-			<%= @attendees.inspect%>
 			<a href="<%=index_demo_url%>"><div class="home_button"></div></a>
-			<a class="people_button"><%# @attendees.size%></a>
+			<a class="people_button"><%= @attendees.size%></a>
 			<a href="<%=contribute_url%>" class="go_button">GO</a>
 			<a class="going_button"></a>
 		</div>
 	</div>
 	<div class="activity_people_wrapper">
 		<ul class="people_list">
-			<%# render :partial => "attendee", :collection => @attendees%>
+			<%= render :partial => "attendee", :collection => @attendees%>
 		</ul>						
 		<div class="activity_menu">
 			<div class="back_button" id="bb_ppl_list"></div>
