@@ -47,7 +47,7 @@
 			        if ($nav.data('size') == 'big') {
 			            $nav.data('size','small').stop().animate({
 			                top:'-200px'
-			            }, 300);
+			            }, 30);
 			        }
 			    } else {
 			        if ($nav.data('size') == 'small') {
@@ -92,7 +92,7 @@
 		<div class="top_menu_top">
 			<ul class="top_menu">
 				<div class="centering_top">
-					<!--<li><%= link_to 'Vision',vision_url, :class => (params[:action] == 'vision' ? 'selected' : nil)%></li>-->
+					<li><%= link_to 'Vision',vision_url, :class => (params[:action] == 'vision' ? 'selected' : nil)%></li>
 					<li><%= link_to 'Our Story',about_url, :class => (params[:action] == 'about' ? 'selected' : nil)%></li>
 					<li class="mobile_hide"><%= link_to 'Support',help_url, :class => (params[:action] == 'help' ? 'selected' : nil)%></li>
 					<li class="mobile_hide"><%= link_to 'Press',press_url, :class => (params[:action] == 'press' ? 'selected' : nil) %></li>			
