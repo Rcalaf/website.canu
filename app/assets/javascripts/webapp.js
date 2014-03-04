@@ -27,8 +27,12 @@
 			  $(".go_button, .get_canu").show(); 
 			  $(".activity_container").css("margin-top", "50px");
 		  }
-		
-		
+
+		  $( 'p.activity_description:empty' ).remove();
+		  
+		  $('.how_many:contains("0")').each(function () {
+			  $(this).hide();
+});
 		
 		//$('html, body').animate({scrollTop: $(document).height()}, 'slow');
 		
@@ -37,12 +41,12 @@
 		
 		
 		$(".creator_name").click(function() {	
-			$(".activity_container").hide();
+			$(".activity_container, .get_canu").hide();
 			$(".activity_people_wrapper").show();
 		});
 
 		$("#bb_ppl_list").click(function() {	
-			$(".activity_people_wrapper").hide();
+			$(".activity_people_wrapper, .get_canu").hide();
 			$(".activity_container").show();
 		});
 		
@@ -87,13 +91,6 @@
 			$("#wr_me").css("left","0").css("opacity","1");
 		});				
 
-		
-		
-
-		$(".going_button").click(function(){
-			$(this).fadeOut();
-			$(".go_button").fadeIn();
-		});
 				
 		$("#tab_local").addClass("tab_selected");
 		
