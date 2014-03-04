@@ -1,6 +1,6 @@
 class Webapplication::ActivitiesController < Webapplication::WebapplicationController
   #before_filter :authenticate_user
-  before_filter :http_basic_auth, :except => [:invite]
+  before_filter :http_basic_auth, :except => [:invite, :show]
   
   def index
     puts session[:user]
@@ -20,29 +20,34 @@ class Webapplication::ActivitiesController < Webapplication::WebapplicationContr
   end
   
   def show
-    #activities/invite/:activity_id
+=begin
     respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}",:get,{},{})
     @activity = JSON.parse(respond.body)
-    #respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat",:get,{'authorization' => %{Token token="#{session[:user]['token']}"}},{})
-    #@chat_messages = JSON.parse(respond.body)
+    respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat",:get,{'authorization' => %{Token token="#{session[:user]['token']}"}},{})
+    @chat_messages = JSON.parse(respond.body)
     respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees",:get,{},{})
     @attendees = JSON.parse(respond.body)
+=end
+    respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/invite",:get,{},{})
+    @activity = JSON.parse(respond.body)
+    respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat",:get,{},{})
+    @chat_messages = JSON.parse(respond.body)
+    respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees",:get,{},{})
+    @attendees = JSON.parse(respond.body)    
     @title = "CANU - Activity Details"
     @body_class = "webapp"
   end
   
   
   def invite
-      #@activity = get_from_canu_api("http://api.canu.se/activities/invite/#{params[:activity_id]}")
       respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/invite",:get,{},{})
       @activity = JSON.parse(respond.body)
-      #respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat",:get,{'authorization' => %{Token token="#{session[:user]['token']}"}},{})
-      #@chat_messages = JSON.parse(respond.body)
+      respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat",:get,{},{})
+      @chat_messages = JSON.parse(respond.body)
       respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees",:get,{},{})
       @attendees = JSON.parse(respond.body)
       @title = "CANU - You're Invited"
       @body_class = "invite"
-      @user = User.new
   end
   
   def update_feed

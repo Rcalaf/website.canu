@@ -18,8 +18,8 @@ class WebappController < ApplicationController
   
   def invite
       @activity = get_from_canu_api("http://api.canu.se/activities/invite/#{params[:activity_id]}")
-     # @chat_messages = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat")
-     # @attendees = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees")
+      @chat_messages = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat")
+      @attendees = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees")
       @title = "CANU - You're Invited"
       @body_class = "invite"
       @user = User.new

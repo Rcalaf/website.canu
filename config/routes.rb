@@ -65,7 +65,7 @@ Canu::Application.routes.draw do
         #
         # From Invite:
         #
-            match 'invite/:activity_id' => 'webapplication/activities#invite', :as => 'invite'
+            match 'i/:activity_id' => 'webapplication/activities#invite', :as => 'invite'
             
             # Add Name for a single interaction
             match 'contribute' => 'webapp#contribute', :as => 'contribute'
