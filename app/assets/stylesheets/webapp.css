@@ -253,7 +253,7 @@ p.activity_address{
 span.activity_date {
 	float: right;
 	line-height: 25px;
-	font-size: 12px;
+	font-size: 11px;
 	color: #2b4b58;
 	padding: 5px 0;
 }
@@ -313,7 +313,12 @@ div.activity_chat {
 	padding-bottom: 20px;
 }
 
-div.activity_chat li {
+div.activity_chat ul {
+	float: left;
+	margin-top: 10px;
+}
+
+div.activity_chat ui li {
 	float: left;
 	width: calc(100% - 20px);
 	padding-bottom: 20px;

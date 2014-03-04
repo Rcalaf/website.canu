@@ -2,7 +2,9 @@
 <%# @attendees%>
 <div class="get_canu">
 	<!--<div class="logo_tiny"></div>-->
-	<p class="get">Open in the app ></p>
+	<a href="https://itunes.apple.com/nz/app/canu-get-together/id697998179?mt=8#">
+		<p class="get">Open in the app</p>
+	</a>
 </div>
 <div class="activity_people_wrapper">
 	<ul class="people_list">
@@ -27,7 +29,7 @@
 			<span class="activity_date"><%= Time.parse(@activity['start']).strftime("%d %h")%></span>
 		</div>
 		<div class="activity_actual">
-			<a href="#" class="go_button">GO</a>
+			<a href="https://itunes.apple.com/nz/app/canu-get-together/id697998179?mt=8#" class="go_button">GO</a>
 			<p class="activity_title"><%= @activity['title']%></p>
 			<span class="clear"></span>
 			<p class="activity_address"><%= @activity['street']%>, <%= @activity['city']%></p>
@@ -41,7 +43,9 @@
 			</ul>
 		</div>
 		<div class="canu_footer">
-			<div class="logo_tiny">Get Together</div>
+			<a href="http://www.canu.se">
+				<div class="logo_tiny">Get Together</div>
+			</a>
 		</div>
 	</div>
 </div>
