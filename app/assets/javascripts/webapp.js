@@ -17,25 +17,33 @@
 	
 	$(document).ready(function(){
 		
+		//Load iPhone functionality leading to the AppStore
+				
+		  var isiPhone = navigator.userAgent.toLowerCase().indexOf("iphone");
+
+		  if(isiPhone > -1)
+
+		  {
+			  $(".go_button, .get_canu").show(); 
+			  $(".activity_container").css("margin-top", "50px");
+		  }
+		
+		
 		
 		//$('html, body').animate({scrollTop: $(document).height()}, 'slow');
 		
 		$(".activity_people_wrapper").hide();
 		
-		$(".people_button").click(function() {	
-			$(".activity_container").fadeOut(100);
-			$(".activity_people_wrapper").fadeIn(100);
+		
+		
+		$(".creator_name").click(function() {	
+			$(".activity_container").hide();
+			$(".activity_people_wrapper").show();
 		});
 
 		$("#bb_ppl_list").click(function() {	
-			$(".activity_people_wrapper").fadeOut(100);
-			$(".activity_container").fadeIn(100);
-		});
-		
-		$(".go_button").click(function(){
-			$(".add_data").fadeIn(700);
-			$(".go_button").fadeOut();
-			$(".going_button").fadeIn();
+			$(".activity_people_wrapper").hide();
+			$(".activity_container").show();
 		});
 		
 		$(".empty_tribes").css("height", $(document).height() + "px");

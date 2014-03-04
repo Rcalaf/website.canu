@@ -25,10 +25,17 @@ Canu::Application.routes.draw do
         match 'terms' => 'pages#terms', :as => 'terms'
         match 'help' => 'pages#help', :as => 'help'
         match 'start' => 'tribemachine#start', :as => 'start'
-        
-        match 'privacyapp' => 'webapp#privacy', :as => 'privacyapp'
-        match 'termsapp' => 'webapp#terms', :as => 'termsapp'
-        
+
+
+    #
+    # App Use:
+    #
+
+    match 'privacyapp' => 'webapp#privacy', :as => 'privacyapp'
+    match 'termsapp' => 'webapp#terms', :as => 'termsapp'
+    match 'lockdown' => 'webapp#lockdown', :as => 'lockdown'
+
+
     #
     # Technical:
     #
