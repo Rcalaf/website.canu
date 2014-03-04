@@ -19,16 +19,28 @@ class Webapplication::ActivitiesController < Webapplication::WebapplicationContr
   end
   
   def show
-    respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}",:get,{'authorization' => %{Token token="#{session[:user]['token']}"}},{})
+    #activities/invite/:activity_id
+    respond = request_to_canu_api("http://api.canu.se/activities/invite/#{params[:activity_id]}",:get,{},{})
     @activity = JSON.parse(respond.body)
-    respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat",:get,{'authorization' => %{Token token="#{session[:user]['token']}"}},{})
-    @chat_messages = JSON.parse(respond.body)
+    #respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat",:get,{'authorization' => %{Token token="#{session[:user]['token']}"}},{})
+    #@chat_messages = JSON.parse(respond.body)
     respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees",:get,{},{})
     @attendees = JSON.parse(respond.body)
     @title = "CANU - Activity Details"
     @body_class = "webapp"
   end
   
+  
+  def invite
+      #@activity = get_from_canu_api("http://api.canu.se/activities/invite/#{params[:activity_id]}")
+      respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/invite",:get,{},{})
+      @activity = JSON.parse(respond.body)
+     # @chat_messages = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat")
+     # @attendees = get_from_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees")
+      @title = "CANU - You're Invited"
+      @body_class = "invite"
+      @user = User.new
+  end
   
   def update_feed
     

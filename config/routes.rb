@@ -65,7 +65,7 @@ Canu::Application.routes.draw do
         #
         # From Invite:
         #
-            match 'invite/:activity_id' => 'webapp#invite', :as => 'invite'
+            match 'invite/:activity_id' => 'webapplication/activities#invite', :as => 'invite'
             
             # Add Name for a single interaction
             match 'contribute' => 'webapp#contribute', :as => 'contribute'
@@ -101,7 +101,6 @@ Canu::Application.routes.draw do
   # ---------------------------API--------------------------------------
     # ------------------------USERS-------------------------------------
     
-      #match ''
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
