@@ -46,8 +46,8 @@
 		});
 
 		$("#bb_ppl_list").click(function() {	
-			$(".activity_people_wrapper, .get_canu").hide();
-			$(".activity_container").show();
+			$(".activity_people_wrapper").hide();
+			$(".activity_container, .get_canu").show();
 		});
 		/*
 		$(".empty_tribes").css("height", $(document).height() + "px");

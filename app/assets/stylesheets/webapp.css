@@ -36,7 +36,7 @@ div.activity_people_wrapper {
 	background-color: #f1f5f5;
 	
 	max-width: 768px;
-	height: auto;
+	height: 100%;
 	margin: 0 auto;
 	padding: 0;	
 	overflow-x: hidden;
@@ -408,19 +408,9 @@ div.activity_menu {
 	bottom: 0;
 	left: 50%;
 	margin-left: -384px;
-	z-index: 5000;
+	z-index: 9000;
 }
 
-div.home_button {
-	position: fixed;
-	top: 40px;
-	left: 40px;
-	width: 40px;
-	height: 40px;
-	background-color: #fff;
-	background-image: url(/assets/canu_logo.png);
-	background-size: 100%;
-}
 
 div.back_button {
 	width: 57px;
