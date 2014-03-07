@@ -27,7 +27,7 @@ class Webapplication::ActivitiesController < Webapplication::WebapplicationContr
     @chat_messages = JSON.parse(respond.body)
     respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees",:get,{},{})
     @attendees = JSON.parse(respond.body)
-=end
+
     respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/invite",:get,{},{})
     @activity = JSON.parse(respond.body)
     respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat",:get,{},{})
@@ -36,6 +36,7 @@ class Webapplication::ActivitiesController < Webapplication::WebapplicationContr
     @attendees = JSON.parse(respond.body)    
     @title = "CANU - Activity Details"
     @body_class = "webapp"
+=end
   end
   
   
