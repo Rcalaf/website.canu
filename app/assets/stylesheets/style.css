@@ -172,7 +172,7 @@ Home Page Sections
 }
 
 #sec_landing {
-	background: url(/assets/bg_test_.png) no-repeat center center; 
+	background: url(/assets/p_1.jpg) no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -428,7 +428,6 @@ div.logo_top {
 	height: 40px;
 	top: 40px;
 	left: 40px;
-	background-color: #f2f2f2;
 	z-index: 10000;
 	background-image: url(/assets/canu_logo.svg);
 	background-size: 40px auto;
