@@ -111,7 +111,7 @@ ul.tabs li.tab {
     -o-transition: opacity .7s ease-in-out;
 }
 
-p.c_soon, div.sign_in, div.social_connect {
+p.c_soon, div.sign_in {
 	transition: opacity .5s ease-in-out;
 	-moz-transition: opacity .5s ease-in-out;
     -webkit-transition: opacity .5s ease-in-out;	
@@ -172,13 +172,14 @@ Home Page Sections
 }
 
 #sec_landing {
-	background: url(/assets/p_1.jpg) no-repeat center center; 
+	background: url(/assets/p_2_strech.jpg) no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	width: 100%;
 	height: 100%;
+	min-height: 640px;
 }
 
 
@@ -190,10 +191,9 @@ Typography & Buttons
 
 
 span.android {
-	position: absolute;
-	left: 50%;
-	bottom: 160px;
-	margin-left: -230px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
 
 	padding: 0;
 	width: 160px;
@@ -202,19 +202,26 @@ span.android {
 	font-size: 14px;
 	background-color: rgba(255, 255, 255, 1);
 	color: #2c4b58;
-	border-radius: 2px;
-	border: 1px solid #d9dfe1;
+	border-radius: 1px;
+	border: 1px solid #fff;
 	text-align: center;
 	z-index: 4000;
+	
+	-webkit-transition: all 0.4s ease;  
+    -moz-transition: all 0.4s ease;    
+    -o-transition: all 0.4s ease;    
+    transition: all 0.4s ease; 
+}
+
+a.android:hover {
+	border: 1px solid #d9dfe1;
 }
 
 
 a.store:link, a.store:visited {
-	position: absolute;
-	left: 50%;
-	bottom: 160px;
-
-	margin-left: -410px;
+	float: left;
+	margin-left: 160px;
+	margin-top: 20px;
 
 	padding: 0;
 	width: 160px;
@@ -225,13 +232,17 @@ a.store:link, a.store:visited {
 	text-decoration: none;
 	text-shadow: none;
 	color: #fff;
-	border-radius: 2px;
+	border-radius: 1px;
 	text-align: center;
 	border: 1px solid #cc4040;
 	z-index: 4000;
+	-webkit-transition: all 0.4s ease;  
+    -moz-transition: all 0.4 ease;    
+    -o-transition: all 0.4s ease;    
+    transition: all 0.4s ease; 
 }
 
-a.store:active {
+a.store:active, a.store:hover {
 	background-color: #cc4040;
 	border: 1px solid #ba3939;
 }
@@ -248,15 +259,15 @@ Codes
 *******************************/
 
 div.codes{
-	position: absolute;
-	height: 45px;
-	left: 50%;
-	bottom: 160px;
-	margin-left: -230px;
+	float: left;
+	margin-left: -160px;
+	margin-top: 65px;
+	
+	
 	z-index: 2000;
 	
 	opacity: 0;
-	border-radius: 2px;
+	border-radius: 1px;
 	z-index: 3000;
 	-webkit-transition: all 0.4s ease;  
     -moz-transition: all 0.4s ease;    
@@ -265,7 +276,7 @@ div.codes{
 }
 
 div.codes_active{
-	bottom: 220px;
+	margin-top: 85px;
 	opacity: 1;
 }
 
@@ -281,7 +292,7 @@ div.form_window{
 	line-height: 45px;
 	background-color: rgba(255, 255, 255, 1);
 	border: 1px solid #d9dfe1;
-	border-radius: 2px;
+	border-radius: 1px;
 }
 
 div.input_holder {
@@ -317,11 +328,12 @@ input.submit_button {
 	text-shadow: none;
 	background-color: #d9dfe1;
 	background-color: #ec6057;
-	border-radius: 2px;
+	border-radius: 1px;
 }	
 		
-input.submit_button:active {
-	background-color: #cfd6d8;	
+input.submit_button:hover, input.submit_button:active {
+	background-color: #cc4040;
+	border: 1px solid #ba3939;
 }
 
 span.android:hover {
@@ -331,15 +343,18 @@ span.android:hover {
 
 .confirmation{
 	position: absolute;
-	width: auto;
-	height: 45px;
-	top: 0;
-	left: 5px;
-	text-align: left;
-	line-height: 45px;
+	width: 300px;
+	height: 100px;
+	left: 50%;
+	top:0;
+	margin-left: -150px;
+	margin-top: 80px;
+	
+	
+	text-align: center;
 	z-index: 3000;
-	font-size: 14px;
-	color: #2b4b58;
+	font-size: 24px;
+	color: #fff;
 	-webkit-transition: all 0.4s 1s ease;  
     -moz-transition: all 0.4s 1s ease;    
     -o-transition: all 0.4s 1s ease;    
@@ -363,15 +378,23 @@ h1{
 }
 
 h2{
-	font-size: 64px;
-	margin: 0 auto;
-	padding: 0 40px;
+	float: left;
+	margin-left: 160px;
+	font-size: 74px;
 	margin-top: 240px;
 	text-align: left;
 	color: #fff;
-	max-width: 800px;
 	font-weight: 700;
+	-webkit-transition: all 0.2s ease;  
+    -moz-transition: all 0.2s ease;    
+    -o-transition: all 0.2s ease;    
+    transition: all 0.2s ease; 
 }
+
+h2:hover{
+	cursor: default;
+}
+
 
 h3{
 	font-size: 64px; 
@@ -431,11 +454,14 @@ div.logo_top {
 	z-index: 10000;
 	background-image: url(/assets/canu_logo.svg);
 	background-size: 40px auto;
-	-webkit-transition: all 1.4s ease;  
+	border-radius: 1px;
+	-webkit-transition: all 0.4s ease;  
+    -moz-transition: all 0.4s ease;    
+    -o-transition: all 0.4s ease;    
+    transition: all 0.4s ease; 
 }
 
 div.logo_top:hover {
-	-webkit-transform:rotate(360deg);
 	cursor: pointer;
 }
 
@@ -489,24 +515,44 @@ ul.bottom_menu {
 	margin: 0;
 }
 
-ul.bottom_menu li a {
+
+ul.bottom_menu li {
+	list-style: none;
+	float: left;
+}
+
+ul.bottom_menu li.right {
 	float: right;
+}
+
+
+ul.bottom_menu li a {
 	line-height: 40px;
 	height: 40px;
 	padding: 0 10px;
 	font-size: 12px;
-	color: #2b4b58;
 	color: #fff;
-	list-style: none;
+	opacity: 0.7;
+	-webkit-transition: all 0.4s ease;  
+    -moz-transition: all 0.4s ease;    
+    -o-transition: all 0.4s ease;    
+    transition: all 0.4s ease; 
+}
+
+#feedback_btn {
+	padding-right: 10px;
+}
+
+
+ul.bottom_menu li a:hover {
+	opacity: 1;
+	cursor: pointer;
 }
 
 ul.bottom_menu li:first-child {
-	padding-right: 20px;
+	padding-left: 10px;
 }
 
-ul.bottom_menu li:hover {
-	cursor: pointer;
-}
 
 
 /******************************
@@ -703,40 +749,6 @@ Comments Container
 	height: auto;
 	margin-bottom: -170px;
 	width: 380px;
-}
-
-/******************************
-Social Connect
-*******************************/
-
-
-div.social_connect {
-	position: fixed;
-	width: 320px;
-	left: 10px;
-	bottom: 2px;
-	height: 28px;
-	z-index: 8000;
-	opacity: 0.1;
-}
-
-div.social_connect:hover {
-	filter: alpha(opacity=100);
-    opacity: 1;
-}
-
-div.social_connect div{
-	float: left;
-	margin-left: 10px;
-}
-
-.fb_stretch {
-	padding-bottom: 190px;
-}
-
-.fb-like{
-    height: 20px;
-    overflow: hidden;
 }
 
 
@@ -1261,6 +1273,15 @@ a.button_link span {
 Mobile
 *******************************/
 
+
+@media only screen and (max-width: 1080px), only screen and (max-device-width: 1080px){
+	h2 {
+		font-size: 56px;
+	}
+}
+
+
+
 @media only screen and (max-width: 820px), only screen and (max-device-width: 820px){
 
 		
@@ -1269,6 +1290,12 @@ Mobile
 			-webkit-overflow-scrolling: touch;
 		}
 
+		#sec_landing {
+			background: url(/assets/p_2_strech.jpg) no-repeat 40% center; 
+			background-size: auto 100%;
+			min-height: 500px;
+		}
+		
 		
 		div.authorization_header {
 			margin-top: 40px;
@@ -1300,6 +1327,7 @@ Mobile
 		}
 		
 		span.android {
+			float: none;
 			position: static;
 			margin: 0 auto;
 			display: block;
@@ -1316,26 +1344,33 @@ Mobile
 			margin-top: 20px;
 			text-align: center;
 			font-size: 14px;
+			color: #fff;
 		}
 		
 		a.store:link, a.store:visited, a.store:active {
 			position: static;
+			float: none;
 			margin: 0 auto;
 			display: block;
 		}
 		
 		
 		div.codes{
+			float: none;
 			position: static;
 			height: 45px;
 			margin: 0 auto;
-			margin-top: -299px;
+			margin-top: -255px;
 			z-index: 5000;
 			display: block;
 			width: 280px;
 			padding: 20px 0;
 			opacity: 0;
 			padding-left: 24px;
+		}
+		
+		div.codes:hover{
+			cursor: default;
 		}
 
 		div.codes_active{
@@ -1344,13 +1379,13 @@ Mobile
 		}
 		
 		h2{
-			font-size: 32px;
-			line-height: 48px;    
+			float: none;
+			font-size: 32px;   
 			font-weight: 700;
 			text-align: center;
 			margin: 0 auto;
-			margin-top: 80px;
-			margin-bottom: 40px;
+			margin-top: 90px;
+			margin-bottom: 60px;
 			width: auto;
 		}
 		
