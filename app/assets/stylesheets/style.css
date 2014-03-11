@@ -203,7 +203,7 @@ span.android {
 	background-color: rgba(255, 255, 255, 1);
 	color: #2c4b58;
 	border-radius: 1px;
-	border: 1px solid #fff;
+	border: 1px solid #d9dfe1;
 	text-align: center;
 	z-index: 4000;
 	
@@ -213,8 +213,8 @@ span.android {
     transition: all 0.4s ease; 
 }
 
-a.android:hover {
-	border: 1px solid #d9dfe1;
+span.android:hover {
+	border: 1px solid #fff;
 }
 
 
@@ -560,7 +560,7 @@ Top Menu
 *******************************/
 
 div.top_menu_top {
-	background-color: rgba(255, 255, 255, 1);
+	background-color: rgba(255, 255, 255, 0);
 	position: fixed;
 	width: 100%;
 	top:0;
@@ -767,23 +767,6 @@ div.feature p{
 	margin: 0 auto;
 }
 
-div.intro_bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 502px;
-	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-#intro_about {background: url(/assets/telefonplan/78.JPG) no-repeat center center; }
-#intro_vision {background: url(/assets/telefonplan/81.JPG) no-repeat center center; }
-#intro_contacts {background: url(/assets/telefonplan/78.JPG) no-repeat center center; }
-
 
 p.intro_header {
 	position: relative;
@@ -792,8 +775,7 @@ p.intro_header {
 	line-height: 102px;    
 	font-weight: 700;
 	color: #bfc9cd;
-	color: #fff;
-	padding-bottom: 80px;
+	padding-bottom: 40px;
 	padding-top: 40px;
 	z-index: 5000;
 	height: 220px;
@@ -1293,7 +1275,6 @@ Mobile
 		#sec_landing {
 			background: url(/assets/p_2_strech.jpg) no-repeat 40% center; 
 			background-size: auto 100%;
-			min-height: 500px;
 		}
 		
 		
@@ -1306,10 +1287,6 @@ Mobile
 			right: 10px;
 		}
 		
-		
-		div.intro_bg {
-			height: 380px;
-		}
 		
 		
 		p.description {
