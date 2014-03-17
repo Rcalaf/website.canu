@@ -13,6 +13,8 @@ Canu::Application.routes.draw do
     #
     # Homepage:
     #
+        
+        
         match 'user/new' => 'users#new', :as => "new_user"
         match 'about' => 'pages#about', :as => 'about'
         match 'product' => 'pages#product', :as => 'product'
