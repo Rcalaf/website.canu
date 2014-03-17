@@ -1,4 +1,4 @@
-var currentScreen = "screen9_final_friendly";
+var currentScreen = "screen1";
 var nextScreen;
 
 $(document).ready(function(){
