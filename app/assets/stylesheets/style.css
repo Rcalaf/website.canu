@@ -172,7 +172,7 @@ Home Page Sections
 }
 
 #sec_landing {
-	background: url(/assets/p_2_strech.jpg) no-repeat center center; 
+	background: url(/assets/website_sized.jpg) no-repeat center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -1273,7 +1273,7 @@ Mobile
 		}
 
 		#sec_landing {
-			background: url(/assets/p_2_strech.jpg) no-repeat 40% center; 
+			background: url(/assets/website_sized.jpg) no-repeat 40% center; 
 			background-size: auto 100%;
 		}
 		
