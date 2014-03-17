@@ -1,0 +1,38 @@
+<div id="screen7_drums" class="screen">
+    <div class="header_holder" id="headers_drums">
+	    <p class="header">Play drums really?</p>
+	    <p class="plain">Even if you play like a boss, not all bears like to wake up from drums...</p>
+    </div>
+	<div class="bg_holder_center" id="bg_drums">
+		<object type="image/svg+xml" class="tipi_drums" data="./assets/tipi_drum.svg"></object>
+		<object type="image/svg+xml" class="casual_clouds_many" data="./assets/casual_clouds_many.svg"></object>
+	</div>	
+    
+	<div class="hero_holder_center" id="h_drums">
+		<object type="image/svg+xml" class="main_hero" id="hero_drums" data="./assets/bear_drummer.svg"></object>
+		<div class="eye_blink_left"></div>
+		<div class="eye_blink_right"></div>
+	</div>
+	<a onClick="goToScreen8_end_sacrificed()"><img class="scroll_down" src="./assets/scroll_down.svg"></a>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    console.log("Screen 7_drums");
+		});
+		
+		/*$(document).ready(function(){
+	    	$(window).scroll(function(){
+	        	goToScreen2();  
+	        })
+	    })*/
+		function goToScreen8_end_sacrificed() { nextScreenWithVerticalTransition("screen8_end_sacrificed");}	
+		$(document).ready(function() {
+		if( $(window).width() < 640 ) {}	
+		else {	
+			TweenMax.from($("#h_drums"), .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.4});
+			TweenMax.from($("#bg_drums"), .5, {css:{opacity:0}, ease:Quad.easeOut, delay: 1});
+			TweenMax.from($("#headers_drums"), 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: .2});
+			TweenMax.from($('.scroll_down'), 0.3, {css: {opacity: 0}, ease:Quad.easeOut, delay: 1});
+		}
+		});
+	</script>
+</div>

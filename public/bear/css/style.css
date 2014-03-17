@@ -1,0 +1,1758 @@
+/******************************
+General Possitioning
+*******************************/
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-family: 'Montserrat', sans-serif;
+	color: #2c4c59;
+	background-color: #e4f8f7;
+	}
+	
+#wrapper{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.screen{
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0 ;
+	position: relative;
+	overflow: hidden;
+	z-index: 1000;
+}
+
+
+/******************************
+General Details
+*******************************/
+
+.clear {
+	width: 0;
+	height: 0;
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+a:link, a:visited, a:active, a input.submit, a.link_next {
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-appearance: none;	
+}
+
+input {
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	border-radius: 0;
+	}
+
+a:link, a:visited, a:active {
+	color: #2b4b58;
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgba(28, 166, 195, 1);
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+li {list-style: none;}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #bec8cc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #bec8cc;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #bec8cc;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #bec8cc;
+}
+
+div.centering {
+	display: table;
+	margin: 0 auto;
+}
+/******************************
+Typography
+*******************************/
+
+div.header_holder {
+	height: auto;
+	margin: 0 auto;
+	padding-top: 44px;
+	z-index: 10000;
+	position: relative;
+} 
+
+p.header, p.header_fancy, p.header_fancy_intro, p.header_second {
+	line-height: 34px;
+	height: 34px;
+	text-align: center;
+	z-index: 2000;
+	margin: 0;
+	padding: 0;
+	padding: 0 140px;
+}
+
+p.white {
+	color: #fff;
+}
+
+p.header{
+    font-size: 29pt;
+    text-transform: uppercase;
+    font-weight: 700;
+    height: auto;
+    
+}
+p.header_fancy{
+    font-size: 17pt;
+    font-family: 'Pacifico', cursive;
+}
+
+p.header_fancy_intro{
+    font-size: 21pt;
+    font-family: 'Pacifico', cursive;
+}
+p.header_second{
+    font-size: 22pt;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+p.plain {
+	text-align: center;
+    z-index: 2000;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 14pt;
+    font-family: 'Lato';
+    font-style: italic;
+    text-shadow: 0 0 1px #e4f8f7;
+}
+
+p.description {
+	line-height: 24px;
+	text-align: center;
+    z-index: 2000;
+    width: 400px;
+     padding: 0;
+    font-size: 12pt;
+    font-family: 'Lato';
+    font-style: italic;
+    z-index: 6000;
+    position: absolute;
+    bottom: 30px;
+}
+
+img.scroll_down {
+	width: 44px;
+	height: 44px;
+	position: fixed;
+	bottom: 28px;
+	left: 50%;
+	margin-left: -22px;
+	z-index: 9000;
+}
+
+img.scroll_down:hover, img.scroll_down:active  {
+	cursor: pointer;
+	-webkit-animation: decision_big .2s ease-out forwards;
+	-moz-animation: decision_big .2s ease-out forwards;
+	-o-animation: decision_big .2s ease-out forwards;
+	animation: decision_big .2s ease-out forwards;	
+}
+
+/******************************
+Game Buttons
+*******************************/
+
+#i_smoke {background-image: url(../assets/icons/smoking.svg);}
+
+#i_hunt {background-image: url(../assets/icons/hunt.svg);}
+
+#i_dry_socks {background-image: url(../assets/icons/dry_socks.svg);}
+
+#i_village {background-image: url(../assets/icons/back_village.svg);}
+
+#i_forest {background-image: url(../assets/icons/discover_forest.svg);}
+
+#i_play {background-image: url(../assets/icons/play_again.svg);}
+
+#i_village {background-image: url(../assets/icons/back_village.svg);}
+
+#i_beer {background-image: url(../assets/icons/drink_beer.svg);}
+
+#i_fishing {background-image: url(../assets/icons/fishing.svg);}
+
+#i_drums {background-image: url(../assets/icons/play_drums.svg);}
+
+#i_sundance {background-image: url(../assets/icons/sundance.svg);}
+
+#i_canu {background-image: url(../assets/icons/canu.svg);}
+
+
+
+/******************************
+Bear Variations
+*******************************/
+
+
+#hero_pipe {
+	margin-top: -100px;
+}
+
+#hero_donut {
+	margin-top: 20px;
+	width: 70%;
+	height: 70%;
+	left: 15%;
+}
+
+#hero_hunt {
+	margin-top: 70px;
+	width: 64%;
+	height: 64%;
+	left: 18%;
+}
+
+#hero_backpack, #hero_binoculars {
+	margin-top: 45px;
+	width: 70%;
+	height: 70%;
+	left: 15%;
+}
+
+#hero_sundance {
+	top: -90px;
+	width: 134%;
+	height: 134%;
+	left: -17%;
+}
+
+#hero_drums {
+	top: -60px;
+	width: 110%;
+	height: 110%;
+	left: -5%;
+}
+
+#hero_sacrificed {
+	top: -80px;
+	width: 104%;
+	height: 104%;
+	left: -2%;
+}
+
+#hero_shaman {
+	top: -60px;
+	width: 110%;
+	height: 110%;
+	left: -4px;
+}
+
+#hero_love {
+	top: -30px;
+	width: 90%;
+	height: 90%;
+	left: 5%;
+}
+
+
+#hero_fishing {
+	margin-top: 70px;
+	width: 200%;
+	height: 200%;
+	left: -50%;
+	top: -60%;
+}
+
+#hero_friendly {
+	width: 220%;
+	height: 220%;
+	left: -60%;
+	top: -65%;
+}
+
+#hero_friendly_solo {
+	width: 88%;
+	height: 88%;
+	left: 6%;
+	top: 0%;
+}
+
+
+/******************************
+Hero Holders
+*******************************/
+			
+			
+.hero_holder_center {
+	position: absolute;	
+	z-index: 900;
+	left: 50%;
+	overflow: visible;
+	height: 528px;
+	width: 386px;
+	margin-left: -193px;
+	top: 50%;
+	margin-top: -200px;
+	z-index: 4000;
+}
+
+.bg_holder_center {
+	position: absolute;	
+	z-index: 900;
+	left: 50%;
+	top: 50%;
+	overflow: visible;
+	height: 400px;
+	width: 400px;
+	margin-left: -200px;
+	margin-top: -200px;
+	z-index: 2000;
+}			
+
+.hero_holder_center_large {
+	position: absolute;	
+	z-index: 900;
+	left: 50%;
+	overflow: visible;
+	height: 660px;
+	width: 1000px;
+	margin-left: -500px;
+	top: 140px;
+	z-index: 4000;
+}	
+
+.hero_holder_back_large {
+	position: absolute;	
+	z-index: 900;
+	left: 50%;
+	overflow: visible;
+	height: 960px;
+	width: 700px;
+	margin-left: -350px;
+	bottom: -340px;
+	z-index: 4000;
+}						
+
+.hero_holder_front {
+	position: absolute;	
+	z-index: 900;
+	left: 50%;
+	overflow: visible;
+	height: 924px;
+	width: 674px;
+	margin-left: -337px;
+	bottom: -470px;
+	z-index: 4000;
+
+}	
+
+
+#hero_tipi {
+	position: absolute;	
+	z-index: 900;
+	left: 50%;
+	overflow: visible;
+	height: 400px;
+	width: 700px;
+	margin-left: -350px;
+	margin-top: 120px;
+	z-index: 2000;
+}
+	
+
+		
+			
+.main_hero {
+	height: 100%;
+	width: 100%;
+	position:  absolute;
+	overflow: visible;
+	z-index: 10000;
+}
+
+.main_hero_front {
+	height: 120%;
+	width: 120%;
+	left: -10%;
+	top: -10%;
+	position:  absolute;
+	overflow: visible;
+	z-index: 10000;
+}
+
+
+
+/******************************
+Decor
+*******************************/
+
+.forest {
+	width: 440px;
+	height: 440px;
+	margin-left: -20px;
+	margin-top: -20px;
+	position: absolute;
+	overflow: visible;
+	opacity: 0.3;
+}
+
+.forest_large {
+	width: 540px;
+	height: 540px;
+	position: absolute;
+	overflow: visible;
+	top: -70px;
+	left: -70px;
+	opacity: 0.3;
+}
+
+
+.tipi_drums {
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	overflow: visible;
+	top: 0px;
+	left: -100px;
+	z-index: 2000;
+	
+}
+
+.games {
+	width: 640px;
+	height: 480px;
+	position: absolute;
+	overflow: visible;
+	top: 20px;
+	left: -120px;
+	z-index: 2000;
+}
+
+#screen6_insomnia_socks, #screen6_insomnia_pipe, #screen6_insomnia_hunt  {
+	background-color: #20363d;
+}
+
+.stars {
+	width: 120%;
+	height: 120%;
+	top:-34%;
+	left: -10%;
+	position: absolute;
+	overflow: visible;
+	-webkit-animation: stary 6s ease-in-out infinite;
+	-moz-animation: stary 6s ease-in-out infinite;
+	-o-animation: stary 6s ease-in-out infinite;
+	animation: stary 6s ease-in-out infinite;
+	z-index: 1900;
+}
+
+.night_clouds {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	overflow: visible;
+	top: 0px;
+	left: 0px;
+	-webkit-animation: dimm 8s ease-in infinite;
+	-moz-animation: dimm 8s ease-in infinite;
+	-o-animation: dimm 8s ease-in infinite;
+	animation: dimm 8s ease-in infinite;
+	z-index: 1001;
+}
+
+
+.casual_clouds {
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	overflow: visible;
+	top: 0px;
+	left: 0px;
+	-webkit-animation: dimm 8s ease-in infinite;
+	-moz-animation: dimm 8s ease-in infinite;
+	-o-animation: dimm 8s ease-in infinite;
+	animation: dimm 8s ease-in infinite;
+	z-index: 1001;
+}
+
+.casual_clouds_many {
+	width: 800px;
+	height: 400px;
+	position: absolute;
+	overflow: visible;
+	top: -100px;
+	left: -200px;
+	-webkit-animation: dimm 8s ease-in infinite;
+	-moz-animation: dimm 8s ease-in infinite;
+	-o-animation: dimm 8s ease-in infinite;
+	animation: dimm 8s ease-in infinite;
+	z-index: 1001;
+}
+
+.pipe_smoke {
+	width: 440px;
+	height: 440px;
+	position: absolute;
+	overflow: visible;
+	right: 90px;
+	top: -194px;
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
+	-o-opacity: 0;
+	opacity: 0;
+	z-index: 2000;
+}
+
+#smoke_1 { -webkit-animation: smoking 4s ease-out 0s infinite;}
+#smoke_2 { -webkit-animation: smoking 4s ease-out 1s infinite;}
+#smoke_3 { -webkit-animation: smoking 4s ease-out 2s infinite;}
+#smoke_4 { -webkit-animation: smoking 4s ease-out 3s infinite;}
+#smoke_5 { -webkit-animation: smoking 4s ease-out 4s infinite;}
+#smoke_6 { -webkit-animation: smoking 5s ease-out 5s infinite;}
+#smoke_7 { -webkit-animation: smoking 5s ease-out 6s infinite;}
+
+#smoke_1 { -moz-animation: smoking 4s ease-out 0s infinite;}
+#smoke_2 { -moz-animation: smoking 4s ease-out 1s infinite;}
+#smoke_3 { -moz-animation: smoking 4s ease-out 2s infinite;}
+#smoke_4 { -moz-animation: smoking 4s ease-out 3s infinite;}
+#smoke_5 { -moz-animation: smoking 4s ease-out 4s infinite;}
+#smoke_6 { -moz-animation: smoking 5s ease-out 5s infinite;}
+#smoke_7 { -moz-animation: smoking 5s ease-out 6s infinite;}
+
+#smoke_1 { -o-animation: smoking 4s ease-out 0s infinite;}
+#smoke_2 { -o-animation: smoking 4s ease-out 1s infinite;}
+#smoke_3 { -o-animation: smoking 4s ease-out 2s infinite;}
+#smoke_4 { -o-animation: smoking 4s ease-out 3s infinite;}
+#smoke_5 { -o-animation: smoking 4s ease-out 4s infinite;}
+#smoke_6 { -o-animation: smoking 5s ease-out 5s infinite;}
+#smoke_7 { -o-animation: smoking 5s ease-out 6s infinite;}
+
+#smoke_1 { animation: smoking 4s ease-out 0s infinite;}
+#smoke_2 { animation: smoking 4s ease-out 1s infinite;}
+#smoke_3 { animation: smoking 4s ease-out 2s infinite;}
+#smoke_4 { animation: smoking 4s ease-out 3s infinite;}
+#smoke_5 { animation: smoking 4s ease-out 4s infinite;}
+#smoke_6 { animation: smoking 5s ease-out 5s infinite;}
+#smoke_7 { animation: smoking 5s ease-out 6s infinite;}
+
+
+/******************************
+Eyes
+*******************************/
+
+
+.bear_eye_left, .bear_eye_right {
+	position: absolute;
+	width: 52px;
+	height: 52px;
+	z-index: 11000;
+} 
+
+.bear_eye_left_beer_left, .bear_eye_right_beer_left, .bear_eye_left_beer_right, .bear_eye_right_beer_right {
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	top:97px;
+	z-index: 11000;	
+}
+
+.bear_eye_left {
+	left: 236px;
+	top:130px;
+	-webkit-animation: pipe_eye 4s ease-out infinite;
+	-moz-animation: pipe_eye 4s ease-out infinite;
+	-o-animation: pipe_eye 4s ease-out infinite;
+	animation: pipe_eye 4s ease-out infinite;
+}
+
+.bear_eye_right {
+	left: 383px;
+	top:130px;
+	-webkit-animation: pipe_eye 4s ease-out infinite;
+	-moz-animation: pipe_eye 4s ease-out infinite;
+	-o-animation: pipe_eye 4s ease-out infinite;
+	animation: pipe_eye 4s ease-out infinite;
+}
+
+.bear_eye_left_love {
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	z-index: 11000;	
+	left: 139px;
+	top: 106px;
+	-webkit-animation: love_eye 4s ease-out infinite;
+	-moz-animation: love_eye 4s ease-out infinite;
+	-o-animation: love_eye 4s ease-out infinite;
+	animation: love_eye 4s ease-out infinite;
+}
+
+.bear_eye_right_love {
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	z-index: 11000;	
+	left: 215px;
+	top: 106px;
+	-webkit-animation: love_eye 4s ease-out infinite;
+	-moz-animation: love_eye 4s ease-out infinite;
+	-o-animation: love_eye 4s ease-out infinite;
+	animation: love_eye 4s ease-out infinite;
+}
+
+.bear_eye_left_donut {
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	z-index: 11000;
+	left: 266px;
+	top:181px;
+	-webkit-animation: donut_eye 4s ease-out infinite;
+	-moz-animation: donut_eye 4s ease-out infinite;
+	-o-animation: donut_eye 4s ease-out infinite;
+	animation: donut_eye 4s ease-out infinite;
+}
+
+.bear_eye_right_donut {
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	z-index: 11000;
+	left: 369px;
+	top:181px;
+	-webkit-animation: donut_eye 4s ease-out infinite;
+	-moz-animation: donut_eye 4s ease-out infinite;
+	-o-animation: donut_eye 4s ease-out infinite;
+	animation: donut_eye 4s ease-out infinite;
+}
+
+.bear_eye_left_beer_left {
+	left: -19px;
+	-webkit-animation: beer_eye_left 4s ease-out infinite;
+	-moz-animation: beer_eye_left 4s ease-out infinite;
+	-o-animation: beer_eye_left 4s ease-out infinite;
+	animation: beer_eye_left 4s ease-out infinite;
+}
+
+.bear_eye_right_beer_left {
+	left: 70px;
+	-webkit-animation: beer_eye_left 4s ease-out infinite;
+	-moz-animation: beer_eye_left 4s ease-out infinite;
+	-o-animation: beer_eye_left 4s ease-out infinite;
+	animation: beer_eye_left 4s ease-out infinite;
+}
+
+
+.bear_eye_left_beer_right {
+	left: 288px;
+	-webkit-animation: beer_eye_right 4s ease-out infinite;
+	-moz-animation: beer_eye_right 4s ease-out infinite;
+	-o-animation: beer_eye_right 4s ease-out infinite;
+	animation: beer_eye_right 4s ease-out infinite;
+}
+
+.bear_eye_right_beer_right {
+	left:377px;
+	-webkit-animation: beer_eye_right 4s ease-out infinite;
+	-moz-animation: beer_eye_right 4s ease-out infinite;
+	-o-animation: beer_eye_right 4s ease-out infinite;
+	animation: beer_eye_right 4s ease-out infinite;
+}
+
+div.eye_blink_left, div.eye_blink_right {
+	width: 18px;
+	height: 18px;
+	display: block;
+	border-radius: 20px;
+	position: absolute;
+	background-color: #fff;
+	z-index: 11000;
+	-webkit-animation: blink 2s .5s infinite;
+	-moz-animation: blink 2s .5s infinite;
+	-o-animation: blink 2s .5s infinite;
+	animation: blink 2s .5s infinite;
+	}
+
+div.eye_blink_left {
+	top: 192px;
+	left: 176px;
+}
+
+div.eye_blink_right {
+	top: 172px;
+	left: 280px;
+}
+
+div.eye_blink_totem{
+	width: 20px;
+	height: 20px;
+	display: block;
+	border-radius: 20px;
+	position: absolute;
+	background-color: #fff;
+	z-index: 11000;	
+	top: -4px;
+	left: 189px;
+	-webkit-animation: blink 2.8s .1s infinite;
+	-moz-animation: blink 2.8s .1s infinite;
+	-o-animation: blink 2.8s .1s infinite;
+	animation: blink 2.8s .1s infinite;
+}
+
+
+
+div.hero_holder_front div.eye_blink_left {
+	top: 244px;
+	left: 250px;
+}
+
+div.hero_holder_front div.eye_blink_right {
+	top: 244px;
+	left: 396px;
+}
+
+#h_hunt div.eye_blink_right {
+	top: 224px;
+	left: 373px;
+}
+
+#h_hunt div.eye_blink_left {
+	top: 224px;
+	left: 279px;
+}
+
+#h_gone div.eye_blink_right {
+	top: 211px;
+	left: 379px;
+}
+
+#h_gone div.eye_blink_left {
+	top: 211px;
+	left: 277px;
+}
+
+#h_drums div.eye_blink_right {
+	top: 91px;
+	left: 228px;
+}
+
+#h_drums div.eye_blink_left {
+	top: 91px;
+	left: 135px;
+}
+
+
+#h_end_friendly div.eye_blink_right {
+	top: 120px;
+	left: 221px;
+}
+
+#h_end_friendly div.eye_blink_left {
+	top: 120px;
+	left: 147px;
+}
+
+
+
+/******************************
+Decisions
+*******************************/
+
+
+div.decisions {
+	position: relative;
+	margin: 0 auto;
+	margin-top: 40px;
+	height: auto;
+	z-index: 6000;
+}
+
+a.choice {
+	display: block;
+	float: left;
+	width: 190px;
+	height: 190px;
+	border-radius: 100px;
+	margin: 0 65px;	
+	-webkit-box-shadow: 0px 0px 1px rgba(44, 76, 89, 0.1);	
+	-moz-box-shadow: 0px 0px 1px rgba(44, 76, 89, 0.1);	
+	box-shadow: 0px 0px 1px rgba(44, 76, 89, 0.1);	
+	
+	-webkit-transition: all 0.4s ease;  
+    -moz-transition: all 0.4s ease;    
+    -o-transition: all 0.4s ease;    
+    transition: all 0.4s ease; 
+}
+
+a.choice_blank {
+	display: block;
+	float: left;
+	width: 190px;
+	height: 190px;
+	margin: 0 65px;		
+}
+
+div.link_next {
+	width: 190px;
+	height: 190px;
+	background-size: 190px 190px;
+	background-repeat: no-repeat;
+}
+
+a.choice span.arrow {
+	display: block;
+	position: relative;
+	width: 30px;
+	height: 4px;
+	background-color: #a4dbde;
+	top: 10px;
+	left: 80px; 
+}
+
+a.choice span.text_next {
+	display: block;
+	text-align: center;
+	width: 190px;
+	top: 20px;
+	text-transform: uppercase;
+	font-family: 'Lato';
+	font-weight: 700;
+	color: #a4dbde;
+	position: relative;
+}
+
+div.link_next:hover, div.link_next:active {
+	cursor: pointer;
+	-webkit-animation: decision .2s ease-out forwards;	
+	-moz-webkit-animation: decision .2s ease-out forwards;	
+	-o-webkit-animation: decision .2s ease-out forwards;	
+	animation: decision .2s ease-out forwards;	
+
+}
+
+
+
+
+
+/******************************
+Final Results Page
+*******************************/
+
+#logo {
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	top: 40px;
+	left: 40px;
+	z-index: 10000;
+	background-image: url(http://www.canu.se/assets/canu_logo.svg);
+	background-size: 40px auto;
+	border-radius: 1px;
+}
+
+.hand_holder {
+	position: absolute;	
+	z-index: 900;
+	left: 50%;
+	top: 0;
+	overflow: visible;
+	height: 100%	;
+	width: 674px;
+	margin-left: -280px;
+	margin-top: 40px;
+
+	z-index: 4000;
+}	
+			
+
+.bear_hand {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-left: -405px;
+	width: 800px;
+	height: 600px;
+	z-index: 10000;
+}
+
+.app_store {
+	position: absolute;
+	bottom: 94px;
+	margin-left:-12px;
+	width: 160px;
+	height: 60px;
+	z-index: 12000;
+	display: block;
+}
+
+.app_store:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.bear_phone {
+	position: absolute;
+	bottom: 241px;
+	margin-left: -17px;
+	width: 162px;
+	height: auto;
+	z-index: 11000;
+}			
+	
+
+div.bear_end_card {
+	height: 480px;
+
+	width: 240px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -160px;
+	margin-left: 50px;
+	z-index: 5000;
+}
+
+div.bear_result {
+	width: 220px;
+	height: 220px;
+	border: 10px solid #fff;
+	border-radius: 200px;
+	box-shadow: 0px 0px 3px rgba(183, 222, 225, 0.15);
+	-webkit-box-shadow: 0px 0px 3px rgba(183, 222, 225, 0.15);
+	-moz-box-shadow: 0px 0px 3px rgba(183, 222, 225, 0.15);
+	
+	background-size: 220px auto;
+	background-position: center 0px;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 5000;
+}
+
+#result_beer {
+	background-image: url(../assets/bear_beer.svg);
+}
+#result_shaman {
+	background-image: url(../assets/bear_shaman.svg);
+}
+#result_sacrificed {
+	background-image: url(../assets/bear_sacrificed.svg);
+}
+#result_love {
+	background-image: url(../assets/bear_love.svg);
+}
+
+div.bear_result_bg {
+	width: 220px;
+	height: 220px;
+	background-image: url(../assets/result_forest.svg);
+	border-radius: 200px;
+	background-size: 220px auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 4900;
+	left: 10px;
+	top:10px;
+	opacity: 0.4;	
+}
+
+div.bear_end_card ul {
+	list-style: none;
+	height: 60px;
+	width: 240px;
+	margin-top: 20px;
+}
+
+div.bear_end_card ul li {
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin: 0 5px;
+}
+
+img.share_item {
+	width: 40px;
+	height: 40px;
+}
+
+img.share_item:hover {
+	opacity: 0.8;
+}
+
+p.share, p.share_or {
+	width: 240px;
+	text-align: center;
+	color: #2c4c59;
+	font-size: 20px;
+	line-height: 24px;
+	height: 20px;
+	padding: 0;
+}
+
+p.share {
+	font-weight: 700;
+}
+
+p.share_or {
+	font-family: Pacifico;
+	font-size: 18px;
+	margin-top: 4px;
+}
+
+/******************************
+Keyframed Animations
+*******************************/
+
+@-webkit-keyframes blink {
+  0%, 100% { opacity: 0;}
+  
+  96% {opacity: 0;}
+  
+  97% {opacity: 1;}
+
+  99%{ opacity: 1; }
+}
+
+
+
+@-webkit-keyframes decision {
+  from {
+    -webkit-transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.04);
+  }
+}
+
+
+@-webkit-keyframes stary {
+  0%, 100% {
+    -webkit-transform: scale(1);
+  }
+
+  40% {
+    -webkit-transform: scale(1.03);
+  }
+}
+
+@-webkit-keyframes pipe_eye {
+  0%, 100% {
+    -webkit-transform:rotate(0);
+  }
+
+  50% {
+    -webkit-transform:rotate(20deg);
+  }
+  
+  75% {
+    -webkit-transform:rotate(30deg);
+  }
+  
+  80% {
+    -webkit-transform:rotate(26deg);
+  }    
+}
+
+
+@-webkit-keyframes donut_eye {
+  0%, 100% {
+    -webkit-transform:rotate(180deg);
+  }
+
+  70% {
+    -webkit-transform:rotate(200deg);
+  } 
+  
+  85% {
+    -webkit-transform:rotate(290deg);
+  }     
+}
+
+@-webkit-keyframes love_eye {
+  0%, 100% {
+    -webkit-transform:rotate(230deg);
+  }
+
+  45% {
+    -webkit-transform:rotate(120deg);
+  } 
+}
+
+@-webkit-keyframes beer_eye_left {
+  0%, 100% {
+    -webkit-transform:rotate(180deg);
+  }
+  
+  20% {
+	-webkit-transform:rotate(160deg);	  
+  }
+
+  35% {
+    -webkit-transform:rotate(180deg);
+  } 
+  
+  40% {
+    -webkit-transform:rotate(90deg);
+  }   
+
+  45% {
+    -webkit-transform:rotate(87deg);
+  }
+  
+  50% {
+    -webkit-transform:rotate(92deg);
+  }  
+  
+  52% {
+    -webkit-transform:rotate(180deg);
+  }         
+  
+  85% {
+    -webkit-transform:rotate(190deg);
+  }     
+}
+
+@-webkit-keyframes beer_eye_right {
+  0%, 100% {
+    -webkit-transform:rotate(270deg);
+  }
+  
+  20% {
+	-webkit-transform:rotate(260deg);	  
+  }
+
+  35% {
+    -webkit-transform:rotate(240deg);
+  } 
+  
+  40% {
+    -webkit-transform:rotate(270deg);
+  }   
+
+  45% {
+    -webkit-transform:rotate(274deg);
+  }
+  
+  50% {
+    -webkit-transform:rotate(270deg);
+  }  
+  
+  52% {
+    -webkit-transform:rotate(180deg);
+  }         
+  
+  85% {
+    -webkit-transform:rotate(170deg);
+  }     
+}
+
+
+@-webkit-keyframes smoking {
+  0%, 100% { opacity: 0;}
+
+  25%{ opacity: 1; }
+}
+
+@-webkit-keyframes dimm {
+  0%, 100% { opacity: 0.4;}
+
+  25%{ opacity: 1; }
+  
+  75%{ opacity: 0.2; }
+}
+
+@-webkit-keyframes decision_big {
+  from {
+    -webkit-transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.05);
+  }
+}
+
+
+
+
+
+
+
+
+
+@-moz-keyframes blink {
+  0%, 100% { opacity: 0;}
+  
+  96% {opacity: 0;}
+  
+  97% {opacity: 1;}
+
+  99%{ opacity: 1; }
+}
+
+
+
+@-moz-keyframes decision {
+  from {
+    -moz-transform: scale(1);
+  }
+
+  to {
+    -moz-transform: scale(1.04);
+  }
+}
+
+
+@-moz-keyframes stary {
+  0%, 100% {
+    -moz-transform: scale(1);
+  }
+
+  40% {
+    -moz-transform: scale(1.03);
+  }
+}
+
+@-moz-keyframes pipe_eye {
+  0%, 100% {
+    -moz-transform:rotate(0);
+  }
+
+  50% {
+    -moz-transform:rotate(20deg);
+  }
+  
+  75% {
+    -moz-transform:rotate(30deg);
+  }
+  
+  80% {
+    -moz-transform:rotate(26deg);
+  }    
+}
+
+
+@-moz-keyframes donut_eye {
+  0%, 100% {
+    -moz-transform:rotate(180deg);
+  }
+
+  70% {
+    -moz-transform:rotate(200deg);
+  } 
+  
+  85% {
+    -moz-transform:rotate(290deg);
+  }     
+}
+
+@-moz-keyframes love_eye {
+  0%, 100% {
+    -moz-transform:rotate(230deg);
+  }
+
+  45% {
+    -moz-transform:rotate(120deg);
+  } 
+}
+
+@-moz-keyframes beer_eye_left {
+  0%, 100% {
+    -moz-transform:rotate(180deg);
+  }
+  
+  20% {
+	-moz-transform:rotate(160deg);	  
+  }
+
+  35% {
+    -moz-transform:rotate(180deg);
+  } 
+  
+  40% {
+    -moz-transform:rotate(90deg);
+  }   
+
+  45% {
+    -moz-transform:rotate(87deg);
+  }
+  
+  50% {
+    -moz-transform:rotate(92deg);
+  }  
+  
+  52% {
+    -moz-transform:rotate(180deg);
+  }         
+  
+  85% {
+    -moz-transform:rotate(190deg);
+  }     
+}
+
+@-moz-keyframes beer_eye_right {
+  0%, 100% {
+    -moz-transform:rotate(270deg);
+  }
+  
+  20% {
+	-moz-transform:rotate(260deg);	  
+  }
+
+  35% {
+    -moz-transform:rotate(240deg);
+  } 
+  
+  40% {
+    -moz-transform:rotate(270deg);
+  }   
+
+  45% {
+    -moz-transform:rotate(274deg);
+  }
+  
+  50% {
+    -moz-transform:rotate(270deg);
+  }  
+  
+  52% {
+    -moz-transform:rotate(180deg);
+  }         
+  
+  85% {
+    -moz-transform:rotate(170deg);
+  }     
+}
+
+
+@-moz-keyframes smoking {
+  0%, 100% { opacity: 0;}
+
+  25%{ opacity: 1; }
+}
+
+@-moz-keyframes dimm {
+  0%, 100% { opacity: 0.4;}
+
+  25%{ opacity: 1; }
+  
+  75%{ opacity: 0.2; }
+}
+
+@-moz-keyframes decision_big {
+  from {
+    -moz-transform: scale(1);
+  }
+
+  to {
+    -moz-transform: scale(1.05);
+  }
+}
+
+
+
+
+
+@-o-keyframes blink {
+  0%, 100% { opacity: 0;}
+  
+  96% {opacity: 0;}
+  
+  97% {opacity: 1;}
+
+  99%{ opacity: 1; }
+}
+
+
+
+@-o-keyframes decision {
+  from {
+    -o-transform: scale(1);
+  }
+
+  to {
+    -o-transform: scale(1.04);
+  }
+}
+
+
+@-o-keyframes stary {
+  0%, 100% {
+    -o-transform: scale(1);
+  }
+
+  40% {
+    -o-transform: scale(1.03);
+  }
+}
+
+@-o-keyframes pipe_eye {
+  0%, 100% {
+    -o-transform:rotate(0);
+  }
+
+  50% {
+    -o-transform:rotate(20deg);
+  }
+  
+  75% {
+    -o-transform:rotate(30deg);
+  }
+  
+  80% {
+    -o-transform:rotate(26deg);
+  }    
+}
+
+
+@-o-keyframes donut_eye {
+  0%, 100% {
+    -o-transform:rotate(180deg);
+  }
+
+  70% {
+    -o-transform:rotate(200deg);
+  } 
+  
+  85% {
+    -o-transform:rotate(290deg);
+  }     
+}
+
+@-o-keyframes love_eye {
+  0%, 100% {
+    -o-transform:rotate(230deg);
+  }
+
+  45% {
+    -o-transform:rotate(120deg);
+  } 
+}
+
+@-o-keyframes beer_eye_left {
+  0%, 100% {
+    -o-transform:rotate(180deg);
+  }
+  
+  20% {
+	-o-transform:rotate(160deg);	  
+  }
+
+  35% {
+    -o-transform:rotate(180deg);
+  } 
+  
+  40% {
+    -o-transform:rotate(90deg);
+  }   
+
+  45% {
+    -o-transform:rotate(87deg);
+  }
+  
+  50% {
+    -o-transform:rotate(92deg);
+  }  
+  
+  52% {
+    -o-transform:rotate(180deg);
+  }         
+  
+  85% {
+    -o-transform:rotate(190deg);
+  }     
+}
+
+@-o-keyframes beer_eye_right {
+  0%, 100% {
+    -o-transform:rotate(270deg);
+  }
+  
+  20% {
+	-o-transform:rotate(260deg);	  
+  }
+
+  35% {
+    -o-transform:rotate(240deg);
+  } 
+  
+  40% {
+    -o-transform:rotate(270deg);
+  }   
+
+  45% {
+    -o-transform:rotate(274deg);
+  }
+  
+  50% {
+    -o-transform:rotate(270deg);
+  }  
+  
+  52% {
+    -o-transform:rotate(180deg);
+  }         
+  
+  85% {
+    -o-transform:rotate(170deg);
+  }     
+}
+
+
+@-o-keyframes smoking {
+  0%, 100% { opacity: 0;}
+
+  25%{ opacity: 1; }
+}
+
+@-o-keyframes dimm {
+  0%, 100% { opacity: 0.4;}
+
+  25%{ opacity: 1; }
+  
+  75%{ opacity: 0.2; }
+}
+
+@-o-keyframes decision_big {
+  from {
+    -o-transform: scale(1);
+  }
+
+  to {
+    -o-transform: scale(1.05);
+  }
+}
+
+
+
+
+
+@keyframes blink {
+  0%, 100% { opacity: 0;}
+  
+  96% {opacity: 0;}
+  
+  97% {opacity: 1;}
+
+  99%{ opacity: 1; }
+}
+
+
+
+@keyframes decision {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.04);
+  }
+}
+
+
+@keyframes stary {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes pipe_eye {
+  0%, 100% {
+    transform:rotate(0);
+  }
+
+  50% {
+    transform:rotate(20deg);
+  }
+  
+  75% {
+    transform:rotate(30deg);
+  }
+  
+  80% {
+    transform:rotate(26deg);
+  }    
+}
+
+
+@keyframes donut_eye {
+  0%, 100% {
+    transform:rotate(180deg);
+  }
+
+  70% {
+    transform:rotate(200deg);
+  } 
+  
+  85% {
+    transform:rotate(290deg);
+  }     
+}
+
+@keyframes love_eye {
+  0%, 100% {
+    transform:rotate(230deg);
+  }
+
+  45% {
+    transform:rotate(120deg);
+  } 
+}
+
+@keyframes beer_eye_left {
+  0%, 100% {
+    transform:rotate(180deg);
+  }
+  
+  20% {
+	transform:rotate(160deg);	  
+  }
+
+  35% {
+    transform:rotate(180deg);
+  } 
+  
+  40% {
+    transform:rotate(90deg);
+  }   
+
+  45% {
+    transform:rotate(87deg);
+  }
+  
+  50% {
+    transform:rotate(92deg);
+  }  
+  
+  52% {
+    transform:rotate(180deg);
+  }         
+  
+  85% {
+    transform:rotate(190deg);
+  }     
+}
+
+@keyframes beer_eye_right {
+  0%, 100% {
+    transform:rotate(270deg);
+  }
+  
+  20% {
+	transform:rotate(260deg);	  
+  }
+
+  35% {
+    transform:rotate(240deg);
+  } 
+  
+  40% {
+    transform:rotate(270deg);
+  }   
+
+  45% {
+    transform:rotate(274deg);
+  }
+  
+  50% {
+    transform:rotate(270deg);
+  }  
+  
+  52% {
+    transform:rotate(180deg);
+  }         
+  
+  85% {
+    transform:rotate(170deg);
+  }     
+}
+
+
+@keyframes smoking {
+  0%, 100% { opacity: 0;}
+
+  25%{ opacity: 1; }
+}
+
+@keyframes dimm {
+  0%, 100% { opacity: 0.4;}
+
+  25%{ opacity: 1; }
+  
+  75%{ opacity: 0.2; }
+}
+
+@keyframes decision_big {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+
+
+/******************************
+Responsive Support
+*******************************/
+
+@media only screen and (max-width: 640px), only screen and (max-device-width: 640px){
+
+	p.header{
+	   
+	    z-index: 2000;
+	    padding: 0 20px;
+	    font-size: 28px;
+    }
+    
+	a.link_next {
+		width: 80px;
+		height: 80px;
+		line-height: 80px;
+		font-size: 16px;
+		margin: 0 10px;
+	}
+
+	div.decisions {
+		bottom: 25%;
+	}
+
+}
+
+
+

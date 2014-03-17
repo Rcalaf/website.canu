@@ -1,0 +1,36 @@
+<div id="screen8_end_sacrificed" class="screen">
+    <div class="header_holder" id="headers_end_sacrificed">
+	    <p class="header_fancy_intro">You are the</p>
+	    <p class="header">Sacrificed Bear</p>
+    </div>
+
+    <a onClick="goToScreen9_final_sacrificed()"><img class="scroll_down" src="./assets/scroll_down.svg"></a>
+	<div class="hero_holder_center" id="h_end_scarificed">
+		<object type="image/svg+xml" class="main_hero" id="hero_sacrificed" data="./assets/bear_sacrificed.svg"></object>
+		<div class="eye_blink_left_small"></div>
+		<div class="eye_blink_right_small"></div>
+		<div class="eye_blink_totem"></div>
+		<p class="description">Le chaman (ou shaman) se représente comme l’intermédiaire ou l'être intercesseur entre l'Homme et les esprits de la nature. </p>
+	</div>
+	<div class="bg_holder_center" id="bg_end_sacrificed">
+		<object type="image/svg+xml" class="tipi_drums" data="./assets/tipi_drum.svg"></object>
+		<object type="image/svg+xml" class="casual_clouds_many" data="./assets/casual_clouds_many.svg"></object>
+	</div>		
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    console.log("Screen 8_end_sacrificed");
+		});
+		
+		function goToScreen9_final_sacrificed() { nextScreenWithVerticalTransition("screen9_final_sacrificed");}
+	
+		$(document).ready(function() { TweenMax.to($("#h_end_sacrificed"), .4, {css:{ opacity:0 }, delay: 0.2});
+		if( $(window).width() < 640 ) {}	
+		else {
+			TweenMax.from($("#h_end_sacrificed"), .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.4});
+			TweenMax.from($("#bg_end_sacrificed"), .5, {css:{opacity:0}, ease:Quad.easeOut, delay: 1});
+			TweenMax.from($("#headers_end_sacrificed"), 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: .2});
+			TweenMax.from($('.scroll_down'), 0.3, {css: {opacity: 0}, ease:Quad.easeOut, delay: 1});
+		}
+		});
+	</script>
+</div>

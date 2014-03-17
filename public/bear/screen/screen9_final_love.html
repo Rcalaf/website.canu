@@ -1,0 +1,53 @@
+<div id="screen9_final_love" class="screen">
+	<a href="http://www.canu.se"><div id="logo"></div></a>
+    <div class="header_holder" id="headers_theend">
+    	<p class="header">You are not a fucking bear !</p>
+    	<p class="plain">But you can still try out CANU to get together</p>
+    </div>
+	<div class="bear_end_card">
+	    <div class="bear_result_bg"></div>
+	    <div class="bear_result" id="result_love"></div>
+	    <ul>
+	    	<div class="centering">
+		    <li>
+		    	<a href="#">
+			    	<img class="share_item" style="margin-top:2px;" src="./assets/share_tw.svg"/>
+			    </a>
+			</li>
+		    <li>
+		    	<a href="https://www.facebook.com/sharer/sharer.php?u=http://bear.canu.se/lovebear.html"  target="_blank">
+		    		<img class="share_item" src="./assets/share_fb.svg"/>
+		    	</a>
+			</li>
+		    <li>
+		    	<a href="mailto:vitali@canu.se?&subject=Bear%20Postcard&body=Hey CANU People!%0D%0A%0D%0AI%20would%20like%20to%20receive%20my%20Love%20Bear%20postcard.%0D%0A%0D%0APlease%20send%20it%20here:%0D%0A%0D%0AThanks!" target="_top">
+			    	<img class="share_item" src="./assets/share_post.svg"/>
+			    </a>
+			</li>
+	    	</div>
+	    </ul>
+	    <p class="share">Share your bear</p>
+	    <p class="share_or">or get a surprise ? !</p>
+    </div>  
+    <div class="hand_holder">	
+		<object type="image/svg+xml" class="bear_hand" data="./assets/bear_hand.svg"></object> 
+		<img class="bear_phone" src="./assets/bear_phone.png"/>
+		<a href="https://itunes.apple.com/nz/app/canu-get-together/id697998179?mt=8#" target="_blank"><img class="app_store" src="./assets/app_store.svg"/></a>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+		
+		    console.log("Screen 9_final_love");
+			
+			if( $(window).width() < 640 ) {}	
+		else {
+			TweenMax.from($("#h_theend"), .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.8});
+			TweenMax.from($("#headers_theend"), 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: 0.8});
+			TweenMax.from($("#d_theend"), 0.3, {css: {opacity: 0, scale: 1.1}, ease:Quint.easeInOut, delay: 1.2});
+			}
+		});
+	</script>
+</div>
+
+

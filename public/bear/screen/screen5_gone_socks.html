@@ -1,0 +1,32 @@
+<div id="screen5_gone_socks" class="screen">
+    <div class="header_holder" id="headers_gone">
+    	<p class="header">You are such a couch potato</p>
+    	<p class="plain">Your tribe left. You are basically fucked. You need to find new friends now.</p>
+    </div>        
+    <div class="hero_holder_front" id="h_gone">
+		<object type="image/svg+xml" class="main_hero" id="hero_backpack" data="./assets/bear_backpack.svg"></object>
+		<div class="eye_blink_left"></div>
+		<div class="eye_blink_right"></div>
+	</div>
+    <div class="bg_holder_center" id="bg_gone">
+		<object type="image/svg+xml" class="forest" style="opacity: 0.3" data="./assets/forest.svg"></object>
+		<object type="image/svg+xml" class="casual_clouds_many" data="./assets/casual_clouds_many.svg"></object>
+	</div>	
+	<a onClick="goToScreen6_new_socks()"><img class="scroll_down" src="./assets/scroll_down.svg"></a>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    console.log("Screen 5_gone_socks");
+		});
+		
+		function goToScreen6_new_socks() { nextScreenWithVerticalTransition("screen6_new_socks");}
+	
+		$(document).ready(function() {
+			if( $(window).width() < 640 ) {}	
+		else {
+			TweenMax.from($("#h_gone"), .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.8});
+			TweenMax.from($("#bg_gone"), .5, {css:{opacity:0}, ease:Quad.easeOut, delay: 1});
+			TweenMax.from($("#headers_gone"), 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: 0.8});
+			}
+		});
+	</script>
+</div>

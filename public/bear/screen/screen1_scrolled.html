@@ -1,0 +1,101 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+	    console.log("Screen 1");
+	});
+	
+	function goToScreen2_pipe() { nextScreenWithHorizontalTransition("screen2_pipe");}
+	function goToScreen2_2() { nextScreenWithHorizontalTransition("screen2_2");}
+	function goToScreen2_3() { nextScreenWithHorizontalTransition("screen2_3");}
+
+	$(document).ready(function() {
+		// This example adds a duration to the tweens so they are synced to the scroll position
+
+		var controller = $.superscrollorama();
+		var bb = $('#bear_back');
+		var bf = $('#bear_front');
+		
+		var holder_1 = $('#ani_intro');
+		var holder_2 = $('#ani_choices_1');
+		
+		var header_1 = $('#headers_1');
+		var header_2 = $('#headers_2');
+		var header_3 = $('#headers_3');
+		
+		var decisions = $('.decisions');
+		
+		// amount of scrolling over which the tween takes place (in pixels)
+
+
+		// individual element tween examples
+		//controller.addTween(bb, TweenMax.fromTo(bb, .9, {css:{scale: 1, opacity: 0}, immediateRender:true, ease:Quad.easeInOut}, {css:{scale: 1.2, opacity: 1}, ease:Quad.easeInOut}), 0, 100);
+		
+		TweenMax.from(bb, .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.4});
+		TweenMax.from(header_1, 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: .2});
+		TweenMax.from($('.scroll_down'), 0.3, {css: {opacity: 0}, ease:Quad.easeOut, delay: 1});
+		
+		controller.addTween(holder_1, 
+			(new TimelineLite())
+			.append([
+				TweenMax.fromTo(bb, .4, {css:{opacity: 1}}, {css:{opacity:1}}),
+				TweenMax.to($('.scroll_down'), .02, {css:{opacity: 0}}),
+				TweenMax.to(bb, .05, {css:{opacity: 0}, ease:Quad.easeIn, delay:.4}),
+				TweenMax.to(header_1, .1, {css:{opacity: 0}, delay:0.1}),
+				TweenMax.fromTo(header_2, .1, {css:{opacity: 0}}, {css:{opacity: 1},delay:.3}),
+				TweenMax.to(header_2, .1, {css:{opacity: 0}, delay:.5})
+				
+			]), 740);
+			
+		controller.addTween(holder_2, 
+			(new TimelineLite())
+			.append([
+				TweenMax.fromTo(bf, 0.3, {css:{scale:1.4, opacity: 0.7}}, {css:{scale:1.8, opacity: 1}, ease:Expo.easeOut, delay: .2}),
+				TweenMax.to(decisions, 0.5, {css:{display: 'block'}}),
+				TweenMax.fromTo(decisions, 0.5, {css:{display:'none', opacity:0}},{css:{display: 'block', opacity: 1}, ease:Expo.easeIn, delay: 1}),
+				TweenMax.fromTo($('.link_next'), 0.3, {css:{scale:0.95}}, {css:{scale:1}, ease:Expo.easeIn, delay: 1.6}),
+				TweenMax.fromTo(header_3, 1, {css:{opacity: 0}}, {css:{opacity: 1}, delay: .2})
+			]), 500);
+	});
+</script>
+<div id="screen1" class="screen">
+    <div class="header_holder" id="headers_1">
+	    <p class="header" id="line_1">Who</p>
+	    <p class="header_fancy" id="line_2">is</p>
+	    <p class="header_second" id="line_3">this fucking bear?</p>
+    </div>
+    <div class="header_holder" id="headers_2">
+    	<p class="header" id="line_4">Imagine, you are</p>
+    </div>
+    <div class="header_holder" id="headers_3">
+    	<p class="header" id="line_5">What do you feel like doing?</p>
+    	<p class="plain" id="line_6">Bears have a lot of activities to do depending on the mood.</p>
+    </div>    
+
+    <div class="bear_holder" id="ani_intro">
+    	<div class="hero_holder" id="hh_back">
+    		<object type="image/svg+xml" class="main_hero" id="bear_back" data="./assets/bear_back.svg"></object>
+    	</div>
+    </div>
+    <div class="bear_holder" id="ani_choices_1">
+    	<div class="hero_holder" id="hh_front">
+    		<object type="image/svg+xml" class="main_hero" id="bear_front" data="./assets/bear_face.svg"></object>
+    	</div>
+    </div>    
+    <img class="scroll_down" src="./assets/scroll_down.svg">
+	<div class="decisions">
+		<div class="centering">
+			<a class="link_next" id="i_smoke" onClick="goToScreen2_pipe()">
+				<div class="arrow"></div>
+				<span class="text_next">Smoke the peace pipe</span>
+			</a>
+			<a class="link_next" id="i_hunt" onClick="goToScreen2_2()">
+				<div class="arrow"></div>
+				<span class="text_next">Go hunt</span>
+			</a>
+			<a class="link_next" id="i_dry_socks" onClick="goToScreen2_3()">
+				<div class="arrow"></div>
+				<span class="text_next">Dry socks</span>
+			</a>
+		</div>
+	</div>    
+
+</div>

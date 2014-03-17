@@ -1,0 +1,50 @@
+<div id="screen4_pipe" class="screen">
+    <div class="header_holder" id="headers_pipe">
+    	<p class="header">Starting to see dancing feathers?</p>
+    	<p class="plain">Smoking the peace pipe can be nice, but it can cause some strange dreams.</p>
+    </div>        
+	<div class="decisions" id="d_pipe">
+		<div class="centering">
+			<a class="choice"  onClick="goToScreen5_gone_pipe()" href="#">
+				<div class="link_next" id="i_smoke"></div>
+				<span class="arrow"></span>
+				<span class="text_next">Smoke More</span>
+			</a>
+			<a class="choice_blank"></a>
+			<a class="choice"  onClick="goToScreen6_insomnia_pipe()" href="#">
+				<div class="link_next" id="i_village"></div>
+				<span class="arrow"></span>
+				<span class="text_next">Check out the village</span>
+			</a>
+		</div>
+	</div>
+    <div class="hero_holder_front" id="h_pipe">
+		<object type="image/svg+xml" class="main_hero" id="hero_pipe" data="./assets/bear_pipe.svg"></object>
+		<object type="image/svg+xml" class="bear_eye_left" data="./assets/bear_eye.svg"></object>
+		<object type="image/svg+xml" class="bear_eye_right" data="./assets/bear_eye.svg"></object>
+		<object type="image/svg+xml" class="pipe_smoke" id="smoke_1" data="./assets/pipe_smoke_1.svg"></object>
+		<object type="image/svg+xml" class="pipe_smoke" id="smoke_2" data="./assets/pipe_smoke_2.svg"></object>
+		<object type="image/svg+xml" class="pipe_smoke" id="smoke_3" data="./assets/pipe_smoke_3.svg"></object>
+		<object type="image/svg+xml" class="pipe_smoke" id="smoke_4" data="./assets/pipe_smoke_4.svg"></object>
+		<object type="image/svg+xml" class="pipe_smoke" id="smoke_5" data="./assets/pipe_smoke_5.svg"></object>
+		<object type="image/svg+xml" class="pipe_smoke" id="smoke_6" data="./assets/pipe_smoke_6.svg"></object>
+		<object type="image/svg+xml" class="pipe_smoke" id="smoke_7" data="./assets/pipe_smoke_7.svg"></object>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    console.log("Screen 4_pipe");
+		});
+		
+		function goToScreen5_gone_pipe() { nextScreenWithVerticalTransition("screen5_gone_pipe");}
+		function goToScreen6_insomnia_pipe() { nextScreenWithVerticalTransition("screen6_insomnia_pipe");}	
+		$(document).ready(function() {
+		
+		if( $(window).width() < 640 ) {}	
+		else {
+			TweenMax.from($("#h_pipe"), .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.8});
+			TweenMax.from($("#headers_pipe"), 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: 0.8});
+			TweenMax.from($("#d_pipe"), 0.3, {css: {opacity: 0, scale: 1.1}, ease:Quint.easeInOut, delay: 1.2});
+		}
+		});
+	</script>
+</div>
