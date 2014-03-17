@@ -868,13 +868,20 @@ div.link_next:hover, div.link_next:active {
 Final Results Page
 *******************************/
 
+
+a:link {
+	display: block;
+	height: auto;
+	width: auto;
+}
+
 #logo {
 	position: fixed;
 	width: 40px;
 	height: 40px;
 	top: 40px;
 	left: 40px;
-	z-index: 10000;
+	z-index: 11000;
 	background-image: url(http://www.canu.se/assets/canu_logo.svg);
 	background-size: 40px auto;
 	border-radius: 1px;
