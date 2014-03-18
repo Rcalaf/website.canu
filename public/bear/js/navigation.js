@@ -1,4 +1,4 @@
-var currentScreen = "screen1";
+var currentScreen = "screen8_end_love";
 var nextScreen;
 
 $(document).ready(function(){
