@@ -989,7 +989,7 @@ div.stats-block{
 	width: 220px;
 	float: left;
 	margin-left: 140px;
-	opacity: 0.4;
+	opacity: 1;
 }
 
 div.stats-block:hover{
