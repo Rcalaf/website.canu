@@ -31,6 +31,25 @@
         <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Lato:400italic,700' rel='stylesheet' type='text/css'>
         
+        <style>
+			body {
+				overflow: hidden;
+			}
+			
+			/* Preloader */
+			
+			#preloader {
+			    position:fixed;
+			    top:0;
+			    left:0;
+			    right:0;
+			    bottom:0;
+			    background-color:#fff; /* change if the mask should have another color then white */
+			    z-index:999999999; /* makes sure it stays on top */
+			}
+			
+        </style>
+        
         <script src='https://raw.github.com/x1024/jquery-fastbutton/master/bin/fastbutton.js'></script>
         <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>-->
         
@@ -46,11 +65,22 @@
 		</script>
     </head>
     <body class="'use-fastclick'">
+		<!-- Preloader -->
+		<div id="preloader"></div>
         <div id="wrapper">
         </div>
         <script src="./js/jquery.js"></script>
         <script src="./js/navigation.js"></script>   
         <script src="./js/TweenMax.min.js"></script>
-        <script src="./js/jquery.superscrollorama.js"></script>     
+        <script src="./js/jquery.superscrollorama.js"></script> 
+        <script type="text/javascript">
+			//<![CDATA[
+			$(window).load(function() { // makes sure the whole site is loaded
+				$('#status').fadeOut(); // will first fade out the loading animation
+				$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+				$('body').delay(350).css({'overflow':'visible'});
+			})
+				//]]>
+		</script>    
     </body>
 </html>
