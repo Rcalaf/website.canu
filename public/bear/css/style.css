@@ -149,7 +149,7 @@ p.header_second{
 p.plain {
 	text-align: center;
     z-index: 2000;
-    padding: 10px 80px;
+    padding: 10px 0;
     margin: 0;
     font-size: 14pt;
     font-family: 'Lato';
@@ -161,17 +161,14 @@ p.description {
 	line-height: 24px;
 	text-align: center;
     z-index: 2000;
-    width: 600px;
-    
-   margin-left: -200px;
-
-   position: absolute;
-   bottom: 40px;
-   padding: 0 80px;
+    width: 400px;
+     padding: 0;
     font-size: 12pt;
     font-family: 'Lato';
     font-style: italic;
-    
+    z-index: 6000;
+    position: absolute;
+    bottom: 30px;
 }
 
 img.scroll_down {
@@ -267,21 +264,21 @@ Bear Variations
 }
 
 #hero_sacrificed {
-	top: -60px;
-	width: 80%;
-	height: 80%;
-	left: 10%;
+	top: -80px;
+	width: 104%;
+	height: 104%;
+	left: -2%;
 }
 
 #hero_shaman {
-	top: -100px;
+	top: -60px;
 	width: 110%;
 	height: 110%;
 	left: -4px;
 }
 
 #hero_love {
-	top: -90px;
+	top: -30px;
 	width: 90%;
 	height: 90%;
 	left: 5%;
@@ -307,7 +304,7 @@ Bear Variations
 	width: 88%;
 	height: 88%;
 	left: 6%;
-	top: -50px;
+	top: 0%;
 }
 
 
@@ -613,7 +610,7 @@ Eyes
 	height: 26px;
 	z-index: 11000;	
 	left: 139px;
-	top: 46px;
+	top: 106px;
 	-webkit-animation: love_eye 4s ease-out infinite;
 	-moz-animation: love_eye 4s ease-out infinite;
 	-o-animation: love_eye 4s ease-out infinite;
@@ -626,7 +623,7 @@ Eyes
 	height: 26px;
 	z-index: 11000;	
 	left: 215px;
-	top: 46px;
+	top: 106px;
 	-webkit-animation: love_eye 4s ease-out infinite;
 	-moz-animation: love_eye 4s ease-out infinite;
 	-o-animation: love_eye 4s ease-out infinite;
@@ -724,8 +721,8 @@ div.eye_blink_totem{
 	position: absolute;
 	background-color: #fff;
 	z-index: 11000;	
-	top: -6px;
-	left: 186px;
+	top: -4px;
+	left: 189px;
 	-webkit-animation: blink 2.8s .1s infinite;
 	-moz-animation: blink 2.8s .1s infinite;
 	-o-animation: blink 2.8s .1s infinite;
@@ -776,12 +773,12 @@ div.hero_holder_front div.eye_blink_right {
 
 
 #h_end_friendly div.eye_blink_right {
-	top: 70px;
+	top: 120px;
 	left: 221px;
 }
 
 #h_end_friendly div.eye_blink_left {
-	top: 70px;
+	top: 120px;
 	left: 147px;
 }
 
