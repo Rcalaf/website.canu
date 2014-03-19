@@ -44,8 +44,14 @@
 			    left:0;
 			    right:0;
 			    bottom:0;
-			    background-color:#fff; /* change if the mask should have another color then white */
+			    background-color:white;
+			    opacity: 0.3;
 			    z-index:999999999; /* makes sure it stays on top */
+			    text-align: center;
+			}
+
+			#preloader h1{
+				
 			}
 			
         </style>
@@ -66,21 +72,14 @@
     </head>
     <body class="'use-fastclick'">
 		<!-- Preloader -->
-		<div id="preloader"></div>
+		<div id="preloader">
+			<h1>LOADER</h1>
+		</div>
         <div id="wrapper">
         </div>
         <script src="./js/jquery.js"></script>
-        <script src="./js/navigation.js"></script>   
-        <script src="./js/TweenMax.min.js"></script>
-        <script src="./js/jquery.superscrollorama.js"></script> 
-        <script type="text/javascript">
-			//<![CDATA[
-			$(window).load(function() { // makes sure the whole site is loaded
-				$('#status').fadeOut(); // will first fade out the loading animation
-				$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-				$('body').delay(350).css({'overflow':'visible'});
-			})
-				//]]>
-		</script>    
+        <script src="./js/TweenMax.min.js"></script>        
+        <script src="./js/navigation.js"></script>
+        <script src="./js/html5Preloader.js"></script>   
     </body>
 </html>
