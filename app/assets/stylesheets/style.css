@@ -25,7 +25,7 @@ html, body {
 
 body {
 	font-family: 'Lato';
-	background-color: #f1f5f5;
+	background-color: #fff;
 	color: #2b4b58; 
 }
 
@@ -163,7 +163,7 @@ Home Page Sections
 	-o-background-size: cover;
 	background-size: cover;
 	width: 100%;
-	height: 90%;
+	height: 100%;
 }
 
 #sec_local, #sec_tribes {
@@ -223,7 +223,7 @@ h1{
 }
 
 h2{
-	font-size: 44px;
+	font-size: 56px;
 	margin: 0 auto;
 	padding: 0 40px;
 	margin-top: 200px;
@@ -282,7 +282,7 @@ p.c_soon {
 	height: 100px;
 	line-height: 100px;
 	color: #2c4b58;
-	background-color: #f1f1f5;
+	background-color: #fff;
 	font-weight: 700;
 	position: absolute;
 	top: 50%;
@@ -352,7 +352,6 @@ ul.bottom_menu {
 	position: fixed;
 	width: 100%;
 	height: 40px;
-	background-color: rgba(255, 255, 255, 0.9);
 	z-index: 7900;
 	bottom: 0;
 	right: 0;
@@ -386,13 +385,13 @@ Top Menu
 ul.top_menu {
 	position: fixed;
 	height: 40px;
-	background-color: rgba(242, 245, 245, 0.9);
+	background-color: rgba(255, 255, 255, 0.9);
 	z-index: 10000;
-	top: 40px;
+	top: o;
 	left: 120px;
 	margin: 0;
 	width: 700px;
-	padding: 0 10px;
+	padding: 40px 10px;
 }
 
 ul.top_menu  li {
@@ -1313,7 +1312,6 @@ Mobile
 			position: fixed;
 			width: 100%;
 			height: 40px;
-			background-color: rgba(255, 255, 255, 0.5);
 			z-index: 7900;
 			bottom: 0;
 			right: 0;
