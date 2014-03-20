@@ -579,8 +579,8 @@ div.feature p{
 }
 
 body.authorization p.intro_header {
-	font-size: 32px; 
-	text-align: center;	
+	font-size: 23px; 
+	padding: 8px 0 12px 0;
 }
 
 p.intro_header {
@@ -629,6 +629,7 @@ p.body {
 body.authorization p.body {
 	font-size: 14px;
 	line-height: 24px;
+	padding: 4px 0;
 }
 
 p.body a{
