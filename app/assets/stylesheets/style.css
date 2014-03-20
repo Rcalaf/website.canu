@@ -579,11 +579,12 @@ div.feature p{
 }
 
 p.intro_header {
-	font-size: 36px;
-	line-height: 56px;    
+	font-size: 36px;   
 	font-weight: 700;
 	color: #2b4b58;
-	padding-bottom: 40px;
+	padding: 20px 0;
+	margin: 10px 0;
+	text-align: center;
 }
 
 p.header {
@@ -609,12 +610,13 @@ p.header span  {
 }
 
 p.body {
-	font-size: 15px;
-	line-height: 34px;
+	font-size: 18px;
+	line-height: 28px;
 	color: #2b4b58;      
 	font-weight: 400;
-	padding: 20px 0 30px 0;
+	padding: 12px 0;
 	float: left;
+	margin: 0;
 }
 
 p.body a{
@@ -949,7 +951,7 @@ body.invite{
 }
 
 body.authorization{
-	background-color: #f1f5f5;
+	background-color: #fff;
 }
 
 body.expired{
@@ -1376,7 +1378,7 @@ Mobile
 		ul.top_menu {
 			position: fixed;
 			height: 40px;
-			background-color: rgba(242, 245, 245, 0.9);
+			background-color: rgba(255, 255, 255, 0.9);
 			z-index: 10000;
 			width: 250px;
 			top: 10px;
@@ -1399,7 +1401,7 @@ Mobile
 			padding: 0 7px 0 0;
 		}		
 		
-		.mobile_hide, .member_story {
+		.mobile_hide, .member_story, #team_section {
 			display: none;
 		}
 		
