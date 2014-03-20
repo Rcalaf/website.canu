@@ -644,21 +644,22 @@ span.team {
 
 span.team  ul.team{
 	float: left;
-	width: 1200px;
-	height: 322px;
-	margin-left: 0;
-	margin-top: 40px;
+	width: auto;
+	height: 222px;
+	margin: 40px 0 0 0;
 }
 
 span.team  ul.team li{
 	float: left;
-	width: 227px;
-	height: 322px;
+	width: 140px;
+	height: 200px;
 	margin-right: 0;
-	background-position: 227px 0;
+	background-position: -140px 0;
 	cursor: pointer;
 	opacity: 0.2;
 	margin-left: 0;
+	background-size: 280px 199px;
+	background-repeat: no-repeat;
 }
 
 span.team  ul.team li:hover{
@@ -692,85 +693,53 @@ span.team ul.team li:last-child{
 span.team  ul.details{
 	float: left;
 	height: 180px;
-	margin-top: 40px;
-	margin-bottom: 20px;
+	margin: 0;
 }
 
 span.team  ul.details li{
 	float: left;
-	width: 227px;
+	width: 140px;
 	margin-right: 4px;
+	margin: 0;
+	padding: 0;
 }
 
 span.team ul.details li:last-child{
 	margin-right: 0;
 }
 
+span.team  ul.details li p {
+	margin: 4px 0;
+}
+
 span.team  ul.details li p.name{
 	float: left;
-	width: 225px;
+	width: 140px;
 	color: #2b4b58;
-	font-size: 15px;
-	line-height: 24px;
+	font-size: 14px;
 	font-weight: 700;
 	word-spacing: 0.1em;
 	text-transform: capitalize;
+	padding-bottom: 8px;
 }
 
 span.team  ul.details li p.title{
 	float: left;
-	width: 225px;
-	margin-top: 10px;
-	color: #2b4b58;
+	width: 140px;
+	color: #acafbf;
 	font-size: 12px;
 	text-transform: capitalize;
 }
 
 span.team  ul.details li p.email{
 	float: left;
-	width: 225px;
+	width: 140px;
 	line-height: 18px;
-	margin-top: 10px;
 	color: #acafbf;
 	font-size: 12px;
 	opacity: 1;
 }
 
-
-div.member_story {
-	position: relative;
-	top: 326px;
-	left: 0;
-	height: 260px;
-	background-color: rgba(242, 245, 245, 1);
-}
-
-div.member_story p.story{
-	position: absolute;
-	top:60px;
-	left: 0;
-	padding: 40px 0;
-	font-size: 15px;
-	line-height: 24px;
-	color: #2b4b58;       
-	font-weight: 400;
-	float: left;
-	width: 700px;
-}
-
-div.member_story p.member_name{
-	position: absolute;
-	top:0;
-	left: 0;
-	padding: 40px 0;
-	font-size: 26px;
-	font-weight: 700;
-	line-height: 28px;
-	color: #2b4b58;      
-	font-weight: 700;
-	float: left;
-	width: 600px;
-}
 
 
 /******************************
