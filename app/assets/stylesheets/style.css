@@ -684,18 +684,17 @@ Comments Container
 	left: 140px;
 	top: 50%;
 	margin-top: -190px;
-	width: 300px;
+	width: 340px;
 	height: 220px;
 	padding: 0 20px;
 	color: #fff;   
 	display: none;
 	z-index: 10060;
 	
-	font-size: 72px;
-	line-height: 108px;
+	font-size: 74px;
 
 	color: #fff;    
-	font-style: italic;
+	
 }
 
 #comments_blur {

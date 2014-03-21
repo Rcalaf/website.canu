@@ -1,52 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Something doesn't work.</title>
+  <title>Oops. Computers can be stupid sometimes.</title>
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="user-scalable=no, width=device-width"/>
   <style type="text/css">
     body { 
-    	background-color: rgba(229, 245, 255, 1);
+    	background-color: #f1f5f5;
     	color: #666; 
     	text-align: center; 
-    	font-family: "Lato", arial, sans-serif; 
+    	font-family: "lato", arial, sans-serif; 
     	}
+    div.error_image {
+    	background-image: url("assets/error_arrows.svg");
+    	background-size: 100% 100%;
+    	background-repeat: no-repeat;
+    	width: 60%;
+    	height: 40%;
+    	left: 20%;
+    	top:50%;
+    	position: absolute;
+    }	
     	
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 300px auto;
-
-    }
     
     h1 { 
     	text-align: center;
-    	color: #6D6E7A;
+    	color: #2b4b58;
     	font-size: 38px;
-    	line-height: 48px;
     	z-index: 2100;
+    	margin: 0 auto;
+    	padding: 120px 20px 0 20px;
     	}
-    	
-    h1 span{
-	color: #ED5F57;
-}
+  
     
     div.logo_top {
-		position: absolute;
-		width: 100px;
+		position: fixed;
+		width: 40px;
+		height: 40px;
 		top: 40px;
-		left: 50%;
-		margin-left: -480px;
-		z-index: 2000;
+		left: 40px;
+		z-index: 10000;
+		background-image: url("assets/canu_logo.svg");
+		background-size: 40px 40px;
+	}
+	
+	div.logo_top:hover {
+		cursor: pointer;
+	}
+	
+	.error_sign {
+		width: 600px;
+		height: 400px;
+		margin: 0 auto;
+		background-color: aqua;
+		display: block;
+	}
+    
+	
+	@media only screen and (max-width: 999px), only screen and (max-device-width: 999px){
+
+		h1 {
+			font-size: 22px;
+		}
+		
+		div.logo_top {
+			left: 50%;
+			margin-left: -20px;
+			position: absolute;
+		}
 	}
 	
     
   </style>
 </head>
 
-<body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <h1>Oops. Computers can be stupid sometimes. E-mail us with any questions.</h1>
-  </div>
-</body>
+	<body>
+	  	<a href="http://www.canu.se/"><div class="logo_top"></div></a>
+	  	<h1>Oops. Computers can be stupid sometimes.</h1>
+	  	<div class="error_image"></div>
+    </body>
 </html>
