@@ -10,10 +10,14 @@
 <% set_meta_tags :og => { :title => 'CANU - Get Together', :type => 'website',:url => 'http://www.canu.se/', :image => 'http://localhost:3000/images/facebook_img.png', :description => 'Put your future activities in one place. CANU is the quickest way to get your friends together.', :site_name => 'CANU.se'} %>
 <div class="logo_top"></div>
 <div class="section" id="sec_landing">
-	<h2>The chat to <br>get together</h2>
+	<h2 id="rand_tagline"></h2>
+	<!--<h2 id="rand_tagline">The tool to<br>get together</h2>-->
 	<span class="clear"></span>
-	<a href="https://itunes.apple.com/nz/app/canu-get-together/id697998179?mt=8#" class="store" onclick="_gaq.push(['_trackEvent', 'to_app_store']);">Get the app</a>
-	<span class="android">Android launch</span>	
+	<h4 id="rand_tagline_sup"></h4>
+	<span class="clear"></span>
+	<a href="https://itunes.apple.com/nz/app/canu-get-together/id697998179?mt=8#" class="store" onclick="_gaq.push(['_trackEvent', 'to_app_store']);">App Store
+	</a>
+	<span class="android">Android Launch</span>	
 	<a href="vision" class="about_canu" style="display:none">About</a>	
 	<div class="codes <%= flash[:again]%>">
 		<%unless flash[:ok].nil?%>

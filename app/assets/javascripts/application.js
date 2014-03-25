@@ -36,6 +36,22 @@
 		    $('.confirmation').fadeOut("slow");
 		  }, 2000);
 	
+	
+		var tagline = new Array();
+		tagline[0] = "The chat to</br> get together";
+		tagline[1] = "Get together";
+		
+		var tagline_sup = new Array();
+		tagline_sup[0] = "That's the whole point.";
+		tagline_sup[1] = "";
+
+		
+		var myRandom = Math.floor(Math.random()*tagline.length);
+		
+		var myRandom_sup = Math.floor(Math.random()*tagline.length);
+		
+		$('#rand_tagline').html(tagline[myRandom]);
+		$('#rand_tagline_sup').html(tagline_sup[myRandom_sup]);
 
 	});
 	
