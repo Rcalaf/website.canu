@@ -193,7 +193,7 @@ Typography & Buttons
 
 span.android {
 	float: left;
-	margin-left: 20px;
+	margin-left: 160px;
 	margin-top: 20px;
 
 	padding: 0;
@@ -222,7 +222,7 @@ span.android:hover {
 
 a.store:link, a.store:visited {
 	float: left;
-	margin-left: 160px;
+	margin-left: -70px;
 	margin-top: 20px;
 
 	padding: 0;
@@ -415,13 +415,16 @@ h4 {
 	float: left;
 	margin-left: 160px;
 	font-size: 24px;
-	margin-top: -20px;
+	margin-top: -40px;
 	text-align: left;
 	color: #fff;
 	font-weight: 400;
 	opacity: 0.8;
 }
 
+h4:hover {
+	cursor: default;
+}
 
 p.display_state{
 	font-size: 32px; 
@@ -1220,6 +1223,9 @@ a.button_link span {
 }
 
 
+.mob_ver {
+	display: none !important;
+}
 
 
 
@@ -1237,7 +1243,8 @@ Mobile
 		font-size: 56px;
 	}
 	h4 {
-		font-size: 18px;
+		font-size: 22px;
+		margin-top: -20px;
 	}
 	
 }
@@ -1322,7 +1329,7 @@ Mobile
 			position: static;
 			float: none;
 			margin: 0 auto;
-			display: block;
+			display: block;			
 		}
 		
 		
@@ -1331,7 +1338,7 @@ Mobile
 			position: static;
 			height: 45px;
 			margin: 0 auto;
-			margin-top: -68px;
+			margin-top: 0px;
 			z-index: 5000;
 			display: block;
 			width: 280px;
@@ -1351,17 +1358,23 @@ Mobile
 		
 		h2{
 			float: none;
-			font-size: 32px;   
+			font-size: 36px;   
 			font-weight: 700;
 			text-align: center;
 			margin: 0 auto;
 			margin-top: 100px;
-			margin-bottom: 40px;
+			margin-bottom: 30px;
 			width: auto;
 		}
 		
 		h4{
-			display: none;
+			float: none;
+			font-size: 18px;   
+			text-align: center;
+			margin: 0 auto;
+			margin-top: 10px;
+			margin-bottom: 40px;
+			width: auto;
 		}
 		
 		
@@ -1416,7 +1429,15 @@ Mobile
 		}		
 		
 		.mobile_hide {
-			display: none;
+			display: none !important;
+		}
+		
+		.desc_ver {
+			display: none !important;
+		}
+		
+		.mob_ver {
+			display: block !important;
 		}
 		
 		p.intro_header {
@@ -1432,10 +1453,11 @@ Mobile
 		
 
 		p.quote {
-			width: 280px !important;
-			padding: 0;
+			width: auto !important;
+			padding: 20px 40px 0 40px;
 			margin: 0;
-			font-size: 24px;
+			font-size: 34px;
+			line-height: normal;
 		}
 		
 		ul.team{

@@ -37,7 +37,7 @@
 		  }, 2000);
 	
 	
-		var tagline = new Array();
+		/*var tagline = new Array();
 		tagline[0] = "The chat to</br> get together";
 		tagline[1] = "Get together";
 		
@@ -51,7 +51,7 @@
 		var myRandom_sup = Math.floor(Math.random()*tagline.length);
 		
 		$('#rand_tagline').html(tagline[myRandom]);
-		$('#rand_tagline_sup').html(tagline_sup[myRandom_sup]);
+		$('#rand_tagline_sup').html(tagline_sup[myRandom_sup]);*/
 
 	});
 	
