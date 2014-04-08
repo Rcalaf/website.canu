@@ -27,8 +27,12 @@
 			  $(".go_button, .get_canu").show(); 
 			  $(".activity_container").css("margin-top", "50px");
 		  }
-		
-		
+
+		  $( 'p.activity_description:empty' ).remove();
+		  
+		  $('.how_many:contains("0")').each(function () {
+			  $(this).hide();
+});
 		
 		//$('html, body').animate({scrollTop: $(document).height()}, 'slow');
 		
@@ -37,22 +41,22 @@
 		
 		
 		$(".creator_name").click(function() {	
-			$(".activity_container").hide();
+			$(".activity_container, .get_canu").hide();
 			$(".activity_people_wrapper").show();
 		});
 
 		$("#bb_ppl_list").click(function() {	
 			$(".activity_people_wrapper").hide();
-			$(".activity_container").show();
+			$(".activity_container, .get_canu").show();
 		});
-		
+		/*
 		$(".empty_tribes").css("height", $(document).height() + "px");
 		
 		$(window).resize(function() {
 			$(".empty_tribes").css("height", $(document).height() + "px");
 		});
 		
-		/*
+		
 		$(".chat_submit").click(function(){
 			$(".add_data").fadeIn(700);
 		});
@@ -65,7 +69,7 @@
 			$(".add_data").fadeOut();
 		});
 		
-		*/
+
 	
 
 
@@ -87,17 +91,9 @@
 			$("#wr_me").css("left","0").css("opacity","1");
 		});				
 
-		
-		
-
-		$(".going_button").click(function(){
-			$(this).fadeOut();
-			$(".go_button").fadeIn();
-		});
 				
 		$("#tab_local").addClass("tab_selected");
 		
-		/*
 			
 		$("#selected").addClass("pos_local");
 
@@ -113,7 +109,7 @@
 		});
 		
 		
-		*/
+		
 		
 	   	$("#tab_me").click(function(){
 	   		if ($(this).hasClass("tab_selected")) {
@@ -128,7 +124,7 @@
 			$("li.tab").removeClass("tab_selected");
 			$(this).addClass("tab_selected");
 		});	   	
-		
+		*/
 		
 	});
 	

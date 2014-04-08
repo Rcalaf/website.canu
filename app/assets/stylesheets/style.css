@@ -696,6 +696,7 @@ Comments Container
 	z-index: 10060;
 	
 	font-size: 74px;
+	font-weight: 700;
 
 	color: #fff;    
 	
@@ -705,7 +706,7 @@ Comments Container
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(191, 201, 205, 0.95);
+	background-color: rgba(43, 75, 88, 0.85);
 	top: 0;
 	left: 0;
 	z-index: 10050;

@@ -1,5 +1,6 @@
 class Webapplication::ActivitiesController < Webapplication::WebapplicationController
-  before_filter :authenticate_user
+  #before_filter :authenticate_user
+  before_filter :http_basic_auth, :except => [:invite, :show]
   
   def index
     puts session[:user]
@@ -19,16 +20,46 @@ class Webapplication::ActivitiesController < Webapplication::WebapplicationContr
   end
   
   def show
-    respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}",:get,{'authorization' => %{Token token="#{session[:user]['token']}"}},{})
+=begin
+    respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}",:get,{},{})
     @activity = JSON.parse(respond.body)
     respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat",:get,{'authorization' => %{Token token="#{session[:user]['token']}"}},{})
     @chat_messages = JSON.parse(respond.body)
     respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees",:get,{},{})
     @attendees = JSON.parse(respond.body)
+
+    respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/invite",:get,{},{})
+    @activity = JSON.parse(respond.body)
+    respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/chat",:get,{},{})
+    @chat_messages = JSON.parse(respond.body)
+    respond = request_to_canu_api("http://api.canu.se/activities/#{params[:activity_id]}/attendees",:get,{},{})
+    @attendees = JSON.parse(respond.body)    
     @title = "CANU - Activity Details"
     @body_class = "webapp"
+=end
   end
   
+  
+  def invite
+      respond = request_to_canu_api("http://api.canu.se/activities/#{params[:invitation_token]}/invite",:get,{},{})
+      @activity = JSON.parse(respond.body)
+      puts @activity['end_date'].to_time
+      puts Time.zone.now
+      puts @activity['end_date'].to_time < Time.zone.now
+      if @activity['end_date'].to_time < Time.zone.now
+        @title = "CANU - Invitation Expired"
+        @body_class = "invite"
+        render 'expired'
+      else
+        respond = request_to_canu_api("http://api.canu.se/activities/#{@activity['id']}/chat",:get,{},{})
+        @chat_messages = JSON.parse(respond.body)
+        respond = request_to_canu_api("http://api.canu.se/activities/#{@activity['id']}/attendees",:get,{},{})
+        @attendees = JSON.parse(respond.body)
+        @title = "CANU - You're Invited"
+        @body_class = "invite"
+      end
+   
+  end
   
   def update_feed
     
