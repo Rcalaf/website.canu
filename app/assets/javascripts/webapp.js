@@ -28,16 +28,13 @@
 			  $(".activity_container").css("margin-top", "50px");
 		  }
 
-		  $( 'p.activity_description:empty' ).remove();
+		  $( 'p.activity_description:empty').remove();
 		  
-		  $('.how_many:contains("0")').each(function () {
-			  $(this).hide();
-});
+		  $('.how_many:contains("0")').each(function () { $(this).hide(); });
 		
 		//$('html, body').animate({scrollTop: $(document).height()}, 'slow');
 		
 		$(".activity_people_wrapper").hide();
-		
 		
 		
 		$(".creator_name").click(function() {	
@@ -49,6 +46,9 @@
 			$(".activity_people_wrapper").hide();
 			$(".activity_container, .get_canu").show();
 		});
+		
+		
+		
 		/*
 		$(".empty_tribes").css("height", $(document).height() + "px");
 		
