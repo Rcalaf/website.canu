@@ -37,6 +37,7 @@ Canu::Application.routes.draw do
     match 'privacyapp' => 'webapp#privacy', :as => 'privacyapp'
     match 'termsapp' => 'webapp#terms', :as => 'termsapp'
     match 'lockdown' => 'webapp#lockdown', :as => 'lockdown'
+    match 'd' => 'webapp#d', :as => 'd'
     
     
     #
