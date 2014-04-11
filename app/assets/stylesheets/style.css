@@ -763,6 +763,18 @@ p.intro_header {
 	height: auto;
 }
 
+p.lockdown_header {
+	position: relative;
+	text-align: left;
+	font-size: 23px;  
+	font-weight: 700;
+	color: #2b4b58;
+	padding-bottom: 20px;
+	padding-top: 30px;
+	z-index: 5000;
+	height: auto;
+}
+
 p.quote {
 	font-size: 42px;
 	line-height: 63px;
@@ -807,12 +819,21 @@ p.body {
 	float: left;
 }
 
+p.body_lk {
+	font-size: 13px;
+	line-height: 18px;
+	color: #2b4b58;      
+	font-weight: 400;
+	padding: 5px 0 5px 0;
+	float: left;
+}
+
 p.body a{
 	opacity: 0.8;
 }
 
 div.bottom_spacer {
-	height: 100px;
+	height: 60px;
 	width: 300px;
 	float: left;
 }
@@ -1231,7 +1252,15 @@ a.button_link span {
 }
 
 
-
+div.pipe_image {
+	background-image: url("/assets/error_pipe.svg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 320px;
+	height: 160px;
+	float: left;
+}	
+    	
 
 
 
