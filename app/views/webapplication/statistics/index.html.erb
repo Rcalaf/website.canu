@@ -1,50 +1,5 @@
 <% content_for :js do %>
 
-	var activities = [
-			{
-				value: <%= @data['activity']['total_active'].to_i%>,
-				color: "#F9CD00"
-			},
-			{
-				value : <%= @data['activity']['total'].to_i%>,
-				color : "#B92D2A"
-			}
-		];
-
-	var users = [
-	
-		{
-			value : <%= @data['user']['total'].to_i%>,
-			color : "#F9CD00"
-		},
-		{
-			value : <%= @data['user']['ghost'].to_i%>,
-			color : "#00a6c3"
-		}
-
-	];
-	
-	var confirmed = [
-		{
-			value: <%= @data['user']['total_phone_verified'] + @data['user']['total_email_verified'].to_i%>,
-			color:"#DF4A42"
-		},
-	/*	{
-			value : <%= @data['user']['total_email_verified'].to_i%>,
-			color : "#B92D2A"
-		},*/
-		{
-			value: <%= @data['user']['not_verified'].to_i%>,
-			color:"#00a6c3"
-		}
-	];
-	
-$('document').ready(function(){
-	var usersPie = new Chart(document.getElementById("users_canvas").getContext("2d")).Pie(users);
-	var activitiesPie = new Chart(document.getElementById("activities_canvas").getContext("2d")).Pie(activities);
-	var confirmedPie = new Chart(document.getElementById("confirmed_canvas").getContext("2d")).Pie(confirmed);
-})
-
  var center;		  
  var marker;
  var map;
@@ -53,7 +8,7 @@ function initMap(){
 
 
 	center = new google.maps.LatLng(20, 10);
-	zoom = 2;
+	zoom = 1;
 	
 	
 	//alert('Loading Map');
@@ -100,41 +55,19 @@ function initMap(){
 <div class="stats-block">
 	<ul class="stats">
 		<li>
-			<a class="item">Total Users:</a> 
+			<a class="item">Users</a> 
 			<a class="number yellow"><%= @data['user']['total']%></a>
 		</li>
-
 		<li>
-			<a class="item">Ghost Users:</a> 
-			<a class="number"><%= @data['user']['ghost']%></a>
-		</li>
-	</ul>
-
-	<div class="graph_stats">
-		<canvas id="users_canvas" height="200" width="200" style="float: left;"></canvas>
-	</div>
-</div>
-
-<div class="stats-block">
-	<ul class="stats">
-		<li>
-			<a class="item">Verified Phones Total:</a> 
+			<a class="item">Phones Total</a> 
 			<a class="number orange"><%= @data['user']['total_phone_verified']%></a> 
 		</li>
 		<li>
-			<a class="item">Not confirmed:</a> 
-			<a class="number"><%= @data['user']['not_verified']%></a>
+			<a class="item">Ghosts</a> 
+			<a class="number"><%= @data['user']['ghost']%></a>
 		</li>
-	</ul>
-	<div class="graph_stats">
-		<canvas id="confirmed_canvas" height="200" width="200" style="float: left;"></canvas>
-	</div>
-</div>
 
-<div class="stats-block">
-	<ul class="stats">
-
-		<li>
+		<li style="display:none">
 			<a class="item">Activities Created:</a> 
 			<a class="number red"><%= @data['activity']['total']%></a>
 		</li>
@@ -142,19 +75,12 @@ function initMap(){
 			<a class="item">Activities Active:</a> 
 			<a class="number yellow"><%= @data['activity']['total_active']%></a>
 		</li>
-		<li></li>
-		<li></li>
 	</ul>
-	<div class="graph_stats">
-		<canvas id="activities_canvas" height="200" width="200" style="float: left;"></canvas>
-	</div>
 </div>
 
-
+<span class="clear"></span>
 <div class="map_stats">
-	<a class="item" style="height: 40px;">Live Activites:</a> 
-	<div id="map_canvas"></div>
-	
+	<div id="map_canvas"></div>	
 </div>	
 
 

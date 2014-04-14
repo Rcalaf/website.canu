@@ -921,7 +921,11 @@ Stats
 *******************************/
 
 body.stats{
-	background-color: #000;
+	background-color: #f2f2e7;
+}
+
+body.stats div.logo_top{
+	display: none;
 }
 
 body.webapp{
@@ -944,19 +948,15 @@ body.expired{
 div.stats-block{
 	width: 220px;
 	float: left;
-	margin-left: 140px;
+	margin-left: 20px;
 	opacity: 1;
-}
-
-div.stats-block:hover{
-    opacity: 1;
 }
 
 ul.stats {
 	width: 520px;
 	float: left;
 	padding-right: 100px;
-	margin-top: 38px;
+	margin-top: 20px;
 	
 }
 
@@ -976,7 +976,7 @@ a.item {
 	line-height: 36px;
 
 	width: 1800px;
-	color: #fff;
+	color: #85857d;
 }
 
 li a.number {
@@ -985,46 +985,25 @@ li a.number {
 	font-size: 36px;
 	line-height: 36px;
 	font-style: normal;
-	color: rgba(28, 166, 195, 1);
+	color: #cb5b5d;
 	width: 180px;
 }
 
-li a.red {
-	color: #B92D2A;
-}
-
-li a.orange {
-	color: #DF4A42;
-}
-
-li a.yellow{
-	color: #F9CD00;
-}
 
 div.map_stats {
 	float: left;
-	margin-left: 140px;
+	margin-left: 20px;
 	margin-top: 0px;
-	width: 700px;
-	height: 350px;
-	opacity: 1;
-	padding-bottom: 100px;
+	width: 400px;
+	height: 260px;
 }
 
 
 div#map_canvas{
-	width: 990px;
-	height: 510px;		
+	width: 440px;
+	height: 260px;		
 }
 
-div.graph_stats {
-	float: left;
-	margin-left: 25px;
-	margin-top: 0px;
-	width: 200px;
-	height: 200px;
-	opacity: 0.8;
-}
 
 
 
