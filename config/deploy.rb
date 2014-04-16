@@ -10,17 +10,19 @@ ENV['RAILS_ENV'] ||= 'production'
 # SSH settings
 
 ## New server
-set :server_ip, "91.121.65.49"
+#set :server_ip, "91.121.65.49"
+set :server_ip, "62.210.114.175"
 
 default_run_options[:pty] = true
 set :ssh_options, {:forward_agent => true}
-set :user, "deploy"
+#set :user, "deploy"
+set :user, "canu"
 
 ###
 # Deploy settings
 #
 
-set :application, "canu.se"
+set :application, "new.canu.se"
 set :local_app, "canu.se"
 set :deploy_to, "/home/#{user}/#{application}"
 
@@ -39,7 +41,7 @@ set :deploy_to, "/home/#{user}/#{application}"
 #
 set :scm, :git
 set :repository, "git@github.com:Rcalaf/website.canu.git"  #point to github CLONE URL.
-set :branch, "master"
+set :branch, "new"
 set :deploy_via, :remote_cache
 
 
@@ -47,7 +49,8 @@ set :deploy_via, :remote_cache
 # BBDD settings
 #
 
-set :db_passwd, "wL8XSPha"
+#set :db_passwd, "wL8XSPha"
+set :db_passwd, "Itshalfpast8"
 set :db_name, "canu_production"
 
 role :app, server_ip
