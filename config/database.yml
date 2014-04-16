@@ -38,5 +38,5 @@ production:
   database: canu_production
   pool: 5
   username: root
-  password: wL8XSPha
+  password: Itshalfpast8
  # socket: /tmp/mysql.sock
