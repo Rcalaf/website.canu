@@ -806,6 +806,8 @@ a.choice {
 	width: 190px;
 	height: 190px;
 	border-radius: 100px;
+	padding: 0;
+	
 	margin: 0 65px;	
 	-webkit-box-shadow: 0px 0px 1px rgba(44, 76, 89, 0.1);	
 	-moz-box-shadow: 0px 0px 1px rgba(44, 76, 89, 0.1);	
