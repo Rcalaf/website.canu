@@ -1276,7 +1276,7 @@ Mobile
 	}
 	h4 {
 		font-size: 22px;
-		margin-top: -20px;
+		margin-top: 20px;
 	}
 	
 }
@@ -1296,6 +1296,7 @@ Mobile
 			width: auto;
 			margin-top: 100px;
 		}
+		
 
 }
 
