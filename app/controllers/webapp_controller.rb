@@ -63,6 +63,30 @@ class WebappController < ApplicationController
       @body_class = "authorization"
   end
   
+  def a
+      @title = "CANU - Download"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def b
+      @title = "CANU - Download"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def p
+      @title = "CANU - Download"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def s
+      @title = "CANU - Download"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
   def contribute
       @title = "CANU - Contribute"
       @user = User.new
