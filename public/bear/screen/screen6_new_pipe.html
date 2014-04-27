@@ -1,0 +1,48 @@
+<div id="screen6_new_pipe" class="screen">
+    <div class="header_holder" id="headers_new">
+    	<p class="header">Lucky you! A new tribe walked by. Show that you deserve their trust.</p>
+    	<p class="plain">How do you prove that you’re a bear to count on?
+</p>
+    </div>        
+	<div class="decisions" id="d_new">
+		<div class="centering">
+			<a class="choice"  onClick="goToScreen7_fishing()">
+				<div class="link_next" id="i_fishing"></div>
+				<span class="arrow"></span>
+				<span class="text_next">I'll bring some people and show off my fishing skills.
+</span>
+			</a>
+			<a class="choice_blank"></a>
+			<a class="choice"  onClick="goToScreen7_friendly()">
+				<div class="link_next" id="i_beer"></div>
+				<span class="arrow"></span>
+				<span class="text_next">I’ll get drunk with them.
+</span>
+			</a>
+		</div>
+	</div> 
+    <div class="hero_holder_front" id="h_new">
+		<object type="image/svg+xml" class="main_hero" id="hero_binoculars" data="./assets/bear_binoculars.svg"></object>
+	</div>
+    <div class="bg_holder_center" id="bg_new">
+		<object type="image/svg+xml" class="forest" style="opacity: 0.5" data="./assets/forest.svg"></object>
+		<object type="image/svg+xml" class="casual_clouds_many" data="./assets/casual_clouds_many.svg"></object>
+	</div>		
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    console.log("Screen 4_new_pipe");
+		});
+		
+		function goToScreen7_fishing() { nextScreenWithVerticalTransition("screen7_fishing"); TweenMax.to($(".screen"), 0.6, {css:{ opacity:0}});}
+		function goToScreen7_friendly() { nextScreenWithVerticalTransition("screen7_friendly"); TweenMax.to($(".screen"), 0.6, {css:{ opacity:0}});}
+	
+		$(document).ready(function() {
+			
+			TweenMax.from($("#h_new"), .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.8});
+			TweenMax.from($("#bg_new"), .5, {css:{opacity:0}, ease:Quad.easeOut, delay: 1});
+			TweenMax.from($("#headers_new"), 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: 0.8});
+			TweenMax.from($("#d_new"), 0.3, {css: {opacity: 0, scale: 1.1}, ease:Quint.easeInOut, delay: 1.2});
+			
+		});
+	</script>
+</div>

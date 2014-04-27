@@ -1,0 +1,26 @@
+<div id="screen2" class="screen">
+    <div class="header_holder" id="headers_zoom">
+	    <p class="header">Imagine that you are this bear...</p>
+    </div>
+    <a onClick="goToScreen3_front()" href="#"><img class="scroll_down" src="./assets/scroll_down.svg"></a>
+	<div class="hero_holder_back_large" id="h_zoom">
+		<object type="image/svg+xml" class="main_hero" data="./assets/bear_back.svg"></object>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    console.log("Screen 2");
+		});
+		
+		function goToScreen3_front() { nextScreenWithVerticalTransition("screen3_front");}
+	
+		$(document).ready(function() {
+		
+		if( $(window).width() < 640 ) {}	
+		else {
+			TweenMax.from($("#h_zoom"), .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.9});
+			TweenMax.from($("#headers_zoom"), 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: 0.8});
+			TweenMax.from($('.scroll_down'), 0.3, {css: {opacity: 0}, ease:Quad.easeOut, delay: 1.1});
+			}
+		});
+	</script>
+</div>

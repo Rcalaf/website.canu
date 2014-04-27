@@ -1,0 +1,45 @@
+<div id="screen6_insomnia_pipe" class="screen">
+    <div class="header_holder" id="headers_insomnia">
+    	<p class="header white">Seems like you smoked longer than you thought...</p>
+    	<p class="plain white">Your entire tribe is sleeping. What do are you up to now?</p>
+    </div>        
+	<div class="decisions" id="d_insomnia">
+		<div class="centering">
+			<a class="choice"  onClick="goToScreen7_sundance()">
+				<div class="link_next" id="i_sundance"></div>
+				<span class="arrow"></span>
+				<span class="text_next">Dancing</span>
+			</a>
+			<a class="choice_blank"></a>
+			<a class="choice"  onClick="goToScreen7_drums()">
+				<div class="link_next" id="i_drums"></div>
+				<span class="arrow"></span>
+				<span class="text_next">Some drumming</span>
+			</a>
+		</div>
+	</div> 
+	<div class="bg_holder_center" id="bg_insomnia">
+		
+		<object type="image/svg+xml" class="night_clouds" data="./assets/night_clouds.svg"></object>
+		<object type="image/svg+xml" class="main_hero" id="hero_tipi" data="./assets/tipi.svg"></object>
+	</div>	
+	<object type="image/svg+xml" class="stars" data="./assets/stars.svg"></object>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		    console.log("Screen 6_insomnia_pipe");
+		});
+		
+		function goToScreen7_sundance() { nextScreenWithVerticalTransition("screen7_sundance");}
+		function goToScreen7_drums() { nextScreenWithVerticalTransition("screen7_drums");}
+	
+		$(document).ready(function() {
+		if( $(window).width() < 640 ) {}	
+		else {	
+			TweenMax.from($("#h_insomnia"), .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.8});
+			TweenMax.from($("#headers_insomnia"), 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: 0.8});
+			TweenMax.from($(".stars"), 2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: 1});
+			TweenMax.from($("#d_insomnia"), 0.3, {css: {opacity: 0, scale: 1.1}, ease:Quint.easeInOut, delay: 1.2});
+			}
+		});
+	</script>
+</div>

@@ -1,0 +1,50 @@
+<div id="screen3_front" class="screen">
+    <div class="header_holder" id="headers_front">
+    	<p class="header">What do you feel like doing?</p>
+    	<p class="plain">On your first day as a bear you have a few activities to do. Choose wisely.
+</p>
+    </div>        
+	<div class="decisions" id="d_front">
+		<div class="centering">
+			<a class="choice"  onClick="goToScreen4_pipe()">
+				<div class="link_next" id="i_smoke"></div>
+				<span class="arrow"></span>
+				<span class="text_next">Smoke calumet with myself</span>
+			</a>
+			<a class="choice"  onClick="goToScreen4_hunt()">
+				<div class="link_next" id="i_hunt"></div>
+				<span class="arrow"></span>
+				<span class="text_next">Hunt for food</span>
+			</a>
+			<a class="choice"  onClick="goToScreen4_socks()">
+				<div class="link_next" id="i_dry_socks"></div>
+				<span class="arrow"></span>
+				<span class="text_next">Stay at home and play games</span>
+			</a>
+		</div>
+	</div> 
+    <div class="hero_holder_front" id="h_front">
+		<object type="image/svg+xml" class="main_hero" data="./assets/bear_front.svg"></object>
+		<div class="eye_blink_left"></div>
+		<div class="eye_blink_right"></div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    console.log("Screen 3_front");
+		});
+		
+		function goToScreen4_pipe() { nextScreenWithVerticalTransition("screen4_pipe");}
+		function goToScreen4_hunt() { nextScreenWithVerticalTransition("screen4_hunt");}
+		function goToScreen4_socks() { nextScreenWithVerticalTransition("screen4_socks");}
+	
+		$(document).ready(function() {
+		
+		if( $(window).width() < 640 ) {}	
+		else {
+			TweenMax.from($("#h_front"), .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.8});
+			TweenMax.from($("#headers_front"), 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: 0.8});
+			TweenMax.from($("#d_front"), 0.3, {css: {opacity: 0, scale: 1.1}, ease:Quint.easeInOut, delay: 1.2});		
+		}
+		});
+	</script>	
+</div>

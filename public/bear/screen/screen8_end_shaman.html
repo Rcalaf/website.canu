@@ -1,0 +1,35 @@
+<div id="screen8_end_shaman" class="screen">
+    <div class="header_holder" id="headers_end_shaman">
+	    <p class="header_fancy_intro">You are the</p>
+	    <p class="header">Shaman Bear</p>
+    </div>
+
+    <a onClick="goToScreen9_final_shaman()"><img class="scroll_down" src="./assets/scroll_down.svg"></a>
+	<div class="hero_holder_center" id="h_end_shaman">
+		<object type="image/svg+xml" class="main_hero" id="hero_shaman" data="./assets/bear_shaman.svg"></object>
+		<p class="description">When you’re the shaman bear, you create something out of nothing. Sometimes you dance too much and people die of heat. It’s not nice and you know that, so you go and pray for your sins. Eventually you'll start your own fellowship where everyone has to wear pink trousers and hug everyone they see. People think it’s weird.  </p>
+	</div>
+	<div class="bg_holder_center" id="bg_end_shaman">
+		<object type="image/svg+xml" class="tipi_drums" data="./assets/tipi_drum.svg"></object>
+		<object type="image/svg+xml" class="casual_clouds_many" data="./assets/casual_clouds_many.svg"></object>
+		
+	</div>		
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    console.log("Screen 8_end_shaman");
+		});
+	
+		function goToScreen9_final_shaman() { nextScreenWithVerticalTransition("screen9_final_shaman");}
+	
+		$(document).ready(function() {
+		if( $(window).width() < 640 ) {}	
+		else {	
+			TweenMax.from($("#h_end_shaman"), .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.4});
+			TweenMax.from($("#bg_end_shaman"), .5, {css:{opacity:0}, ease:Quad.easeOut, delay: 1});
+			TweenMax.from($("#headers_end_shaman"), 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: .2});
+			TweenMax.from($('.scroll_down'), 0.3, {css: {opacity: 0}, ease:Quad.easeOut, delay: 1});
+		}
+		});
+	</script>
+</div>
+

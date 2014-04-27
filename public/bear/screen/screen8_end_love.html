@@ -1,0 +1,39 @@
+<div id="screen8_end_love" class="screen">
+    <div class="header_holder" id="headers_end_love">
+	    <p class="header_fancy_intro">You are the</p>
+	    <p class="header">Romantic Bear</p>
+    </div>
+	<div class="bg_holder_center" id="bg_end_love">
+		<object type="image/svg+xml" class="forest_large" data="./assets/forest.svg"></object>
+		<object type="image/svg+xml" class="casual_clouds_many" data="./assets/casual_clouds_many.svg"></object>
+	</div>	
+    <a onClick="goToScreen9_final_love()"><img class="scroll_down" src="./assets/scroll_down.svg"></a>
+	<div class="hero_holder_center" id="h_end_love ">
+		<object type="image/svg+xml" class="main_hero" id="hero_love" data="./assets/bear_love.svg"></object>
+		<object type="image/svg+xml" class="bear_eye_left_love" data="./assets/bear_eye.svg"></object>
+		<object type="image/svg+xml" class="bear_eye_right_love" data="./assets/bear_eye.svg"></object>		
+		<p class="description">You’re the love bear. You give a lot of yourself to others but you tend to fall in love a bit too easily. You have like 200 partners and half of them don’t even know you exist. C'mon man, you’re better than this. Eventually you’ll start a magazine called Playbear and you’ll make a fortune. Well played sir. </p>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    console.log("Screen 8_end_love");
+		});
+		
+		/*$(document).ready(function(){
+	    	$(window).scroll(function(){
+	        	goToScreen2();  
+	        })
+	    })*/
+		function goToScreen9_final_love() { nextScreenWithVerticalTransition("screen9_final_love");}
+	
+		$(document).ready(function() {
+		if( $(window).width() < 640 ) {}	
+		else {	
+			TweenMax.from($("#h_end_love"), .5, {css:{y: 1000 }, ease:Quad.easeOut, delay: 0.4});
+			TweenMax.from($("#bg_end_love"), .5, {css:{opacity:0}, ease:Quad.easeOut, delay: 1});
+			TweenMax.from($("#headers_end_love"), 0.2, {css: {opacity: 0}, ease:Quad.easeInOut, delay: .2});
+			TweenMax.from($('.scroll_down'), 0.3, {css: {opacity: 0}, ease:Quad.easeOut, delay: 1});
+		}
+		});
+	</script>
+</div>
