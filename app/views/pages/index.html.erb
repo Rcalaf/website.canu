@@ -1,37 +1,5 @@
-<% content_for(:head) do %>
-  <%= tag(:link, :rel => :canonical, :href => "http://www.canu.se") %>
-<% end %>
-<!-- Google serach
--->
-<% set_meta_tags :robots => "noodp,noydir" %>
-<% set_meta_tags :description => "Put your future activities in one place. CANU is the quickest way to get your friends together." %>
-<!-- Facebook
--->
-<% set_meta_tags :og => { :title => 'CANU - Get Together', :type => 'website',:url => 'http://www.canu.se/', :image => 'http://localhost:3000/images/facebook_img.png', :description => 'Put your future activities in one place. CANU is the quickest way to get your friends together.', :site_name => 'CANU.se'} %>
-<div class="logo_top"></div>
-<div class="section" id="sec_landing">
-	<h2 id="rand_tagline">Get Together</h2>
-	<span class="clear"></span>
-	<h4 id="rand_tagline_sup">That's the whole point.</h4>
-	<span class="clear"></span>
-	<a href="https://itunes.apple.com/nz/app/canu-get-together/id697998179?mt=8#" class="store mob_ver" onclick="_gaq.push(['_trackEvent', 'to_app_store']);">App Store</a>
-	<span class="android">Android Launch</span>	
-	
-	<div class="codes <%= flash[:again]%>">
-		<%unless flash[:ok].nil?%>
-			<div class="confirmation <%=flash[:hejdo]%>"><%=flash[:ok]%></div>
-		<%end%>
-		<div class="form_window <%=flash[:eraser]%>">
-			<%= form_for @user, :url => new_user_url do |f|%>
-				<div class="input_holder">
-					<input name="user[email]" type="email" class="email" placeholder="<%= flash[:error].nil? ? 'Your e-mail' : flash[:error]%>"/>
-				</div>
-				<input type="submit" name="submit" value="Invite" class="submit_button"/>
-			<%end%>
-		</div>
-	</div>
-	<a href="https://itunes.apple.com/nz/app/canu-get-together/id697998179?mt=8#" class="store desc_ver" onclick="_gaq.push(['_trackEvent', 'to_app_store']);">App Store</a>
-	<a href="vision" class="about_canu" style="display:none">About</a>	
-	
-	
-</div>
+<script type="text/javascript">
+
+	window.location = "http://www.canu.se"
+
+</script>
