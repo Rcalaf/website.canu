@@ -534,6 +534,7 @@ ul.bottom_menu li {
 
 ul.bottom_menu li.right {
 	float: right;
+	margin-right: 2px;
 }
 
 
@@ -550,7 +551,7 @@ ul.bottom_menu li a {
     transition: all 0.4s ease; 
 }
 
-#feedback_btn {
+#lifestyle {
 	padding-right: 10px;
 }
 
