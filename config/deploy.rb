@@ -22,7 +22,7 @@ set :user, "canu"
 # Deploy settings
 #
 
-set :application, "new.canu.se"
+set :application, "canu.se"
 set :local_app, "canu.se"
 set :deploy_to, "/home/#{user}/#{application}"
 
@@ -41,7 +41,7 @@ set :deploy_to, "/home/#{user}/#{application}"
 #
 set :scm, :git
 set :repository, "git@github.com:Rcalaf/website.canu.git"  #point to github CLONE URL.
-set :branch, "new"
+set :branch, "master"
 set :deploy_via, :remote_cache
 
 
