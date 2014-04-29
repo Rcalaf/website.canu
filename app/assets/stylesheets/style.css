@@ -989,15 +989,20 @@ ul.press_kit li.kit_image a:link {
 
 
 /******************************
-Stats
+Body Styles
 *******************************/
 
 body.stats{
-	background-color: rgba(30, 30, 40, 1);
+	background-color: #f2f2e7;
+	font-family:  sans-serif;
 }
 
 body.webapp{
 	background-color: #f1f5f5;
+}
+
+body.stats .logo_top{
+	display: none;
 }
 
 body.invite{
@@ -1013,52 +1018,63 @@ body.expired{
 	background-size: cover;
 }
 
-div.stats-block{
-	width: 220px;
-	float: left;
-	margin-left: 140px;
-	opacity: 1;
-}
 
-div.stats-block:hover{
-    opacity: 1;
-}
+
+/******************************
+Stats
+*******************************/
 
 ul.stats {
-	width: 520px;
+	width: 500px;
+	height: 538px;
 	float: left;
-	padding-right: 100px;
-	margin-top: 38px;
-	
+	margin-top: 40px;	
 }
 
 ul.stats li {
 	float: left;
 	display: block;
 	list-style: none;
-	padding: 20px 40px 20px 0;
-	width: 120px;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.0);
-	border-right: 1px solid rgba(255, 255, 255, 0.0);
+	padding: 40px;
+	width: 75px;
 }
 
-a.item {
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 36px;
+ul.stats li.2 {
+	float: left;
+	display: block;
+	list-style: none;
+	padding: 60px 40px;
+	width: 125px;
+}
 
-	width: 1800px;
-	color: #fff;
+li a.item {
+	font-weight: bold;
+	font-size: 14px;
+	color: rgba(250, 136, 54, 0.65098);
+	width: auto;
+	text-shadow: rgba(0,0,0,0.15) 0.02em 0.02em 0.05em;
+}
+
+li.2 a.item {
+	font-weight: bold;
+	font-size: 18px;
+	color: rgba(250, 136, 54, 0.65098);
+	width: auto;
+	text-shadow: rgba(0,0,0,0.15) 0.02em 0.02em 0.05em;
 }
 
 li a.number {
 	float: left;
-	font-weight: 400;
+	font-weight: bold;
 	font-size: 36px;
-	line-height: 36px;
 	font-style: normal;
-	color: rgba(28, 166, 195, 1);
+	color: rgba(250, 136, 54, 0.65098);
 	width: 180px;
+	text-shadow: rgba(0,0,0,0.15) 0.02em 0.02em 0.05em;
+}
+
+li a.big {
+	font-size: 86px;
 }
 
 li a.red {
@@ -1075,26 +1091,21 @@ li a.yellow{
 
 div.map_stats {
 	float: left;
-	margin-left: 140px;
-	margin-top: 0px;
-	width: 700px;
-	height: 350px;
-	padding-bottom: 100px;
+	width: 500px;
+	height: 269px;
 }
 
 
 div#map_canvas{
-	width: 990px;
-	height: 510px;		
+	width: 500px;
+	height: 269px;
+	background-color:#f2f2e7 !important;	
 }
 
-div.graph_stats {
-	float: left;
-	margin-left: 25px;
-	margin-top: 0px;
-	width: 200px;
-	height: 200px;
-	opacity: 0.8;
+div#map_canvas_2{
+	width: 500px;
+	height: 269px;	
+	background-color:#f2f2e7 !important;	
 }
 
 

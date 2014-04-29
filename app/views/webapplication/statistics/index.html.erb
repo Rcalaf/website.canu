@@ -1,59 +1,23 @@
+
+
+
+    
+
 <% content_for :js do %>
 
-	var activities = [
-			{
-				value: <%= @data['activity']['total_active'].to_i%>,
-				color: "#F9CD00"
-			},
-			{
-				value : <%= @data['activity']['total'].to_i%>,
-				color : "#B92D2A"
-			}
-		];
-
-	var users = [
-	
-		{
-			value : <%= @data['user']['total'].to_i%>,
-			color : "#F9CD00"
-		},
-		{
-			value : <%= @data['user']['ghost'].to_i%>,
-			color : "#00a6c3"
-		}
-
-	];
-	
-	var confirmed = [
-		{
-			value: <%= @data['user']['total_phone_verified'] + @data['user']['total_email_verified'].to_i%>,
-			color:"#DF4A42"
-		},
-	/*	{
-			value : <%= @data['user']['total_email_verified'].to_i%>,
-			color : "#B92D2A"
-		},*/
-		{
-			value: <%= @data['user']['not_verified'].to_i%>,
-			color:"#00a6c3"
-		}
-	];
-	
-$('document').ready(function(){
-	var usersPie = new Chart(document.getElementById("users_canvas").getContext("2d")).Pie(users);
-	var activitiesPie = new Chart(document.getElementById("activities_canvas").getContext("2d")).Pie(activities);
-	var confirmedPie = new Chart(document.getElementById("confirmed_canvas").getContext("2d")).Pie(confirmed);
-})
 
  var center;		  
  var marker;
- var map;
+ var map,map2;
 
 function initMap(){
 
 
-	center = new google.maps.LatLng(20, 10);
-	zoom = 2;
+	center = new google.maps.LatLng(22, 4);
+	zoom = 1;
+	
+	center_2 = new google.maps.LatLng(59.32893, 18.06491);
+	zoom_2 = 11;
 	
 	
 	//alert('Loading Map');
@@ -62,13 +26,30 @@ function initMap(){
 	var mapOptions = {
      //scrollwheel: false,
      zoom: zoom,
-     //disableDefaultUI: true,
+     disableDefaultUI: true,
      mapTypeId: google.maps.MapTypeId.ROADMAP,
-     center: center
+     center: center,
+     styles: 
+[{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
+
+   };
+   
+	var mapOptions_2 = {
+     //scrollwheel: false,
+     zoom: zoom_2,
+     disableDefaultUI: true,
+     mapTypeId: google.maps.MapTypeId.ROADMAP,
+     center: center_2,
+     styles: 
+[{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
+
    };
 
    map = new google.maps.Map(document.getElementById("map_canvas"),
            mapOptions);
+           
+   map_2 = new google.maps.Map(document.getElementById("map_canvas_2"),
+           mapOptions_2);
 
 	var image = new google.maps.MarkerImage(
  		'/wp-content/themes/collections/images/bo-super-small.png',
@@ -77,12 +58,34 @@ function initMap(){
 		new google.maps.Point(0,0)
 	);
 	<%@data['activity']['active_activities_locations'].each_with_index do |activity,index|%>
+		
+	    
+	    var myIcon = new google.maps.MarkerImage("http://vinitiate.se/blogazine/photos/canu_pin.png", null, null, null, new google.maps.Size(20,30));
+
+		
 		var marker_<%=index%> = new google.maps.Marker({
 				         map:map,
 				         draggable:false,
 				         animation: google.maps.Animation.DROP,
 				         position: new google.maps.LatLng("<%=activity['activity']['latitude']%>","<%=activity['activity']['longitude']%>"),
-				         //icon: '/wordpress/wp-content/themes/collections/images/Bo_Map_Pin2.png'
+				         icon: myIcon
+				      });
+	  /*	var infowindow_<%=index%> = new google.maps.InfoWindow({
+	      content: "mola"
+	   	});
+
+	  	google.maps.event.addListener(marker_<%=index%>, "click", function() {
+	  	  infowindow_<%=index%>.open(map,marker_<%=index%>);
+	  	});*/
+	<%end%>
+	
+	<%@data['activity']['active_activities_locations'].each_with_index do |activity,index|%>
+		var marker_<%=index%> = new google.maps.Marker({
+				         map:map_2,
+				         draggable:false,
+				         animation: google.maps.Animation.DROP,
+				         position: new google.maps.LatLng("<%=activity['activity']['latitude']%>","<%=activity['activity']['longitude']%>"),
+				         icon: myIcon
 				      });
 	  /*	var infowindow_<%=index%> = new google.maps.InfoWindow({
 	      content: "mola"
@@ -97,65 +100,37 @@ function initMap(){
 
 <%end%>
 
-<div class="stats-block">
-	<ul class="stats">
-		<li>
-			<a class="item">Total Users:</a> 
-			<a class="number yellow"><%= @data['user']['total']%></a>
-		</li>
-
-		<li>
-			<a class="item">Ghost Users:</a> 
-			<a class="number"><%= @data['user']['ghost']%></a>
-		</li>
-	</ul>
-
-	<div class="graph_stats">
-		<canvas id="users_canvas" height="200" width="200" style="float: left;"></canvas>
-	</div>
-</div>
-
-<div class="stats-block">
-	<ul class="stats">
-		<li>
-			<a class="item">Verified Phones Total:</a> 
-			<a class="number orange"><%= @data['user']['total_phone_verified']%></a> 
-		</li>
-		<li>
-			<a class="item">Not confirmed:</a> 
-			<a class="number"><%= @data['user']['not_verified']%></a>
-		</li>
-	</ul>
-	<div class="graph_stats">
-		<canvas id="confirmed_canvas" height="200" width="200" style="float: left;"></canvas>
-	</div>
-</div>
-
-<div class="stats-block">
-	<ul class="stats">
-
-		<li>
-			<a class="item">Activities Created:</a> 
-			<a class="number red"><%= @data['activity']['total']%></a>
-		</li>
-		<li>
-			<a class="item">Activities Active:</a> 
-			<a class="number yellow"><%= @data['activity']['total_active']%></a>
-		</li>
-		<li></li>
-		<li></li>
-	</ul>
-	<div class="graph_stats">
-		<canvas id="activities_canvas" height="200" width="200" style="float: left;"></canvas>
-	</div>
-</div>
-
+<ul class="stats">
+	<li class="2">
+		<a class="number big"><%= @data['activity']['total_active']%></a>
+		<a class="item">Activities Active</a> 
+	</li>
+	<li class="2"> 
+		<a class="number big" style="opacity:0.5"><%= @data['activity']['total']%></a>
+		<a class="item" style="opacity:0.5">Activities Created</a> 
+	</li>
+	<span class="clear"></span>
+	<li>
+		<a class="number"><%= @data['user']['total']%></a>
+		<a class="item">Total Users</a> 
+	</li>
+	<li>
+		<a class="number"><%= @data['user']['total_phone_verified']%></a> 
+		<a class="item">Verified Numbers</a> 
+	</li>
+	<li>
+		<a class="number"><%= @data['user']['ghost']%></a>
+		<a class="item">Ghosts Hiding</a> 
+	</li>
+</ul>
 
 <div class="map_stats">
-	<a class="item" style="height: 40px;">Live Activites:</a> 
 	<div id="map_canvas"></div>
-	
 </div>	
+<div class="map_stats">
+	<div id="map_canvas_2"></div>
+</div>	
+
 
 
 
