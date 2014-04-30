@@ -38,10 +38,19 @@ Canu::Application.routes.draw do
     match 'termsapp' => 'webapp#terms', :as => 'termsapp'
     match 'lockdown' => 'webapp#lockdown', :as => 'lockdown'
     match 'd' => 'webapp#d', :as => 'd'
-    match 'a' => 'webapp#d', :as => 'a'
-    match 'b' => 'webapp#d', :as => 'b'
-    match 'p' => 'webapp#d', :as => 'p'
-    match 's' => 'webapp#d', :as => 's'
+    match 'a' => 'webapp#a', :as => 'a'
+    match 'b' => 'webapp#b', :as => 'b'
+    match 'p' => 'webapp#p', :as => 'p'
+    match 's' => 'webapp#s', :as => 's'
+    
+    
+    #
+    # Promo Pages:
+    #
+    
+    match 'hwa' => 'hangwith#hwa', :as => 'hwa'
+    match 'hwb' => 'hangwith#hwb', :as => 'hwb'
+    match 'hwc' => 'hangwith#hwc', :as => 'hwc'
     
     
     #

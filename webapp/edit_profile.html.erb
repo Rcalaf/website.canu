@@ -1,0 +1,26 @@
+<div class="authorization_header">Edit Profile</div>
+<div class="authorization_form">
+	<div class="input_classic">
+		<input class="authorization" value="myusername" placeholder="Username"/>
+	</div>
+	<div class="input_classic">
+		<input class="authorization" value="myemail@canu.se" placeholder="Email"/>
+	</div>	
+	<div class="input_classic">
+		<input class="authorization" value="Jakob Valsh" placeholder="Full Name"/>
+	</div>		
+	<div class="input_classic">
+		<input name="user[confirm_password]" type="password" placeholder="New Password"/>
+	</div>	
+	<div class="input_classic">
+		<input name="user[confirm_password]" type="password" placeholder="Password Confirmation"/>
+	</div>		
+	<div class="input_classic">
+		<a href="<%=fullview_signedin_url%>"><input type="submit" class="submit" value="SAVE"/></a>
+	</div>	
+	<a class="guidance">The full settings are in the App</a>
+</div>
+
+<div class="activity_menu">
+	<%= link_to '<div class="back_button" id="bb_ppl_list"></div>'.html_safe, :back %>
+</div>

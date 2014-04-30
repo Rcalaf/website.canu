@@ -1,0 +1,27 @@
+<div class="wrapper">
+	<%  @activities.each do |activity|%>
+		<%# activity%>
+
+	<div class="feed_container">
+		<div class="creator_info">
+			<img src="http://api.canu.se/<%=activity['user']['profile_pic']%>" onerror="MissingUserpic(this);" class="creator_userpic"/>
+			<a class="creator_name"><%= activity['user']['first_name']%></a>
+			
+			<span class="activity_hours"><%= Time.parse(activity['start']).strftime("%H:%M")%> - <span><%=Time.parse(activity['end_date']).strftime("%H:%M")%></span></span>	
+			<span class="activity_date"><%= Time.parse(activity['start']).strftime("%d %h")%></span>
+		
+		</div>
+		<div class="activity_header">
+			<!--<div class="map">
+				<iframe width='100%' height='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v3/vinitiate.ggnah1pf/mm/zoomwheel.html?secure=1#11/<%=activity['latitude']%>/<%=activity['longitude']%>'></iframe>
+			</div>-->
+			<a href="<%=fullview_url(activity['id'])%>">
+			<p class="activity_title"><%= activity['title']%></p>
+			<p class="activity_address"><%= activity['street']%>, <%= activity['city']%>, <%= activity['zip_code']%></p>
+			</a>
+		</div>
+	</div>
+
+	<%end%>
+	
+</div>

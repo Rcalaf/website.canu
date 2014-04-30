@@ -1,0 +1,200 @@
+<!--<p class="hw_header">Hang with the gang</p>
+<p class="hw_desc">An opportunity to hang with your idol and show them <b>your favourite activity</b></p>
+<span class="clear"></span>
+<div class="hw_holder">
+	<div class="hw_obj hw_band">
+		<p class="band_name">The Fooo</p>
+		<p class="band_desc">When the four members of The Fooo decided to form a group, it stood clear that the multi-talented teenagers would bring some much needed spark to an already existing genre. Now, they are ready to take on the world</p>
+	</div>
+	<div class="hw_obj hw_photo"></div>
+	<div class="hw_obj hw_steps">
+		<p><b>1.</b> Download the app CANU</p>
+		<p><b>2.</b> Invite your friends to your favourite activity</p>
+		<p><b>3.</b> Get Together, have fun and wait for The Fooo to join you</p>
+	</div>
+</div>
+
+<div class="hw_bottom">
+	<div class="centering">
+		<a href="#" class="logo_canu"></a>
+		<a href="#" class="logo_spotify"></a>
+	</div>
+</div>
+<div class="full_shade"></div>
+-->
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<style>
+
+/* hhh */
+
+
+.clear {
+	width: 0;
+	height: 0;
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+
+
+div.sticker {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: 80px;
+	height: 10px;
+	background-color: red;
+	z-index: 900;
+}
+
+div.love_us {
+	position: absolute;
+	width: 800px;
+	height: auto;
+	padding: 20px;
+	padding-bottom: 100px;
+	background-color: #000;
+	top: 0;
+	left: 50%;
+	margin-left: -420px;
+	margin-top: 100px;
+	border-radius: 2px;
+	z-index: 1100;
+	float: left;
+}
+
+div.love_bg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color: rgba(255, 255, 255, 0.7);
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+p.l_header {
+	text-align: center;
+	font-size: 58px;
+	font-weight: bold;
+	color: #fff;
+	padding: 70px 80px 60px 80px;
+}
+
+p.l_body {
+	font-size: 16px;
+	line-height: 24px;
+	color: #fff;
+	padding: 10px 100px;
+	float: left;
+}
+
+span.l_body_tiny {
+	font-size: 14px;
+	line-height: 24px;
+	color: #fff;
+	padding: 0;
+	float: left;
+	opacity: 0.5;
+	font-style: italic;
+}
+
+div.l_team{
+	width: 600px;
+	height: 300px;
+	background-size: 600px auto;
+	background-image: url('/assets/hangwith/team.jpg');
+	margin: 40px 0;
+	margin-left: 100px;
+	float: left;
+	display: none;
+}
+
+ul.l_follow {
+	float: left;
+	list-style: none;
+	margin-left: 100px;
+	margin-top: 40px;
+}
+
+ul.l_follow li{
+	float: left;
+	padding: 0 10px 0 0;
+	width: 110px;
+}
+
+ul.l_follow li p{
+	padding: 10px 0;
+	font-size: 12px;
+	color: #fff;	
+}
+
+a:link, a:visited {
+	text-decoration: underline;
+	color: #fff;
+}
+
+
+</style>
+
+<script>
+$(document).ready(function(){
+	$(".sticker").click(function(){
+		$('.love_bg').fadeToggle(40);
+		$('.love_us').fadeToggle(140);
+	});
+	$(".love_bg").click(function(){
+		$('.love_bg, .love_us').fadeOut(200);
+	});
+
+	
+});
+</script>
+
+<div class="love_us" style="display:none">
+	<p class="l_header">Thanks, but we are out of the sticker business</p>
+	<div class="l_team"></div>
+	<p class="l_body">Hi! We are Caio, Linn and Rafael.</p>
+	<p class="l_body">It has been an amazing experience, we don't have words to describe how happy we are. Thank you, thank you and thank you.</p>
+	<p class="l_body">But we are officially out of the sticker business. We received enough orders to get the 3 of us busy for a very looooong time. Of course we will manage to send out all the orders we already got. It might take some time but we will put our heart on it!</p>
+	<p class="l_body">“Not available on the App Store”  is movement and does’t stop here. Please share your photos with us, by email: notonappstore@gmail.com or using the #notonappstore.</p>
+	<p class="l_body">You can print your own sticker <a href="https://www.dropbox.com/s/a27yl78389fyyg2/notonappstore.pdf">here</a>, for free<br/><span class="l_body_tiny">*If you see this sticker being sold anywhere, that is not us!</span></p>
+	<p class="l_body">Lets keep in touch, we have tons of others projects that we would love to share with you!</p>
+	<span class="clear"></span>
+	<ul class="l_follow">
+		<li>
+			<p>Caio Andrade</p>
+			<span class="clear"></span>
+			<a href="https://twitter.com/hicaioandrade" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @hicaioandrade</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			
+		</li>
+		<li>
+			<p>Linn Livijn Wexell</p>
+			<span class="clear"></span>
+			<a href="https://twitter.com/linnwexells" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @linnwexells</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			
+		</li>
+		<li>
+			<p>Rafael Ochoa</p>
+			<span class="clear"></span>
+			<a href="https://twitter.com/rafael_ochoa" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @rafael_ochoa</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			
+		</li>
+	</ul>
+</div>
+<div class="love_bg" style="display:none"></div>
+<div class="sticker"></div>
+
+
+
+
+

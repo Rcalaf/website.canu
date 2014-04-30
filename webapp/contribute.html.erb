@@ -1,0 +1,11 @@
+<div class="authorization_header">Who are you?</div>
+<div class="authorization_form">
+	<div class="input_classic">
+		<input name="user[confirm_password]" class="authorization" placeholder="Full Name"/>
+	</div>
+	<div class="input_classic">
+		<%= link_to '<input type="submit" class="submit" value="use"/>'.html_safe, :back %>
+	</div>	
+	<a class="guidance">Want to save your name for future?</a>
+	<a class="guidance_option" href="<%=iamnew_account_url%>">Create Account</a>
+</div>
