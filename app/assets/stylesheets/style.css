@@ -1035,8 +1035,8 @@ ul.stats li {
 	float: left;
 	display: block;
 	list-style: none;
-	padding: 40px;
-	width: 75px;
+	padding: 20px 40px;
+	width: 30px;
 }
 
 ul.stats li.two {

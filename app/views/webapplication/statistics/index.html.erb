@@ -56,12 +56,21 @@ function initMap(){
 		new google.maps.Point(0,0),
 		new google.maps.Point(0,0)
 	);
+	
+	 var myIcon = new google.maps.MarkerImage("http://vinitiate.se/blogazine/photos/canu_pin.png", null, null, null, new google.maps.Size(20,30));
+	 var myIconLocal = new google.maps.MarkerImage("http://vinitiate.se/blogazine/photos/canu_pin_local.png", null, null, null, new google.maps.Size(20,30));
+	
+	
+	<%@data['activity']['active_activities_locations_local'].each_with_index do |activity,index|%>
+		var marker_<%=index%> = new google.maps.Marker({
+				         map:map,
+				         draggable:false,
+				         animation: google.maps.Animation.DROP,
+				         position: new google.maps.LatLng("<%=activity['activity']['latitude']%>","<%=activity['activity']['longitude']%>"),
+				         icon: myIconLocal
+				      });
+	<%end%>
 	<%@data['activity']['active_activities_locations'].each_with_index do |activity,index|%>
-		
-	    
-	    var myIcon = new google.maps.MarkerImage("http://vinitiate.se/blogazine/photos/canu_pin.png", null, null, null, new google.maps.Size(20,30));
-
-		
 		var marker_<%=index%> = new google.maps.Marker({
 				         map:map,
 				         draggable:false,
@@ -69,15 +78,23 @@ function initMap(){
 				         position: new google.maps.LatLng("<%=activity['activity']['latitude']%>","<%=activity['activity']['longitude']%>"),
 				         icon: myIcon
 				      });
-	  /*	var infowindow_<%=index%> = new google.maps.InfoWindow({
-	      content: "mola"
-	   	});
-
-	  	google.maps.event.addListener(marker_<%=index%>, "click", function() {
-	  	  infowindow_<%=index%>.open(map,marker_<%=index%>);
-	  	});*/
 	<%end%>
 	
+	
+	
+	
+	
+	<%@data['activity']['active_activities_locations_local'].each_with_index do |activity,index|%>
+		var marker_<%=index%> = new google.maps.Marker({
+				         map:map_2,
+				         draggable:false,
+				         animation: google.maps.Animation.DROP,
+				         position: new google.maps.LatLng("<%=activity['activity']['latitude']%>","<%=activity['activity']['longitude']%>"),
+				         icon: myIconLocal
+				      });
+	<%end%>
+
+
 	<%@data['activity']['active_activities_locations'].each_with_index do |activity,index|%>
 		var marker_<%=index%> = new google.maps.Marker({
 				         map:map_2,
@@ -86,14 +103,9 @@ function initMap(){
 				         position: new google.maps.LatLng("<%=activity['activity']['latitude']%>","<%=activity['activity']['longitude']%>"),
 				         icon: myIcon
 				      });
-	  /*	var infowindow_<%=index%> = new google.maps.InfoWindow({
-	      content: "mola"
-	   	});
 
-	  	google.maps.event.addListener(marker_<%=index%>, "click", function() {
-	  	  infowindow_<%=index%>.open(map,marker_<%=index%>);
-	  	});*/
 	<%end%>
+
 				
  }
 
@@ -106,23 +118,28 @@ function initMap(){
 		<a class="number big"><%= @data['activity']['total_active']%></a>
 		<a class="item">Activities Active</a> 
 	</li>
-	<li class="two"> 
-		<a class="number big" style="opacity:0.5"><%= @data['user']['total_phone_verified']%></a>
-		<a class="item" style="opacity:0.5">Verified Numbers</a> 
+	<li class="two">
+		<a class="number big"><!--<%= @data['activity']['total_active_tribe']%>/--><span style="color: #75c7cd;"><%= @data['activity']['total_active_local']%></span></a>
+		<a class="item"  style="color: #75c7cd;">Local</a> 
 	</li>
 	<span class="clear"></span>
-	<li>
-		<a class="number"><%= @data['user']['total']%></a>
-		<a class="item">Total Users</a> 
-	</li>
-	<li>
-		<a class="number"><%= @data['activity']['total']%></a> 
-		<a class="item">Activities Created</a> 
+	<li> 
+		<a class="number"><%= @data['user']['total_phone_verified']%></a>
+		<a class="item">Verified Numbers</a> 
 	</li>
 	<li>
 		<a class="number"><%= @data['user']['ghost']%></a>
 		<a class="item">Ghosts Hiding</a> 
 	</li>
+	<li style="opacity:0.5">
+		<a class="number"><%= @data['user']['total']%></a>
+		<a class="item">Total Users</a> 
+	</li>
+	<li style="opacity:0.5">
+		<a class="number"><%= @data['activity']['total']%></a> 
+		<a class="item">Activities Created</a> 
+	</li>
+
 </ul>
 
 <div class="map_stats">
