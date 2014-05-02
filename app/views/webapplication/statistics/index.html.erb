@@ -127,10 +127,6 @@ function initMap(){
 		<a class="number"><%= @data['user']['total_phone_verified']%></a>
 		<a class="item">Verified Numbers</a> 
 	</li>
-	<li>
-		<a class="number"><%= @data['user']['ghost']%></a>
-		<a class="item">Ghosts Hiding</a> 
-	</li>
 	<li style="opacity:0.5">
 		<a class="number"><%= @data['user']['total']%></a>
 		<a class="item">Total Users</a> 
@@ -139,6 +135,16 @@ function initMap(){
 		<a class="number"><%= @data['activity']['total']%></a> 
 		<a class="item">Activities Created</a> 
 	</li>
+	<span class="clear"></span>
+	<li style="opacity:0.5">
+		<a class="number"><%= @data['user']['ghost']%></a>
+		<a class="item">Ghosts Hiding</a> 
+	</li>
+	<li style="opacity:0.5">
+		<a class="number"><%=@ask_for_code.size%></a>
+		<a class="item">Android Requests</a> 
+	</li>
+
 </ul>
 
 <div class="map_stats">

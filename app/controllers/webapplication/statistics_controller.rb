@@ -5,6 +5,7 @@ class Webapplication::StatisticsController < Webapplication::WebapplicationContr
    
   def index
     @body_class = "stats"
+    @ask_for_code = User.find_all_by_code(nil)
     respond_local = request_to_canu_api("http://api.canu.se/statistics/all",:get,{},{})
     puts respond_local.body
     @data = JSON.parse(respond_local.body)
