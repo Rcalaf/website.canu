@@ -23,12 +23,14 @@ div.urgent {
 	z-index: 900000;
 	background-color: #eb5f57;
 	color: #fff;
+	transition: all .1s ease-in-out;
 }
 
-div.urgent:hover {
-	box-shadow: 0px 0px 4px rgba(40, 40, 40, 0.8);
+div.urgent:hover, div.urgent:active {
+	background-color: #cc4040;
 	cursor: pointer;
 }
+
 
 /******************************
 General
