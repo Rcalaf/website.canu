@@ -26,6 +26,8 @@
 			
 	    });
 	    
+	  
+	   	 
 	   	 $('#comments').height() - 170;
 
 	   	 $(".android").click(function(){
