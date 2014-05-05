@@ -12,7 +12,7 @@ html{color:#000;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fiel
 
 div.urgent {
 	position: fixed;
-	width: 260px;
+	width: 240px;
 	height: auto;
 	padding: 20px;
 	top: 20px;
