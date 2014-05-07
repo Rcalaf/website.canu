@@ -5,6 +5,7 @@ class WebappController < ApplicationController
     @title = "CANU - Activities"
     @body_class = "webapp"
     @activities = get_from_canu_api("http://api.canu.se/activities")
+    @user = User.new
   end
 	
   def fullview
