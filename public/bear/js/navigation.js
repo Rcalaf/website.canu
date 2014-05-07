@@ -1,4 +1,4 @@
-var currentScreen = "screen9_final_shaman";
+var currentScreen = "screen1";
 var nextScreen;
 var allLoadingFiles = [];
 
