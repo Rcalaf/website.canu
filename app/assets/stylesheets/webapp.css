@@ -894,18 +894,21 @@ ul.city_activities {
 	padding-bottom: 400px;
 }
 
-ul.city_activities li {
-	height: 100px;
-	width: auto;
+ul.city_activities p.title {
 	float: left;
-}
-
-ul.city_activities li p.title {
 	color: #fff;
 	line-height: 100px;
 	font-size: 78px;
 	width: auto;
 	padding-right: 10px;
+	word-break:break-word;
+	transition: all .7s ease-in-out;
+}
+
+ul.city_activities p.title:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	color: green;
 }
 
 
