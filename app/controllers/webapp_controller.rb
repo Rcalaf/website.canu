@@ -38,6 +38,12 @@ class WebappController < ApplicationController
     @user = User.new
   end
   
+  def stockholm
+    @title = "Stockholm Summer"
+    @body_class = "city"
+    @user = User.new
+  end
+  
   
   def privacyapp
       @title = "CANU - Privacy"
