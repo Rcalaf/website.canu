@@ -78,6 +78,7 @@ Canu::Application.routes.draw do
     
     
     match 'statistics' => 'webapplication/statistics#index', :as => 'statistics'
+    match 'stockholm' => 'webapplication/statistics#local_activities', :as => 'local_activities'
     
     #
     # From Invite:
