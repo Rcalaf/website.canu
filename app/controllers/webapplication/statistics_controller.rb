@@ -1,7 +1,7 @@
 class Webapplication::StatisticsController < Webapplication::WebapplicationController
   layout 'authorization'
   
-  before_filter :http_basic_auth
+  before_filter :http_basic_auth, :only => [:index]
    
   def index
     @body_class = "stats"
