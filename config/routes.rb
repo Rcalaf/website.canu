@@ -31,20 +31,6 @@ Canu::Application.routes.draw do
     
     
     #
-    # App Use:
-    #
-    
-    match 'privacyapp' => 'webapp#privacy', :as => 'privacyapp'
-    match 'termsapp' => 'webapp#terms', :as => 'termsapp'
-    match 'lockdown' => 'webapp#lockdown', :as => 'lockdown'
-    match 'd' => 'webapp#d', :as => 'd'
-    match 'a' => 'webapp#a', :as => 'a'
-    match 'b' => 'webapp#b', :as => 'b'
-    match 'p' => 'webapp#p', :as => 'p'
-    match 's' => 'webapp#s', :as => 's'
-    
-    
-    #
     # Promo Pages:
     #
     
@@ -54,8 +40,73 @@ Canu::Application.routes.draw do
     
     
     #
-    # Technical:
+    # App Use:
     #
+    
+    match 'privacyapp' => 'webapp#privacy', :as => 'privacyapp'
+    match 'termsapp' => 'webapp#terms', :as => 'termsapp'
+    match 'lockdown' => 'webapp#lockdown', :as => 'lockdown'
+    
+    #
+    # Smart Links:
+    #
+    
+    match 'd' => 'webapp#d', :as => 'd'
+    match 'a' => 'webapp#a', :as => 'a'
+    match 'b' => 'webapp#b', :as => 'b'
+    match 'p' => 'webapp#p', :as => 'p'
+    match 's' => 'webapp#s', :as => 's'
+    
+    #
+    # Stats:
+    #
+
+
+    match 'statistics' => 'webapplication/statistics#index', :as => 'statistics'
+    
+
+    #
+    # Webapp Invite:
+    #
+    match 'i/:invitation_token' => 'webapplication/activities#invite', :as => 'invite'
+    match 'expired' => 'webapp#expired', :as => 'expired'
+   
+    #
+    # Public Page of a city:
+    #
+    
+    match 'stockholm' => 'webapplication/statistics#local_activities', :as => 'local_activities'
+  
+    match 'public_stockholm' => 'webapplication/activities#public_stockholm', :as => 'public_stockholm'
+    
+    
+    
+    #
+    # Art Project (vitali):
+    #
+  
+    match 'stockholm_summer' => 'webapplication/activities#stockholm_summer', :as => 'stockholm_summer'
+    
+
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    #
+    # Postponed
+    #
+
+
+    # Add Name for a single interaction
+    match 'contribute' => 'webapp#contribute', :as => 'contribute'
+    
     match 'resetpassword' => 'users#resetpassword', :as => 'resetpassword'
     match 'email-confirmed' => 'users#emailconfirmation', :as => 'emailconfirmation'
     
@@ -76,26 +127,6 @@ Canu::Application.routes.draw do
     match 'sign-up' => 'webapplication/session#sign_up', :as => 'sign_up'
     match 'facebook-auth' => 'webapplication/session#facebook_auth',:as => 'facebook_auth'
     
-    
-    match 'statistics' => 'webapplication/statistics#index', :as => 'statistics'
-    match 'stockholm' => 'webapplication/statistics#local_activities', :as => 'local_activities'
-    
-    #
-    # From Invite:
-    #
-    match 'i/:invitation_token' => 'webapplication/activities#invite', :as => 'invite'
-    
-    match 'public_stockholm' => 'webapplication/activities#public_stockholm', :as => 'public_stockholm'
-    
-    # Add Name for a single interaction
-    match 'contribute' => 'webapp#contribute', :as => 'contribute'
-    
-    # Forward expired activity to this page
-    match 'expired' => 'webapp#expired', :as => 'expired'
-    
-    #
-    # Sign Up
-    #
     match 'iamnew_account' => 'webapp#iamnew_account', :as => 'iamnew_account'
     match 'iamnew_profile' => 'webapp#iamnew_profile', :as => 'iamnew_profile'
     

@@ -252,11 +252,11 @@ div.activity_container_public {
  	transition: all .1s ease-in-out;
 }
 
-div.activity_container_public:hover {
+div.activity_container_public:hover, div.activity_container_public:active {
 
 	box-shadow: 0 0 3px rgba(43, 75, 88, 0.24);
 	cursor: pointer;
-
+	opacity: 0.9;
 }
 
 
@@ -1007,6 +1007,14 @@ Mobile
 		height: 57px;
 	}
 		
+}
+
+/******************************
+Summer Art Project
+*******************************/
+
+body.summer {
+	background-color: yellow;
 }
 
 	

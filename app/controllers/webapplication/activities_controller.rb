@@ -67,6 +67,12 @@ class Webapplication::ActivitiesController < Webapplication::WebapplicationContr
     @user = User.new
   end
   
+  def stockholm_summer
+    @title = "The summer we co-create"
+    @body_class = "summer"
+    @user = User.new
+  end
+  
   def update_feed
     
   end
