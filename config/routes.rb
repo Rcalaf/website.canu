@@ -14,7 +14,6 @@ Canu::Application.routes.draw do
     # Homepage:
     #
     
-    
     match 'user/new' => 'users#new', :as => "new_user"
     match 'vision' => 'pages#vision', :as => 'vision'
     match 'product' => 'pages#product', :as => 'product'
@@ -47,6 +46,7 @@ Canu::Application.routes.draw do
     match 'termsapp' => 'webapp#terms', :as => 'termsapp'
     match 'lockdown' => 'webapp#lockdown', :as => 'lockdown'
     
+    
     #
     # Smart Links:
     #
@@ -57,41 +57,47 @@ Canu::Application.routes.draw do
     match 'p' => 'webapp#p', :as => 'p'
     match 's' => 'webapp#s', :as => 's'
     
+    
     #
     # Stats:
     #
-
 
     match 'statistics' => 'webapplication/statistics#index', :as => 'statistics'
     
 
     #
-    # Webapp Invite:
-    #
+    # Webapp Invite (Use Custom Layout - webapp_invite for og: meta tags)
+    # 
+    
     match 'i/:invitation_token' => 'webapplication/activities#invite', :as => 'invite'
     match 'expired' => 'webapp#expired', :as => 'expired'
+   
    
     #
     # Public Page of a city:
     #
     
     match 'stockholm' => 'webapplication/statistics#local_activities', :as => 'local_activities'
-  
-    match 'public_stockholm' => 'webapplication/activities#public_stockholm', :as => 'public_stockholm'
     
+    match 'public_stockholm' => 'webapplication/public#public_stockholm', :as => 'public_stockholm'
     
     
     #
     # Art Project (vitali):
     #
   
-    match 'stockholm_summer' => 'webapplication/activities#stockholm_summer', :as => 'stockholm_summer'
+    match 'stockholm_summer' => 'webapplication/public#stockholm_summer', :as => 'stockholm_summer'
     
 
-    
-
 
     
+    
+    
+    
+    
+    
+    
+    #####################################
     
     
     

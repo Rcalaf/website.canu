@@ -2,6 +2,8 @@ class Webapplication::ActivitiesController < Webapplication::WebapplicationContr
   #before_filter :authenticate_user
   before_filter :http_basic_auth, :except => [:invite, :show, :fullview_signedin]
   
+  layout 'webapp_invite'
+  
   def index
     puts session[:user]
     @title = "CANU - Activities"
@@ -60,19 +62,7 @@ class Webapplication::ActivitiesController < Webapplication::WebapplicationContr
       end
    
   end
-  
-  def public_stockholm
-    @title = "Public - Stockholm"
-    @body_class = "webapp"
-    @user = User.new
-  end
-  
-  def stockholm_summer
-    @title = "The summer we co-create"
-    @body_class = "summer"
-    @user = User.new
-  end
-  
+
   def update_feed
     
   end
