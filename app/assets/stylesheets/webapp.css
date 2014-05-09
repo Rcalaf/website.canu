@@ -12,6 +12,7 @@ div.wrapper {
 	-webkit-overflow-scrolling: touch;
 }
 
+
 .clear_line {
 	width: auto;
 	height: 1px;
@@ -50,6 +51,8 @@ div.activity_container {
  	border-width: 1px;
  	border-image: url(/assets/webapp/border.png) 2 repeat;
 }
+
+
 
 div.canu_footer {
 	width: calc(100% - 20px);
@@ -200,6 +203,84 @@ a.go_button:hover, a.go_button:active{
 	background-position: 45px 0;
 }
 
+
+
+/******************************
+Public Cards
+*******************************/
+
+
+div.wrapper_public {
+	max-width: 1020px;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;	
+	overflow-x: hidden;
+	overflow-y: scroll; /* has to be scroll, not auto */
+	-webkit-overflow-scrolling: touch;
+}
+
+ul.public_wall {
+	margin-top: 40px;	
+}
+
+ul.public_wall li {
+	float: left;
+	margin: 10px;
+	width: auto;
+	
+}
+
+div.activity_container_public {
+	max-width: 680px;
+	width: 320px;
+	
+
+	height: auto;
+	background-color: #fff;
+
+
+	
+	box-shadow: 0 0 5px rgba(43, 75, 88, 0.14);
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+ 	-webkit-box-sizing:border-box;
+ 	
+ 	border-radius: 4px;
+ 	border-width: 1px;
+ 	border-image: url(/assets/webapp/border.png) 2 repeat;
+ 	transition: all .1s ease-in-out;
+}
+
+div.activity_container_public:hover {
+
+	box-shadow: 0 0 3px rgba(43, 75, 88, 0.24);
+	cursor: pointer;
+
+}
+
+
+@media only screen and (max-width: 1020px), only screen and (max-device-width: 1020px){ 
+	div.wrapper_public {
+		max-width: 680px;
+	}
+}
+
+@media only screen and (max-width: 680px), only screen and (max-device-width: 680px){ 
+	div.wrapper_public {
+		max-width: 500px;
+	}
+	ul.public_wall li {
+		float: none;		
+	}
+	div.activity_container_public { 
+		width: auto;
+	}
+	ul.public_wall {
+		margin-top: 0;	
+	}
+}
+
 /******************************
 Contents
 *******************************/
@@ -218,6 +299,8 @@ div.activity_header {
 	height: auto;
 	z-index: 1100;
 }
+
+
 
 div.creator_userpic {
 	margin: 9px 9px 0 9px;
@@ -926,3 +1009,4 @@ Mobile
 		
 }
 
+	

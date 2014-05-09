@@ -85,6 +85,8 @@ Canu::Application.routes.draw do
     #
     match 'i/:invitation_token' => 'webapplication/activities#invite', :as => 'invite'
     
+    match 'public_stockholm' => 'webapplication/activities#public_stockholm', :as => 'public_stockholm'
+    
     # Add Name for a single interaction
     match 'contribute' => 'webapp#contribute', :as => 'contribute'
     

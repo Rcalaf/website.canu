@@ -11,9 +11,6 @@
 
 function initMap(){
 
-
-	center = new google.maps.LatLng(22, 4);
-	zoom = 1;
 	
 	center_2 = new google.maps.LatLng(59.32893, 18.06491);
 	zoom_2 = 11;
@@ -36,32 +33,21 @@ function initMap(){
            
    map_2 = new google.maps.Map(document.getElementById("map_canvas_2"),
            mapOptions_2);
-
-	 var myIcon = new google.maps.MarkerImage("http://vinitiate.se/blogazine/photos/canu_pin.png", null, null, null, new google.maps.Size(20,30));
+           
 	 var myIconLocal = new google.maps.MarkerImage("http://vinitiate.se/blogazine/photos/canu_pin_local.png", null, null, null, new google.maps.Size(20,30));
 	
 	
 	<%@data['activity']['active_activities_locations_local'].each_with_index do |activity,index|%>
 		var marker_<%=index%> = new google.maps.Marker({
-				         map:map_2,
-				         draggable:false,
-				         animation: google.maps.Animation.DROP,
-				         position: new google.maps.LatLng("<%=activity['activity']['latitude']%>","<%=activity['activity']['longitude']%>"),
-				         icon: myIconLocal
-				      });
+		         map:map_2,
+		         draggable:false,
+		         animation: google.maps.Animation.DROP,
+		         position: new google.maps.LatLng("<%=activity['activity']['latitude']%>","<%=activity['activity']['longitude']%>"),
+		         icon: myIconLocal
+		      });
 	<%end%>
 
 
-	<%@data['activity']['active_activities_locations'].each_with_index do |activity,index|%>
-		var marker_<%=index%> = new google.maps.Marker({
-				         map:map_2,
-				         draggable:false,
-				         animation: google.maps.Animation.DROP,
-				         position: new google.maps.LatLng("<%=activity['activity']['latitude']%>","<%=activity['activity']['longitude']%>"),
-				         icon: myIcon
-				      });
-
-	<%end%>
 
 				
  }

@@ -61,6 +61,12 @@ class Webapplication::ActivitiesController < Webapplication::WebapplicationContr
    
   end
   
+  def public_stockholm
+    @title = "Public - Stockholm"
+    @body_class = "webapp"
+    @user = User.new
+  end
+  
   def update_feed
     
   end
