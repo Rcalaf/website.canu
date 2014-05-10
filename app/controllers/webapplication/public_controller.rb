@@ -5,7 +5,9 @@ class Webapplication::PublicController < Webapplication::WebapplicationControlle
   def public_stockholm
     @title = "Public - Stockholm"
     @body_class = "webapp"
-    @user = User.new
+    
+    respond_local = request_to_canu_api("https://api.canu.se/activities")
+    @activities = JSON.parse(respond_local.body)
   end
   
   def stockholm_summer

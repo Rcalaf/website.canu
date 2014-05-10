@@ -8,31 +8,6 @@
 </div>
 <div class="wrapper_public">
 	<ul class="public_wall">
-		<li>
-			<a href="#">
-				<div class="activity_container_public">
-					<div class="activity_header">
-						<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
-							<div class="alternative_userpic" style=""></div>
-						</div>
-						<a class="creator_name">
-							Jackson
-							<span class="how_many">& <%= 10 - 1%></span>
-						</a>
-						<span class="clear"></span>
-						<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
-						<p class="activity_title">Biking</p>
-						<span class="clear_line_2"></span>
-						<p class="activity_address">Heleneborgsgatan, Stockholm</p>
-						<span class="activity_hours">
-							10:00 - 
-							<span>11:00</span>
-						</span>			
-						<span class="activity_date">Tomorrow</span>
-					</div>
-					<span class="clear"></span>
-				</div>
-			</a>
-		</li>
+		<%= render :partial => 'activity', :collection => @activities%>
 	</ul>
 </div>

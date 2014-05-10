@@ -1,194 +1,73 @@
-<%# @activity%>
-<%# @attendees%>
+<%# @activities.inspect%>
+<% content_for :js do %>
+
+
+ var center;		  
+ var marker;
+ var map2;
+
+function initMap(){
+
+	
+	center_2 = new google.maps.LatLng(59.32893, 18.06491);
+	zoom_2 = 11;
+	
+	
+	//alert('Loading Map');
+	
+
+	var mapOptions_2 = {
+     //scrollwheel: false,
+     zoom: zoom_2,
+     disableDefaultUI: true,
+     mapTypeId: google.maps.MapTypeId.ROADMAP,
+     center: center_2,
+     styles: 
+[{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
+
+   };
+
+           
+   map_2 = new google.maps.Map(document.getElementById("map_canvas_2"),
+           mapOptions_2);
+           
+	 var myIconLocal = new google.maps.MarkerImage("http://vinitiate.se/blogazine/photos/canu_pin_local.png", null, null, null, new google.maps.Size(20,30));
+	
+	
+	<%@activities.each_with_index do |activity,index|%>
+		var marker_<%=index%> = new google.maps.Marker({
+		         map:map_2,
+		         draggable:false,
+		         animation: google.maps.Animation.DROP,
+		         position: new google.maps.LatLng("<%=activity['latitude']%>","<%=activity['longitude']%>"),
+		         icon: myIconLocal
+		      });
+	<%end%>
+				
+ }
+
+<%end%>
+
+
+
+
+
+
+
 <div class="get_canu">
 	<!--<div class="logo_tiny"></div>-->
 	<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1">
 		<p class="get">Open in the app</p>
 	</a>
 </div>
+
+
+<div id="map_canvas_2"></div>
+
+
+
 <div class="wrapper_public">
 	<ul class="public_wall">
-		<li>
-			<a href="#">
-				<div class="activity_container_public">
-					<div class="activity_header">
-						<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
-							<div class="alternative_userpic" style=""></div>
-						</div>
-						<a class="creator_name">
-							Jackson
-							<span class="how_many">& <%= 10 - 1%></span>
-						</a>
-						<span class="clear"></span>
-						<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
-						<p class="activity_title">Biking</p>
-						<span class="clear_line_2"></span>
-						<p class="activity_address">Heleneborgsgatan, Stockholm</p>
-						<span class="activity_hours">
-							10:00 - 
-							<span>11:00</span>
-						</span>			
-						<span class="activity_date">Tomorrow</span>
-					</div>
-					<span class="clear"></span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<div class="activity_container_public">
-					<div class="activity_header">
-						<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
-							<div class="alternative_userpic" style=""></div>
-						</div>
-						<a class="creator_name">
-							Jackson
-							<span class="how_many">& <%= 10 - 1%></span>
-						</a>
-						<span class="clear"></span>
-						<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
-						<p class="activity_title">Biking</p>
-						<span class="clear_line_2"></span>
-						<p class="activity_address">Heleneborgsgatan, Stockholm</p>
-						<span class="activity_hours">
-							10:00 - 
-							<span>11:00</span>
-						</span>			
-						<span class="activity_date">Tomorrow</span>
-					</div>
-					<span class="clear"></span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<div class="activity_container_public">
-					<div class="activity_header">
-						<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
-							<div class="alternative_userpic" style=""></div>
-						</div>
-						<a class="creator_name">
-							Jackson
-							<span class="how_many">& <%= 10 - 1%></span>
-						</a>
-						<span class="clear"></span>
-						<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
-						<p class="activity_title">Biking</p>
-						<span class="clear_line_2"></span>
-						<p class="activity_address">Heleneborgsgatan, Stockholm</p>
-						<span class="activity_hours">
-							10:00 - 
-							<span>11:00</span>
-						</span>			
-						<span class="activity_date">Tomorrow</span>
-					</div>
-					<span class="clear"></span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<div class="activity_container_public">
-					<div class="activity_header">
-						<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
-							<div class="alternative_userpic" style=""></div>
-						</div>
-						<a class="creator_name">
-							Jackson
-							<span class="how_many">& <%= 10 - 1%></span>
-						</a>
-						<span class="clear"></span>
-						<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
-						<p class="activity_title">Biking</p>
-						<span class="clear_line_2"></span>
-						<p class="activity_address">Heleneborgsgatan, Stockholm</p>
-						<span class="activity_hours">
-							10:00 - 
-							<span>11:00</span>
-						</span>			
-						<span class="activity_date">Tomorrow</span>
-					</div>
-					<span class="clear"></span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<div class="activity_container_public">
-					<div class="activity_header">
-						<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
-							<div class="alternative_userpic" style=""></div>
-						</div>
-						<a class="creator_name">
-							Jackson
-							<span class="how_many">& <%= 10 - 1%></span>
-						</a>
-						<span class="clear"></span>
-						<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
-						<p class="activity_title">Biking</p>
-						<span class="clear_line_2"></span>
-						<p class="activity_address">Heleneborgsgatan, Stockholm</p>
-						<span class="activity_hours">
-							10:00 - 
-							<span>11:00</span>
-						</span>			
-						<span class="activity_date">Tomorrow</span>
-					</div>
-					<span class="clear"></span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<div class="activity_container_public">
-					<div class="activity_header">
-						<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
-							<div class="alternative_userpic" style=""></div>
-						</div>
-						<a class="creator_name">
-							Jackson
-							<span class="how_many">& <%= 10 - 1%></span>
-						</a>
-						<span class="clear"></span>
-						<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
-						<p class="activity_title">Biking</p>
-						<span class="clear_line_2"></span>
-						<p class="activity_address">Heleneborgsgatan, Stockholm</p>
-						<span class="activity_hours">
-							10:00 - 
-							<span>11:00</span>
-						</span>			
-						<span class="activity_date">Tomorrow</span>
-					</div>
-					<span class="clear"></span>
-				</div>
-			</a>
-		</li>
-		<li>
-			<a href="#">
-				<div class="activity_container_public">
-					<div class="activity_header">
-						<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
-							<div class="alternative_userpic" style=""></div>
-						</div>
-						<a class="creator_name">
-							Jackson
-							<span class="how_many">& <%= 10 - 1%></span>
-						</a>
-						<span class="clear"></span>
-						<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
-						<p class="activity_title">Biking</p>
-						<span class="clear_line_2"></span>
-						<p class="activity_address">Heleneborgsgatan, Stockholm</p>
-						<span class="activity_hours">
-							10:00 - 
-							<span>11:00</span>
-						</span>			
-						<span class="activity_date">Tomorrow</span>
-					</div>
-					<span class="clear"></span>
-				</div>
-			</a>
-		</li>
+		<%= render :partial => 'activity', :collection => @activities%>
 	</ul>
 </div>
