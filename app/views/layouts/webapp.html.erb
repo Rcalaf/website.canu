@@ -19,6 +19,8 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src='https://raw.github.com/x1024/jquery-fastbutton/master/bin/fastbutton.js'></script>
 		
+		<%= yield :header%>
+		
 		<%= stylesheet_link_tag 'style' %>
 		<%= stylesheet_link_tag 'webapp' %>
 		<%= javascript_include_tag "application_rest"%>
@@ -26,6 +28,7 @@
 		
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"> 
+		
 	   
 	    <script type="text/javascript">
 
@@ -46,7 +49,7 @@
 	<%# " here is the current user: #{session[:user]}" %>
 
 	<%# " here is the current location: #{session[:lat]} - #{session[:long]}" %>
-	<body class="<%=@body_class%> 'use-fastclick'">
+	<body class="<%=@body_class%> 'use-fastclick'" onload="initMap()">
 			
 
 			<%= yield%> 

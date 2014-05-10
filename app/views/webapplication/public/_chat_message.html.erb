@@ -1,0 +1,12 @@
+<li class="invite_chat">
+	<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
+		<div class="alternative_userpic" style="background-image: url(http://api.canu.se/<%=chat_message['user']['profile_pic']%>);"></div>
+	</div>
+	<a class="chat_name"><%=chat_message['user']['user_name']%></a>
+	<ul id="cht_msgs">
+		<li class="chat_message"><%=chat_message['text']%>
+			<div class="chat_arrow"></div>
+		</li>
+	</ul>
+</li>
+

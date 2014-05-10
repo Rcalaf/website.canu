@@ -20,4 +20,15 @@ class Webapplication::PublicController < Webapplication::WebapplicationControlle
     
   end
   
+  def show
+    respond = request_to_canu_api("https://api.canu.se/activities/#{params[:id]}")
+    @activity = JSON.parse(respond.body)
+    respond = request_to_canu_api("https://api.canu.se/activities/#{params[:id]}/chat")
+    @chat_messages = JSON.parse(respond.body)
+    respond = request_to_canu_api("https://api.canu.se/activities/#{params[:id]}/attendees")
+    @attendees = JSON.parse(respond.body)    
+    @title = "CANU - Public - Activity Details"
+    @body_class = "webapp"
+  end
+  
 end

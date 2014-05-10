@@ -1,6 +1,6 @@
-
+<%# activity["invitation_token"]%>
 <li>
-	<a href="#">
+	<a href="<%= show_local_activities_url(activity["id"])%>">
 		<div class="activity_container_public">
 			<div class="activity_header">
 				<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
@@ -17,7 +17,7 @@
 				<p class="activity_address"><%= activity["street"].empty? ? "somewhere" : activity["street"]%>, <%= activity["city"]%></p>
 				<span class="activity_hours">
 					<%= DateTime.strptime(activity["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%> - 
-					<span><%= DateTime.strptime(activity["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%></span>
+					<span><%= DateTime.strptime(activity["end_date"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%></span>
 				</span>			
 				
 				<span class="activity_date"><%= DateTime.strptime(activity["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%d-%m-%Y")%></span>
@@ -26,3 +26,4 @@
 		</div>
 	</a>
 </li>
+
