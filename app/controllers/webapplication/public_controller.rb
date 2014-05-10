@@ -6,7 +6,10 @@ class Webapplication::PublicController < Webapplication::WebapplicationControlle
     @title = "Public - Stockholm"
     @body_class = "webapp"
     
-    respond_local = request_to_canu_api("https://api.canu.se/activities")
+    @long = params[:long] ? params[:long] : 18.06491
+    @lat = params[:lat] ? params[:lat] : 59.32893
+    
+    respond_local = request_to_canu_api("https://api.canu.se/activities?latitude=#{@lat}&longitude=#{@long}")
     @activities = JSON.parse(respond_local.body)
   end
   
