@@ -25,17 +25,26 @@
 
 		  {
 			  $(".go_button, .get_canu").show(); 
-			  $(".activity_container").css("margin-top", "50px");
+			  $(".activity_container, ul.public_wall").css("margin-top", "50px");
+			  
+				$("#bb_ppl_list").click(function() {	
+					$(".activity_people_wrapper").hide();
+					$(".activity_container, .get_canu").show();
+				});
 		  }
 
 		  $( 'p.activity_description:empty').remove();
+		 
+		  $( 'a.guest_name:empty').each(function () {
+			 $(this).siblings().addClass("username_only");
+			 $(this).remove(); 
+		  });
 		  
 		  $('.how_many:contains("0")').each(function () { $(this).hide(); });
 		
 		//$('html, body').animate({scrollTop: $(document).height()}, 'slow');
 		
-		$(".activity_people_wrapper").hide();
-		
+
 		
 		$(".creator_name").click(function() {	
 			$(".activity_container, .get_canu").hide();
@@ -44,7 +53,7 @@
 
 		$("#bb_ppl_list").click(function() {	
 			$(".activity_people_wrapper").hide();
-			$(".activity_container, .get_canu").show();
+			$(".activity_container").show();
 		});
 		
 		

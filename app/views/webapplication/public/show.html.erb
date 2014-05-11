@@ -32,7 +32,10 @@
 			<p class="activity_description"><%= @activity['description']%></p>
 			<span class="clear_line_2"></span>
 
-			<p class="activity_address"><%= @activity['street']%>, <%= @activity['city']%></p>
+			<p class="activity_address" onclick="window.location.href='http://maps.google.com/maps?q=<%= @activity['latitude']%>,<%= @activity['longitude']%>'">
+			<%= @activity["place_name"].empty? ? " " : @activity["place_name"]%>
+			<%= @activity["street"].empty? ? " " : @activity["street"] + ", " + @activity["city"]%>
+			</p>
 			<span class="activity_hours">
 				<%= Time.parse(@activity['start']).strftime("%H:%M")%> - 
 				<span><%=Time.parse(@activity['end_date']).strftime("%H:%M")%></span>

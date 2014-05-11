@@ -11,7 +11,9 @@ class Webapplication::PublicController < Webapplication::WebapplicationControlle
     
     respond_local = request_to_canu_api("https://api.canu.se/activities?latitude=#{@lat}&longitude=#{@long}")
     @activities = JSON.parse(respond_local.body)
+
   end
+  
   
   def stockholm_summer
     @title = "The summer we co-create"

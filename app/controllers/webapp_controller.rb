@@ -1,6 +1,69 @@
 class WebappController < ApplicationController
 	layout 'webapp'
-	
+
+
+# Support
+ 
+  def expired
+    @title = "CANU - Expired Activity"
+    @body_class = "expired"
+    @user = User.new
+  end
+  
+  def privacyapp
+      @title = "CANU - Privacy"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def termsapp
+      @title = "CANU - Terms"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def lockdown
+      @title = "CANU - Lockdown"
+      @user = User.new
+      @body_class = "authorization"
+  end
+
+
+# Links
+
+  def d
+      @title = "CANU - Download"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def a
+      @title = "CANU - Download"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def b
+      @title = "CANU - Download"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def p
+      @title = "CANU - Download"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+  def s
+      @title = "CANU - Download"
+      @user = User.new
+      @body_class = "authorization"
+  end
+  
+
+=begin  
+
   def activities
     @title = "CANU - Activities"
     @body_class = "webapp"
@@ -32,62 +95,8 @@ class WebappController < ApplicationController
       @body_class = "webapp"
       @user = User.new
   end
- 
-  def expired
-    @title = "CANU - Expired Activity"
-    @body_class = "expired"
-    @user = User.new
-  end
-  
-  
-  def privacyapp
-      @title = "CANU - Privacy"
-      @user = User.new
-      @body_class = "authorization"
-  end
-  
-  def termsapp
-      @title = "CANU - Terms"
-      @user = User.new
-      @body_class = "authorization"
-  end
-  
-  def lockdown
-      @title = "CANU - Lockdown"
-      @user = User.new
-      @body_class = "authorization"
-  end
-  
-  def d
-      @title = "CANU - Download"
-      @user = User.new
-      @body_class = "authorization"
-  end
-  
-  def a
-      @title = "CANU - Download"
-      @user = User.new
-      @body_class = "authorization"
-  end
-  
-  def b
-      @title = "CANU - Download"
-      @user = User.new
-      @body_class = "authorization"
-  end
-  
-  def p
-      @title = "CANU - Download"
-      @user = User.new
-      @body_class = "authorization"
-  end
-  
-  def s
-      @title = "CANU - Download"
-      @user = User.new
-      @body_class = "authorization"
-  end
-  
+
+
   def contribute
       @title = "CANU - Contribute"
       @user = User.new
@@ -105,13 +114,13 @@ class WebappController < ApplicationController
       @user = User.new
       @body_class = "authorization"
   end
-=begin  
+  
   def signin
       @title = "CANU - Sign In"
       @user = User.new
       @body_class = "authorization"
   end
-=end  
+ 
   def settings
       @title = "CANU - Your Settings"
       @user = User.new
@@ -123,7 +132,7 @@ class WebappController < ApplicationController
       @user = User.new
       @body_class = "authorization"
   end
-  
+=end 
   private 
   
   def get_from_canu_api(url,headers = {})

@@ -72,7 +72,7 @@ div.activity_people_wrapper {
 	margin-left: -384px;
 	top: 0;
 	z-index: 8000;
-	display: block;
+	display: none;
 }
 
 
@@ -181,6 +181,17 @@ ul.people_list li a.guest_username {
 	font-style: italic;
 }
 
+ul.people_list li a.username_only {
+	float: left;
+	line-height: 33px;
+	color: #2b4b58;
+	font-size: 14px;
+	padding-top: 10px;
+	font-weight: 700;
+	width: 70%;
+	font-style: normal;
+}
+
 
 /******************************
 Activity Menu
@@ -232,6 +243,13 @@ ul.public_wall li {
 	
 }
 
+ul.public_wall li a.whole {
+	background-color: aqua;
+	width: auto;
+	height: auto;
+	display: block;
+}
+
 div.activity_container_public {
 	max-width: 680px;
 	width: 320px;
@@ -239,6 +257,7 @@ div.activity_container_public {
 
 	height: auto;
 	background-color: #fff;
+	padding-bottom: 29px;
 
 
 	
@@ -250,14 +269,13 @@ div.activity_container_public {
  	border-radius: 4px;
  	border-width: 1px;
  	border-image: url(/assets/webapp/border.png) 2 repeat;
- 	transition: all .1s ease-in-out;
+ 	transition: all .3s ease-in-out;
 }
 
 div.activity_container_public:hover, div.activity_container_public:active {
 
-	box-shadow: 0 0 3px rgba(43, 75, 88, 0.24);
+	box-shadow: 0 0 3px rgba(43, 75, 88, 0.34);
 	cursor: pointer;
-	opacity: 0.9;
 }
 
 
@@ -351,7 +369,7 @@ img.creator_userpic {
 	border-radius: 40px;
 }
 
-a.creator_name {
+.creator_name {
 	float: left;
 	line-height: 35px;
 	margin-top: 10px;
@@ -361,14 +379,16 @@ a.creator_name {
 	opacity: 1;
 }
 
-a.creator_name span {
+.creator_name span {
 	font-weight: 400;
-	color: #bfc9cd;
+	opacity: 0.8;
+	margin-left: 2px;
 }
 
-a.creator_name:hover {
+.wrapper .creator_name:hover, .wrapper .creator_name:active {
 	cursor: pointer;
-	opacity: 1;
+	opacity: 0.5;
+	color: #2b4b58;
 }
 
 p.activity_title{
@@ -389,6 +409,11 @@ p.activity_address{
 	float: left;
 	margin: 0;
 	opacity: 0.7;
+}
+
+.wrapper p.activity_address:hover {
+	cursor: pointer;
+	opacity: 1;
 }
 
 span.activity_date {
@@ -995,7 +1020,7 @@ Mobile
 		margin-left: 0;
 		top: 0;
 		z-index: 8000;
-		display: block;
+		display: none;
 	}
 	
 	

@@ -8,7 +8,6 @@ Canu::Application.routes.draw do
     
     resources :users
     #resources :pages
-    #resources :tribemachine
     
     #
     # Homepage:
@@ -26,7 +25,6 @@ Canu::Application.routes.draw do
     match 'privacy' => 'pages#privacy', :as => 'privacy'
     match 'terms' => 'pages#terms', :as => 'terms'
     match 'help' => 'pages#help', :as => 'help'
-    match 'start' => 'tribemachine#start', :as => 'start'
     
     
     #
