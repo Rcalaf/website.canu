@@ -4,15 +4,24 @@
 $(document).ready(function(){
 	$(".title").hover(function() {	
 		$(this).find(".artsy_details").toggleClass("show_details");
+	});
+	$(".summer_pencil").hover(function() {	
+		$(".write").toggleClass("show_details");
+	});	
+	$("#click_about").click(function() {	
+		$(".artsy_about").toggleClass("show_about");
 	});	
 });		
 </script>
+<div class="artsy_top_menu_bg"></div>
 <div class="artsy_top_menu">
-	<p class="artsy_header">Sommaren vi Skapar</p>
+	<p class="artsy_header" id="click_about">Sommaren vi Skapar</p>
 	<div class="add_city">+</div>
 	<div class="artsy_city">Stockholm</div>
 </div>
-
+<div class="artsy_about">
+	<p class="about">Co-creting this summer is something that we all should try out in Stockholm. This isn't just the perfect time to do activities but to also share them with each other in the city. By opening up our casual plans we expand our social circles, and make the city a friendly place to be. Propose your ideas or choose what you feel like joining, welcome others and feel welcomed.</p>
+</div>
 <div class="artsy_top">
 	<div class="content">
 		
@@ -22,7 +31,100 @@ $(document).ready(function(){
 	<ul class="public_wall">
 		<span class="artsy">
 			<%= render :partial => 'activityart', :collection => @activities%>
+			
+			<span class="title">
+				Swimming
+				<div class="artsy_details">
+						May 18, 12:00
+					<span class="place">
+						Skanstull
+					</span>
+				</div>
+			</span>
+			<span class="no_und">,&nbsp</span>
+			<span class="title">
+				House Party 
+				<div class="artsy_details">
+						May 19, 18:00
+					<span class="place">
+						Sveavagen 76
+					</span>
+				</div>
+			</span>
+			<span class="no_und">,&nbsp</span>
+			<span class="title">
+				BBQ
+				<div class="artsy_details">
+						Jun 15, 11:00
+					<span class="place">
+						Skanstull
+					</span>
+				</div>
+			</span>
+			<span class="no_und">,&nbsp</span>
+			<span class="title">
+				Dance for Love
+				<div class="artsy_details">
+						May 18, 12:00
+					<span class="place">
+						Skanstull
+					</span>
+				</div>
+			</span>
+			<span class="no_und">,&nbsp</span>
+			<span class="title">
+				Sunbathing
+				<div class="artsy_details">
+						May 18, 12:00
+					<span class="place">
+						Skanstull
+					</span>
+				</div>
+			</span>
+			<span class="no_und">,&nbsp</span>
+			<span class="title">
+				Climbing
+				<div class="artsy_details">
+						May 18, 12:00
+					<span class="place">
+						Skanstull
+					</span>
+				</div>
+			</span>
+			<span class="no_und">,&nbsp</span>
+			<span class="title">
+				Badminton
+				<div class="artsy_details">
+						May 18, 12:00
+					<span class="place">
+						Skanstull
+					</span>
+				</div>
+			</span>
+			<span class="no_und">,&nbsp</span>
+			<span class="title">
+				Coffee
+				<div class="artsy_details">
+						May 18, 12:00
+					<span class="place">
+						Skanstull
+					</span>
+				</div>
+			</span>
+			<span class="no_und">,&nbsp</span>
+			<span class="title">
+				Exhibit
+				<div class="artsy_details">
+						May 18, 12:00
+					<span class="place">
+						Skanstull
+					</span>
+				</div>
+			</span>
+			<span class="clear"></span>
+			<div class="summer_pencil">
+				<div class="write">write via canu</div>
+			</div>
 		</span>
 	</ul>
 </div>
-<div class="summer_pencil"></div>

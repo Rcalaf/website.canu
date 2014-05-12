@@ -281,26 +281,6 @@ div.activity_container_public:hover, div.activity_container_public:active {
 }
 
 
-@media only screen and (max-width: 1060px), only screen and (max-device-width: 1060px){ 
-	div.wrapper_public {
-		max-width: 680px;
-	}
-}
-
-@media only screen and (max-width: 720px), only screen and (max-device-width: 720px){ 
-	div.wrapper_public {
-		max-width: 500px;
-	}
-	ul.public_wall li {
-		float: none;		
-	}
-	div.activity_container_public { 
-		width: auto;
-	}
-	ul.public_wall {
-		margin-top: 0;	
-	}
-}
 
 /******************************
 Contents
@@ -1044,7 +1024,16 @@ Summer Art Project
 body.summer {
 	background-color: #fcde3c;
 	font-family: 'Vollkorn', serif;
-	cursor: url('/assets/summer_pencil.png') 10 5, cell;
+}
+
+div.artsy_top_menu_bg {
+	width: 100%;
+	background-color: #fcde3c;
+	height: 50px;
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: 2900;
 }
 
 div.artsy_top_menu {
@@ -1058,12 +1047,38 @@ div.artsy_top_menu {
 	z-index: 3000;
 }
 
+div.artsy_about {
+	position: fixed;
+	background-color: #fff;
+	width: 100%;
+	height: auto;
+	top: -700px;
+	left: 0;
+	transition: all .8s ease-out ;
+	z-index: 2800;
+	padding-bottom: 50px;
+}
+
+div.show_about {
+	top: 0;
+}
+
+div.artsy_about p {
+	color: #fcde3c;
+	font-size: 34px;
+	width: 1020px;
+	margin: 100px auto 0 auto;
+}
+
 div.artsy_top_menu div.artsy_city {
 	line-height: 50px;
 	height: 50px;
-	float: right;
+	float: left;
 	color: #fff;
 	font-size: 18px;
+	padding-left: 8px;
+	opacity: 0.8;
+	cursor: default;
 }
 
 div.artsy_top_menu div.add_city {
@@ -1094,7 +1109,7 @@ div.artsy_top div.content {
 body.summer ul.public_wall {
 	border-top: 0px solid #fff;
 	padding-top: 40px;
-	padding-bottom: 400px;
+	padding-bottom: 100px;
 }
 
 p.artsy_header {
@@ -1104,7 +1119,13 @@ p.artsy_header {
 	color: #fff;
 	text-align: left;
 	float: left;
-	padding-left: 10px;
+	padding-left: 2px;
+	opacity: 0.9;
+}
+
+p.artsy_header:hover {
+	cursor: pointer;
+	opacity: 1;
 }
 
 .artsy .title {
@@ -1116,6 +1137,10 @@ p.artsy_header {
 	height: 84px;
 	width: auto;
 	display: block;
+}
+
+.artsy:last-child {
+	color: red;
 }
 
 .artsy .title:hover {
@@ -1158,17 +1183,69 @@ div.artsy_details span.place {
 }
 	
 div.summer_pencil {
-	width: 200px;
-	height: 200px;
-	background-image: url(/assets/summer_pencil.svg);
-	background-size: 200px 200px;
-	position: fixed;
-	bottom: 0;
-	right: 0;
+	width: 140px;
+	height: 140px;
+	background-image: url(/assets/summer_pencil_2.svg);
+	background-size: 140px 140px;
+	float: left;
 	z-index: 5000;
 	display: block;
+	margin-top: 120px;
+	margin-left: -10px;
+	transition: all .6s ease-out;
+	-webkit-transform: rotate(-45deg);
+}
+
+div.write {
+	line-height: 140px;
+	padding-left: 12px;
+	text-align: center;
+	color: #fcde3c;
+	-webkit-transform: rotate(0);
+	opacity: 0;
+}
+
+div.summer_pencil:hover {
+	-webkit-transform: rotate(0);
+	cursor: pointer;
+	margin-left: 0;
 }
 	
 	
 	
+	
+	
+	
+@media only screen and (max-width: 1060px), only screen and (max-device-width: 1060px){ 
+	div.wrapper_public {
+		max-width: 680px;
+	}
+	div.artsy_top_menu {
+		width: 680px;
+		margin-left: -340px;
+	}
+	div.artsy_about p {
+		width: 680px;
+	}
+}
+
+@media only screen and (max-width: 720px), only screen and (max-device-width: 720px){ 
+	div.wrapper_public {
+		max-width: 500px;
+	}
+	ul.public_wall li {
+		float: none;		
+	}
+	div.activity_container_public { 
+		width: auto;
+	}
+	ul.public_wall {
+		margin-top: 0;	
+	}
+	div.artsy_top_menu {
+		width: auto;
+		margin-left: 0;
+		left: auto;
+	}
+}
 	
