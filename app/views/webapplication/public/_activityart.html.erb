@@ -1,0 +1,26 @@
+<%# activityart["invitation_token"]%>
+
+
+
+<p class="title"><%= activityart["title"]%></p><span class="no_und">,&nbsp</span>
+	
+<!--
+	<li onclick="window.location.href='<%= show_local_activities_url(activityart["id"])%>'" style="-webkit-user-select: none;">
+			<span class="creator_name"><%= activityart["user"]["user_name"]%><span class="how_many">& <%= activityart["attendee_ids"].size - 1%></span></span>
+			<span class="clear"></span>
+			<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
+			
+			<p class="activity_address">
+			<%= activityart["place_name"].empty? ? " " : activityart["place_name"]%>
+			<%= activityart["street"].empty? ? " " : activityart["street"] + ", " + activityart["city"]%>
+			</p>
+			<span class="activity_hours">
+				<%= DateTime.strptime(activityart["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%> - 
+				<span><%= DateTime.strptime(activityart["end_date"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%></span>
+			</span>			
+			
+			<span class="activity_date"><%= DateTime.strptime(activityart["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%d-%m-%Y")%></span>
+
+</li>
+-->
+

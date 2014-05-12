@@ -16,9 +16,14 @@ class Webapplication::PublicController < Webapplication::WebapplicationControlle
   
   
   def stockholm_summer
-    @title = "The summer we co-create"
+    @title = "Sommaren vi Skapar - Stockholm"
     @body_class = "summer"
-    @user = User.new
+    
+    @long = params[:long] ? params[:long] : 18.06491
+    @lat = params[:lat] ? params[:lat] : 59.32893
+    
+    respond_local = request_to_canu_api("https://api.canu.se/activities?latitude=#{@lat}&longitude=#{@long}")
+    @activities = JSON.parse(respond_local.body)
   end
   
   def update_feed

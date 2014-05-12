@@ -1,13 +1,12 @@
+<%# @activities.inspect%>
 <%# @activity%>
-<%# @attendees%>
-<div class="get_canu">
-	<!--<div class="logo_tiny"></div>-->
-	<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1">
-		<p class="get">Open in the app</p>
-	</a>
+<div class="artsy_top">
+	<p class="artsy_header">Sommaren<br> vi Skapar</p>
 </div>
-<div class="wrapper_public">
+<div class="wrapper_public" style="margin-top: 400px;">
 	<ul class="public_wall">
-		<%= render :partial => 'activity', :collection => @activities%>
+		<span class="artsy">
+			<%= render :partial => 'activityart', :collection => @activities%>
+		</span>
 	</ul>
 </div>
