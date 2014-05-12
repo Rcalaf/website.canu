@@ -1,12 +1,28 @@
 <%# @activities.inspect%>
 <%# @activity%>
-<div class="artsy_top">
-	<p class="artsy_header">Sommaren<br> vi Skapar</p>
+<script>
+$(document).ready(function(){
+	$(".title").hover(function() {	
+		$(this).find(".artsy_details").toggleClass("show_details");
+	});	
+});		
+</script>
+<div class="artsy_top_menu">
+	<p class="artsy_header">Sommaren vi Skapar</p>
+	<div class="add_city">+</div>
+	<div class="artsy_city">Stockholm</div>
 </div>
-<div class="wrapper_public" style="margin-top: 400px;">
+
+<div class="artsy_top">
+	<div class="content">
+		
+	</div>
+</div>
+<div class="wrapper_public">
 	<ul class="public_wall">
 		<span class="artsy">
 			<%= render :partial => 'activityart', :collection => @activities%>
 		</span>
 	</ul>
 </div>
+<div class="summer_pencil"></div>

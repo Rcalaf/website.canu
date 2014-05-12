@@ -1044,45 +1044,86 @@ Summer Art Project
 body.summer {
 	background-color: #fcde3c;
 	font-family: 'Vollkorn', serif;
+	cursor: url('/assets/summer_pencil.png') 10 5, cell;
+}
+
+div.artsy_top_menu {
+	width: 1020px;
+	background-color: #fcde3c;
+	height: 50px;
+	position: fixed;
+	top:0;
+	left: 50%;
+	margin-left: -510px;
+	z-index: 3000;
+}
+
+div.artsy_top_menu div.artsy_city {
+	line-height: 50px;
+	height: 50px;
+	float: right;
+	color: #fff;
+	font-size: 18px;
+}
+
+div.artsy_top_menu div.add_city {
+	line-height: 30px;
+	height: 30px;
+	float: right;
+	color: #fff;
+	font-size: 18px;
+	display: none;
 }
 
 div.artsy_top {
 	width: 100%;
 	position: absolute;
-	top: 0;
-	height: 400px;
-	background-image: url(/assets/summer.png);
+	top: 50px;
+	height: 0;
+	background-image: url(/assets/sumsmer.png);
 	background-size: cover;
+	z-index: 2000;
+}
+
+div.artsy_top div.content {
+	width: 1024px;
+	margin: 0 auto;
+	background-color: blue;
 }
 
 body.summer ul.public_wall {
-	border-top: 4px solid #fff;
+	border-top: 0px solid #fff;
 	padding-top: 40px;
+	padding-bottom: 400px;
 }
 
 p.artsy_header {
 	font-weight: 700;
-	font-size: 90px;
+	font-size: 18px;
+	line-height: 50px;
 	color: #fff;
-	text-align: center;
-	padding: 80px 40px 0 40px;
+	text-align: left;
+	float: left;
+	padding-left: 10px;
 }
 
-.artsy p.title {
+.artsy .title {
 	color: #fff;
 	font-size: 72px;
 	float: left;
 	word-break: break-word;
 	margin-top: 4px;
-	height: 80px;
+	height: 84px;
+	width: auto;
+	display: block;
 }
 
-.artsy p.title:hover {
+.artsy .title:hover {
   background-image: linear-gradient(0deg, #fff, #fff 50%, transparent 50%);
   background-size: 100% 1px;
   background-repeat: no-repeat;
   background-position: bottom;
-  cursor: pointer;
+  cursor: alias;
 }
 
 .no_und{
@@ -1091,8 +1132,42 @@ p.artsy_header {
 	font-size: 72px;
 	float: left;
 }
+
+div.artsy_details {
+	position: relative;
+	width: 100%;
+	height: 20px;
+	display: block;
+	left: 0;
+	bottom: 16px;
+	line-height: 20px;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 12px; 
+	transition: all .2s ease-in-out;
+	opacity: 0;
+}
+
+.show_details {
+	opacity: 1 !important;
+}
+
+div.artsy_details span.place {
+	float: right;
+}
 	
-	
+div.summer_pencil {
+	width: 200px;
+	height: 200px;
+	background-image: url(/assets/summer_pencil.svg);
+	background-size: 200px 200px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 5000;
+	display: block;
+}
 	
 	
 	

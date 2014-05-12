@@ -2,7 +2,31 @@
 
 
 
-<p class="title"><%= activityart["title"]%></p><span class="no_und">,&nbsp</span>
+<span class="title" onclick="window.location.href='<%= show_local_activities_url(activityart["id"])%>'">
+	<%= activityart["title"]%>
+	<div class="artsy_details">
+			<%= DateTime.strptime(activityart["start"], '%Y-%m-%d').strftime("%b %d")%>,
+			<%= DateTime.strptime(activityart["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%>	
+		<span class="place">
+			<%= activityart["place_name"].empty? ? " " : activityart["place_name"]%>
+			<%= activityart["street"].empty? ? " " : activityart["street"] + ", " + activityart["city"]%>
+		</span>
+	</div>
+</span>
+<span class="no_und">,&nbsp</span>
+<span class="title" onclick="window.location.href='<%= show_local_activities_url(activityart["id"])%>'">
+	<%= activityart["title"]%>
+	<div class="artsy_details">
+			<%= DateTime.strptime(activityart["start"], '%Y-%m-%d').strftime("%b %d")%>,
+			<%= DateTime.strptime(activityart["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%>	
+		<span class="place">
+			<%= activityart["place_name"].empty? ? " " : activityart["place_name"]%>
+			<%= activityart["street"].empty? ? " " : activityart["street"] + ", " + activityart["city"]%>
+		</span>
+	</div>
+</span>
+<span class="no_und">,&nbsp</span>
+
 	
 <!--
 	<li onclick="window.location.href='<%= show_local_activities_url(activityart["id"])%>'" style="-webkit-user-select: none;">
