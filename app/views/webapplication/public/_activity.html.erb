@@ -12,13 +12,21 @@
 			<span class="clear_line_2"></span>
 			<p class="activity_address">			
 			<%= activity["street"].empty? ? activity["place_name"] : activity["street"] + ", " + activity["city"]%>
-			<%= activity["city"].empty? ? activity["country"] : " "%>
+			<%= activity["city"].empty? ? activity["country"] : " "%>	
 			</p>
 			<span class="activity_hours">
-				<%= DateTime.strptime(activity["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%> - 
+				
+				
+				
+				<%= DateTime.strptime(activity["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%>	 - 
 				<span><%= DateTime.strptime(activity["end_date"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%></span>
+			
+			
+			
+			
+				
 			</span>			
 			
-			<span class="activity_date"><%= DateTime.strptime(activity["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%d-%m-%Y")%></span>
+			<span class="activity_date"><%= DateTime.strptime(activity["start"], '%Y-%m-%d').strftime("%b %d")%></span>
 		</div>
 	</div>

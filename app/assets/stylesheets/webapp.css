@@ -254,7 +254,7 @@ ul.public_wall li a.whole {
 
 div.activity_container_public {
 	max-width: 680px;
-	width: 320px;
+	width: 160px;
 	
 
 	height: auto;
@@ -391,7 +391,8 @@ p.activity_address{
 	float: left;
 	margin: 0;
 	opacity: 0.7;
-	width: 150px;
+	max-width: 140px;
+	width: auto;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
