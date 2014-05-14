@@ -10,9 +10,9 @@
 			<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
 			<p class="activity_title"><%= activity["title"]%></p>
 			<span class="clear_line_2"></span>
-			<p class="activity_address">
-			<%= activity["street"].empty? ? " " : activity["street"] + ", " + activity["city"]%>
-			<%= activity["place_name"].empty? ? " " : activity["place_name"]%>
+			<p class="activity_address">			
+			<%= activity["street"].empty? ? activity["place_name"] : activity["street"] + ", " + activity["city"]%>
+			<%= activity["city"].empty? ? activity["country"] : " "%>
 			</p>
 			<span class="activity_hours">
 				<%= DateTime.strptime(activity["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%> - 
@@ -22,5 +22,3 @@
 			<span class="activity_date"><%= DateTime.strptime(activity["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%d-%m-%Y")%></span>
 		</div>
 	</div>
-</li>
-

@@ -33,9 +33,8 @@
 			<span class="clear_line_2"></span>
 
 			<p class="activity_address" onclick="window.location.href='http://maps.google.com/maps?q=<%= @activity['latitude']%>,<%= @activity['longitude']%>'">
-			<%= @activity["place_name"].empty? ? " " : @activity["place_name"]%>
-			<%= @activity["street"].empty? ? " " : @activity["street"] + ", " + @activity["city"]%>
-			
+			<%= @activity["street"].empty? ? @activity["place_name"] : @activity["street"] + ", " + @activity["city"]%>
+			<%= @activity["city"].empty? ? @activity["country"] : " "%>		
 			</p>
 			<span class="activity_hours">
 				<%= Time.parse(@activity['start']).strftime("%H:%M")%> - 

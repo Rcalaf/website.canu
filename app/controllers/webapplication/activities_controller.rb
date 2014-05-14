@@ -48,7 +48,6 @@ class Webapplication::ActivitiesController < Webapplication::WebapplicationContr
         @chat_messages = JSON.parse(respond.body)
         respond = request_to_canu_api("http://api.canu.se/activities/#{@activity['id']}/attendees",:get,{},{})
         @attendees = JSON.parse(respond.body)
-        @title = "CANU - You're Invited"
         @body_class = "invite"
       end
    
