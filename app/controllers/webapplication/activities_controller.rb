@@ -2,7 +2,7 @@ class Webapplication::ActivitiesController < Webapplication::WebapplicationContr
   #before_filter :authenticate_user
   before_filter :http_basic_auth, :except => [:invite, :show]
   
-  layout 'webapp'
+  layout 'webapp_invite'
   
   def index
     puts session[:user]
