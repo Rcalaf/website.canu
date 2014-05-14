@@ -5,22 +5,14 @@ class Webapplication::WebapplicationController < ApplicationController
   protected 
   
   def authenticate_user
-    if session[:user]
-      response = request_to_canu_api("https://api.canu.se/session/", :post, {}, {token: session[:user]['token']})
-      if response.code.to_i == 400
-        redirect_to sign_in_url
-        session[:user] = nil
-      end
-    else
-      redirect_to sign_in_url
-      session[:user] = nil
-    end
+	  
   end
   
-  def request_to_canu_api(url, method = :get,headers = {}, params = {})
+  def request_to_canu_api(url, method = :get,headers = {}, params = {})	
+  
     uri = URI.parse(url)
     puts uri.inspect
-    http = Net::HTTP.new(uri.host, uri.port)
+    http = Net::HTTP.new(uri.host, 443)
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     puts http.inspect
