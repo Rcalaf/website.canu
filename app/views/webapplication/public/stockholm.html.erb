@@ -1,57 +1,6 @@
 <%# @activities.inspect%>
 <%# @activity%>
 
-<% content_for :header do%>
-<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<%end%>
-	
-<% content_for :js do %>
-	
-	var center;		  
-	var marker;
-	var map2;
-
-		function initMap(){
-		
-		center_2 = new google.maps.LatLng(<%=@lat%>, <%=@long%>);
-		zoom_2 = 11;
-		
-		
-		//alert('Loading Map');
-		
-		
-		var mapOptions_2 = {
-		 //scrollwheel: false,
-		 zoom: zoom_2,
-		 disableDefaultUI: true,
-		 mapTypeId: google.maps.MapTypeId.ROADMAP,
-		 center: center_2,
-		 styles: 
-		[{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
-		
-		};
-		
-		       
-		map_2 = new google.maps.Map(document.getElementById("map_canvas_2"),
-		       mapOptions_2);
-		       
-		 var myIconLocal = new google.maps.MarkerImage("http://vinitiate.se/blogazine/photos/canu_pin_local.png", null, null, null, new google.maps.Size(20,30));
-		
-		
-		<%@activities.each_with_index do |activity,index|%>
-			var marker_<%=index%> = new google.maps.Marker({
-			         map:map_2,
-			         draggable:false,
-			         animation: google.maps.Animation.DROP,
-			         position: new google.maps.LatLng("<%=activity['latitude']%>","<%=activity['longitude']%>"),
-			         icon: myIconLocal
-			      });
-		<%end%>
-					
-		}
-
-<%end%>
-
 
 
 
@@ -63,9 +12,9 @@
 		<p class="get">Open in the app</p>
 	</a>
 </div>
-<!-- <div id="map_canvas_2"></div> -->
 <div class="wrapper_public">
 	<ul class="public_wall">
 		<%= render :partial => 'activity', :collection => @activities%>
 	</ul>
 </div>
+
