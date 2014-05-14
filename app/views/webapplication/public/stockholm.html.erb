@@ -16,30 +16,23 @@ $(document).ready(function(){
 });		
 </script>
 
-
-
-
 <div class="get_canu">
 	<!--<div class="logo_tiny"></div>-->
 	<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1">
 		<p class="get">Open in the app</p>
 	</a>
 </div>
-<a class="suggest_button" id="suggest_trigger_mobile" href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform?usp=send_form" target="_blank">Add Activity</a>
-
-<div class="wrapper_public">
-<div class="sommaren_bg"></div>	
-	<ul class="public_wall">
-		<%= render :partial => 'activity', :collection => @activities%>
-	</ul>
-
-</div>
-
-
-<div class="suggest_bg"></div>
-
 <a class="suggest_button" id="suggest_trigger">Add Activity</div>
-
+<a class="suggest_button" id="suggest_trigger_mobile" href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform?usp=send_form" target="_blank">Add Activity</a>
+<span class="clear"></span>
+<div class="wrapper_public">
+		<div class="sommaren_bg"></div>	
+		<ul class="public_wall">
+			<%= render :partial => 'activity', :collection => @activities%>
+		</ul>
+	</div>
+</div>
+<div class="suggest_bg"></div>
 <div class="suggest_activity">
 	<iframe src="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform?embedded=true" width="540" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </div>
