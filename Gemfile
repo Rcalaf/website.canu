@@ -39,3 +39,5 @@ gem 'capistrano', '~> 2.15.5'
 
 gem 'meta-tags', :require => 'meta_tags'
 
+gem 'acts_as_opengraph', :require => 'acts_as_opengraph'
+
