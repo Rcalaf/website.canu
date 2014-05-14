@@ -1,5 +1,9 @@
 <%# @activity%>
 <%# @attendees%>
+<% content_for :opengraph_meta_tags do %>
+	acts_as_opengraph :values => { :type => "website", :site_name => "http://canu.se", :title => "<%= @activity['title']%>", :image => "http://www.canu.se/images/totem.png" }
+<% end %>
+
 <div class="get_canu">
 	<!--<div class="logo_tiny"></div>-->
 	<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1">
