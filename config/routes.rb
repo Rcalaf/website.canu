@@ -75,16 +75,16 @@ Canu::Application.routes.draw do
     # Public Page of a city:
     #
     
-    match 'stockholm' => 'webapplication/statistics#local_activities', :as => 'local_activities'
-    match 'public_stockholm/:id' => 'webapplication/public#show', :as => 'show_local_activities'
-    match 'public_stockholm' => 'webapplication/public#public_stockholm', :as => 'public_stockholm'
+    match 'stockholm/:id' => 'webapplication/public#show', :as => 'show_local_activities'
+    match 'stockholm' => 'webapplication/public#stockholm', :as => 'stockholm'
     
     
     #
     # Art Project (vitali):
     #
   
-    match 'stockholm_summer' => 'webapplication/public#stockholm_summer', :as => 'stockholm_summer'
+    match 'summer' => 'webapplication/public#summer', :as => 'summer'
+    match 'stockholm_summer' => 'webapplication/public#summer', :as => 'summer'
     
 
 

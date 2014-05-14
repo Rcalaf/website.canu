@@ -2,8 +2,8 @@ class Webapplication::PublicController < Webapplication::WebapplicationControlle
   
   layout 'webapp'
  
-  def public_stockholm
-    @title = "Public - Stockholm"
+  def stockholm
+    @title = "Stockholm"
     @body_class = "webapp"
     
     @long = params[:long] ? params[:long] : 18.06491
@@ -15,8 +15,8 @@ class Webapplication::PublicController < Webapplication::WebapplicationControlle
   end
   
   
-  def stockholm_summer
-    @title = "Sommaren vi Skapar - Stockholm"
+  def summer
+    @title = "Sommaren vi Skapar"
     @body_class = "summer"
     
     @long = params[:long] ? params[:long] : 18.06491
