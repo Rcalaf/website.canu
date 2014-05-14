@@ -14,7 +14,6 @@
 			<%= activity["street"].empty? ? " " : activity["street"] + ", " + activity["city"]%>
 			<%= activity["place_name"].empty? ? " " : activity["place_name"]%>
 			<!-- <%= activity["place_name"].equal? ?(activity["place_name"]) ? " " : activity["place_name"]%> -->
-			
 			</p>
 			<span class="activity_hours">
 				<%= DateTime.strptime(activity["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%> - 
