@@ -62,7 +62,7 @@ set :use_sudo, false
 # **ATTENTION** After the first deploy create “/var/www/my_app/shared/log” folder for toubleshooting
 #create a Task for this issue above.
 
-#Cleaner reaper error on cap deploy:restart & deploy. Those tries to restart mongrel clusters thorught a pool of scripts called spinners. 
+#Cleaner reaper error on cap deploy:restart & deploy. Thosecurrent_path tries to restart mongrel clusters thorught a pool of scripts called spinners. 
 #Now we restart passenger so we deploy over Phussion passenger instead
 deploy.task :restart, :roles => :app do
   run "touch #{current_path}/tmp/restart.txt"
@@ -171,6 +171,7 @@ namespace :deploy do
   desc "Migrate the DB"
   task :seed, :roles => :db do
     run "cd #{current_path}; rake db:seed RAILS_ENV='production'"
+    run "bundle:install"
   end
 end
 
