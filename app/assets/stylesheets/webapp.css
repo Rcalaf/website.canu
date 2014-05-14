@@ -364,7 +364,7 @@ img.creator_userpic {
 .creator_name span {
 	font-weight: 400;
 	opacity: 0.8;
-	margin-left: 2px;
+	margin-left: 4px;
 }
 
 .wrapper .creator_name:hover, .wrapper .creator_name:active {
@@ -1301,14 +1301,17 @@ p.summer_desc {
 	text-align: center;
 	width: auto;
 	margin-bottom: 50px;
+	margin-top: -80px;
 	opacity: 0.3;
+	font-style: italic;
+	font-weight: bold;
 }
 
 div.suggest_activity {
 	position: fixed;
 	background-color: #fff;
 	width: 540px;
-	height: 500px;
+	height: 505px;
 	bottom: -500px;
 	left: 50%;
 	margin-left: -270px;
@@ -1381,10 +1384,11 @@ Small Shitty Screens
 	.sommaren_bg {
 		width: 320px;
 		height: 160px;
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 	p.summer_desc {
-		margin-bottom: 10px;
+		margin-bottom: -10px;
+		margin-top: -20px;
 	}
 }
 	
