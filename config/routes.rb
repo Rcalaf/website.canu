@@ -77,6 +77,7 @@ Canu::Application.routes.draw do
     
     match 'stockholm/:id' => 'webapplication/public#show', :as => 'show_local_activities'
     match 'stockholm' => 'webapplication/public#stockholm', :as => 'stockholm'
+    match 'public_stockholm' => 'webapplication/public#stockholm', :as => 'stockholm'
     
     
     #
