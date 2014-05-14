@@ -1028,7 +1028,6 @@ Summer Art Project
 body.summer {
 	background-color: #fcde3c;
 	font-family: 'Vollkorn', serif;
-	font-family:"Siri Regular", Verdana, sans-serif;
 }
 
 
@@ -1086,6 +1085,7 @@ div.artsy_top_menu div.artsy_city {
 	padding-left: 8px;
 	opacity: 0.8;
 	cursor: default;
+		font-family:"Siri Regular", Verdana, sans-serif;
 }
 
 div.artsy_top_menu div.add_city {
@@ -1128,6 +1128,7 @@ p.artsy_header {
 	float: left;
 	padding-left: 2px;
 	opacity: 0.9;
+		font-family:"Siri Regular", Verdana, sans-serif;
 }
 
 p.artsy_header:hover {
