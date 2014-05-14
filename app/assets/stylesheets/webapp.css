@@ -233,9 +233,9 @@ div.wrapper_public {
 }
 
 ul.public_wall {
-	margin-top: 40px;
 	height: auto;
 	overflow: hidden;	
+	padding-bottom: 200px;
 }
 
 ul.public_wall li {
@@ -1220,7 +1220,96 @@ div.summer_pencil:hover {
 }
 	
 	
+/******************************
+Suggest Activity
+*******************************/
+
+a.suggest_button, a.suggest_button:link, a.suggest_button:visited {
+	position: absolute;
+	left: 50%;
+	margin-left: -80px;
+	text-align: center;
+	top:200px;
+	z-index: 90000;
+	display: block;
 	
+	width: 160px;
+	height: 45px;
+	line-height: 43px;
+	font-size: 16px;
+	background-color: #ec6057;
+	text-decoration: none;
+	text-shadow: none;
+	color: #fff;
+	border-radius: 4px;
+	
+	text-align: center;
+	border: 1px solid #cc4040;
+	
+	-webkit-transition: all 0.2s ease;  
+    -moz-transition: all 0.2s ease;    
+    -o-transition: all 0.3s ease;    
+    transition: all 0.3s ease; 
+}
+
+
+a.suggest_button:hover, a.suggest_button:active {
+	cursor: pointer;
+	background-color: #cc4040;
+	border: 1px solid #ba3939;
+}
+
+#suggest_trigger_mobile {
+	display: none;
+	float: left;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+div.suggest_bg {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(241, 245, 245, 0.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 90000;
+	display: none;
+}
+
+div.suggest_activity {
+	position: fixed;
+	background-color: #fff;
+	width: 540px;
+	height: 500px;
+	bottom: -500px;
+	left: 50%;
+	margin-left: -270px;
+	transition: all .8s ease-out ;
+	z-index: 91000;
+	display: block;
+}
+
+div.show_suggest {
+	bottom: -56px;
+}
+
+.sommaren_bg {
+	width: 700px;
+	height: 300px;
+	background-image: url(/assets/sommaren.svg);
+	background-size: 700px auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0 auto;
+}
+
+
+/******************************
+Small Shitty Screens
+*******************************/
 	
 	
 	
@@ -1254,6 +1343,13 @@ div.summer_pencil:hover {
 		width: auto;
 		margin-left: 0;
 		left: auto;
+	}
+	#suggest_trigger {
+		display: none;
+	}
+	
+	#suggest_trigger_mobile {
+		display: block;
 	}
 }
 	

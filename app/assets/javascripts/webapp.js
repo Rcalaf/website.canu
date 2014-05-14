@@ -30,6 +30,7 @@
 					$(".activity_people_wrapper").hide();
 					$(".activity_container, .get_canu").show();
 				});
+				$("#suggest_trigger_mobile").hide();
 		  }
 
 		  $( 'p.activity_description:empty').remove();
