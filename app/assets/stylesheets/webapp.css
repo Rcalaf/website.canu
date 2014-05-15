@@ -1062,7 +1062,7 @@ div.artsy_about {
 	top: -700px;
 	left: 0;
 	transition: all .8s ease-out ;
-	z-index: 2800;
+	z-index: 1800;
 	padding-bottom: 50px;
 }
 
@@ -1074,7 +1074,7 @@ div.artsy_about p {
 	color: #fcde3c;
 	font-size: 34px;
 	width: 1020px;
-	margin: 100px auto 0 auto;
+	margin: 80px auto 0 auto;
 }
 
 div.artsy_top_menu div.artsy_city {
@@ -1094,14 +1094,15 @@ div.artsy_top_menu div.artsy_why {
 	height: 50px;
 	float: right;
 	color: #fff;
-	font-size: 18px;
-	padding-left: 8px;
+	font-size: 14px;
+	margin-right: 8px;
 	opacity: 0.8;
 	cursor: default;
-		font-family:"Siri Regular", Verdana, sans-serif;
+	font-family:"Siri Regular", Verdana, sans-serif;
 }
 div.artsy_top_menu div.artsy_why:hover {
 	cursor: pointer;
+	opacity: 1;
 }
 
 div.artsy_top_menu div.add_city {
@@ -1113,26 +1114,11 @@ div.artsy_top_menu div.add_city {
 	display: none;
 }
 
-div.artsy_top {
-	width: 100%;
-	position: absolute;
-	top: 50px;
-	height: 0;
-	background-image: url(/assets/sumsmer.png);
-	background-size: cover;
-	z-index: 2000;
-}
-
-div.artsy_top div.content {
-	width: 1024px;
-	margin: 0 auto;
-	background-color: blue;
-}
 
 body.summer ul.public_wall {
 	border-top: 0px solid #fff;
-	padding-top: 120px;
-	padding-bottom: 300px;
+	padding-top: 100px;
+	padding-bottom: 200px;
 }
 
 p.artsy_header {
@@ -1144,7 +1130,7 @@ p.artsy_header {
 	float: left;
 	padding-left: 2px;
 	opacity: 1;
-		font-family:"Siri Regular", Verdana, sans-serif;
+	font-family:"Siri Regular", Verdana, sans-serif;
 }
 
 p.artsy_header:hover {
