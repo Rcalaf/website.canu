@@ -1326,6 +1326,10 @@ div.show_suggest {
 }
 
 
+#iphone_pencil {
+	display: none;
+}
+
 /******************************
 Small Shitty Screens
 *******************************/
@@ -1441,5 +1445,6 @@ Small Shitty Screens
 		margin-top: 40px;
 		margin-left: -10px;
 	}
+	
 }
 	
