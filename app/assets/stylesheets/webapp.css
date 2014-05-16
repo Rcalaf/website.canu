@@ -1143,45 +1143,53 @@ p.artsy_header:hover {
 	font-size: 72px;
 	float: left;
 	word-break: break-word;
-	margin-top: 4px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-top: 20px;
 	height: 84px;
 	width: auto;
 	display: block;
+	padding: 0;
+	background-size: calc(100% - 38px) 1px;
+    background-repeat: no-repeat;
+    background-position: 2px bottom;
 }
 
-.artsy:last-child {
-	color: red;
-}
 
 .artsy .title:hover {
   background-image: linear-gradient(0deg, #fff, #fff 50%, transparent 50%);
-  background-size: 100% 1px;
-  background-repeat: no-repeat;
-  background-position: bottom;
   cursor: alias;
 }
 
+.last_details_bg:hover {
+	background-size: calc(100% - 2px) 1px;
+}
+
 .no_und{
-	background-image: none;
-	color: #fff;
-	font-size: 72px;
-	float: left;
+	width: 30px;
+	background-color: #fcde3c;
+	padding: 0;
+	margin: 0;
 }
 
 div.artsy_details {
 	position: relative;
-	width: 100%;
-	height: 20px;
+	width: calc(100% - 38px);
+	height: 18px;
 	display: block;
-	left: 0;
-	bottom: 16px;
-	line-height: 20px;
+	left: 2px;
+	bottom: 18px;
+	line-height: 18px;
 	margin: 0;
 	padding: 0;
 	color: #fff;
 	font-size: 12px; 
 	transition: all .2s ease-in-out;
 	opacity: 0;
+}
+
+div.last_details {
+	width: calc(100% - 2px);
 }
 
 .show_details {
@@ -1200,7 +1208,7 @@ div.summer_pencil {
 	float: left;
 	z-index: 5000;
 	display: block;
-	margin-top: 120px;
+	margin-top: 80px;
 	margin-left: -10px;
 	transition: all .6s ease-out;
 	-webkit-transform: rotate(-45deg);
@@ -1329,6 +1337,11 @@ Small Shitty Screens
 	div.wrapper_public {
 		max-width: 680px;
 	}
+	
+	body.summer div.wrapper_public {
+		max-width: 880px;
+	}
+	
 	div.artsy_top_menu {
 		width: 680px;
 		margin-left: -340px;
@@ -1337,14 +1350,19 @@ Small Shitty Screens
 		width: 680px;
 	}
 	.sommaren_bg {
-	width: 600px;
-}
+		width: 600px;
+	}
 }
 
 @media only screen and (max-width: 720px), only screen and (max-device-width: 720px){ 
 	div.wrapper_public {
 		max-width: 500px;
 	}
+	
+	body.summer div.wrapper_public {
+		max-width: 700px;
+	}
+		
 	ul.public_wall li {
 		float: none;		
 	}

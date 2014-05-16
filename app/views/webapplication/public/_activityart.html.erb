@@ -1,6 +1,6 @@
 <%# activityart["invitation_token"]%>
 <span class="title" onclick="window.location.href='<%= show_local_activities_url(activityart["id"])%>'">
-	<%= activityart["title"]%>
+	<%= activityart["title"]%><span class="no_und">,&nbsp</span>
 	<div class="artsy_details">
 			<%= DateTime.strptime(activityart["start"], '%Y-%m-%d').strftime("%b %d")%>, 
 			<%= DateTime.strptime(activityart["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%>	
@@ -10,6 +10,6 @@
 		</span>
 	</div>
 </span>
-<span class="no_und">,&nbsp</span>
+
 
 

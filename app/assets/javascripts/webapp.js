@@ -41,6 +41,10 @@
 		  });
 		  
 		  $('.how_many:contains("0")').each(function () { $(this).hide(); });
+		  
+		  $('.artsy span.title').last().find(".no_und").hide();
+		  $('.artsy span.title').last().find(".artsy_details").addClass("last_details");
+		  $('.artsy span.title').last().addClass("last_details_bg");
 		
 		//$('html, body').animate({scrollTop: $(document).height()}, 'slow');
 		

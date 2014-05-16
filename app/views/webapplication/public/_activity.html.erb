@@ -5,7 +5,13 @@
 			<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
 				<div class="alternative_userpic" style="background-image: url(http://api.canu.se/<%= activity['user']['profile_pic']%>);"></div>
 			</div>
-			<span class="creator_name"><%= activity["user"]["user_name"]%><span class="how_many">& <%= activity["attendee_ids"].size - 1%></span></span>
+			<span class="creator_name">
+
+				<%= activity['user']['user_name']%> 
+				
+				
+				<span class="how_many">& <%= activity["attendee_ids"].size - 1%></span>
+			</span>
 			<span class="clear"></span>
 			<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
 			<p class="activity_title"><%= activity["title"]%></p>
