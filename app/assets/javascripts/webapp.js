@@ -31,6 +31,9 @@
 					$(".activity_container, .get_canu").show();
 				});
 				$("#suggest_trigger_mobile").hide();
+				
+				$("#normal_pencil").hide();
+				$("#iphone_pencil").show(); 
 
 		  }
 

@@ -6,8 +6,6 @@ $(document).ready(function(){
 		$(this).find(".artsy_details").toggleClass("show_details");
 	});
 	
-	$('.title').on({ 'touchstart' : function(){ $(this).find(".artsy_details").addClass("show_details"); } });
-	$('.title').on({ 'touchend' : function(){ $(this).find(".artsy_details").removeClass("show_details"); } });
 	
 	$(".summer_pencil").hover(function() {	
 		$(".write").toggleClass("show_details");
@@ -20,15 +18,9 @@ $(document).ready(function(){
 	$('.artsy span.title').last().find(".artsy_details").addClass("last_details");
 	$('.artsy span.title').last().addClass("last_details_bg");
 	$("#normal_pencil").show();
-	
-  var isiPhone = navigator.userAgent.toLowerCase().indexOf("iphone");
-
-  if(isiPhone > -1)
-
-  {
- 	$("#normal_pencil").hide();
-	$("#iphone_pencil").show(); 
-  }
+  
+  	$('.title').on({ 'touchstart' : function(){ $(this).find(".artsy_details").addClass("show_details"); } });
+	$('.title').on({ 'touchend' : function(){ $(this).find(".artsy_details").removeClass("show_details"); } });
 });		
 </script>
 <div class="artsy_top_menu_bg"></div>
