@@ -1094,8 +1094,8 @@ div.artsy_top_menu div.artsy_why {
 	height: 50px;
 	float: right;
 	color: #fff;
-	font-size: 14px;
-	margin-right: 8px;
+	font-size: 18px;
+	margin-right: 10px;
 	opacity: 0.8;
 	cursor: default;
 	font-family:"Siri Regular", Verdana, sans-serif;
@@ -1167,7 +1167,6 @@ p.artsy_header:hover {
 
 .no_und{
 	width: 30px;
-	background-color: #fcde3c;
 	padding: 0;
 	margin: 0;
 }
@@ -1262,7 +1261,7 @@ a.suggest_button, a.suggest_button:link, a.suggest_button:visited {
 }
 
 
-a.suggest_button:hover, a.suggest_button:active {
+a.suggest_button:hover {
 	cursor: pointer;
 	background-color: #cc4040;
 	border: 1px solid #ba3939;
@@ -1342,12 +1341,13 @@ Small Shitty Screens
 		max-width: 880px;
 	}
 	
+	
 	div.artsy_top_menu {
-		width: 680px;
-		margin-left: -340px;
+		width: 880px;
+		margin-left: -440px;
 	}
 	div.artsy_about p {
-		width: 680px;
+		width: 880px;
 	}
 	.sommaren_bg {
 		width: 600px;
@@ -1359,9 +1359,6 @@ Small Shitty Screens
 		max-width: 500px;
 	}
 	
-	body.summer div.wrapper_public {
-		max-width: 700px;
-	}
 		
 	ul.public_wall li {
 		float: none;		
@@ -1393,6 +1390,56 @@ Small Shitty Screens
 	p.summer_desc {
 		margin-bottom: -10px;
 		margin-top: -20px;
+	}
+	
+	body.summer div.wrapper_public {
+		width: auto;
+	}
+	
+	body.summer ul.public_wall {
+		width: calc(100% - 20px);
+		margin-left: 10px;
+		padding-top: 40px;
+		padding-bottom: 10px;
+	}
+	body.summer ul.public_wall .title {
+		font-size: 38px;
+		margin-top: 10px;
+		height: 52px;
+	}
+	
+	.artsy_details {
+		font-size: 12px !important;
+		bottom: 10px !important;
+		
+	}
+	
+	.artsy_details .place {
+		display: none;
+	}
+	.artsy_why {
+		display: none;
+	}
+	
+	p.artsy_header {
+		margin-left: 10px;
+		font-size: 14px;
+	}
+	
+	.artsy_city{
+		font-size: 14px !important;
+	}
+	.artsy .title:hover {
+	  background-image: none;
+	}
+	
+	div.summer_pencil {
+		width: 80px;
+		height: 80px;
+		background-image: url(/assets/summer_pencil_2.svg);
+		background-size: 80px 80px;
+		margin-top: 40px;
+		margin-left: -10px;
 	}
 }
 	
