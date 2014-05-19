@@ -1257,10 +1257,10 @@ div.artsy_details span.place {
 }
 	
 div.summer_pencil {
-	width: 120px;
-	height: 120px;
+	width: 100px;
+	height: 100px;
 	background-image: url(/assets/summer_pencil.svg);
-	background-size: 120px 120px;
+	background-size: 100px 100px;
 	float: left;
 	z-index: 5000;
 	display: block;
@@ -1279,7 +1279,7 @@ p.write {
 	height: 20px;
 	font-size: 18px;
 	width: 600px;
-	padding-top: 100px;
+	padding-top: 80px;
 	padding-bottom: 40px;
 	line-height: 20px;
 	position: relative;
