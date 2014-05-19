@@ -1030,16 +1030,31 @@ Summer Art Project
 
 
 body.summer {
-	background-color: #fcde3c;
+	background-color: #f9d63c;
+	background-color: #111;
 	font-family:"Siri Core Regular", sans-serif; font-weight:normal; font-style:normal;
 }
 
+
+a.quote:link, a.quote:visited, a.quote {
+	color: #fff;
+	font-size: 14px;
+	opacity: 0.7;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	transition: all .2s ease-in-out;
+}
+
+a.quote:hover {
+	opacity: 1;
+}
 
 
 
 div.artsy_top_menu_bg {
 	width: 100%;
-	background-color: #fcde3c;
+	background-color: #f9d63c;
 	height: 50px;
 	position: fixed;
 	top:0;
@@ -1049,7 +1064,7 @@ div.artsy_top_menu_bg {
 
 div.artsy_top_menu {
 	width: 1020px;
-	background-color: #fcde3c;
+	background-color: #f9d63c;
 	height: 50px;
 	position: fixed;
 	top:0;
@@ -1061,6 +1076,7 @@ div.artsy_top_menu {
 div.artsy_about {
 	position: fixed;
 	background-color: #fff;
+	
 	width: 100%;
 	height: auto;
 	top: -700px;
@@ -1075,7 +1091,7 @@ div.show_about {
 }
 
 div.artsy_about p {
-	color: #fcde3c;
+	color: #f9d63c;
 	font-size: 34px;
 	width: 1020px;
 	margin: 80px auto 0 auto;
@@ -1142,13 +1158,14 @@ p.artsy_header:hover {
 
 .artsy .title {
 	color: #fff;
-	font-size: 72px;
+	font-size: 70px;
 	float: left;
 	word-break: break-word;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	margin-top: 20px;
-	height: 84px;
+	margin-top: 28px;
+	height: 72px;
+	line-height: 72px;
 	width: auto;
 	display: block;
 	padding: 0;
@@ -1180,7 +1197,7 @@ div.artsy_details {
 	height: 18px;
 	display: block;
 	left: 2px;
-	bottom: 18px;
+	bottom: -2px;
 	line-height: 18px;
 	margin: 0;
 	padding: 0;
@@ -1220,7 +1237,7 @@ div.write {
 	line-height: 120px;
 	padding-left: 12px;
 	text-align: center;
-	color: #fcde3c;
+	color: #f9d63c;
 	-webkit-transform: rotate(0);
 	opacity: 0;
 }
