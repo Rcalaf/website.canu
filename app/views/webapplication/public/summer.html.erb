@@ -7,10 +7,7 @@ $(document).ready(function(){
 	});
 	
 	
-	$(".summer_pencil").hover(function() {	
-		$(".write").toggleClass("show_details");
-	});	
-	$("#click_about").click(function() {	
+	$("#click_about").click(function() {
 		$(".artsy_about").toggleClass("show_about");
 		$(this).html($(this).html() == 'Hide' ? 'About' : 'Hide');
 	});	
@@ -18,6 +15,10 @@ $(document).ready(function(){
 	$('.artsy span.title').last().find(".artsy_details").addClass("last_details");
 	$('.artsy span.title').last().addClass("last_details_bg");
 	$("#normal_pencil").show();
+	
+	$(".summer_pencil").hover(function(){
+		$("body.summer, .artsy_top_menu_bg, .artsy_top_menu").toggleClass("change");
+	});
   
   	$('.title').on({ 'touchstart' : function(){ $(this).find(".artsy_details").addClass("show_details"); } });
 	$('.title').on({ 'touchend' : function(){ $(this).find(".artsy_details").removeClass("show_details"); } });
@@ -28,11 +29,11 @@ $(document).ready(function(){
 	<p class="artsy_header" >Sommaren vi Skapar</p>
 	<div class="artsy_city">Stockholm</div>
 	<div class="artsy_why" id="click_about">About</div>
-	<a href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform"><div class="artsy_why">Suggest</div></a>
+	<!--<a href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform"><div class="artsy_why">Suggest</div></a>-->
 </div>
 <a href="http://lettersfromsweden.se" target="_blank" class="quote">Fonts by Letters from Sweden</a>
 <div class="artsy_about">
-	<p class="about">We are co-creating this summer together. This is the perfect time to do our favourite activities and share them the time together. By opening up our casual plans we expand our social circles and make the city a friendly place to be. So, what are you up to?</p>
+	<p class="about">This is what we are inviting each other to do in Stockholm this summer. Put up anything you feel like doing.</p>
 </div>
 <div class="wrapper_public">
 	<ul class="public_wall">

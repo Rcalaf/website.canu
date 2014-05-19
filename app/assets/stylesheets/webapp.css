@@ -1027,12 +1027,26 @@ Summer Art Project
 *******************************/
 
 
-
+body.summer, .artsy_top_menu_bg, .artsy_top_menu {
+	transition: all .3s ease-in-out;
+}
 
 body.summer {
-	background-color: #f9d63c;
+	background-color: #f9d63c; 
+	
+	
+	font-family:"Trim Light", sans-serif; font-weight:200; font-style:normal;
+	font-family:"Siri Core Bold", sans-serif; font-weight:bold; font-style:normal; 
 	font-family:"Siri Core Regular", sans-serif; font-weight:normal; font-style:normal;
+	font-family:"Trim SemiBold", sans-serif; font-weight:600; font-style:normal;
+	
+	
 }
+
+.change {
+	background-color: #ed5f57 !important;
+}
+
 
 
 a.quote:link, a.quote:visited, a.quote {
@@ -1053,7 +1067,7 @@ a.quote:hover {
 
 div.artsy_top_menu_bg {
 	width: 100%;
-	background-color: #f9d63c;
+	background-color: #f9d63c; 
 	height: 50px;
 	position: fixed;
 	top:0;
@@ -1063,7 +1077,7 @@ div.artsy_top_menu_bg {
 
 div.artsy_top_menu {
 	width: 1020px;
-	background-color: #f9d63c;
+	background-color: #f9d63c; 
 	height: 50px;
 	position: fixed;
 	top:0;
@@ -1074,26 +1088,27 @@ div.artsy_top_menu {
 
 div.artsy_about {
 	position: fixed;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 1);
 	
-	width: 100%;
-	height: auto;
-	top: -700px;
-	left: 0;
+	width: calc(100% - 100px);
+	height: calc(100% - 50px);
+	top: 100%;
+	left: 50px;
 	transition: all .8s ease-out ;
-	z-index: 1800;
-	padding-bottom: 50px;
+	z-index: 188800;
+	
 }
 
-div.show_about {
-	top: 0;
+.show_about {
+  top: 50px !important;
 }
+
 
 div.artsy_about p {
-	color: #f9d63c;
-	font-size: 34px;
-	width: 1020px;
-	margin: 80px auto 0 auto;
+	color: #333;
+	font-size: 72px;
+	padding: 80px;
+	margin: 0 auto;
 }
 
 div.artsy_top_menu div.artsy_city {
@@ -1103,9 +1118,13 @@ div.artsy_top_menu div.artsy_city {
 	color: #fff;
 	font-size: 18px;
 	padding-left: 8px;
-	opacity: 0.5;
+	opacity: 0;
 	cursor: default;
-	font-family:"Siri Regular", Verdana, sans-serif;
+	transition: all .2s ease-in-out;
+}
+
+.city_opacity {
+	opacity: 0.5 !important;
 }
 
 div.artsy_top_menu div.artsy_why {
@@ -1163,8 +1182,8 @@ p.artsy_header:hover {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	margin-top: 28px;
-	height: 72px;
-	line-height: 72px;
+	height: 66px;
+	line-height: 66px;
 	width: auto;
 	display: block;
 	padding: 0;
