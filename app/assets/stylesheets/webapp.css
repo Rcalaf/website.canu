@@ -1026,10 +1026,14 @@ Mobile
 Summer Art Project
 *******************************/
 
+
+
+
 body.summer {
 	background-color: #fcde3c;
-	font-family: 'Vollkorn', serif;
+	font-family:"Siri Core Regular", sans-serif; font-weight:normal; font-style:normal;
 }
+
 
 
 
@@ -1098,7 +1102,6 @@ div.artsy_top_menu div.artsy_why {
 	margin-right: 10px;
 	opacity: 0.8;
 	cursor: default;
-	font-family:"Siri Regular", Verdana, sans-serif;
 }
 div.artsy_top_menu div.artsy_why:hover {
 	cursor: pointer;
@@ -1130,7 +1133,6 @@ p.artsy_header {
 	float: left;
 	padding-left: 2px;
 	opacity: 1;
-	font-family:"Siri Regular", Verdana, sans-serif;
 }
 
 p.artsy_header:hover {
@@ -1153,6 +1155,7 @@ p.artsy_header:hover {
 	background-size: calc(100% - 38px) 1px;
     background-repeat: no-repeat;
     background-position: 2px bottom;
+
 }
 
 
