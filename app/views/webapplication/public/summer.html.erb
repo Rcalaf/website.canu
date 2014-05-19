@@ -9,13 +9,23 @@ $(document).ready(function(){
 	
 	$("#click_about").click(function() {
 		$(".artsy_about").toggleClass("show_about");
-		$(this).html($(this).html() == 'Hide' ? 'About' : 'Hide');
 	});	
+	
+	$(".artsy_about").click(function() {
+		$(this).toggleClass("show_about");
+	});	
+	
+	
 	$('.artsy span.title').last().find(".no_und").hide();
 	$('.artsy span.title').last().find(".artsy_details").addClass("last_details");
 	$('.artsy span.title').last().addClass("last_details_bg");
 	$("#normal_pencil").show();
 	
+
+	$(".artsy_header").hover(function(){
+		$(".artsy_city").toggleClass("show_city");
+	});
+
 	$(".summer_pencil").hover(function(){
 		$("body.summer, .artsy_top_menu_bg, .artsy_top_menu").toggleClass("change");
 		$(".write").toggleClass("show_write");
@@ -28,18 +38,19 @@ $(document).ready(function(){
 <div class="artsy_top_menu_bg"></div>
 <div class="artsy_top_menu">
 	<p class="artsy_header" >Sommaren vi Skapar</p>
-	<div class="artsy_city">Stockholm</div>
+	<div class="artsy_city">i Stockholm</div>
 	<div class="artsy_why" id="click_about">About</div>
-	<!--<a href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform"><div class="artsy_why">Suggest</div></a>-->
 </div>
 <a href="http://lettersfromsweden.se" target="_blank" class="quote">Fonts by Letters from Sweden</a>
 <div class="artsy_about">
-	<p class="about">This is what we are doing in Stockholm this summer. <br><br>Put up anything you feel like doing.</p>
+	<p class="about">This is what we are doing in Stockholm this summer. <br><br>Put up anything you feel like.</p>
+	<p class="description">This are all the spontaneous ideas from the public feed of <a href="www.canu.se" target="_blank">CANU</a>. Let's meet.</p>
 </div>
 <div class="wrapper_public">
 	<ul class="public_wall">
 		<span class="artsy">
 			<%= render :partial => 'activityart', :collection => @activities%>
+<!--
 			<span class="title">Tennis<span class="no_und">,&nbsp</span><div class="artsy_details">June 18, 18:00<span class="place">Skanstull</span></div></span>
 			<span class="title">Skate Park<span class="no_und">,&nbsp</span><div class="artsy_details">June 18, 18:00<span class="place">Skanstull</span></div></span>
 			<span class="title">Dance for Love<span class="no_und">,&nbsp</span><div class="artsy_details">June 18, 18:00<span class="place">Skanstull</span></div></span>
@@ -52,6 +63,7 @@ $(document).ready(function(){
 			<span class="title">Swimming<span class="no_und">,&nbsp</span><div class="artsy_details">June 18, 18:00<span class="place">Skanstull</span></div></span>
 			<span class="title">Fika<span class="no_und">,&nbsp</span><div class="artsy_details">June 18, 18:00<span class="place">Skanstull</span></div></span>
 			<span class="title">Coffee<span class="no_und">,&nbsp</span><div class="artsy_details">June 18, 18:00<span class="place">Skanstull</span></div></span>
+-->
 		</span>			
 		
 		<span class="clear"></span>
@@ -60,7 +72,7 @@ $(document).ready(function(){
 		</div>
 		<div class="summer_pencil" id="normal_pencil">
 			<p class="write">
-				Write using <a href="https://itunes.apple.com/us/app/canu-get-together/id697998179">CANU</a> or<a href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform"> this form.</a>
+				Write using <a href="https://itunes.apple.com/us/app/canu-get-together/id697998179">CANU</a> or this boring <a href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform">form</a>.
 			</p>
 		</div>
 	</ul>
