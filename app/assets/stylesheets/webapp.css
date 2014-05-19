@@ -1240,31 +1240,42 @@ div.artsy_details span.place {
 div.summer_pencil {
 	width: 120px;
 	height: 120px;
-	background-image: url(/assets/summer_pencil_2.svg);
+	background-image: url(/assets/summer_pencil.svg);
 	background-size: 120px 120px;
 	float: left;
 	z-index: 5000;
 	display: block;
 	margin-top: 80px;
-	margin-left: -10px;
 	transition: all .6s ease-out;
-	-webkit-transform: rotate(-45deg);
 }
 
-div.write {
-	line-height: 120px;
-	padding-left: 12px;
-	text-align: center;
-	color: #f9d63c;
-	-webkit-transform: rotate(0);
-	opacity: 0;
+
+p.write {
+	color: #fff;
+	opacity: 1;
+	display: none;
+	font-family:"Trim Light", sans-serif; font-weight:200; font-style:normal;
+	margin-left: 100px;
+	width: auto;
+	height: 20px;
+	width: 300px;
+	padding-top: 100px;
+	padding-bottom: 40px;
+	line-height: 20px;
+	position: relative;
+	top: 0;
+	left: 0;
 }
 
-div.summer_pencil:hover {
-	-webkit-transform: rotate(-30);
-	cursor: pointer;
+.show_write {
+	display: block !important;
 }
-	
+
+p.write a:link, p.write a:visited  {
+	color: #fff;
+	text-decoration: underline;
+}
+
 	
 /******************************
 Suggest Activity
