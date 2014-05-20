@@ -1218,9 +1218,24 @@ p.artsy_header:hover {
   cursor: alias;
 }
 
+.artsy .fake .title {
+	opacity: 0.5;
+}
+
+.artsy .fake .title:hover {
+	cursor: default;
+	background-image: none;
+}
+
+
+
 .last_details_bg:hover {
 	background-size: calc(100% - 2px) 1px;
 }
+
+
+
+
 
 .no_und{
 	width: 30px;
@@ -1239,9 +1254,10 @@ div.artsy_details {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	font-size: 12px; 
+	font-size: 13px; 
 	transition: all .2s ease-in-out;
 	opacity: 0;
+	font-family:"Trim Light", sans-serif; font-weight:200; font-style:normal;
 }
 
 div.last_details {
