@@ -236,7 +236,7 @@ div.wrapper_public {
 ul.public_wall {
 	height: auto;
 	overflow: hidden;	
-	padding-bottom: 200px;
+	padding-bottom: 10px;
 }
 
 ul.public_wall li {
@@ -1346,6 +1346,51 @@ a.suggest_button:hover {
 	border: 1px solid #ba3939;
 }
 
+.create_options {
+	position: absolute;
+	width: 160px;
+	display: block;
+	height: auto;
+
+	right: 21px;
+	top: 10px;
+	opacity: 1;
+	display: none;
+	z-index: 3000000;
+	
+
+}
+
+.create_options li {
+	float: left;
+	margin-top: 10px;
+
+	padding: 0;
+	width: 160px;
+	height: 45px;
+	line-height: 43px;
+	font-size: 14px;
+	background-color: rgba(255, 255, 255, 1);
+	color: #bfc9cd;
+	border-radius: 4px;
+	
+	border: 1px solid #bfc9cd;
+	text-align: center;
+	z-index: 4000;
+	
+	-webkit-transition: all 0.2s ease;  
+    -moz-transition: all 0.2s ease;    
+    -o-transition: all 0.2s ease;    
+    transition: all 0.2s ease; 
+}
+
+
+.create_options li:hover {
+	color: #d9dfe1;
+	cursor: pointer;
+}
+
+
 #suggest_trigger_mobile {
 	display: none;
 	float: left;
@@ -1376,15 +1421,15 @@ p.summer_desc {
 	margin-top: 20px;
 	opacity: 0.3;
 	font-style: italic;
-	font-weight: bold;
+
 }
 
 div.suggest_activity {
 	position: fixed;
 	background-color: #fff;
 	width: 540px;
-	height: 505px;
-	bottom: -500px;
+	height: 520px;
+	top: -700px;
 	left: 50%;
 	margin-left: -270px;
 	transition: all .8s ease-out ;
@@ -1393,7 +1438,8 @@ div.suggest_activity {
 }
 
 div.show_suggest {
-	bottom: -56px;
+	top: 50%;
+	margin-top: -260px;
 }
 
 .sommaren_bg {
@@ -1456,7 +1502,11 @@ Small Shitty Screens
 		margin-left: 0;
 		left: 10px;
 	}
-	#suggest_trigger {
+	#trigger_options {
+		display: none;
+	}
+	
+	.suggest_activity {
 		display: none;
 	}
 	
@@ -1470,7 +1520,7 @@ Small Shitty Screens
 		margin-top: 20px;
 	}
 	p.summer_desc {
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		margin-top: 20px;
 	}
 	

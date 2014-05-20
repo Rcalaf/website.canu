@@ -32,6 +32,7 @@
 				});
 				$("#suggest_trigger_mobile").hide();
 				
+				$(".sommaren_bg").css("margin-top", "48px");				
 		  }
 
 		  $( 'p.activity_description:empty').remove();
