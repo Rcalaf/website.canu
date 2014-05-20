@@ -6,10 +6,6 @@ $(document).ready(function(){
 		$(this).find(".artsy_details").toggleClass("show_details");
 	});
 	
-	$('.title').on({ 'touchstart' : function(){ $(this).find(".artsy_details").addClass("show_details"); } });
-	$('.title').on({ 'touchend' : function(){ $(this).find(".artsy_details").removeClass("show_details"); } });
-	
-	
 	$("#click_about").click(function() {
 		$(".artsy_about").toggleClass("show_about");
 	});	
