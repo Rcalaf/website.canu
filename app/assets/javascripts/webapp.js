@@ -32,9 +32,6 @@
 				});
 				$("#suggest_trigger_mobile").hide();
 				
-				$("#normal_pencil").hide();
-				$("#iphone_pencil").show(); 
-
 		  }
 
 		  $( 'p.activity_description:empty').remove();

@@ -1092,12 +1092,17 @@ div.artsy_about {
 	position: fixed;
 	background-color: rgba(255, 255, 255, 1);
 	
-	width: calc(100% - 80px);
-	height: calc(100%);
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
 	top: 100%;
-	left: 40px;
+	left: 10px;
 	transition: all .8s ease-out ;
 	z-index: 188800;
+	overflow: auto;
+}
+
+div.artsy_about::-webkit-scrollbar { 
+    display: none; 
 }
 
 div.artsy_about:hover {
@@ -1105,14 +1110,15 @@ div.artsy_about:hover {
 }
 
 .show_about {
-  top: 0 !important;
+  top: 10px !important;
 }
 
 
 div.artsy_about p.about {
+	position: relative;
 	color: #333;
 	font-size: 72px;
-	padding: 80px;
+	padding: 60px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -1121,9 +1127,10 @@ div.artsy_about p.description {
 	color: rgba(200, 200, 200, 1);
 	font-size: 24px;
 	line-height: 34px;
-	padding: 40px 20px;
+	text-align: center;
 	margin: 0 auto;
 	font-family:"Trim Light", sans-serif; font-weight:200; font-style:normal;
+	padding-bottom: 100px;
 }
 
 div.artsy_about p.description a:link , div.artsy_about p.description a:visited {
@@ -1373,7 +1380,7 @@ p.summer_desc {
 	text-align: center;
 	width: auto;
 	margin-bottom: 50px;
-	margin-top: -80px;
+	margin-top: 20px;
 	opacity: 0.3;
 	font-style: italic;
 	font-weight: bold;
@@ -1398,7 +1405,7 @@ div.show_suggest {
 
 .sommaren_bg {
 	width: 800px;
-	height: 270px;
+	height: 400px;
 	display: block;
 	position: static;
 	margin: 0 auto;
@@ -1421,16 +1428,18 @@ Small Shitty Screens
 	}
 	
 	body.summer div.wrapper_public {
-		max-width: 880px;
+		max-width: calc(100% - 40px);
 	}
 	
 	
 	div.artsy_top_menu {
-		width: 880px;
-		margin-left: -440px;
+		width: calc(100% - 40px);
+		margin-left: 0;
+		left: 20px;
 	}
 	.sommaren_bg {
 		width: 600px;
+		height: 300px;
 	}
 }
 
@@ -1450,9 +1459,9 @@ Small Shitty Screens
 		margin-top: 0;	
 	}
 	div.artsy_top_menu {
-		width: auto;
+		width: calc(100% - 20px);
 		margin-left: 0;
-		left: auto;
+		left: 10px;
 	}
 	#suggest_trigger {
 		display: none;
@@ -1468,29 +1477,32 @@ Small Shitty Screens
 		margin-top: 20px;
 	}
 	p.summer_desc {
-		margin-bottom: -10px;
-		margin-top: -20px;
+		margin-bottom: 20px;
+		margin-top: 20px;
 	}
 	
 	body.summer div.wrapper_public {
 		width: auto;
 	}
 	
+	
+	
 	body.summer ul.public_wall {
-		width: calc(100% - 20px);
-		margin-left: 10px;
-		padding-top: 40px;
+		width: 100%;
+	
+		padding-top: 20px;
 		padding-bottom: 10px;
 	}
 	body.summer ul.public_wall .title {
-		font-size: 38px;
-		margin-top: 10px;
-		height: 52px;
+		font-size: 28px;
+		margin-top: 8px;
+		height: 42px;
 	}
 	
 	.artsy_details {
 		font-size: 12px !important;
-		bottom: 10px !important;
+		bottom: 20px !important;
+		margin-left: -4px !important;
 		
 	}
 	
@@ -1504,7 +1516,7 @@ Small Shitty Screens
 	
 	p.artsy_header {
 		margin-left: 10px;
-		font-size: 14px;
+		font-size: 22px;
 	}
 	
 	.artsy_city{
@@ -1517,10 +1529,43 @@ Small Shitty Screens
 	div.summer_pencil {
 		width: 80px;
 		height: 80px;
-		background-image: url(/assets/summer_pencil_2.svg);
 		background-size: 80px 80px;
-		margin-top: 40px;
-		margin-left: -10px;
+		margin-top: 80px;
+		margin-left: 0;
+		padding-bottom: 140px;
+		background-repeat: no-repeat;
+	}
+	
+	div.summer_pencil p.write {
+		width: 300px;
+		text-align: center;
+		display: block;
+		height: 20px;
+		font-size: 16px;
+		padding-top: 90px;
+		padding-bottom: 60px;
+		line-height: 20px;
+		position: relative;
+		top: 4px;
+		left: 0;
+		margin-left: -14px;
+	}
+	
+	
+	
+	a.quote:link, a.quote:visited, a.quote {
+		color: #fff;
+		font-size: 12px;
+		opacity: 0.7;
+		width: 300px;
+		left: 50%;
+		bottom: 10px;
+		margin-left: -150px;
+		text-align: center;
+	}
+	
+	.artsy_about {
+		display: none;
 	}
 	
 }

@@ -6,6 +6,9 @@ $(document).ready(function(){
 		$(this).find(".artsy_details").toggleClass("show_details");
 	});
 	
+	$('.title').on({ 'touchstart' : function(){ $(this).find(".artsy_details").toggleClass("show_details"); } });
+	$('.title').on({ 'touchend' : function(){ $(this).find(".artsy_details").toggleClass("show_details"); } });
+	
 	
 	$("#click_about").click(function() {
 		$(".artsy_about").toggleClass("show_about");
@@ -19,7 +22,6 @@ $(document).ready(function(){
 	$('.artsy span.title').last().find(".no_und").hide();
 	$('.artsy span.title').last().find(".artsy_details").addClass("last_details");
 	$('.artsy span.title').last().addClass("last_details_bg");
-	$("#normal_pencil").show();
 	
 
 	$(".artsy_header").hover(function(){
@@ -39,7 +41,7 @@ $(document).ready(function(){
 	<div class="artsy_city">i Stockholm</div>
 	<div class="artsy_why" id="click_about">About</div>
 </div>
-<a href="http://lettersfromsweden.se" target="_blank" class="quote">Fonts by Letters from Sweden</a>
+
 <div class="artsy_about">
 	<p class="about">This is what we are doing in Stockholm this summer. <br><br>Put up anything you feel like doing.</p>
 	<p class="description">We are just getting started with <a href="https://canu.se">CANU</a>, so let's give it a try and see what happens.</p>
@@ -65,9 +67,6 @@ $(document).ready(function(){
 		</span>			
 		
 		<span class="clear"></span>
-		<div class="summer_pencil" id="iphone_pencil">
-			<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179"><div class="write">write via canu</div></a>
-		</div>
 		<div class="summer_pencil" id="normal_pencil">
 			<p class="write">
 				Write using <a href="https://itunes.apple.com/us/app/canu-get-together/id697998179">CANU</a> or this boring <a href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform">form</a>.
@@ -75,3 +74,4 @@ $(document).ready(function(){
 		</div>
 	</ul>
 </div>
+<a href="http://lettersfromsweden.se" target="_blank" class="quote">Fonts by Letters from Sweden</a>
