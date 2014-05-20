@@ -229,6 +229,7 @@ div.wrapper_public {
 	padding: 0;	
 	overflow-x: hidden;
 	overflow-y: scroll; /* has to be scroll, not auto */
+	overflow-y: auto; /* has to be scroll, not auto */
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -1033,15 +1034,7 @@ body.summer, .artsy_top_menu_bg, .artsy_top_menu {
 
 body.summer {
 	background-color: #f9d63c; 
-	
-	
-	font-family:"Trim Light", sans-serif; font-weight:200; font-style:normal;
-	font-family:"Siri Core Bold", sans-serif; font-weight:bold; font-style:normal; 
-	font-family:"Siri Core Regular", sans-serif; font-weight:normal; font-style:normal;
 	font-family:"Trim SemiBold", sans-serif; font-weight:600; font-style:normal;
-	
-	
-	
 }
 
 .change {

@@ -19,6 +19,15 @@ $(document).ready(function(){
 	$('.artsy span.title').last().find(".artsy_details").addClass("last_details");
 	$('.artsy span.title').last().addClass("last_details_bg");
 	
+	$('.artsy span.title').each(function() {
+		$(this).html($(this).html().replace('\'','’'));	
+	});
+	
+	
+	
+
+
+	
 
 	$(".artsy_header").hover(function(){
 		$(".artsy_city").toggleClass("show_city");

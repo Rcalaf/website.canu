@@ -44,8 +44,7 @@
 		  $('.how_many:contains("0")').each(function () { $(this).hide(); });
 		  
 
-		
-		//$('html, body').animate({scrollTop: $(document).height()}, 'slow');
+	
 		
 
 		
@@ -60,86 +59,6 @@
 		});
 		
 
-
-		
-		
-		/*
-		$(".empty_tribes").css("height", $(document).height() + "px");
-		
-		$(window).resize(function() {
-			$(".empty_tribes").css("height", $(document).height() + "px");
-		});
-		
-		
-		$(".chat_submit").click(function(){
-			$(".add_data").fadeIn(700);
-		});
-		
-		$("#submit_save_name").click(function(){
-			$(".add_data").fadeOut();
-		});
-		
-		$("#cancel_add_data").click(function(){
-			$(".add_data").fadeOut();
-		});
-		
-
-	
-
-
-		$("#tab_local").click(function(){
-			$("#wr_local").css("left","0").css("opacity","1");
-			$("#wr_tribes").css("left","100%").css("opacity","0");
-			$("#wr_me").css("left","200%").css("opacity","0");
-		});
-
-		$("#tab_tribes").click(function(){
-			$("#wr_local").css("left","-100%").css("opacity","0");
-			$("#wr_tribes").css("left","0").css("opacity","1");
-			$("#wr_me").css("left","100%").css("opacity","0");
-		});
-		
-		$("#tab_me").click(function(){
-			$("#wr_local").css("left","-200%").css("opacity","0");
-			$("#wr_tribes").css("left","-100%").css("opacity","0");
-			$("#wr_me").css("left","0").css("opacity","1");
-		});				
-
-				
-		$("#tab_local").addClass("tab_selected");
-		
-			
-		$("#selected").addClass("pos_local");
-
-
-		$("#tab_local").click(function(){
-			$("#selected").removeClass("pos_tribes").removeClass("pos_me");
-			$("#selected").addClass("pos_local");
-		});
-
-		$("#tab_tribes").click(function(){
-			$("#selected").removeClass("pos_local").removeClass("pos_me");
-			$("#selected").addClass("pos_tribes");
-		});
-		
-		
-		
-		
-	   	$("#tab_me").click(function(){
-	   		if ($(this).hasClass("tab_selected")) {
-		   		$(".my_profile").toggleClass("profilepossition");
-		   		$(".wrapper").toggleClass("faded");	
-		   } else {
-
-		   } 
-	   	});		
-	   	
-		$("#tab_tribes, #tab_local, #tab_me").click(function(){
-			$("li.tab").removeClass("tab_selected");
-			$(this).addClass("tab_selected");
-		});	   	
-		*/
-		
 	});
 	
 
