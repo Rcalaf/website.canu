@@ -1,7 +1,20 @@
 <%# @activity%>
 <%# @attendees%>
+
+
 <% content_for :opengraph_meta_tags do %>
-	acts_as_opengraph :values => { :type => "place", :site_name => "http://canu.se", :title => "<%= @activity['title']%>", :image => "http://api.canu.se/<%=@activity['user']['profile_pic']%>", :latitude => "<%= @activity['latitude']%>", :longitude => "<%= @activity['longitude']%>" }
+
+		<meta property="og:type" content="place"/>
+		<meta property="og:title" content="<%= @activity['title']%>"/>
+		<meta property="og:image" content="http://api.canu.se/<%=@activity['user']['profile_pic']%>"/>
+		<meta property="og:image" content="http://www.canu.se/images/totem.png"/>
+		<meta property="og:site_name" content="canu.se"/>
+		<meta property="og:description" content="<%= @activity['description']%>"/>
+		<meta property="og:description" content="You are invited to come along"/>
+		
+		<meta property="og:latitude" content="<%= @activity['latitude']%>"/>
+		<meta property="og:longitude" content="<%= @activity['longitude']%>"/>
+		
 <% end %>
 
 <div class="get_canu">
