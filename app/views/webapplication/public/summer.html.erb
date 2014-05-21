@@ -1,5 +1,10 @@
 <%# @activities.inspect%>
 <%# @activity%>
+
+<% content_for :opengraph_meta_tags do %>
+	acts_as_opengraph :values => { :type => "website", :description => "This is what we are doing in Stockholm this summer", :site_name => "http://canu.se/summer", :title => "Sommaren vi Skapar", :image => "http://canu.se/images/yellow.png" }
+<% end %>
+
 <script>
 $(document).ready(function(){
 	$(".title").hover(function() {	
