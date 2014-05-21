@@ -2,7 +2,13 @@
 <%# @activity%>
 
 <% content_for :opengraph_meta_tags do %>
-	acts_as_opengraph :values => { :type => "website", :description => "This is what we are doing in Stockholm this summer", :site_name => "http://canu.se/summer", :title => "Sommaren vi Skapar", :image => "http://canu.se/images/yellow.png" }
+
+		<meta property="og:type" content="website"/>
+		<meta property="og:title" content="Sommaren vi Skapar"/>
+		<meta property="og:image" content="http://canu.se/images/yellow.png"/>
+		<meta property="og:site_name" content="Sommaren vi Skapar"/>
+		<meta property="og:description" content="This is what we are doing in Stockholm this summer"/>
+		
 <% end %>
 
 <script>
