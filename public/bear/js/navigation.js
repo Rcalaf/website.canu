@@ -23,13 +23,11 @@ function nextScreenWithVerticalTransition (screen) {
 		if( $(window).width() < 640 ) {
 			removeOldScreen();
 		}	
-		
     	else {
 			TweenMax.fromTo($('#'+ nextScreen), .7, {css: {opacity: 0}}, {css: {opacity: 1}});
 			TweenMax.fromTo($('#'+ currentScreen), .2, {css: {opacity: 1}}, {css: {opacity:0}});			
 			setTimeout(function(){ removeOldScreen(); },300);
 		}
-
 	});
 }
 

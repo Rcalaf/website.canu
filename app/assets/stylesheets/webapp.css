@@ -939,7 +939,19 @@ a.logedin_settings:hover, a.logedin_settings:active {
 }
 
 
+div.like_holder {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	z-index: 9999999;
+	opacity: 0.4;
+	transition: all .3s ease-in-all;
+}
 
+div.like_holder:hover {
+	cursor: pointer;
+	opacity: 1;
+}
 
 
 
@@ -1605,6 +1617,9 @@ Small Shitty Screens
 	}
 	
 	.artsy_about {
+		display: none;
+	}
+	div.like_holder {
 		display: none;
 	}
 	

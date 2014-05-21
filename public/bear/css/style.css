@@ -37,6 +37,24 @@ body{
 }
 
 
+
+
+div.like_holder {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	z-index: 11000;
+	opacity: 0.4;
+	transition: all .3s ease-in-all;
+}
+
+div.like_holder:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+
+
 /******************************
 General Details
 *******************************/
