@@ -1,5 +1,21 @@
 <%# @activity%>
 <%# @attendees%>
+<% content_for :opengraph_meta_tags do %>
+
+		<meta property="og:type" content="place"/>
+		<meta property="og:title" content="Join for <%= @activity['title']%>"/>
+		<!-- <meta property="og:image" content="http://www.canu.se/images/totem.png"/> -->
+		<meta property="og:image" content="http://api.canu.se/<%=@activity['user']['profile_pic']%>"/>
+		
+		<meta property="og:site_name" content="canu.se"/>
+		<meta property="og:description" content="You are invited to come along"/>
+		<meta property="og:description" content="<%= @activity['description']%>"/>
+		
+		
+		<meta property="og:latitude" content="<%= @activity['latitude']%>"/>
+		<meta property="og:longitude" content="<%= @activity['longitude']%>"/>
+		
+<% end %>
 <div class="get_canu">
 	<!--<div class="logo_tiny"></div>-->
 	<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1">

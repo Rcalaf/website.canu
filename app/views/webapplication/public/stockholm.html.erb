@@ -1,6 +1,18 @@
 <%# @activities.inspect%>
 <%# @activity%>
 
+<% content_for :opengraph_meta_tags do %>
+
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="Sommaren vi Skapar"/>
+	<!-- <meta property="og:image" content="http://www.canu.se/images/totem.png"/> -->
+	<meta property="og:image" content="http://www.canu.se/images/sommaren.png"/>
+	
+	<meta property="og:site_name" content="canu.se"/>
+	<meta property="og:description" content="En aktivitetskalender för unga av unga"/>
+		
+<% end %>
+
 <script>
 $(document).ready(function(){
 	$("#suggest_trigger").click(function() {	
