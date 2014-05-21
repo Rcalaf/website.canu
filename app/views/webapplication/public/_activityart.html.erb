@@ -5,8 +5,7 @@
 			<%= DateTime.strptime(activityart["start"], '%Y-%m-%d').strftime("%b %d")%>, 
 			<%= DateTime.strptime(activityart["start"], '%Y-%m-%dT%H:%M:%S%z').strftime("%H:%M")%>	
 		<span class="place">
-			<%= activityart["street"].empty? ? activityart["place_name"] : activityart["street"] + "  " + activityart["city"]%>
-			<%= activityart["city"].empty? ? activityart["country"] : " "%>	
+			<%= activityart["street"].empty? ? activityart["place_name"] : activityart["street"] %>
 		</span>
 	</div>
 </span>
