@@ -1045,7 +1045,7 @@ body.summer, .artsy_top_menu_bg, .artsy_top_menu {
 }
 
 body.summer {
-	background-color: #f9d63c; 
+	background-color: #fcd331; 
 	font-family:"Trim SemiBold", sans-serif; font-weight:600; font-style:normal;
 }
 
@@ -1074,7 +1074,7 @@ a.quote:hover {
 
 div.artsy_top_menu_bg {
 	width: 100%;
-	background-color: #f9d63c; 
+	background-color: #fcd331; 
 	height: 50px;
 	position: fixed;
 	top:0;
@@ -1084,7 +1084,7 @@ div.artsy_top_menu_bg {
 
 div.artsy_top_menu {
 	width: 1020px;
-	background-color: #f9d63c; 
+	background-color: #fcd331; 
 	height: 50px;
 	position: fixed;
 	top:0;
