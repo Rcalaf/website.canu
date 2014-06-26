@@ -13,7 +13,6 @@
 	        $("#comments_blur").fadeIn(300); 
 	        $("#comments_description").fadeIn(900);
 	        $("#close_btn").fadeIn(1000); 
-	        $("html, body").animate({ scrollTop: 0 }, "fast");
 
 	    });
 	    

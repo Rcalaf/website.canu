@@ -59,11 +59,13 @@
 
 		<ul class="top_menu">
 			<div class="centering_top">
-				<li><%= link_to 'About',vision_url, :class => (params[:action] == 'vision' ? 'selected' : nil)%></li>
+				<!--
+<li><%= link_to 'About',vision_url, :class => (params[:action] == 'vision' ? 'selected' : nil)%></li>
 				<li><%= link_to 'Our Story',about_url, :class => (params[:action] == 'about' ? 'selected' : nil)%></li>
-				<li><a href="http://lifestyle.canu.se" target="_blank">Lifestyle</a></li>
-				<li class="mobile_hide"><%= link_to 'Press',press_url, :class => (params[:action] == 'press' ? 'selected' : nil) %></li>		
+-->
+				<li><a href="http://lifestyle.canu.se" target="_blank">Lifestyle</a></li>	
 				<li class="mobile_hide"><%= link_to 'Support',help_url%></li>
+				<li class="mobile_hide"><%= link_to 'Press',press_url, :class => (params[:action] == 'press' ? 'selected' : nil) %></li>	
 				<li><%= link_to 'Contacts',contacts_url, :class => (params[:action] == 'contacts' ? 'selected' : nil) %></li>
 			</div>
 		</ul>		
