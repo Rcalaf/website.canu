@@ -13,57 +13,246 @@
 		
 <% end %>
 
-<script>
-$(document).ready(function(){
-	$("#suggest_trigger").click(function() {	
-		$(".suggest_bg").fadeToggle();
-		$(".suggest_activity").toggleClass("show_suggest");
-	});	
+<script>  
+	<% content_for :js do %>
 	
-	$("#trigger_options").click(function() {	
-		$(this).hide();
-		$(".create_options").fadeToggle();
-	});	
-	$(".suggest_bg").click(function() {	
-		$(".suggest_bg").fadeToggle();
-		$(".suggest_activity").toggleClass("show_suggest");
-	});	
+	 var center;		  
+	 var marker;
+	 var map2;
 	
+	function initMap(){
+	
+		center_2 = new google.maps.LatLng(59.31203, 18.06291);
+		zoom_2 = 11;
+		
+		var mapOptions_2 = {
+	     //scrollwheel: false,
+	     zoom: zoom_2,
+	     disableDefaultUI: true,
+	     mapTypeId: google.maps.MapTypeId.ROADMAP,
+	     center: center_2,
+	     styles: 
+[
+    {
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#fdd51c"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "color": "#fdd51c"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "color": "#fdd51c"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#f3f4f4"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#7fc8ed"
+            }
+        ]
+    },
+    {},
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#83cead"
+            }
+        ]
+    },
+    {
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "weight": 0.9
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    }
+]
+	
+	   };
+	  
+	   map_2 = new google.maps.Map(document.getElementById("map_canvas_city"), mapOptions_2);
+		
+		var image = new google.maps.MarkerImage(
+	 		'/wp-content/themes/collections/images/bo-super-small.png',
+			new google.maps.Size(40,49),
+			new google.maps.Point(0,0),
+			new google.maps.Point(0,0)
+		);
+	
+		var myIconLocal = new google.maps.MarkerImage("http://canu.se/support/photos/canu_pin.png", null, null, null, new google.maps.Size(20,30));
+		
+		<%@data['activity']['active_activities_locations_local'].each_with_index do |activity,index|%>
+			var marker_<%=index%> = new google.maps.Marker({
+			         map:map_2,
+			         draggable:false,
+			         animation: google.maps.Animation.DROP,
+			         position: new google.maps.LatLng("<%=activity['activity']['latitude']%>","<%=activity['activity']['longitude']%>"),
+			         icon: myIconLocal
+			      });
+		<%end%>
+	
+					
+	 }
+	
+	<%end%>
 
-});		
+
+
+	
+	$(document).ready(function(){
+		$("#suggest_trigger").click(function() {	
+			$(".suggest_bg").fadeToggle();
+			$(".suggest_activity").toggleClass("show_suggest");
+		});	
+		
+		$("#trigger_options").click(function() {	
+			$(this).hide();
+			$(".create_options").fadeToggle();
+		});	
+		$(".suggest_bg").click(function() {	
+			$(".suggest_bg").fadeToggle();
+			$(".suggest_activity").toggleClass("show_suggest");
+		});	
+		
+	
+	});		
 </script>
 <div class="like_holder">
-	<div class="fb-like" data-href="http://facebook.com/canugettogether" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+		<div class="fb-share-button" data-href="http://www.canu.se/stockholm" data-type="button_count"></div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.canu.se/stockholm" data-text="Activities in Stockholm" data-hashtags="canu_stockholm"></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
 
 <div class="get_canu">
 	<!--<div class="logo_tiny"></div>-->
 	<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1">
 		<p class="get">Open in the app</p>
-	</a>
+	</a>	
 </div>
-<a class="suggest_button" id="trigger_options">Lägg till aktivitet</a>
+<div class="city_map">
+	<div class="map_overlay"></div>
+	<div class="map_overlay_bottom"></div>
+	<div id="map_canvas_city"></div>
+</div>
+<div class="city_logo">
+	<div class="city_name">Activities in Stockholm</div>
+	<a class="get_app" href="https://itunes.apple.com/us/app/canu-get-together/id697998179">Get the App</a>
+	<div class="email_submit">
+		<div id="mc_embed_signup">
+			<form action="//canu.us8.list-manage.com/subscribe/post?u=5d36e185e2499e3631f7e6123&amp;id=8b7c867c43" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+				<div class="mc-field-group">
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email">
+				</div>			
+				<div id="mce-responses" class="clear">
+					<div class="response" id="mce-error-response" style="display:none"></div>
+					<div class="response" id="mce-success-response" style="display:none"></div>
+				</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			    <div style="position: absolute; left: -5000px;"><input type="text" name="b_5d36e185e2499e3631f7e6123_8b7c867c43" tabindex="-1" value=""></div>
+			</form>
+		</div>
+	</div>
+	
+</div>
+
+<!-- <a class="suggest_button" href="https://itunes.apple.com/us/app/canu-get-together/id697998179">Get the App</a>
 <a class="suggest_button" id="suggest_trigger_mobile" href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform?usp=send_form" target="_blank">Lägg till aktivitet</a>
 <ul class="create_options">
 	<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179"><li>App</li></a>
 	<a id="suggest_trigger"><li>Formulär</li></a>
 </ul>
+-->
 <span class="clear"></span>
 <div class="wrapper_public">
-		<img class="sommaren_bg" src="/assets/sommaren_bg_2.png">	
-		<p class="summer_desc">En aktivitetskalender för unga av unga</p>
+		<!-- <img class="sommaren_bg" src="/assets/sommaren_bg_2.png">	
+		<p class="summer_desc">En aktivitetskalender för unga av unga</p> -->
 		<ul class="public_wall">
 			<%= render :partial => 'activity', :collection => @activities%>
 		</ul>
+<!--
 		<div class="canu_footer">
 			<a href="http://www.canu.se">
 				<div class="logo_tiny"></div>
 			</a>
 		</div>
+-->
 	</div>
 </div>
+<!--
 <div class="suggest_bg"></div>
 <div class="suggest_activity">
 	<iframe src="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform?embedded=true" width="540" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </div>
+-->
 

@@ -1,5 +1,6 @@
 <%# @activity%>
 <%# @attendees%>
+<%# @attendee%>
 <% content_for :opengraph_meta_tags do %>
 
 		<meta property="og:type" content="place"/>
@@ -22,31 +23,31 @@
 		<p class="get">Open in the app</p>
 	</a>
 </div>
-<div class="activity_people_wrapper">
-	<ul class="people_list">
-		<%= render :partial => "attendee", :collection => @attendees%>
-	</ul>						
-	<div class="activity_menu">
-		<span class="clear_line_2"></span>
-		<div class="back_button" id="bb_ppl_list"></div>
-	</div>
-</div>
 <div class="wrapper">
 	<div class="activity_container">
 		<div class="activity_header">
 			<div style="background-image: url(/assets/webapp/icon_userpic@2x.png);" class="creator_userpic">
 				<div class="alternative_userpic" style="background-image: url(http://api.canu.se/<%=@activity['user']['profile_pic']%>);"></div>
 			</div>
+			<div class="share_activity">
+				<div class="fb-share-button" data-type="button"></div>
+			</div>
 			<a class="creator_name">
 				<%= @activity['user']['user_name']%> 
 				<span class="how_many">& <%= @attendees.size - 1%></span>
 			</a>
 			<span class="clear"></span>
-			<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a>
+			<!-- <a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1" class="go_button"></a> -->
 			<p class="activity_title"><%= @activity['title']%></p>
 			<span class="clear_line"></span>
 			<p class="activity_description"><%= @activity['description']%></p>
 			<span class="clear_line_2"></span>
+			<div class="activity_attendies">
+				<ul class="people_list">
+					<%= render :partial => "attendee", :collection => @attendees%>
+				</ul>	
+			</div>
+			<span class="clear_line_3"></span>
 
 			<p class="activity_address" onclick="window.location.href='http://maps.google.com/maps?q=<%= @activity['latitude']%>,<%= @activity['longitude']%>'">
 			<%= @activity["street"].empty? ? @activity["place_name"] : @activity["street"] + ", " + @activity["city"]%>
@@ -62,10 +63,12 @@
 		<div class="activity_chat">
 			<ul><%= render :partial => 'chat_message', :collection => @chat_messages%></ul>
 		</div>
+<!--
 		<div class="canu_footer">
 			<a href="http://www.canu.se">
 				<div class="logo_tiny"></div>
 			</a>
 		</div>
+-->
 	</div>
 </div>

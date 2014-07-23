@@ -34,6 +34,17 @@ background-size: 100% 1px;
 background-size: 100% 1px;
 }
 
+.clear_line_3 {
+	width: auto;
+	margin-top: -1px;
+	height: 1px;
+	clear: both;
+	display: block;
+	overflow: hidden;
+	background: repeat-x top left url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAMAAACuX0YVAAAABlBMVEUAAADc398xOGMOAAAAAnRSTlMA/1uRIrUAAAAPSURBVHjaAQQA+/8AAAABAAUAAiuizs8AAAAASUVORK5CYII=);
+background-size: 100% 1px;
+}
+
 div.activity_container {
 	width: auto;
 	max-width: 768px;
@@ -75,6 +86,179 @@ div.activity_people_wrapper {
 	display: none;
 }
 
+
+/******************************
+City Header
+*******************************/
+
+div.city_map {
+	position: relative;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	height: 240px;
+}
+
+div.map_overlay {
+	width: 100%;
+	height: 240px;
+	position: absolute;
+	top:0;
+	left: 0;
+	background-color: rgba(241, 245, 245, 0);
+	cursor: default;
+	z-index: 1001;
+}
+
+div.map_overlay_bottom {
+	position: absolute;
+	top: 220px;
+	left: 0;
+	background-color: #f1f5f5;
+	box-shadow: 0px -5px 5px #f1f5f5;
+	height: 40px;
+	width: 100%;
+	z-index: 1002;
+}
+
+div#map_canvas_city{
+	width: 100%;
+	height: 240px;	
+	position: absolute;
+	top: 0;
+	left: 0;	
+	z-index: 1000;
+}
+
+div.city_logo {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: #ec6057;
+	z-index: 2000;
+	box-shadow: 0 0 5px rgba(43, 75, 88, 0.14);
+
+}
+
+
+/******************************
+City Top Bar Content
+*******************************/
+
+
+div.city_name{
+	float: left;
+	margin-left: 40px;
+	color: #fff;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+a.get_app:link, a.get_app:visited {
+	float: right;
+	width: auto;
+	height: 40px;
+	padding: 0 20px;
+	z-index: 9000;
+	color: #fff;
+	line-height: 40px;
+	font-size: 14px;
+	transition: all .1s ease-in-out;
+}
+
+a.get_app:link:hover, a.get_app:visited:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+div.email_submit {
+	float: right;
+	width: 280px;
+	height: 40px;
+	padding: 0;
+	z-index: 9000;
+	margin-right: 10px;
+}
+
+.mc-field-group input {
+	float: right;
+	
+	width: 140px;
+	height: 28px;
+	margin-top: 6px;
+	padding: 0 12px;
+	font-size: 14px;
+	outline: none;
+	color: #fff;
+
+	border: 1px solid #fff;
+	background-color: #ec6057;
+ 	
+ 	border-radius: 2px;
+ 	
+ 		box-sizing:border-box;
+	-moz-box-sizing:border-box;
+ 	-webkit-box-sizing:border-box;
+}
+
+.mc-field-group ::-webkit-input-placeholder {
+   color: #fff;
+}
+
+.mc-field-group :-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+}
+
+.mc-field-group ::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+}
+
+.mc-field-group :-ms-input-placeholder {  
+   color: #fff;  
+}
+
+
+div.email_submit input[type=submit] {
+	float: right;
+	height: 28px;
+	background-color: #fff;
+	color: #ec6057;
+	margin-top: 6px;
+	font-weight: normal;
+	margin-left: -4px;
+	border-radius: 2px;
+	
+		
+	font-size: 14px;
+	padding: 0 10px;	
+
+ 	transition: all .1s ease-in;
+ 	cursor: pointer;
+}
+
+div.email_submit input[type=submit]:hover {
+
+}
+
+/******************************
+Like
+*******************************/
+
+.twitter-share-button, .fb-share-button {
+	float: left;
+} 
+
+.twitter-share-button {
+	margin-left: 12px;
+}
+.fb-share-button {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.twitter-share-button:hover, .fb-share-button:hover {
+} 
 
 /******************************
 Get The App
@@ -133,65 +317,111 @@ Web App - Full View
 *******************************/
 
 
+div.activity_attendies {
+	position: relative;
+	z-index: 6001;
+	overflow-x: auto;
+
+}
 
 
 ul.people_list {
+	height: 58px;
+	z-index: 6001;
 	width: 100%;
-	height: auto;
-	z-index: 4001;
-	padding-bottom: 60px;
-	padding-top: 10px;
+	display: inline-block;
+	white-space: nowrap;
+	
 }
 
 ul.people_list li {
 	width: auto;
-	margin: 0 10px;
+	margin: 0;
 	height: 53px;
-	margin-bottom: 10px;
-	background-color: #fff;
+	width: 47px;
+	 display: inline-block;
+}
+
+ul.people_list li div.user_details {
+	top: 6px;
+	left: 46px;
+	z-index: 10000;
+	padding: 0;
+	margin: 0;
+	position: relative;
+
+	display: none;
+
+	width: 140px;
 	
-	border-radius: 4px;
+
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.8);
+	
+	box-shadow: 0 0 5px rgba(43, 75, 88, 0.14);
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+ 	-webkit-box-sizing:border-box;
+ 	
+ 	border-radius: 4px;
  	border-width: 1px;
  	border-image: url(/assets/webapp/border.png) 2 repeat;
+
 }
 
 ul.people_list li img {
 	height: 37px;
 	width: 37px;
-	margin: 10px;
+	margin: 5px 0 0 0;
+
 }
 
-ul.people_list li a.guest_name {
+ul.people_list li div.user_details a.guest_name {
 	float: left;
-	line-height: 20px;
+	line-height: 14px;
 	color: #2b4b58;
 	font-size: 14px;
 	padding-top: 10px;
 	font-weight: 700;
-	width: 70%;
+	padding-left: 5px;
+	margin-left: 0;
+	text-align: left;
+	margin-top: -49px;
 }
 
-ul.people_list li a.guest_username {
+ul.people_list li div.user_details a.guest_username {
 	float: left;
 	line-height: 10px;
 	color: #2b4b58;
 	font-size: 10px;
+	line-height: 10px;
 	padding-left: 5px;
-	width: 70%;
 	font-style: italic;
+	margin-top: -20px;
 }
 
-ul.people_list li a.username_only {
+ul.people_list li div.user_details a.username_only {
 	float: left;
 	line-height: 33px;
 	color: #2b4b58;
 	font-size: 14px;
 	padding-top: 10px;
 	font-weight: 700;
-	width: 70%;
 	font-style: normal;
+	padding-left: 10px;
+	margin-top: -51px;
 }
 
+div.share_activity {
+	float: right;
+	margin: 10px 10px 0 0;
+	transition: all .2s ease-in-out;
+	opacity: 0.5;
+}
+
+div.share_activity:hover {
+	opacity: 1;
+}
 
 /******************************
 Activity Menu
@@ -231,6 +461,10 @@ div.wrapper_public {
 	overflow-y: scroll; /* has to be scroll, not auto */
 	overflow-y: auto; /* has to be scroll, not auto */
 	-webkit-overflow-scrolling: touch;
+
+	z-index: 3000;
+	position: relative;
+	margin-top: -80px;
 }
 
 ul.public_wall {
@@ -941,11 +1175,10 @@ a.logedin_settings:hover, a.logedin_settings:active {
 
 div.like_holder {
 	position: fixed;
-	bottom: 10px;
-	left: 10px;
 	z-index: 9999999;
-	opacity: 0.4;
-	transition: all .3s ease-in-all;
+	left: 26px;
+	bottom: 26px;
+	width: auto;
 }
 
 div.like_holder:hover {

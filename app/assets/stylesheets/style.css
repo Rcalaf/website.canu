@@ -1407,10 +1407,16 @@ div#map_canvas{
 }
 
 div#map_canvas_2{
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 500px;
 	height: 269px;	
 	background-color:#f2f2e7 !important;	
+	z-index: 1000;
 }
+
+
 
 
 

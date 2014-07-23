@@ -44,10 +44,22 @@
 		  
 		  $('.how_many:contains("0")').each(function () { $(this).hide(); });
 		  
-
-	
 		
-
+		$('ul.people_list li:first-child').hide();
+		
+		if ($('ul.people_list li').length <= 1) {
+			$('.activity_attendies').remove();
+		}
+		
+		
+		$("ul.people_list li").hover(function (){
+			$(this).find(".user_details").toggle();
+			
+		});
+		
+		$(".user_details").click(function () {
+			$(this).hide();
+		});
 		
 		$(".creator_name").click(function() {	
 			$(".activity_container, .get_canu").hide();
