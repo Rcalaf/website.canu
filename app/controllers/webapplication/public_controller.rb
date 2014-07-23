@@ -2,9 +2,6 @@ class Webapplication::PublicController < Webapplication::WebapplicationControlle
   
   layout 'webapp'
  
- 
-  before_filter :http_basic_auth, :only => [:stockholm]
- 
   def stockholm
     @title = "Stockholm"
     @body_class = "webapp"
