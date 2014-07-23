@@ -92,30 +92,31 @@ City Header
 *******************************/
 
 div.city_map {
-	position: relative;
+	position: fixed;
 	top: 40px;
 	left: 0;
 	width: 100%;
-	height: 240px;
+	height: 100%;
+	z-index: 88888;
 }
 
 div.map_overlay {
 	width: 100%;
-	height: 240px;
+	height: 100%;
 	position: absolute;
 	top:0;
 	left: 0;
-	background-color: rgba(241, 245, 245, 0);
+	background-color: rgba(241, 245, 245, 0.0);
 	cursor: default;
 	z-index: 1001;
 }
 
 div.map_overlay_bottom {
 	position: absolute;
-	top: 220px;
+	bottom: 50%;
 	left: 0;
 	background-color: #f1f5f5;
-	box-shadow: 0px -5px 5px #f1f5f5;
+	/* box-shadow: 0px -5px 5px #f1f5f5; */
 	height: 40px;
 	width: 100%;
 	z-index: 1002;
@@ -123,7 +124,7 @@ div.map_overlay_bottom {
 
 div#map_canvas_city{
 	width: 100%;
-	height: 240px;	
+	height: 50%;	
 	position: absolute;
 	top: 0;
 	left: 0;	
@@ -131,13 +132,14 @@ div#map_canvas_city{
 }
 
 div.city_logo {
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
 	background-color: #ec6057;
 	z-index: 2000;
 	box-shadow: 0 0 5px rgba(43, 75, 88, 0.14);
+	z-index: 99999;
 
 }
 
@@ -178,28 +180,21 @@ div.email_submit {
 	height: 40px;
 	padding: 0;
 	z-index: 9000;
-	margin-right: 10px;
+	margin-right: 0;
 }
 
 .mc-field-group input {
 	float: right;
 	
 	width: 140px;
-	height: 28px;
-	margin-top: 6px;
-	padding: 0 12px;
+	height: 40px;
+	padding: 0 0 0 14px;
 	font-size: 14px;
 	outline: none;
 	color: #fff;
 
-	border: 1px solid #fff;
-	background-color: #ec6057;
+	background-color: rgba(255, 255, 255, 0.1);
  	
- 	border-radius: 2px;
- 	
- 		box-sizing:border-box;
-	-moz-box-sizing:border-box;
- 	-webkit-box-sizing:border-box;
 }
 
 .mc-field-group ::-webkit-input-placeholder {
@@ -221,17 +216,13 @@ div.email_submit {
 
 div.email_submit input[type=submit] {
 	float: right;
-	height: 28px;
+	height: 40px;
 	background-color: #fff;
 	color: #ec6057;
-	margin-top: 6px;
-	font-weight: normal;
-	margin-left: -4px;
-	border-radius: 2px;
-	
+	font-weight: normal;	
 		
 	font-size: 14px;
-	padding: 0 10px;	
+	padding: 0 20px;	
 
  	transition: all .1s ease-in;
  	cursor: pointer;
@@ -462,9 +453,9 @@ div.wrapper_public {
 	overflow-y: auto; /* has to be scroll, not auto */
 	-webkit-overflow-scrolling: touch;
 
-	z-index: 3000;
+	z-index: 88889;
 	position: relative;
-	margin-top: -80px;
+	margin-top: 280px;
 }
 
 ul.public_wall {

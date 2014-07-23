@@ -10,10 +10,7 @@
 		
 		<meta property="og:site_name" content="canu.se"/>
 		
-		<meta property="og:description" content="<%= @activity['description']%>"/>
-		<meta property="og:description" content="You are all welcome to join!"/>
-		<meta property="og:description" content="<%= @activity['description']%>"/>
-		
+		<meta property="og:description" content="<%= @activity['description']%> You are all welcome to join!"/>
 		
 		<meta property="og:latitude" content="<%= @activity['latitude']%>"/>
 		<meta property="og:longitude" content="<%= @activity['longitude']%>"/>
@@ -46,6 +43,10 @@
 			<span class="clear_line_2"></span>
 			<div class="activity_attendies">
 				<ul class="people_list">
+					<%= render :partial => "attendee", :collection => @attendees%>
+					<%= render :partial => "attendee", :collection => @attendees%>
+					<%= render :partial => "attendee", :collection => @attendees%>
+					<%= render :partial => "attendee", :collection => @attendees%>
 					<%= render :partial => "attendee", :collection => @attendees%>
 				</ul>	
 			</div>
