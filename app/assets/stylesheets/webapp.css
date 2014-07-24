@@ -355,7 +355,7 @@ div.email_submit input[type=submit]:hover {
 Like
 *******************************/
 
-.twitter-share-button, .fb-share-button {
+.twitter-share-button, .fb-share-button, .fb-like {
 	float: left;
 } 
 
@@ -366,6 +366,12 @@ Like
 	margin-top: 0px;
 	margin-left: 0px;
 }
+
+.fb-like {
+	margin-left: 12px;
+}
+
+
 
 .twitter-share-button:hover, .fb-share-button:hover {
 } 

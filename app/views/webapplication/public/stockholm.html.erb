@@ -193,25 +193,22 @@
 	});		
 </script>
 <div class="like_holder">
-		<div class="fb-share-button" data-href="http://www.canu.se/stockholm" data-type="button_count"></div>
+		<div class="fb-share-button" data-href="http://www.canu.se/stockholm" data-type="button"></div>
+		
+		<div class="fb-like" data-href="https://www.facebook.com/canugettogether" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+		
+		
 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.canu.se/stockholm" data-text="Activities in Stockholm" data-hashtags="canu_stockholm"></a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
 
-<!--
-<div class="get_canu">
-	<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1">
-		<p class="get">Open in the app</p>
-	</a>	
-</div>
--->
 <div class="city_map">
 	<div class="map_overlay"></div>
 	<div class="map_overlay_bottom"></div>
 	<div id="map_canvas_city"></div>
 </div>
 <div class="city_logo">
-	<div class="logo_top"></div>
+	<a href="http://www.canu.se" target="_blank"><div class="logo_top"></div></a>
 	<div class="city_name">Activities in Stockholm</div>
 	<!-- <a class="get_app" href="https://itunes.apple.com/us/app/canu-get-together/id697998179" target="_blank">iOS App</a> -->
 	
@@ -241,13 +238,6 @@
 		<p class="subscribe_description">You can use the <a href="https://itunes.apple.com/us/app/canu-get-together/id697998179" target="_blank">app</a> to create private activities.</p>
 	</div>
 </div>
-<!-- <a class="suggest_button" href="https://itunes.apple.com/us/app/canu-get-together/id697998179">Get the App</a>
-<a class="suggest_button" id="suggest_trigger_mobile" href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform?usp=send_form" target="_blank">Lägg till aktivitet</a>
-<ul class="create_options">
-	<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179"><li>App</li></a>
-	<a id="suggest_trigger"><li>Formulär</li></a>
-</ul>
--->
 <span class="clear"></span>
 <div class="wrapper_public">
 		<!-- <img class="sommaren_bg" src="/assets/sommaren_bg_2.png">	
@@ -255,19 +245,7 @@
 		<ul class="public_wall">
 			<%= render :partial => 'activity', :collection => @activities%>
 		</ul>
-<!--
-		<div class="canu_footer">
-			<a href="http://www.canu.se">
-				<div class="logo_tiny"></div>
-			</a>
-		</div>
--->
 	</div>
 </div>
-<!--
-<div class="suggest_bg"></div>
-<div class="suggest_activity">
-	<iframe src="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform?embedded=true" width="540" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-</div>
--->
+
 

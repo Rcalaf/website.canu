@@ -707,6 +707,21 @@ h4:hover {
 	cursor: default;
 }
 
+a.about_canu_blog {
+	position: absolute;
+	
+	margin-top: 50px;
+	right: 200px;
+	height: 30px;
+	line-height: 30px;
+	color: #000;
+	color: #fff;
+	font-size: 18px;
+	background-size: calc(100%) 1px;
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+}
+
 a.about_canu {
 	position: absolute;
 	
@@ -722,7 +737,7 @@ a.about_canu {
     background-position: 0 bottom;
 }
 
-a.about_canu:hover {
+a.about_canu:hover, a.about_canu_blog:hover {
 	cursor: pointer;
 	background-image: linear-gradient(0deg, #fff, #fff 50%, transparent 50%);
 }
