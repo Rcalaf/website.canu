@@ -57,13 +57,17 @@
 			
 		});
 		
-		$(".user_details").click(function () {
-			$(this).hide();
+		$(".subscribe_action").click(function () {
+			$(".email_submit_bg").addClass("slide_down");
 		});
 		
-		$(".creator_name").click(function() {	
-			$(".activity_container, .get_canu").hide();
-			$(".activity_people_wrapper").show();
+		$(".close_subscribe").click(function () {
+			$(".email_submit_bg").removeClass("slide_down");
+		});
+		
+		
+		$(".user_details").click(function () {
+			$(this).hide();
 		});
 
 		$("#bb_ppl_list").click(function() {	

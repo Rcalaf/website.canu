@@ -1302,8 +1302,7 @@ body.stats{
 }
 
 body.webapp{
-	background-color: #f1f5f5;
-}
+	background-color: #f1f5f5;}
 
 body.stats .logo_top{
 	display: none;
@@ -1624,16 +1623,15 @@ Mobile
 			overflow-y: scroll; /* has to be scroll, not auto */
 			-webkit-overflow-scrolling: touch;
 		}
+
 		
 		div.logo_top {
-			width: 40px;
-			height: 40px;
-			background-size: 40px 40px;
-			left: 50%;
-			margin-left: -20px;
-			margin-top: 20px;
 			position: absolute;
+			left: 50%;
+			margin-left: -25px;
 		}
+		
+		
 		
 		div.app_store {
 			margin: 0 auto;

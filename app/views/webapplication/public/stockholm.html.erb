@@ -4,12 +4,11 @@
 <% content_for :opengraph_meta_tags do %>
 
 	<meta property="og:type" content="website"/>
-	<meta property="og:title" content="Sommaren vi Skapar"/>
-	<!-- <meta property="og:image" content="http://www.canu.se/images/totem.png"/> -->
-	<meta property="og:image" content="http://www.canu.se/images/sommaren.png"/>
+	<meta property="og:title" content="Activities in Stockholm"/>
+	<!-- <meta property="og:image" content="http://www.canu.se/images/sommaren.png"/> -->
 	
-	<meta property="og:site_name" content="canu.se"/>
-	<meta property="og:description" content="En aktivitetskalender för unga av unga"/>
+	<meta property="og:site_name" content="canu.se/stockholm"/>
+	<meta property="og:description" content="You're invited to join these activities in town."/>
 		
 <% end %>
 
@@ -22,7 +21,7 @@
 	
 	function initMap(){
 	
-		center_2 = new google.maps.LatLng(59.31203, 18.06291);
+		center_2 = new google.maps.LatLng(59.31703, 18.06291);
 		zoom_2 = 12;
 		
 		var mapOptions_2 = {
@@ -195,7 +194,6 @@
 </div>
 
 <div class="get_canu">
-	<!--<div class="logo_tiny"></div>-->
 	<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1">
 		<p class="get">Open in the app</p>
 	</a>	
@@ -206,15 +204,23 @@
 	<div id="map_canvas_city"></div>
 </div>
 <div class="city_logo">
+	<div class="logo_top"></div>
 	<div class="city_name">Activities in Stockholm</div>
-	<a class="get_app" href="https://itunes.apple.com/us/app/canu-get-together/id697998179">iOS App</a>
+	<!-- <a class="get_app" href="https://itunes.apple.com/us/app/canu-get-together/id697998179" target="_blank">iOS App</a> -->
+	<div class="subscribe_action">Subscribe</div>	
+</div>
+<div class="email_submit_bg">
+	<div class="close_subscribe"></div>
+	<div class="bird_mail"></div>
 	<div class="email_submit">
+		<p class="title">Activities of the week in your inbox</p>
+		<p class="subscribe_description">We pick the most interesting casual activities in town and share them with everyone.</p>
 		<div id="mc_embed_signup">
 			<form action="//canu.us8.list-manage.com/subscribe/post?u=5d36e185e2499e3631f7e6123&amp;id=8b7c867c43" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
 				<div class="mc-field-group">
 					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your email">
-				</div>			
+				</div>	
+				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">		
 				<div id="mce-responses" class="clear">
 					<div class="response" id="mce-error-response" style="display:none"></div>
 					<div class="response" id="mce-success-response" style="display:none"></div>
@@ -222,10 +228,10 @@
 			    <div style="position: absolute; left: -5000px;"><input type="text" name="b_5d36e185e2499e3631f7e6123_8b7c867c43" tabindex="-1" value=""></div>
 			</form>
 		</div>
+		<span class="clear"></span>
+		<p class="subscribe_description">You can use the <a href="https://itunes.apple.com/us/app/canu-get-together/id697998179" target="_blank">app</a> to create private activities.</p>
 	</div>
-	
 </div>
-
 <!-- <a class="suggest_button" href="https://itunes.apple.com/us/app/canu-get-together/id697998179">Get the App</a>
 <a class="suggest_button" id="suggest_trigger_mobile" href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform?usp=send_form" target="_blank">Lägg till aktivitet</a>
 <ul class="create_options">
@@ -238,10 +244,6 @@
 		<!-- <img class="sommaren_bg" src="/assets/sommaren_bg_2.png">	
 		<p class="summer_desc">En aktivitetskalender för unga av unga</p> -->
 		<ul class="public_wall">
-			<%= render :partial => 'activity', :collection => @activities%>
-			<%= render :partial => 'activity', :collection => @activities%>
-			<%= render :partial => 'activity', :collection => @activities%>
-			<%= render :partial => 'activity', :collection => @activities%>
 			<%= render :partial => 'activity', :collection => @activities%>
 		</ul>
 <!--
