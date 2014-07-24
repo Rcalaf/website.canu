@@ -184,6 +184,11 @@
 			$(".suggest_activity").toggleClass("show_suggest");
 		});	
 		
+	   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			$('.email_submit_bg, .subscribe_action').remove();
+			$('.mobile_subscribe').show();
+		}
+		
 	
 	});		
 </script>
@@ -193,11 +198,13 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
 
+<!--
 <div class="get_canu">
 	<a href="https://itunes.apple.com/us/app/canu-get-together/id697998179?mt=8&ls=1">
 		<p class="get">Open in the app</p>
 	</a>	
 </div>
+-->
 <div class="city_map">
 	<div class="map_overlay"></div>
 	<div class="map_overlay_bottom"></div>
@@ -207,6 +214,8 @@
 	<div class="logo_top"></div>
 	<div class="city_name">Activities in Stockholm</div>
 	<!-- <a class="get_app" href="https://itunes.apple.com/us/app/canu-get-together/id697998179" target="_blank">iOS App</a> -->
+	
+	<a class="mobile_subscribe" href="http://eepurl.com/ZAZiH" style="display:none">Subscribe</a>
 	<div class="subscribe_action">Subscribe</div>	
 </div>
 <div class="email_submit_bg">

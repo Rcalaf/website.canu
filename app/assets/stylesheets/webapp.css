@@ -263,7 +263,7 @@ div.email_submit p.subscribe_description{
 	padding: 0 0 0 14px;
 	font-size: 18px;
 	outline: none;
-	color: #ec6057;
+	color: #203a42;
 	
 	margin-top: 20px;
 
@@ -278,19 +278,19 @@ div.email_submit p.subscribe_description{
 }
 
 .mc-field-group ::-webkit-input-placeholder {
-   color: #ec6057;
+   color: #bfc9cd;
 }
 
 .mc-field-group :-moz-placeholder { /* Firefox 18- */
-   color: #ec6057;  
+   color: #bfc9cd;  
 }
 
 .mc-field-group ::-moz-placeholder {  /* Firefox 19+ */
-   color: #ec6057;  
+   color: #bfc9cd;  
 }
 
 .mc-field-group :-ms-input-placeholder {  
-   color: #ec6057; 
+   color: #bfc9cd; 
 }
 
 
@@ -312,6 +312,15 @@ div.subscribe_action {
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
  	-webkit-box-sizing:border-box;
+}
+
+.mobile_subscribe {
+	position: absolute;
+	text-align: center;
+	width: 120px;
+	left: 50%;
+	top: 10px;
+	margin-left: -60px;
 }
 
 div.email_submit input[type=submit] {
@@ -369,7 +378,7 @@ div.get_canu {
 	position: fixed;
 	height: 40px;
 	width: 100%;
-	z-index: 3000;
+	z-index: 3000000000;
 	top:0;
 	left: 0;
 	background-color: rgba(236, 96, 87, 0.9);	
@@ -1334,7 +1343,7 @@ Mobile
 
 @media only screen and (max-width: 768px), only screen and (max-device-width: 768px){
 		
-			div.city_name{
+	div.city_name{
 		position: relative;
 		left:50%;
 		margin-left: -140px;
@@ -1970,6 +1979,15 @@ Small Shitty Screens
 	div.like_holder {
 		display: none;
 	}
+	
+	div.wrapper_public { 
+		top: 130px;
+	}
+	.subscribe_action {
+		margin-top: 10px;
+	}
+		
+	
 	
 }
 	
