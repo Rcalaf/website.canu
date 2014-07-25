@@ -298,7 +298,7 @@ div.subscribe_action {
 	height: 50px;
 	width: auto;
 	padding: 0 20px;
-	background-color: #fff;
+	/* background-color: #fff; */
 	line-height: 50px;
 	position: absolute;
 	top: 40px;
@@ -308,7 +308,7 @@ div.subscribe_action {
 	cursor: pointer;
 	border-radius: 4px;
 	/* border: 1px solid #ec6057; */
-	box-shadow: 0 0 5px rgba(43, 75, 88, 0.14);
+	/* box-shadow: 0 0 5px rgba(43, 75, 88, 0.14); */
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
  	-webkit-box-sizing:border-box;

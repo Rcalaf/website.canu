@@ -17,7 +17,8 @@
 	
 	$(document).ready(function(){
 
-				
+		  $("#bg_video").show(); 
+		  
 		  var isiPhone = navigator.userAgent.toLowerCase().indexOf("iphone");
 
 		  if(isiPhone > -1)

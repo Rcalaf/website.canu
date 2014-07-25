@@ -301,6 +301,7 @@ ul.scr_list .scr_about {
     z-index: 2; 	
     position: absolute;
     top:0;	
+    display: none;
 }
 
 
