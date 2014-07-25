@@ -283,6 +283,7 @@ ul.scr_list .scr_about {
     top: 0;
     overflow: hidden;
     z-index: 1; /* for accessing the video by click */
+    background-color: #f1f5f5 !important;
 }
 
 #bg { 
@@ -305,7 +306,7 @@ ul.scr_list .scr_about {
     position: absolute;
     top:0;	
     display: none;
-    background-color: transparent !important;
+    background-color: #f1f5f5 !important;
 }
 
 video, #start, #stop, #pause, #plus, #minus, #mute { 
