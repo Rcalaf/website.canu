@@ -297,16 +297,20 @@ ul.scr_list .scr_about {
     top:0;	
 }
 
-#bg_video { 
+div.video_holder {
     z-index: 2; 	
     position: absolute;
     top:0;	
     display: none;
 }
 
+#bg_video { 
+
+}
+
 
 #sec_1 {
-	background-color: #000;
+	background-color: #f1f5f5;
 
 }
 

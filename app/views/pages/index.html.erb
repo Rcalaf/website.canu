@@ -13,13 +13,17 @@
 
 <!--<a href="#"><div class="urgent">Dear UK and Canada, we are fixing an issue with the phone number verification. Please hold on.<br><br> The People of CANU </div></a>-->
 
+
+
 <div class="section" id="sec_1">
 	<div id="video-viewport">
 		<img id="bg" width="2000" height="1521" src="/assets/bg_11.png">	
 		<img id="bg_2" width="2000" height="1521" src="/assets/bg_20.jpg">
-		<video id="bg_video" autoplay loop="true" width="2000" height="1520">
-       	 <source src="/assets/bg_1.mp4"type="video/mp4" />
-		</video>
+		<div class="video_holder">
+			<video id="bg_video" autoplay loop="true" width="2000" height="1520">
+	       	 <source src="/assets/bg_1.mp4"type="video/mp4" />
+			</video>
+		</div>
 	</div>
 	<div class="rest_holder">
 		<a class="about_canu mobile_hide" href="https://medium.com/future-tense/what-were-trying-to-achieve-with-canu-f1022830f53">About CANU</a>
@@ -128,6 +132,8 @@
 
 <script>
 	$(document).ready(function(){ 
+		
+		$(".video_holder").fadeIn(300);
 	
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 			$('#video-viewport, .mobile_hide, p.description, #comments_container, .arrow_down').remove();
