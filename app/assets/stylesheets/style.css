@@ -305,8 +305,13 @@ ul.scr_list .scr_about {
     position: absolute;
     top:0;	
     display: none;
-    background-color: #f1f5f5 !important;
+    background-color: transparent !important;
 }
+
+video, #start, #stop, #pause, #plus, #minus, #mute { 
+	background-color: #f1f5f5 !important;
+}
+
 
 
 #sec_1 {
