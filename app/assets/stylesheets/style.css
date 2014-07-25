@@ -299,16 +299,12 @@ ul.scr_list .scr_about {
     display: none;
 }
 
-div.video_holder {
+
+#bg_video { 
     z-index: 2; 	
     position: absolute;
     top:0;	
     display: none;
-}
-
-#bg_video { 
-    position: absolute;
-    top:0;	
 }
 
 
@@ -728,6 +724,7 @@ a.about_canu_blog {
 	background-size: calc(100%) 1px;
     background-repeat: no-repeat;
     background-position: 0 bottom;
+    z-index: 999999999;
 }
 
 a.about_canu {

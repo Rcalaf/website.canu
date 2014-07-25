@@ -19,11 +19,9 @@
 	<div id="video-viewport">
 		<img id="bg" width="2000" height="1521" src="/assets/bg_11.png">	
 		<img id="bg_2" width="2000" height="1521" src="/assets/bg_20.jpg">
-		<div class="video_holder">
-			<video id="bg_video" autoplay loop="true" width="2000" height="1520">
-	       	 <source src="/assets/bg_1.mp4"type="video/mp4" />
-			</video>
-		</div>
+		<video id="bg_video" autoplay loop="true" width="2000" height="1520">
+       	 <source src="/assets/bg_1.mp4"type="video/mp4" />
+		</video>
 	</div>
 	<div class="rest_holder">
 		<a class="about_canu mobile_hide" href="https://medium.com/future-tense/what-were-trying-to-achieve-with-canu-f1022830f53">About CANU</a>
@@ -135,7 +133,7 @@
 				
 
 	      	$("#bg, #bg_2").show();
-	      	$(".video_holder").delay(800).show();
+	      	$("#bg_video").delay(800).show();
 	      	
 	      	 
 	
