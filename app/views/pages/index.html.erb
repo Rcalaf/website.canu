@@ -133,7 +133,7 @@
 <script>
 	$(document).ready(function(){ 
 		
-		$(".video_holder").fadeIn(300);
+		$(".video_holder").delay(3000).fadeIn(300);
 	
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 			$('#video-viewport, .mobile_hide, p.description, #comments_container, .arrow_down').remove();
@@ -146,8 +146,6 @@
 			$(".urgent").hide();		
 		})
 		
-		$("#bg_video").hide();
-		$("#bg_video").delay(800).fadeIn(300);
 	    
 	    var min_w = 300; // minimum video width allowed
 		var vid_w_orig;  // original video dimensions
