@@ -3,7 +3,7 @@ class Webapplication::PublicController < Webapplication::WebapplicationControlle
   layout 'webapp'
  
   def stockholm
-    @title = "Stockholm"
+    @title = "Casual activities in Stockholm"
     @body_class = "webapp"
     
     @confirm = User.find_all_by_used(true)
