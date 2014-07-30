@@ -32,7 +32,7 @@
 				<div class="fb-share-button" data-type="button"></div>
 			</div>
 			<a class="creator_name">
-				<%= @activity['user']['user_name']%> 
+				<%= @activity['user']['first_name'].empty? ? @activity['user']['user_name'] : @activity['user']['first_name']%>
 				<span class="how_many">& <%= @attendees.size - 1%></span>
 			</a>
 			<span class="clear"></span>
