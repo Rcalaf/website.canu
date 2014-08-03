@@ -601,6 +601,20 @@ Public Cards
 *******************************/
 
 
+div.wrapper_public_artsy {
+	max-width: 1020px;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;	
+	overflow-x: hidden;
+	overflow-y: scroll; /* has to be scroll, not auto */
+	overflow-y: auto; /* has to be scroll, not auto */
+	-webkit-overflow-scrolling: touch;
+	
+/* 	background-color: #f1f5f5; */
+}
+
+
 div.wrapper_public {
 	max-width: 1020px;
 	height: auto;
@@ -1858,7 +1872,15 @@ Small Shitty Screens
 		max-width: 680px;
 	}
 	
+	div.wrapper_public_artsy {
+		max-width: 680px;
+	}
+	
 	body.summer div.wrapper_public {
+		max-width: calc(100% - 40px);
+	}
+	
+		body.summer div.wrapper_public_artsy {
 		max-width: calc(100% - 40px);
 	}
 	
@@ -1877,6 +1899,10 @@ Small Shitty Screens
 
 @media only screen and (max-width: 720px), only screen and (max-device-width: 720px){ 
 	div.wrapper_public {
+		max-width: 500px;
+	}
+	
+		div.wrapper_public_artsy {
 		max-width: 500px;
 	}
 	
@@ -1920,6 +1946,10 @@ Small Shitty Screens
 	}
 	
 	body.summer div.wrapper_public {
+		width: auto;
+	}
+	
+		body.summer div.wrapper_public_artsy {
 		width: auto;
 	}
 	
@@ -2010,6 +2040,10 @@ Small Shitty Screens
 	}
 	
 	div.wrapper_public { 
+		top: 130px;
+	}
+	
+		div.wrapper_public_artsy { 
 		top: 130px;
 	}
 	.subscribe_action {

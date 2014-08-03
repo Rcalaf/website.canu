@@ -4,9 +4,9 @@
 <% content_for :opengraph_meta_tags do %>
 
 		<meta property="og:type" content="website"/>
-		<meta property="og:title" content="Sommaren vi Skapar"/>
+		<meta property="og:title" content="Sommaren i Stockholm"/>
 		<meta property="og:image" content="http://canu.se/images/yellow.png"/>
-		<meta property="og:site_name" content="Sommaren vi Skapar"/>
+		<meta property="og:site_name" content="Sommaren i Stockholm"/>
 		<meta property="og:description" content="This is what we are doing in Stockholm this summer"/>
 		
 <% end %>
@@ -47,22 +47,27 @@ $(document).ready(function(){
 </script>
 
 <div class="like_holder">
-	<div class="fb-like" data-href="http://facebook.com/canugettogether" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+		<div class="fb-share-button" data-href="http://www.canu.se/summer" data-type="button"></div>
+		
+		<div class="fb-like" data-href="https://www.facebook.com/canugettogether" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+		
+		
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.canu.se/summer" data-text="Activities in Stockholm" data-hashtags="canu_stockholm"></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
 
 <div class="artsy_top_menu_bg"></div>
 <div class="artsy_top_menu">
-	<p class="artsy_header">Sommaren vi Skapar</p>
-	<div class="artsy_city">i Stockholm</div>
+	<p class="artsy_header">Sommaren i Stockholm</p>
 	<div class="artsy_why" id="click_about">About</div>
 </div>
 
 <div class="artsy_about">
-	<p class="about">This is what we are doing in Stockholm this summer. <br><br>Put up anything you feel like doing.</p>
-	<p class="description">We are just getting started with <a href="https://canu.se">CANU</a>, so let's give it a try and see what happens.</p>
+	<p class="about">This is what we are doing in Stockholm this summer. <br><br><a href="https://itunes.apple.com/us/app/canu-get-together/id697998179">Create your own activity</a></p>
+	<p class="description">We are getting started with <a href="https://canu.se">CANU</a>, so let's give it a try and see what happens.</p>
 </div>
-<div class="wrapper_public">
-	<ul class="public_wall">
+<div class="wrapper_public_artsy">
+	<ul class="public_wall" style="padding-top: 100px">
 		<span class="artsy">
 			<%= render :partial => 'activityart', :collection => @activities%>
 			<span class="fake">
@@ -84,7 +89,7 @@ $(document).ready(function(){
 		<span class="clear"></span>
 		<div class="summer_pencil" id="normal_pencil">
 			<p class="write">
-				Write using <a href="https://itunes.apple.com/us/app/canu-get-together/id697998179">CANU</a> or this boring <a href="https://docs.google.com/forms/d/1AmUF41MmNNT0LsGybUtHgFjki-MPKl6aWj-YC4r6Px0/viewform">form</a>.
+				Write with this <a href="https://itunes.apple.com/us/app/canu-get-together/id697998179">app</a>
 			</p>
 		</div>
 	</ul>
