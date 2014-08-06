@@ -6,7 +6,7 @@
 				<div class="alternative_userpic" style="background-image: url(http://api.canu.se/<%= activity['user']['profile_pic']%>);"></div>
 			</div>
 			<span class="creator_name">
-				<%= activity['user']['first_name'].empty? ? activity['user']['user_name'] : activity['user']['first_name']%>
+				<%= activity['user']['user_name']%>
 			
 				<span class="how_many">& <%= activity["attendee_ids"].size - 1%></span>
 			</span>
